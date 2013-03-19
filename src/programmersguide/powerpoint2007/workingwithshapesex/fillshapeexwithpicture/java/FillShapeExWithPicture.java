@@ -33,7 +33,7 @@ public class FillShapeExWithPicture
         ShapeEx shp = sld.getShapes().get_Item(idx);
 
 
-        //Set the fill type to Picture
+        //Set the fill type to Picture.
         shp.getFillFormat().setFillType(FillTypeEx.Picture);
 
         //Set the picture fill mode
