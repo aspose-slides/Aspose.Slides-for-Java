@@ -28,7 +28,7 @@ public class FillShapeExWithPicture
         //Get the first slide.
         SlideEx sld = pres.getSlides().get_Item(0);
 
-        //Add auto shape of rectangle type
+        //Add auto shape of rectangle type.
         int idx = sld.getShapes().addAutoShape(ShapeTypeEx.Rectangle, 50, 150, 75, 150);
         ShapeEx shp = sld.getShapes().get_Item(idx);
 
