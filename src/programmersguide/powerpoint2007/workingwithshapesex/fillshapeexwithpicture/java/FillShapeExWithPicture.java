@@ -21,7 +21,7 @@ public class FillShapeExWithPicture
         // The path to the documents directory.
         String dataDir = "src/programmersguide/powerpoint2007/workingwithshapesex/fillshapeexwithpicture/data/";
 
-        //Instantiate PresentationEx class that represents the PPTX
+        //Instantiate PresentationEx class that represents the PPTX.
         PresentationEx pres = new PresentationEx();
 
 
