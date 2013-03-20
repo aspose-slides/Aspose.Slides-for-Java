@@ -21,19 +21,19 @@ public class FillShapeExWithPicture
         // The path to the documents directory.
         String dataDir = "src/programmersguide/powerpoint2007/workingwithshapesex/fillshapeexwithpicture/data/";
 
-        //Instantiate PresentationEx class that represents the PPTX.
+        //Instantiate PresentationEx class that represents the PPTX
         PresentationEx pres = new PresentationEx();
 
 
-        //Get the first slide.
+        //Get the first slide
         SlideEx sld = pres.getSlides().get_Item(0);
 
-        //Add auto shape of rectangle type.
+        //Add auto shape of rectangle type
         int idx = sld.getShapes().addAutoShape(ShapeTypeEx.Rectangle, 50, 150, 75, 150);
         ShapeEx shp = sld.getShapes().get_Item(idx);
 
 
-        //Set the fill type to Picture.
+        //Set the fill type to Picture
         shp.getFillFormat().setFillType(FillTypeEx.Picture);
 
         //Set the picture fill mode
