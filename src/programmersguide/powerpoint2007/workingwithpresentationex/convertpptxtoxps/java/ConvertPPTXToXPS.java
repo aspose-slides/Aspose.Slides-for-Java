@@ -34,8 +34,8 @@ public class ConvertPPTXToXPS
         //Save MetaFiles as PNG
         opts.setSaveMetafilesAsPng(true);
 
-        //Save the prsentation to XPS document
-        pres.save(dataDir + "outputXPSOptions.xps", com.aspose.slides.SaveFormat.Xps,opts);
+        //Save the presentation to XPS document
+        pres.save(dataDir + "outputWithXPSOptions.xps", com.aspose.slides.SaveFormat.Xps, opts);
 
         // Status
         System.out.println("PPTX to XPS conversion has been performed successfully.");
