@@ -20,6 +20,10 @@ Using Aspose.Slides for Java in your project gives you the following benefits:
 
 These examples provide helpful demonstrations and code when using Aspose.Slides for Java.
 
+###Run Examples on your PC
+
+Download the [Aspose Examples Dashboard for Java](http://www.aspose.com/community/files/72/java-components/aspose.total-for-java/category1426.aspx) to view and run all these examples on your PC.
+
 ##What's Included in this Examples Repository?
 
 ###Code
