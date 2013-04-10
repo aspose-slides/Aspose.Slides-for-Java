@@ -25,7 +25,7 @@ public class AddingSlidesToPresentation
         Slide slide1 = pres.addEmptySlide();
 
         //Writing the presentation as a PPT file
-        pres.write(dataDir + "AddEmptySlide.ppt");
+        pres.write(dataDir + "EmptySlide.ppt");
 
         /***********************  Adding Body Slide in a Presentation ******************************/
 
@@ -35,7 +35,7 @@ public class AddingSlidesToPresentation
         Slide slide2 = pres.addBodySlide();
 
         //Writing the presentation as a PPT file
-        pres.write(dataDir + "AddBodySlide.ppt");
+        pres.write(dataDir + "BodySlide.ppt");
 
         /***********************  Adding Double Body Slide in a Presentation ******************************/
 
@@ -46,7 +46,7 @@ public class AddingSlidesToPresentation
         Slide slide3 = pres.addDoubleBodySlide();
 
         //Writing the presentation as a PPT file
-        pres.write(dataDir + "AddDoubleBodySlide.ppt");
+        pres.write(dataDir + "DoubleBodySlide.ppt");
 
         /***********************  Adding Header Slide in a Presentation ******************************/
 
@@ -57,7 +57,7 @@ public class AddingSlidesToPresentation
         Slide slide4 = pres.addHeaderSlide();
 
         //Writing the presentation as a PPT file
-        pres.write(dataDir + "AddHeaderSlide.ppt");
+        pres.write(dataDir + "HeaderSlide.ppt");
 
         /***********************  Adding Title Slide in a Presentation ******************************/
 
@@ -68,7 +68,7 @@ public class AddingSlidesToPresentation
         Slide slide5 = pres.addTitleSlide();
 
         //Writing the presentation as a PPT file
-        pres.write(dataDir + "AddTitleSlide.ppt");
+        pres.write(dataDir + "TitleSlide.ppt");
 
         //Printing the status
         System.out.println("Slides added successfully!");
