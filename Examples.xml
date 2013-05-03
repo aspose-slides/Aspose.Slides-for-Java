@@ -334,6 +334,95 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
+                <Example>
+                  <Title>Changing the Position of a Slides</Title>
+                  <Description>If you create a presentation using MS PowerPoint , you would have experienced that whenever you add a new slide to your presentation, it is appended at the end of the presentation by default. Using MS PowerPoint , you can drag a selected slide to any other position of the presentation. Aspose.Slides for Java also allows developers to change the position of a slide within the presentation.
+
+It's very simple to change the position of a slide in the presentation. Just follow the steps below:
+
+- Create an instance of PresentationEx class
+- Obtain the reference of a slide by using its Index
+- Change the SlideNumber of the referenced slide
+- Write the modified presentation as a PPTX file</Description>
+                  <FolderName>ChangingthePositionofaSlides</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Changing the Position of a Slides</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/slidesjava/Changing+the+Position+of+a+Slides</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.out.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting the Background to an Image to Slides</Title>
+                  <Description>Sometimes, developers may need to use an image as the background of the slide. To fulfill such development needs, Aspose.Slides for Java also allows filling the slide background with any image. Please refer to the details given below to use this feature.
+
+To use an image as the background of a slide using Aspose.Slides for Java, please follow the steps below:
+
+- Create an instance of PresentationEx class
+- Set the Background Type of the Slide to OwnBackground
+- Set the FillType of the Slide Background FillFormat to Picture
+- Set the PictureFillMode using the options provided by PictureFillModeEx enum
+- Instantiate ImageEx class with an image that can be used as source picture for the Slide Background using getPictureFillFormat().getPicture().setImage()
+- Write the modified presentation as a PPTX file</Description>
+                  <FolderName>SettingBackgroundImagetoSlides</FolderName>
+                  <Order>6</Order>
+                  <DocLink>
+                    <DisplayName>Setting the Background to an Image to Slides</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/slidesjava/Setting+the+Background+to+an+Image+to+Slides</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\aspose.jpg</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.out.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Creating Slides SVG Image</Title>
+                  <Description>Aspose.Slides for Java is used to create presentation files, complete with slides. These slides can be viewed by opening presentations using Microsoft PowerPoint. But sometimes, developers may also need to view slides as SVG images in their favorite image viewer. In such cases, Aspose.Slides for Java lets you export an individual slide to an SVG image. This article describes how to use this feature.
+
+To generate an SVG image from any desired slide with Aspose.Slides for Java, please follow the steps below:
+
+- Create an instance of the PresentationEx class.
+- Obtain the desired slide's reference by using its ID or index.
+- Get the SVG image in a memory stream.
+- Save the memory stream to file.</Description>
+                  <FolderName>CreatingSlidesSVGImage</FolderName>
+                  <Order>7</Order>
+                  <DocLink>
+                    <DisplayName>Creating Slides SVG Image</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/slidesjava/Creating+Slides+SVG+Image</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo-0.out.svg</Path>
+                    </DataFile>
+                    <DataFile>
+                      <Path>..\Data\demo-1.out.svg</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
               </Examples>
             </Folder>
             <Folder>
