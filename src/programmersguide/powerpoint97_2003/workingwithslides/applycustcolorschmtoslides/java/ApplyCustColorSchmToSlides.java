@@ -21,7 +21,6 @@ public class ApplyCustColorSchmToSlides
         Presentation pres = new Presentation(dataDir + "demo.ppt");
 
         //Set Color at different indices
-
         pres.getMainMaster().setSchemeColor(0, new java.awt.Color(PresetColorEx.Aqua));
         pres.getMainMaster().setSchemeColor(1,  new java.awt.Color(PresetColorEx.Azure));
         pres.getMainMaster().setSchemeColor(2,  new java.awt.Color(PresetColorEx.Bisque));
@@ -33,7 +32,6 @@ public class ApplyCustColorSchmToSlides
         pres.getMainMaster().setSchemeColor(8,  new java.awt.Color(PresetColorEx.Gainsboro));
 
         // Or set scheme color using ColorSchemeIndex enumeration. Use any one option
-
         pres.getMainMaster().setSchemeColor(ColorSchemeIndex.Accent1,  new java.awt.Color(PresetColorEx.Aqua));
         pres.getMainMaster().setSchemeColor(ColorSchemeIndex.Accent2,  new java.awt.Color(PresetColorEx.Azure));
         pres.getMainMaster().setSchemeColor(ColorSchemeIndex.Accent3,  new java.awt.Color(PresetColorEx.Bisque));
