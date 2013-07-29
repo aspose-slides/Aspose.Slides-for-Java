@@ -1457,7 +1457,7 @@ In the following example, we have added the code snippet for adding the slide co
                 </Example>
               </Examples>
             </Folder>
-                        <Folder>
+            <Folder>
               <Title>Working with Shapes</Title>
               <Description>This section contains examples related to addition, formatting, rotating and accessing attributes of shapes in a presentation using Aspose.Slides.</Description>
               <FolderName>WorkingWithShapes</FolderName>
@@ -1711,4 +1711,6 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
       </Folders>
     </Folder>
   </Folders>
+  </Folder>
+ </Folders>
 </Data>
