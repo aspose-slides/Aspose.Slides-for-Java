@@ -473,6 +473,270 @@ To generate an SVG image from any desired slide with Aspose.Slides for Java, ple
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
+                <Example>
+                  <Title>Finding a Shape in a SlideEx</Title>
+                  <Description>All shapes added to the slides have some Alt Text. We suggest developers to use alternative text for finding a specific shape. You can use MS PowerPoint to define the alternative text for objects which you are planning to change in the future.</Description>
+                  <FolderName>FindingShapeInSlideEx</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Finding a Shape in a SlideEx</DisplayName>
+                    <Url>Finding+a+Shape+in+a+SlideEx</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Applying Animations on Shapes inside SlideEx</Title>
+                  <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides also allows developers to apply different kinds of animation effects on different kinds of shapes. There is a separate namespace Aspose.Slides.Pptx.Animation that provides classes to handle the animations on PPTX presentations. In this exampl, we will show how to apply animation effects on shapes.</Description>
+                  <FolderName>ApplyingAnimationsOnShapesInsideSlideEx</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Ing Animations on Shapes inside SlideEx</DisplayName>
+                    <Url>Applying+Animations+on+Shapes+inside+SlideEx</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\AnimExample.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+              <Folders>
+                <Folder>
+                  <Title>Adding Line Shape to SlideEx</Title>
+                  <Description>Aspose.Slides for .NET supports adding different kinds of shapes to the slides. In this section, we will see how to add lines to the slides. Using Aspose.Slides for .NET , developers can not only create simple lines , but some fancy lines can also be drawn on the slides.
+
+This section includes:
+
+1: Adding Plain Line to Slide
+2: Adding Arrow Shaped Line to Slide</Description>
+                  <FolderName>AddingLineShapeToSlideEx</FolderName>
+                  <Order>4</Order>
+                  <Examples>
+                    <Example>
+                      <Title>Adding Plain Line to Slide</Title>
+                      <Description>To add a simple plain line to a selected slide of the presentation, please follow the steps below:
+ 
+1: Create an instance of PresentationEx class
+2: Obtain the reference of a slide by using its Index
+3: Add an AutoShape of Line type using AddAutoShape method exposed by ShapesEx object
+4: Write the modified presentation as a PPTX file
+ 
+In the example given below, we have added a line to the first slide of the presentation.</Description>
+                      <FolderName>AddingPlainLineToSlide</FolderName>
+                      <Order>1</Order>
+                      <DocLink>
+                        <DisplayName>Adding Line Shape to SlideEx</DisplayName>
+                        <Url>Adding+Line+Shape+to+SlideEx</Url>
+                      </DocLink>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\LineShape1.pptx</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Adding Arrow Shaped Line to Slide</Title>
+                      <Description>Aspose.Slides allows developers to configure some properties of the line to make it look more appealing. In this example, we will create an arrow shaped line using Aspose.Slides.</Description>
+                      <FolderName>AddingArrowShapedLineToSlide</FolderName>
+                      <Order>2</Order>
+                      <DocLink>
+                        <DisplayName>Adding Line Shape to SlideEx</DisplayName>
+                        <Url>Adding+Line+Shape+to+SlideEx</Url>
+                      </DocLink>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\LineShape.pptx</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                  </Examples>
+                </Folder>
+              </Folders>
+            </Folder>
+            <Folder>
+              <Title>Working with Charts</Title>
+              <Description>This section includes the following examples:
+
+
+1: Creating a Chart from Scratch
+2: Updating an Existing Chart
+3: Setting Pie Chart Sector Colors
+4: Formatting Chart Entities
+5: Setting Number Format for Chart Data Cell</Description>
+              <FolderName>WorkingWithCharts</FolderName>
+              <Order>4</Order>
+              <Examples>
+                <Example>
+                  <Title>Updating an Existing Chart</Title>
+                  <Description>Aspose.Slides for .NET also facilitates developers to update PowerPoint charts generated through Aspose.Slides or PowerPoint. This topic explains how developers can modify existing charts in slides using Aspose.Slides for .NET.</Description>
+                  <FolderName>UpdatingAnExistingChart</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Updating an Existing Chart</DisplayName>
+                    <Url>Updating+an+Existing+Chart</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\AsposeChart.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\AsposeChartMoodified.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Formatting Chart Entities</Title>
+                  <Description>Aspose.Slides for .NET lets developers add custom charts to their slides from scratch. This example explains how to format different chart entities including chart category and value axis.</Description>
+                  <FolderName>FormattingChartEntities</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Formatting Chart Entities</DisplayName>
+                    <Url>Formatting+Chart+Entities</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\ChartAxis.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting Pie Chart Sector Colors</Title>
+                  <Description>Aspose.Slides for .NET lets developers add custom charts to their slides from scratch. This example explains how to create a pie chart and set different colors for its sectors.</Description>
+                  <FolderName>SettingPieChartSectorColors</FolderName>
+                  <Order>4</Order>
+                  <DocLink>
+                    <DisplayName>Setting Pie Chart Sector Colors</DisplayName>
+                    <Url>Setting+Pie+Chart+Sector+Colors</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\AsposeChart.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>               
+                <Example>
+                  <Title>Setting Number Format for Chart Data Cell</Title>
+                  <Description>Aspose.Slides for .NET lets developers to set chart data cell number. This example demonstrates how to set the chart data number format and possible options.</Description>
+                  <FolderName>SettingNumberFormatForChartDataCell</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Setting Number Format for Chart Data Cell</DisplayName>
+                    <Url>Setting+Number+Format+for+Chart+Data+Cell</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\PresetNumberFormat.pptx</Path>
+                    </DataFile>
+                    <DataFile>
+                      <Path>..\Data\CustomNumberFormat.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+              <Folders>
+                <Folder>
+                  <Title>Creating a Chart from Scratch</Title>
+                  <Description>Aspose.Slides for .NET lets developers add custom charts into slides from scratch. This section includes how to create normal and scatter charts with multiple series from scratch using Aspose.Slides for .NET.</Description>
+                  <FolderName>CreatingChartFromScratch</FolderName>
+                  <Order>1</Order>
+                  <Examples>
+                    <Example>
+                      <Title>Creating Normal Charts</Title>
+                      <Description>Aspose.Slides for .NET has provided the simplest API for creating charts in an easy way.</Description>
+                      <FolderName>CreatingNormalCharts</FolderName>
+                      <Order>1</Order>
+                      <DocLink>
+                        <DisplayName>Creating a Chart from Scratch</DisplayName>
+                        <Url>Creating+a+Chart+from+Scratch</Url>
+                      </DocLink>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\AsposeChart.pptx</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Creating Scattered Chart</Title>
+                      <Description>This example shows how to use Aspose.Slides is used to create a scatter chart with different series markers.</Description>
+                      <FolderName>CreatingScatteredChart</FolderName>
+                      <Order>2</Order>
+                      <DocLink>
+                        <DisplayName>Creating a Chart from Scratch</DisplayName>
+                        <Url>Creating+a+Chart+from+Scratch</Url>
+                      </DocLink>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\AsposeSeriesChart.pptx</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                  </Examples>
+                </Folder>
+              </Folders>
+            </Folder>
+            <Folder>
+              <Title>Working with TablesEx</Title>
+              <Description>This section includes the following examples: 
+
+
+1: Creating a Table from Scratch in SlideEx
+2: Accessing an Existing Table in SlideEx</Description>
+              <FolderName>WorkingWithTablesEx</FolderName>
+              <Order>5</Order>
+              <Examples>
+                <Example>
+                  <Title>Creating a Table from Scratch in SlideEx</Title>
+                  <Description>Aspose.Slides for .NET also facilitates developers to add custom tables in their slides from scratch. This example demonstrates how can developers create and add tables to their slides using Aspose.Slides for .NET.</Description>
+                  <FolderName>CreatingTableFromScratchInSlideEx</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Creating a Table from Scratch in SlideEx</DisplayName>
+                    <Url>Creating+a+Table+from+Scratch+in+SlideEx</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\table.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing an Existing Table in SlideEx</Title>
+                  <Description>Aspose.Slides for .NET allows developers to not only add custom tables in their slides but also access or manage the existing ones. This example demonstrates accessing a table that already exists in a slide.</Description>
+                  <FolderName>AccessingAnExistingTableInSlideEx</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Accessing an Existing Table in SlideEx</DisplayName>
+                    <Url>Accessing+an+Existing+Table+in+SlideEx</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\table.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\table_updated.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
               </Examples>
             </Folder>
           </Folders>
@@ -1193,7 +1457,7 @@ In the following example, we have added the code snippet for adding the slide co
                 </Example>
               </Examples>
             </Folder>
-            <Folder>
+                        <Folder>
               <Title>Working with Shapes</Title>
               <Description>This section contains examples related to addition, formatting, rotating and accessing attributes of shapes in a presentation using Aspose.Slides.</Description>
               <FolderName>WorkingWithShapes</FolderName>
@@ -1224,89 +1488,13 @@ In the following example, we have added the code snippet for adding the slide co
                   <Type>Console</Type>
                 </Example>
                 <Example>
-                  <Title>Adding Line Shape to Slide</Title>
-                  <Description>Aspose.Slides for Java supports adding different kinds of shapes to the slides. In this topic, we will start working with shapes by adding lines to the slides. Using Aspose.Slides for Java, developers can not only create simple lines , but also some fancy lines can be drawn on the slides.
-
-Following types of lines can be added using Aspose.Slides for Java.
-
-- Plain Line
-- Arrow Shaped Line
-
-Plain Line
-To add a simple plain line to a selected slide of the presentation, please follow the steps below:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Position
-- Add a Line shape to the slide by defining its Start and End Points
-- Write the modified presentation as a PPT file
-
-In the example given below, we have added a line to the slide lying at the 2nd position of the presentation.
-
-
-Arrow Shaped Line:
-The line created in the above section is a very simple one. However, Aspose.Slides for Java also allows developers to configure some properties of the line to make it look more appealing. Let us try to configure few properties of a line to make it look like an arrow. Please follow the steps below to do so:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Position
-- Add a Line shape to the slide by defining its Start and End Points. After the line is added, a reference of the line shape is returned that will be used to configure line properties
-- Set the Fore Color of the line
-- Set the Width of the line
-- Set the Line Style to one of the styles offered by Aspose.Slides for Java
-- Set the Dash Style of the line to one of the styles offered by Aspose.Slides for Java
-- Set the Arrow Head Style of the start point of the line
-- Set the Arrow Head Style of the end point of the line
-- Write the modified presentation as a PPT file</Description>
-                  <FolderName>AddingLineShapetoSlide</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Adding Line Shape to Slide</DisplayName>
-                    <Url>Adding Line Shape to Slide</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\demo.out.ppt</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Adding Ellipse Shape to Slide</Title>
-                  <Description>In this topic, we will introduce developers about adding ellipse shapes to their slides using Aspose.Slides for Java. Aspose.Slides for Java provides an easier set of APIs to draw different kinds of shapes with just a few lines of code.
-
-Adding Simple Ellipse in the Slide:
-To add a simple ellipse to a selected slide of the presentation, please follow the steps below:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Index
-- Add an Ellipse shape to the slide by defining its Position (X,Y), Width and Height
-- Write the modified presentation as a PPTX file
-
-In the example given below, we have added an ellipse to the first slide
-
-Adding Formatted Ellipse in the Slide:
-To add a better formatted ellipse to a slide, please follow the steps below:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Position
-- Add an Ellipse shape to the slide by defining its Position (X,Y), Width and Height
-- Set the Fill Type of the ellipse to Gradient
-- Set the Color Type of the Gradient to Two Colors
-- Set the Background Color of the ellipse
-- Set the Foreground Color of the ellipse
-- Set the Fill Angle of the Gradient
-- Rotate the ellipse to some degrees
-- Set the Foreground Color of the ellipse lines
-- Write the modified presentation as a PPT file</Description>
-                  <FolderName>AddingEllipseShapetoSlide</FolderName>
+                  <Title>Formatting Lines of the Shapes</Title>
+                  <Description>It is possible to change the format settings of the lines with which a shape is obtained. For example, you can change the width of the line, modify the color of the line, apply different kinds of styles on the lines etc.</Description>
+                  <FolderName>FormattingLinesOfShapes</FolderName>
                   <Order>3</Order>
                   <DocLink>
-                    <DisplayName>Adding Ellipse Shape to Slide</DisplayName>
-                    <Url>Adding Ellipse Shape to Slide</Url>
+                    <DisplayName>Formatting Lines of the Shapes</DisplayName>
+                    <Url>Formatting+Lines+of+the+Shapes</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -1315,80 +1503,209 @@ To add a better formatted ellipse to a slide, please follow the steps below:
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.out.ppt</Path>
+                      <Path>..\Data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
                 <Example>
-                  <Title>Adding Rectangle Shape to Slide</Title>
-                  <Description>Like previous topics, this one is also about adding a shape and this time the shape we will discuss about is Rectangle . In this topic, we have described that how developers can add simple or formatted rectangles to their slides using Aspose.Slides for Java .
-
-Adding Simple Rectangle in the Slide:
-To add a simple rectangle to a selected slide of the presentation, please follow the steps below:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Position
-- Add a Rectangle shape to the slide by defining its Position (X,Y), Width and Height
-- Write the modified presentation as a PPT file
-
-Adding Formatted Rectangle to Slide:
-To add a formatted rectangle to a slide, please follow the steps below:
-
-- Create an instance of Presentation class
-- Obtain the reference of a slide by using its Position
-- Add a Rectangle shape to the slide by defining its Position (X,Y), Width and Height
-- Set the Fill Type of the rectangle to Pattern
-- Set the Pattern Style of the rectangle to Sphere
-- Set the Background Color of the rectangle
-- Set the Foreground Color of the rectangle
-- Set the Foreground Color of the rectangle lines
-- Set the Width of the rectangle lines
-- Set the Style of the rectangle lines
-- Write the modified presentation as a PPT file</Description>
-                  <FolderName>AddingRectangleShapetoSlide</FolderName>
-                  <Order>4</Order>
-                  <DocLink>
-                    <DisplayName>Adding Rectangle Shape to Slide</DisplayName>
-                    <Url>Adding Rectangle Shape to Slide</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\demo.out.ppt</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Finding a Shape in a Slide</Title>
-                  <Description>It is important to know that PowerPoint Presentation files (PPT) do not have any way to identify shapes on a slide except an internal unique Id. It seems to be difficult for developers to find a shape using its internal unique Id. This topic will describe a simple technique to make it easier to find a specific shape on a slide without using its internal Id.
-
-Finding a Shape on a Slide:
-All shapes added to the slides have some Alternative Text . We suggest developers to use alternative text for finding a specific shape. You can use MS PowerPoint to define the alternative text for objects which you are planning to change in the future:
-
-After setting the alternative text of any desired shape, you can then open that presentation using Aspose.Slides for Java and iterate through all shapes added to a slide. During each iteration, you can check the alternative text of the shape and the shape with the matching alternative text would be the shape required by you.
-
-To demonstrate this technique in a better way, we have created a method, FindShape that does the trick to find a specific shape in a slide and then simply returns that shape.</Description>
-                  <FolderName>FindingaShapeinaSlide</FolderName>
+                  <Title>Filling Shapes with Pattern</Title>
+                  <Description>This example demonstrates how to fill shapes in more attractive styles using patterns. Aspose.Slides for .NET offers more than 45 pre-defined pattern styles that can be used by developers to enrich their presentations.</Description>
+                  <FolderName>FillingShapesWithPattern</FolderName>
                   <Order>5</Order>
                   <DocLink>
-                    <DisplayName>Finding a Shape in a Slide</DisplayName>
-                    <Url>Finding a Shape in a Slide</Url>
+                    <DisplayName>Filling Shapes with Pattern</DisplayName>
+                    <Url>Filling+Shapes+with+Pattern</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
                       <Path>..\Data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\modified.ppt</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Filling Shapes with Texture</Title>
+                  <Description>Like gradient and pattern effects, texture styles are also used to fill shapes with different kinds of effects. Aspose.Slides for .NET offers more than 20 pre-defined texture styles that can be used by developers in their presentations.</Description>
+                  <FolderName>FillingShapesWithTexture</FolderName>
+                  <Order>6</Order>
+                  <DocLink>
+                    <DisplayName>Filling Shapes with Texture</DisplayName>
+                    <Url>Filling+Shapes+with+Texture</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\demo.ppt</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\modified.ppt</Path>
+                    </DataFile>
+                  </OutputFiles>
                   <Type>Console</Type>
                 </Example>
               </Examples>
-            </Folder>
+              <Folders>
+                <Folder>
+                  <Title>Applying Animations on Shapes</Title>
+                  <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides for .NET also allows developers to apply different kinds of animation effects on different kinds of shapes. There are more than 60 pre-defined animation effects provided by Aspose.Slides for .NET. 
+
+This section includes the following examples:
+
+1: Applying Animation Effects
+2: Controlling Animation Order</Description>
+                  <FolderName>ApplyingAnimationsOnShapes</FolderName>
+                  <Order>2</Order>
+                  <Examples>
+                    <Example>
+                      <Title>Applying Animation Effects</Title>
+                      <Description>In this example, we have added a rectangle shape to the slide with the Spiral effect applied on it.</Description>
+                      <FolderName>ApplyingAnimationEffects</FolderName>
+                      <Order>1</Order>
+                      <DocLink>
+                        <DisplayName>Applying Animations on Shapes</DisplayName>
+                        <Url>Applying+Animations+on+Shapes</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Controlling Animation Order</Title>
+                      <Description>In the example, we have added rectangle and ellipse shapes to the slide. Further, we have changed their animation order after applying animation effects on both shapes.</Description>
+                      <FolderName>ControllingAnimationOrder</FolderName>
+                      <Order>2</Order>
+                      <DocLink>
+                        <DisplayName>Applying Animations on Shapes</DisplayName>
+                        <Url>Applying+Animations+on+Shapes</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                  </Examples>
+                </Folder>
+                <Folder>
+                  <Title>Filling Shapes with Gradient</Title>
+                  <Description>This section includes:
+
+1: Using Color Types in Gradient to Fill Shapes
+2: Controlling Degree of Gradient
+3: Adjusting Gradient Fill Angle
+4: Applying Different Gradient Styles</Description>
+                  <FolderName>FillingShapesWithGradient</FolderName>
+                  <Order>4</Order>
+                  <Examples>
+                    <Example>
+                      <Title>Using Color Types in Gradient to Fill Shapes</Title>
+                      <Description>Developers can create gradient effects with One Color or Two Colors to fill shapes using Aspose.Slides for .NET . If developers use One Color to create the gradient effect , the shape is filled with a gradient from the foreground color of the shape to black, white or a shade of gray. 
+
+However, in the case of Two Colors, the shape's fill is faded from one color to the other. If you want to fill your shape with a gradient of Two Colors, you would need to set the foreground color of the shape as the first color and background color as the second one.</Description>
+                      <FolderName>UsingColorTypesInGradientToFillShapes</FolderName>
+                      <Order>1</Order>
+                      <DocLink>
+                        <DisplayName>Filling Shapes with Gradient</DisplayName>
+                        <Url>Filling+Shapes+with+Gradient</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Controlling Degree of Gradient</Title>
+                      <Description>Degree of gradient is only used when a developer wants to use One Color type of gradient. Using Gradient Degree, developers can define the color to which the gradient color will be faded. Gradient Degree is configured by using an integer value ranging from 0 to 20. Each number represents a color.</Description>
+                      <FolderName>ControllingDegreeOfGradient</FolderName>
+                      <Order>2</Order>
+                      <DocLink>
+                        <DisplayName>Filling Shapes with Gradient</DisplayName>
+                        <Url>Filling+Shapes+with+Gradient</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Adjusting Gradient Fill Angle</Title>
+                      <Description>The Gradient Fill Angle is used to adjust the angle at which a gradient is filled. Gradient Fill Angle can be configured by using an integer value ranging from 0 to 179. By default, the fill angle for a gradient is 0, which starts filling the shape from its top and then goes straight down.</Description>
+                      <FolderName>AdjustingGradientFillAngle</FolderName>
+                      <Order>3</Order>
+                      <DocLink>
+                        <DisplayName>Filling Shapes with Gradient</DisplayName>
+                        <Url>Filling+Shapes+with+Gradient</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                    <Example>
+                      <Title>Applying Different Gradient Styles</Title>
+                      <Description>Developers can use 8 different types of gradient styles (offered by Aspose.Slides for .NET ) to apply interesting effects to their gradients. There are two basic gradient styles: From Centerand From Corner. From Center style applies the gradient from the center of the shape whereas the From Corner style fades the gradient from one corner of the shape to the other.</Description>
+                      <FolderName>ApplyingDifferentGradientStyles</FolderName>
+                      <Order>4</Order>
+                      <DocLink>
+                        <DisplayName>Filling Shapes with Gradient</DisplayName>
+                        <Url>Filling+Shapes+with+Gradient</Url>
+                      </DocLink>
+                      <InputFiles>
+                        <DataFile>
+                          <Path>..\Data\demo.ppt</Path>
+                        </DataFile>
+                      </InputFiles>
+                      <OutputFiles>
+                        <DataFile>
+                          <Path>..\Data\modified.ppt</Path>
+                        </DataFile>
+                      </OutputFiles>
+                      <Type>Console</Type>
+                    </Example>
+                  </Examples>
+                </Folder>
           </Folders>
         </Folder>
       </Folders>
