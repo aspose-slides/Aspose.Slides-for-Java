@@ -102,8 +102,6 @@ public class CreatingNormalCharts
         pres.write(dataDir + "AsposeChart.pptx");
 
 
-        // Status
-        System.out.println("Chart created successfully.");
     }
 }
 
