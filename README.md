@@ -1,6 +1,16 @@
-#Aspose.Slides for Java Examples Repository
+##Aspose.Slides for Java Examples Repository
 
 This package contains Java Examples for [Aspose.Slides for Java](http://www.aspose.com/categories/java-components/aspose.slides-for-java/default.aspx).
+<br/><br/>
+<p align="center">
+  <a title="Download Examples Dashboard" href="http://www.aspose.com/community/files/72/java-components/aspose-examples-for-java/default.aspx">
+	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadDasboard-Button-Large.png" />
+  </a>
+  &nbsp;
+  <a title="Download Examples ZIP" href="https://github.com/asposeslides/Aspose_Slides_Java/archive/master.zip">
+	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+  </a>
+</p>
 
 ##How to use the Examples?
 
