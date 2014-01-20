@@ -4,25 +4,25 @@
     <Folder>
       <Title>Programmers Guide</Title>
       <Description>Programmers Guide provides code samples about key programming concepts to build .NET and other applications that use Aspose.Slides.</Description>
-      <FolderName>ProgrammersGuide</FolderName>
+      <FolderName>programmersguide</FolderName>
       <Order>1</Order>
       <Folders>
         <Folder>
           <Title>PowerPoint 2007 Format (PPTX)</Title>
           <Description>Examples for working with Microsift PowerPoint 2007 Documents.</Description>
-          <FolderName>PowerPoint2007</FolderName>
+          <FolderName>powerpoint2007</FolderName>
           <Order>2</Order>
           <Folders>
             <Folder>
               <Title>Working with PresentationEx</Title>
               <Description>Examples related to opening, saving, managing properties, locking, printing of presentations (PPTX format) and convesion to different formats are included in this section.</Description>
-              <FolderName>WorkingWithPresentationEx</FolderName>
+              <FolderName>workingwithpresentationex</FolderName>
               <Order>1</Order>
               <Examples>
                 <Example>
                   <Title>Converting PPTX to PDF</Title>
                   <Description>PDF documents are widely being used as a standard format of exchanging documents between organizations, government sectors and common users etc. So, it may also be required by the developers to convert their presentation files to PDF documents. Realizing this possible requirement, Aspose.Slides for .NET has added the built-in support of converting presentations to PDF documents without using any other component. In this example, this conversion process is explained in detail.</Description>
-                  <FolderName>ConvertingPPTXtoPDF</FolderName>
+                  <FolderName>convertingpptxtopdf</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Converting PPTX to PDF</DisplayName>
@@ -30,15 +30,15 @@
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo1.pdf</Path>
+                      <Path>..\data\demo1.pdf</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo2.pdf</Path>
+                      <Path>..\data\demo2.pdf</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -55,7 +55,7 @@ This example explains how to save a presentation in different ways:
 - Saving a password protected presentation with read access to document properties.
 - Save as read only.
 - Remove write protection.</Description>
-                  <FolderName>SavingAPresentationEx</FolderName>
+                  <FolderName>savingapresentationex</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Saving a PresentationEx</DisplayName>
@@ -63,22 +63,22 @@ This example explains how to save a presentation in different ways:
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\toFile.pptx</Path>
+                      <Path>..\data\toFile.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\toStream.pptx</Path>
+                      <Path>..\data\toStream.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\passwordProtected.pptx</Path>
+                      <Path>..\data\passwordProtected.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\passwordProtectedReadOnlyProperties.pptx</Path>
+                      <Path>..\data\passwordProtectedReadOnlyProperties.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\readOnlyPresentation.pptx</Path>
+                      <Path>..\data\readOnlyPresentation.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\writeProtectionRemoved.pptx</Path>
+                      <Path>..\data\writeProtectionRemoved.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -92,7 +92,7 @@ This example explains how to save a presentation in different ways:
 
 Built-in properties contain general information about the document like document title, author's name, document statistics and so on. Custom properties are those ones, which are defined by the users as Name/Value pairs, where both name and value are defined by the user. Using Aspose.Slides, developers can access and modify the values of built-in properties as well as custom properties. Aspose.Slides provides a class DocumentPropertiesEx that represents the document properties associated with a PPTX presentation file through PresentationEx.DocumentProperties property.
 Developers can use DocumentProperties property exposed by PresentationEx object to access the document properties of the PPTX presentation files as described in this example.</Description>
-                  <FolderName>ManagePresentationExProperties</FolderName>
+                  <FolderName>managepresentationexproperties</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Managing PresentationEx Properties</DisplayName>
@@ -100,15 +100,15 @@ Developers can use DocumentProperties property exposed by PresentationEx object 
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\updatedProperties.pptx</Path>
+                      <Path>..\data\updatedProperties.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\updatedCustomProperties.pptx</Path>
+                      <Path>..\data\updatedCustomProperties.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -116,7 +116,7 @@ Developers can use DocumentProperties property exposed by PresentationEx object 
                 <Example>
                   <Title>Converting PPTX with Notes to Tiff</Title>
                   <Description>TIFF is one of several widely used image formats that Aspose.Slides supports for converting a presentation with notes to images. You can also generate slide thumbnails in the Notes Slide view. This example shows how to generate TIFF images of a presentation in Notes Slide view.</Description>
-                  <FolderName>ConvertPPTXWithNotesToTiff</FolderName>
+                  <FolderName>convertpptxwithnotestotiff</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Converting PPTX with Notes to Tiff</DisplayName>
@@ -124,12 +124,12 @@ Developers can use DocumentProperties property exposed by PresentationEx object 
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\TestNotes.pptx</Path>
+                      <Path>..\data\TestNotes.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\TestNotes.tiff</Path>
+                      <Path>..\data\TestNotes.tiff</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -142,7 +142,7 @@ This example explains how different tiff export options work:
 
 - Converting PPTX Presentation to TIFF with default size.
 - Converting PPTX Presentation to TIFF with custom size.</Description>
-                  <FolderName>ConverPPTXToTIFF</FolderName>
+                  <FolderName>converpptxtotiff</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Converting PPTX to TIFF</DisplayName>
@@ -150,15 +150,15 @@ This example explains how different tiff export options work:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.tiff</Path>
+                      <Path>..\data\demo.tiff</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demoCustomSize.tiff</Path>
+                      <Path>..\data\demoCustomSize.tiff</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -168,7 +168,7 @@ This example explains how different tiff export options work:
                   <Description>XPS format is also widely used for exchange of data. Aspose.Slides takes care of its importance and provides the built-in support for converting a presentation into XPS document.
 
 The Save method exposed by PresentationEx class can be used to convert the whole presentation into XPS document. Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to true or false as per requirement. This example shows how to convert a PPTX presentation into XPS document with and without using options provided by XpsOptions class.</Description>
-                  <FolderName>ConvertPPTXToXPS</FolderName>
+                  <FolderName>convertpptxtoxps</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Converting PPTX to XPS</DisplayName>
@@ -176,15 +176,15 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.xps</Path>
+                      <Path>..\data\output.xps</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\outputWithXPSOptions.xps</Path>
+                      <Path>..\data\outputWithXPSOptions.xps</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -192,7 +192,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Converting PPTX to HTML</Title>
                   <Description>HTML is one of several widely used format for exchanging data. Aspose.Slides provides support for converting a presentation to HTML. This examples shows you how to do this using Aspose.Slides.</Description>
-                  <FolderName>ConvertPPTXToHTML</FolderName>
+                  <FolderName>convertpptxtohtml</FolderName>
                   <Order>7</Order>
                   <DocLink>
                     <DisplayName>Converting PPTX to HTML</DisplayName>
@@ -200,12 +200,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.html</Path>
+                      <Path>..\data\demo.html</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -213,7 +213,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Opening a PresentationEx</Title>
                   <Description>Using Aspose.Slides for .NET, developers can not only create PowerPoint 2007 presentations from scratch but also access or modify the existing ones. In this topic, we will discuss the simplest approach to open and access an existing presentation.</Description>
-                  <FolderName>OpeningPresentationEx</FolderName>
+                  <FolderName>openingpresentationex</FolderName>
                   <Order>8</Order>
                   <DocLink>
                     <DisplayName>Opening a PresentationEx</DisplayName>
@@ -221,7 +221,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <Type>Console</Type>
@@ -229,7 +229,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Accessing OpenDocument Presentation</Title>
                   <Description>Aspose.Slides for .NET now facilitates the developers to access the OpenDocument Presentations (ODP) using PresentationEx class in read only mode. However, you can save the presentation in PPTX format.</Description>
-                  <FolderName>AccessingOpenDocumentPresentation</FolderName>
+                  <FolderName>accessingopendocumentpresentation</FolderName>
                   <Order>9</Order>
                   <DocLink>
                     <DisplayName>Accessing OpenDocument Presentation</DisplayName>
@@ -237,12 +237,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.odp</Path>
+                      <Path>..\data\demo.odp</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\Aspose.pptx</Path>
+                      <Path>..\data\Aspose.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -252,13 +252,13 @@ The Save method exposed by PresentationEx class can be used to convert the whole
             <Folder>
               <Title>Working with Slides in PresentationEx</Title>
               <Description>This section contains examples for addition, accessing, removal, cloning and managing slides of a PresentationEx (PPTX) presentations.</Description>
-              <FolderName>WorkingWithSlidesInPresentationEx</FolderName>
+              <FolderName>workingwithslidesinpresentationex</FolderName>
               <Order>2</Order>
               <Examples>
                 <Example>
                   <Title>Creating Slides Thumbnail Image</Title>
                   <Description>Aspose.Slides for .NET is used to create presentation files containing slides. These slides can be viewed by opening presentation files using Microsoft PowerPoint. But sometimes, developers may need to view slides as images using their favorite image viewer. In such cases, Aspose.Slides for .NET help you generate thumbnail images of the slides. Using this feature is described in detail in this example.</Description>
-                  <FolderName>CreateSlideThumbnail</FolderName>
+                  <FolderName>createslidethumbnail</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Creating Slides Thumbnail Image</DisplayName>
@@ -266,12 +266,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\thumbnail.jpg</Path>
+                      <Path>..\data\thumbnail.jpg</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -279,7 +279,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Adding Slides to PresentationEx</Title>
                   <Description>Before talking about adding slides to the presentation files, let us discuss some facts about the slides. Each PowerPoin t presentation file contains Master / Layout slide and other Normal slides. It means that a presentation file contains at least one or more slides. It is important to know that presentation files without slides are not supported by Aspose.Slides for .NET. Each slide has unique Id and all the Normal Slides are arranged in an order specified by the zero based index.</Description>
-                  <FolderName>AddingSlidesToPresentationEx</FolderName>
+                  <FolderName>addingslidestopresentationex</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Adding Slides to PresentationEx</DisplayName>
@@ -287,7 +287,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\EmptySlide.pptx</Path>
+                      <Path>..\data\EmptySlide.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -295,7 +295,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Removing Slides from a PresentationEx</Title>
                   <Description>Sometimes, developers may need to remove a slide from the presentation due to any reason. Aspose.Slides for .NET offers few methods to do so. In this topic, we will explore these methods to accomplish this task.</Description>
-                  <FolderName>RemovingSlidesFromPresentationEx</FolderName>
+                  <FolderName>removingslidesfrompresentationex</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Removing Slides from a PresentationEx</DisplayName>
@@ -303,12 +303,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.pptx</Path>
+                      <Path>..\data\modified.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -316,7 +316,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Cloning Slides in PresentationEx</Title>
                   <Description>Cloning is the process of making an exact copy or replica of something. Aspose.Slides for .NET also makes it possible to make a copy or clone of any slide and then insert s that cloned slide to the current or any other opened presentation. The process of slide cloning creates a new slide that can be modified by developers without changing the original slide. In this topic, we will learn how to perform slide cloning.</Description>
-                  <FolderName>CloningSlidesInPresentationEx</FolderName>
+                  <FolderName>cloningslidesinpresentationex</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Cloning Slides in PresentationEx</DisplayName>
@@ -324,12 +324,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo_cloned.pptx</Path>
+                      <Path>..\data\demo_cloned.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -339,13 +339,13 @@ The Save method exposed by PresentationEx class can be used to convert the whole
             <Folder>
               <Title>Working with ShapesEx</Title>
               <Description>This section contains examples related to addition, formatting, rotating and accessing attributes of shapes in a presentationEx using Aspose.Slides.</Description>
-              <FolderName>WorkingWithShapesEx</FolderName>
+              <FolderName>workingwithshapesex</FolderName>
               <Order>3</Order>
               <Examples>
                 <Example>
                   <Title>Adding Picture Frame to SlideEx</Title>
                   <Description>Picture frame is also one of the shapes offered by Aspose.Slides for .NET. Adding picture frame to a slide is bit trickier than simple shapes. A picture frame is like a picture in a frame. You can add any desired picture to your slide as a picture frame. In this example addition of picture frame to a slide is done.</Description>
-                  <FolderName>AddPictureFrameToSlideEx</FolderName>
+                  <FolderName>addpictureframetoslideex</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Adding Picture Frame to SlideEx</DisplayName>
@@ -353,12 +353,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\asp.jpg</Path>
+                      <Path>..\data\asp.jpg</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\RectPicFrame.pptx</Path>
+                      <Path>..\data\RectPicFrame.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -366,7 +366,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Filling ShapesEx with Picture</Title>
                   <Description>If a developer needs to fill a shape with an image of his own choice then Aspose.Slides gives full freedom to its users to fill a shape with any desired image. In this example, filling a shape with a picture is performed using Aspose.Slides in a very easy way.</Description>
-                  <FolderName>FillShapeExWithPicture</FolderName>
+                  <FolderName>fillshapeexwithpicture</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Filling ShapesEx with Picture</DisplayName>
@@ -374,12 +374,12 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\asp.jpg</Path>
+                      <Path>..\data\asp.jpg</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\RectShpPic.pptx</Path>
+                      <Path>..\data\RectShpPic.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -387,7 +387,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Finding a Shape in a SlideEx</Title>
                   <Description>All shapes added to the slides have some Alt Text. We suggest developers to use alternative text for finding a specific shape. You can use MS PowerPoint to define the alternative text for objects which you are planning to change in the future.</Description>
-                  <FolderName>FindingShapeInSlideEx</FolderName>
+                  <FolderName>findingshapeinslideex</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Finding a Shape in a SlideEx</DisplayName>
@@ -395,7 +395,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <Type>Console</Type>
@@ -403,7 +403,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                 <Example>
                   <Title>Applying Animations on Shapes inside SlideEx</Title>
                   <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides also allows developers to apply different kinds of animation effects on different kinds of shapes. There is a separate namespace Aspose.Slides.Pptx.Animation that provides classes to handle the animations on PPTX presentations. In this exampl, we will show how to apply animation effects on shapes.</Description>
-                  <FolderName>ApplyingAnimationsOnShapesInsideSlideEx</FolderName>
+                  <FolderName>applyinganimationsonshapesinsideslideex</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Ing Animations on Shapes inside SlideEx</DisplayName>
@@ -411,7 +411,7 @@ The Save method exposed by PresentationEx class can be used to convert the whole
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\AnimExample.pptx</Path>
+                      <Path>..\data\AnimExample.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -426,7 +426,7 @@ This section includes:
 
 1: Adding Plain Line to Slide
 2: Adding Arrow Shaped Line to Slide</Description>
-                  <FolderName>AddingLineShapeToSlideEx</FolderName>
+                  <FolderName>addinglineshapetoslideex</FolderName>
                   <Order>4</Order>
                   <Examples>
                     <Example>
@@ -439,7 +439,7 @@ This section includes:
 4: Write the modified presentation as a PPTX file
  
 In the example given below, we have added a line to the first slide of the presentation.</Description>
-                      <FolderName>AddingPlainLineToSlide</FolderName>
+                      <FolderName>addingplainlinetoslide</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Adding Line Shape to SlideEx</DisplayName>
@@ -447,7 +447,7 @@ In the example given below, we have added a line to the first slide of the prese
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\LineShape1.pptx</Path>
+                          <Path>..\data\LineShape1.pptx</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -455,7 +455,7 @@ In the example given below, we have added a line to the first slide of the prese
                     <Example>
                       <Title>Adding Arrow Shaped Line to Slide</Title>
                       <Description>Aspose.Slides allows developers to configure some properties of the line to make it look more appealing. In this example, we will create an arrow shaped line using Aspose.Slides.</Description>
-                      <FolderName>AddingArrowShapedLineToSlide</FolderName>
+                      <FolderName>addingarrowshapedlinetoslide</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Adding Line Shape to SlideEx</DisplayName>
@@ -463,7 +463,7 @@ In the example given below, we have added a line to the first slide of the prese
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\LineShape.pptx</Path>
+                          <Path>..\data\LineShape.pptx</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -483,13 +483,13 @@ In the example given below, we have added a line to the first slide of the prese
 4: Formatting Chart Entities
 5: Adding Chart Trend Lines
 6: Setting Number Format for Chart Data Cell</Description>
-              <FolderName>WorkingWithCharts</FolderName>
+              <FolderName>workingwithcharts</FolderName>
               <Order>4</Order>
               <Examples>
                 <Example>
                   <Title>Updating an Existing Chart</Title>
                   <Description>Aspose.Slides for .NET also facilitates developers to update PowerPoint charts generated through Aspose.Slides or PowerPoint. This topic explains how developers can modify existing charts in slides using Aspose.Slides for .NET.</Description>
-                  <FolderName>UpdatingAnExistingChart</FolderName>
+                  <FolderName>updatinganexistingchart</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Updating an Existing Chart</DisplayName>
@@ -497,12 +497,12 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\AsposeChart.pptx</Path>
+                      <Path>..\data\AsposeChart.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\AsposeChartMoodified.pptx</Path>
+                      <Path>..\data\AsposeChartMoodified.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -510,7 +510,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Formatting Chart Entities</Title>
                   <Description>Aspose.Slides for .NET lets developers add custom charts to their slides from scratch. This example explains how to format different chart entities including chart category and value axis.</Description>
-                  <FolderName>FormattingChartEntities</FolderName>
+                  <FolderName>formattingchartentities</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Formatting Chart Entities</DisplayName>
@@ -518,7 +518,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\ChartAxis.pptx</Path>
+                      <Path>..\data\ChartAxis.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -526,7 +526,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Setting Pie Chart Sector Colors</Title>
                   <Description>Aspose.Slides for .NET lets developers add custom charts to their slides from scratch. This example explains how to create a pie chart and set different colors for its sectors.</Description>
-                  <FolderName>SettingPieChartSectorColors</FolderName>
+                  <FolderName>settingpiechartsectorcolors</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Setting Pie Chart Sector Colors</DisplayName>
@@ -534,7 +534,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\AsposeChart.pptx</Path>
+                      <Path>..\data\AsposeChart.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -542,7 +542,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Adding Chart Trend Lines</Title>
                   <Description>Aspose.Slides for .NET lets developers add the trend lines for the chart by adding them from scratch. This example demonstrates how to add different chart trend lines.</Description>
-                  <FolderName>AddingChartTrendLines</FolderName>
+                  <FolderName>addingcharttrendlines</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Adding Chart Trend Lines</DisplayName>
@@ -550,7 +550,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\TrendLines.pptx</Path>
+                      <Path>..\data\TrendLines.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -558,7 +558,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Setting Number Format for Chart Data Cell</Title>
                   <Description>Aspose.Slides for .NET lets developers to set chart data cell number. This example demonstrates how to set the chart data number format and possible options.</Description>
-                  <FolderName>SettingNumberFormatForChartDataCell</FolderName>
+                  <FolderName>settingnumberformatforchartdatacell</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Setting Number Format for Chart Data Cell</DisplayName>
@@ -566,10 +566,10 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\PresetNumberFormat.pptx</Path>
+                      <Path>..\data\PresetNumberFormat.pptx</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\CustomNumberFormat.pptx</Path>
+                      <Path>..\data\CustomNumberFormat.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -579,13 +579,13 @@ In the example given below, we have added a line to the first slide of the prese
                 <Folder>
                   <Title>Creating a Chart from Scratch</Title>
                   <Description>Aspose.Slides for .NET lets developers add custom charts into slides from scratch. This section includes how to create normal and scatter charts with multiple series from scratch using Aspose.Slides for .NET.</Description>
-                  <FolderName>CreatingChartFromScratch</FolderName>
+                  <FolderName>creatingchartfromscratch</FolderName>
                   <Order>1</Order>
                   <Examples>
                     <Example>
                       <Title>Creating Normal Charts</Title>
                       <Description>Aspose.Slides for .NET has provided the simplest API for creating charts in an easy way.</Description>
-                      <FolderName>CreatingNormalCharts</FolderName>
+                      <FolderName>creatingnormalcharts</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Creating a Chart from Scratch</DisplayName>
@@ -593,7 +593,7 @@ In the example given below, we have added a line to the first slide of the prese
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\AsposeChart.pptx</Path>
+                          <Path>..\data\AsposeChart.pptx</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -601,7 +601,7 @@ In the example given below, we have added a line to the first slide of the prese
                     <Example>
                       <Title>Creating Scattered Chart</Title>
                       <Description>This example shows how to use Aspose.Slides is used to create a scatter chart with different series markers.</Description>
-                      <FolderName>CreatingScatteredChart</FolderName>
+                      <FolderName>creatingscatteredchart</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Creating a Chart from Scratch</DisplayName>
@@ -609,7 +609,7 @@ In the example given below, we have added a line to the first slide of the prese
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\AsposeSeriesChart.pptx</Path>
+                          <Path>..\data\AsposeSeriesChart.pptx</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -625,13 +625,13 @@ In the example given below, we have added a line to the first slide of the prese
 
 1: Creating a Table from Scratch in SlideEx
 2: Accessing an Existing Table in SlideEx</Description>
-              <FolderName>WorkingWithTablesEx</FolderName>
+              <FolderName>workingwithtablesex</FolderName>
               <Order>5</Order>
               <Examples>
                 <Example>
                   <Title>Creating a Table from Scratch in SlideEx</Title>
                   <Description>Aspose.Slides for .NET also facilitates developers to add custom tables in their slides from scratch. This example demonstrates how can developers create and add tables to their slides using Aspose.Slides for .NET.</Description>
-                  <FolderName>CreatingTableFromScratchInSlideEx</FolderName>
+                  <FolderName>creatingtablefromscratchinslideex</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Creating a Table from Scratch in SlideEx</DisplayName>
@@ -639,7 +639,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\table.pptx</Path>
+                      <Path>..\data\table.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -647,7 +647,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Accessing an Existing Table in SlideEx</Title>
                   <Description>Aspose.Slides for .NET allows developers to not only add custom tables in their slides but also access or manage the existing ones. This example demonstrates accessing a table that already exists in a slide.</Description>
-                  <FolderName>AccessingAnExistingTableInSlideEx</FolderName>
+                  <FolderName>accessinganexistingtableinslideex</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Accessing an Existing Table in SlideEx</DisplayName>
@@ -655,12 +655,12 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\table.pptx</Path>
+                      <Path>..\data\table.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\table_updated.pptx</Path>
+                      <Path>..\data\table_updated.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -683,13 +683,13 @@ In the example given below, we have added a line to the first slide of the prese
 10: Importing and Exporting HTML Text in PPTX
 11: Using Custom Fonts without Installing them
 12: Using Default Fonts for Rendering Presentation</Description>
-              <FolderName>WorkingWithTextInPresentationEx</FolderName>
+              <FolderName>workingwithtextinpresentationex</FolderName>
               <Order>6</Order>
               <Examples>
                 <Example>
                   <Title>Replacing Text in a Placeholder</Title>
                   <Description>Using Aspose.Slides, developers can also find and modify a specific Placeholder present in a slide. In this topic, we are going to demonstrate with the help of an example that how the text contained inside a Placeholder can be replaced or modified using Aspose.Slides.</Description>
-                  <FolderName>ReplacingTextInPlaceholder</FolderName>
+                  <FolderName>replacingtextinplaceholder</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Replacing Text in a Placeholder</DisplayName>
@@ -697,12 +697,12 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -710,7 +710,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Creating a TextBox on SlideEx</Title>
                   <Description>Using Aspose.Slides, developers can create TextBox on a Slide in the Presentation. All you have to do is to add an AutoShape of Rectangle type and call the AddTextFrame method exposed by AutoShapeEX object.</Description>
-                  <FolderName>CreatingTextBoxOnSlideEx</FolderName>
+                  <FolderName>creatingtextboxonslideex</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Creating a TextBox on SlideEx</DisplayName>
@@ -718,7 +718,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -726,7 +726,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Creating TextBox with Hyperlink</Title>
                   <Description>In this example, we will create a TextBox with a Hyperlink. You will have to instantiate HyperlinkEx class and assign it to the desired portion of the TextFrame associated with the TextBox.</Description>
-                  <FolderName>CreatingTextBoxWithHyperlink</FolderName>
+                  <FolderName>creatingtextboxwithhyperlink</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Creating TextBox with Hyperlink</DisplayName>
@@ -734,7 +734,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -742,7 +742,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Managing Paragraphs Alignment</Title>
                   <Description>Text formatting is one of the key elements while creating any kind of documents or presentations. We know that Aspose.Slides supports adding text to slides but in this example, we will see that how can we control the alignment of the text paragraphs in a slide.</Description>
-                  <FolderName>ManagingParagraphsAlignment</FolderName>
+                  <FolderName>managingparagraphsalignment</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Managing Paragraphs Alignment</DisplayName>
@@ -750,12 +750,12 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -763,7 +763,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Applying Shadow Effects on SlideEx Text</Title>
                   <Description>Aspose.Slides provides OuterShadow class in order to apply shadow effects on the text carried by TextFrame. This class provides a number of properties for handling the shadow effects.</Description>
-                  <FolderName>ApplyingShadowEffects</FolderName>
+                  <FolderName>applyingshadoweffects</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Applying Shadow Effects on SlideEx Text</DisplayName>
@@ -771,7 +771,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -779,7 +779,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Managing Font Related Properties</Title>
                   <Description>Presentations usually contain both text and images. The text can be formatted in various way, either to highlight specific sections and words, or to conform with corporate styles. Text formatting helps users vary the look and feel of the presentation content. This example shows how to use Aspose.Slides to configure the font properties of paragraphs of text on slides.</Description>
-                  <FolderName>ManagingFontRelatedProperties</FolderName>
+                  <FolderName>managingfontrelatedproperties</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Managing Font Related Properties</DisplayName>
@@ -787,12 +787,12 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.pptx</Path>
+                      <Path>..\data\demo.pptx</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -800,7 +800,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Managing Font Family of Text</Title>
                   <Description>This example shows how to use Aspose.Slides to create a textbox with some text and then define a particular font, and various other properties of the font family category.</Description>
-                  <FolderName>ManagingFontFamilyOfText</FolderName>
+                  <FolderName>managingfontfamilyoftext</FolderName>
                   <Order>7</Order>
                   <DocLink>
                     <DisplayName>Managing Font Family of Text</DisplayName>
@@ -808,7 +808,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -816,7 +816,7 @@ In the example given below, we have added a line to the first slide of the prese
                 <Example>
                   <Title>Managing Multiple Paragraphs having Multiple Portions</Title>
                   <Description>A TextFameEx object can have one or more Paragraphs (every paragraph is created through a carriage return), that is a collection of ParagraphEx objects. Furthermore, a ParagraphEx object can have one or more Portions (a collection of PortionEx objects. A PortionEx object manages text and its formatting properties. So, it means that ParagraphEx object has capacity to handle text with different formatting properties through its underlying PortionEx objects.</Description>
-                  <FolderName>ManagingMultipleParagraphs</FolderName>
+                  <FolderName>managingmultipleparagraphs</FolderName>
                   <Order>8</Order>
                   <DocLink>
                     <DisplayName>Managing Multiple Paragraphs having Multiple Portions</DisplayName>
@@ -824,7 +824,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\output.pptx</Path>
+                      <Path>..\data\output.pptx</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -836,19 +836,19 @@ In the example given below, we have added a line to the first slide of the prese
         <Folder>
           <Title>PowerPoint 97 - 2003 Format (PPT)</Title>
           <Description>Examples for working with Microsoft PowerPoint 97-2003 documents</Description>
-          <FolderName>PowerPoint97_2003</FolderName>
+          <FolderName>powerpoint97_2003</FolderName>
           <Order>1</Order>
           <Folders>
             <Folder>
               <Title>Introduction</Title>
               <Description>Examples introducing the use of Aspose.Slides in your application.</Description>
-              <FolderName>Introduction</FolderName>
+              <FolderName>introduction</FolderName>
               <Order>1</Order>
               <Examples>
                 <Example>
                   <Title>Hello World Application</Title>
                   <Description>Example for creating a PowerPoint file having Hello World text at a specified position of the slide.</Description>
-                  <FolderName>HelloWorldApplication</FolderName>
+                  <FolderName>helloworldapplication</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Hello World Application using Aspose.Slides for .NET</DisplayName>
@@ -856,7 +856,7 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\hello.ppt</Path>
+                      <Path>..\data\hello.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -866,13 +866,13 @@ In the example given below, we have added a line to the first slide of the prese
             <Folder>
               <Title>Working with Presentation</Title>
               <Description>Examples related to opening, saving, managing properties, locking, printing of presentations (PPT format) and convesion to different formats are included in this section.</Description>
-              <FolderName>WorkingWithPresentation</FolderName>
+              <FolderName>workingwithpresentation</FolderName>
               <Order>2</Order>
               <Examples>
                 <Example>
                   <Title>Converting to PDF File</Title>
                   <Description>PDF documents are widely used as a standard format of exchanging documents between organizations, government sectors and common users etc. So, it may also be required by the developers to convert their presentation files to PDF documents. Realizing this possible requirement, Aspose.Slides for .NET has added the built-in support of converting presentations to PDF documents without using any other component. This example explains the conversion of presentation to PDF using default and custom PDF options.</Description>
-                  <FolderName>ConvertingToPDFFile</FolderName>
+                  <FolderName>convertingtopdffile</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Converting to PDF File</DisplayName>
@@ -880,15 +880,15 @@ In the example given below, we have added a line to the first slide of the prese
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo1.pdf</Path>
+                      <Path>..\data\demo1.pdf</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo2.pdf</Path>
+                      <Path>..\data\demo2.pdf</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -901,7 +901,7 @@ In the example given below, we have added a line to the first slide of the prese
 - User Defined (Custom) Properties
 
 Built-in properties contain general information about the document like document title, author's name etc . Custom properties are defined by the users as Name/Value pairs, where both name and value are defined by the user. Using Aspose.Slides, developers can access and modify the values of the built-in as well as custom properties. This example focuses on setting up the properties of a presentation using Aspose.Slides</Description>
-                  <FolderName>ManagingPresentationProperties</FolderName>
+                  <FolderName>managingpresentationproperties</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Managing Presentation Properties</DisplayName>
@@ -909,15 +909,15 @@ Built-in properties contain general information about the document like document
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\DemoProps.ppt</Path>
+                      <Path>..\data\DemoProps.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -933,7 +933,7 @@ The Shape class exposes a Protection property that can be used to apply ten diff
 - Loop through all the Shapes in each Slide
 - Lock each Shape element using the Protection property exposed by Shape object
 - Finally, write the PPT file using the Write method exposed by Presentation object</Description>
-                  <FolderName>LockingAPresentation</FolderName>
+                  <FolderName>lockingapresentation</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Locking a Presentation</DisplayName>
@@ -941,12 +941,12 @@ The Shape class exposes a Protection property that can be used to apply ten diff
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demoLock.ppt</Path>
+                      <Path>..\data\demoLock.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -956,7 +956,7 @@ The Shape class exposes a Protection property that can be used to apply ten diff
                   <Description>TIFF format is known by its flexibility to accommodate multipage images and data. Keeping in view the importance and popularity of TIFF format, Aspose.Slides provides the support for converting presentations into TIFF document.
 
 The Save method exposed by Presentation class can be called by developers to convert the whole presentation into TIFF document. Further, Tiff Options class exposes ImageSize property enabling the developer to define the size of the image if required. This example shows how to convert a presentation into TIFF document with default options and with customized image size using TiffOptions class.</Description>
-                  <FolderName>ConvertingToTIFFFile</FolderName>
+                  <FolderName>convertingtotifffile</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Converting to TIFF File</DisplayName>
@@ -964,15 +964,15 @@ The Save method exposed by Presentation class can be called by developers to con
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo1.tiff</Path>
+                      <Path>..\data\demo1.tiff</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo2.tiff</Path>
+                      <Path>..\data\demo2.tiff</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -982,7 +982,7 @@ The Save method exposed by Presentation class can be called by developers to con
                   <Description>XPS format is also widely used for exchange of data, therefore Aspose.Slides takes care of its importance and provides the built-in support for converting a presentation into XPS document.
 
 The Save method exposed by Presentation class that can be used to convert the whole presentation into XPS document. Further, Xps Options class exposes SaveMetafileAsPng property that can be set to true or false as per requirement. This example shows how to convert a presentation into XPS document with and without using options provided by XpsOptions class.</Description>
-                  <FolderName>ConvertingToXPSFile</FolderName>
+                  <FolderName>convertingtoxpsfile</FolderName>
                   <Order>7</Order>
                   <DocLink>
                     <DisplayName>Converting to XPS File</DisplayName>
@@ -990,15 +990,15 @@ The Save method exposed by Presentation class that can be used to convert the wh
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo1.xps</Path>
+                      <Path>..\data\demo1.xps</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo2.xps</Path>
+                      <Path>..\data\demo2.xps</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1011,7 +1011,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
 
 - Create an instance of Presentation class to load a presentation that is to be printed
 - Call the Print method with no parameters as exposed by the Presentation object</Description>
-                  <FolderName>PrintingAPresentation</FolderName>
+                  <FolderName>printingapresentation</FolderName>
                   <Order>8</Order>
                   <DocLink>
                     <DisplayName>Printing a Presentation</DisplayName>
@@ -1019,7 +1019,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <Type>Console</Type>
@@ -1029,13 +1029,13 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                 <Folder>
                   <Title>Opening a Presentation</Title>
                   <Description>Examples to explain opening of a presentation directly from your code using Aspose.Slides.</Description>
-                  <FolderName>OpenPresentation</FolderName>
+                  <FolderName>openpresentation</FolderName>
                   <Order>1</Order>
                   <Examples>
                     <Example>
                       <Title>Open Simple Presentation</Title>
                       <Description>Example for opening a simple presentation using Aspose.Slides</Description>
-                      <FolderName>OpenSimple</FolderName>
+                      <FolderName>opensimple</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Opening a Presentation</DisplayName>
@@ -1043,7 +1043,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\simple.ppt</Path>
+                          <Path>..\data\simple.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <Type>Console</Type>
@@ -1051,7 +1051,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                     <Example>
                       <Title>Open Password Protected Presentation</Title>
                       <Description>In this example, password protected presentation is accessed using LoadOptions class object to set the password and then the Presentation class to open the presentation.</Description>
-                      <FolderName>OpenWithPassword</FolderName>
+                      <FolderName>openwithpassword</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Opening a Presentation</DisplayName>
@@ -1059,7 +1059,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\simplePasswordProtected.ppt</Path>
+                          <Path>..\data\simplePasswordProtected.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <Type>Console</Type>
@@ -1069,13 +1069,13 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                 <Folder>
                   <Title>Saving a Presentation</Title>
                   <Description>Whether you are creating a presentation from scratch or want to modify an existing one, you would like to save your presentation after your work is finished. Using Aspose.Slides developers can either save their presentation as a file or stream. This example implements both of these approaches in detail.</Description>
-                  <FolderName>SavePresentation</FolderName>
+                  <FolderName>savepresentation</FolderName>
                   <Order>2</Order>
                   <Examples>
                     <Example>
                       <Title>Save Presentation to File</Title>
                       <Description>Developers can save presentations to files by calling the Write method of the Presentation class. For this, developers can simply pass the file name to the Write method exposed by Presentation class as a string as explained in the example.</Description>
-                      <FolderName>SavePresentationToFile</FolderName>
+                      <FolderName>savepresentationtofile</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Saving a Presentation</DisplayName>
@@ -1083,7 +1083,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1096,7 +1096,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
 - Append the Header to contain the file name
 - Write the presentation to the Stream
 - Close the Http Response</Description>
-                      <FolderName>SavePresentationToStream</FolderName>
+                      <FolderName>savepresentationtostream</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Saving a Presentation</DisplayName>
@@ -1104,7 +1104,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\output.ppt</Path>
+                          <Path>..\data\output.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1116,13 +1116,13 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
             <Folder>
               <Title>Working with Slides</Title>
               <Description>This sectiion contains examples related to addition, removal, cloning, managing transitions and accessing attributes etc. of the slides in a presentation using Aspose.Slides.</Description>
-              <FolderName>WorkingWithSlides</FolderName>
+              <FolderName>workingwithslides</FolderName>
               <Order>3</Order>
               <Examples>
                 <Example>
                   <Title>Creating Slide Thumbnail Image</Title>
                   <Description>Spose.Slides for .NET is used to create presentation files containing slides. These slides can be viewed by opening presentation files using MS PowerPoint . But sometimes, developers may also need to view these slides as images using their favorite image viewers. In such cases, Aspose.Slides for .NET provides the feature to generate thumbnail images of the slides. The usage of this feature is described in this example in detail.</Description>
-                  <FolderName>CreateSlideThumbnail</FolderName>
+                  <FolderName>createslidethumbnail</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Creating Slide Thumbnail Image</DisplayName>
@@ -1130,12 +1130,12 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\thumbnail.jpg</Path>
+                      <Path>..\data\thumbnail.jpg</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1149,7 +1149,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
 3: Add Double Body Slide to Presentation
 4: Add Header Slide to Presentation
 5: Add Title Slide to Presentation</Description>
-                  <FolderName>AddingSlidesToPresentation</FolderName>
+                  <FolderName>addingslidestopresentation</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Adding Slides to Presentation</DisplayName>
@@ -1157,24 +1157,24 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\BodySlide.ppt</Path>
+                      <Path>..\data\BodySlide.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\DoubleBodySlide.ppt</Path>
+                      <Path>..\data\DoubleBodySlide.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\EmptySlide.ppt</Path>
+                      <Path>..\data\EmptySlide.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\HeaderSlide.ppt</Path>
+                      <Path>..\data\HeaderSlide.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\TitleSlide.ppt</Path>
+                      <Path>..\data\TitleSlide.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1182,7 +1182,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                 <Example>
                   <Title>Changing the Position of a Slide</Title>
                   <Description>If you create a presentation using MS PowerPoint , you would have experienced , when ever you add a new slide to your presentation, it is appended at the end of the presentation by default. Using MS PowerPoint , you can drag a selected slide to any other position of the presentation. Aspose.Slides for .NET also allow developers to change the position of a slide within the presentation.</Description>
-                  <FolderName>ChangingPositionOfSlide</FolderName>
+                  <FolderName>changingpositionofslide</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Changing the Position of a Slide</DisplayName>
@@ -1190,12 +1190,12 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1206,7 +1206,7 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
 
 1: Using Slide Reference
 2: Using Slide Index</Description>
-                  <FolderName>RemovingSlidesFromPresentation</FolderName>
+                  <FolderName>removingslidesfrompresentation</FolderName>
                   <Order>4</Order>
                   <DocLink>
                     <DisplayName>Removing Slides from a Presentation</DisplayName>
@@ -1214,12 +1214,12 @@ Printing of the presentation to the default printer is quite simple in Aspose.Sl
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1231,7 +1231,7 @@ This article explains how to clone presentation slides in different ways:
 
 1: Cloning in same Presentation
 2: Cloning in another Presentation</Description>
-                  <FolderName>CloningASlide</FolderName>
+                  <FolderName>cloningaslide</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Cloning a Slide</DisplayName>
@@ -1239,18 +1239,18 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo2.ppt</Path>
+                      <Path>..\data\demo2.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\CloneSlide1.ppt</Path>
+                      <Path>..\data\CloneSlide1.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\CloneSlide2.ppt</Path>
+                      <Path>..\data\CloneSlide2.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1258,7 +1258,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Setting the Background Color</Title>
                   <Description>In this example, we will see how to set the background color of a slide. We know that Aspose.Slides for .NET may contain two types of slides: Master Slide and Normal Slide . It is possible to change the background colors of both types of slides.</Description>
-                  <FolderName>SettingBackgroundColor</FolderName>
+                  <FolderName>settingbackgroundcolor</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Setting the Background Color</DisplayName>
@@ -1266,15 +1266,15 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\MasterSlide.ppt</Path>
+                      <Path>..\data\MasterSlide.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\NormalSlide.ppt</Path>
+                      <Path>..\data\NormalSlide.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1282,7 +1282,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Setting the Background Color to a Gradient</Title>
                   <Description>Gradient is a graphic effect consisting of a gradual change in color. It is great for creating depth and highlights to sections of the images. It is possible to apply gradient effect on the background of a slide using Aspose.Slides for .NET that will be explained in the remaining discussion of this topic.</Description>
-                  <FolderName>SettingBackgroundColorToGradient</FolderName>
+                  <FolderName>settingbackgroundcolortogradient</FolderName>
                   <Order>7</Order>
                   <DocLink>
                     <DisplayName>Setting the Background Color to a Gradient</DisplayName>
@@ -1290,12 +1290,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1303,7 +1303,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Setting the Background to a Pattern</Title>
                   <Description>Aspose.Slides provides feature to applu a pattern style on the background of a slide. Aspose.Slides offer many  types of pattern styles that can be used by developers.</Description>
-                  <FolderName>SettingBackgroundToPattern</FolderName>
+                  <FolderName>settingbackgroundtopattern</FolderName>
                   <Order>8</Order>
                   <DocLink>
                     <DisplayName>Setting the Background to a Pattern</DisplayName>
@@ -1311,12 +1311,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1324,7 +1324,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Setting the Background to an Image</Title>
                   <Description>Sometimes, developers may need to use an image as the background of the slide. To fulfill such development needs, Aspose.Slides for .NET also provides functionality to fill the slide background with any image</Description>
-                  <FolderName>SettingBackgroundToImage</FolderName>
+                  <FolderName>settingbackgroundtoimage</FolderName>
                   <Order>9</Order>
                   <DocLink>
                     <DisplayName>Setting the Background to an Image</DisplayName>
@@ -1332,15 +1332,15 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\logo.jpg</Path>
+                      <Path>..\data\logo.jpg</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1348,7 +1348,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Creating Shape Thumbnail Image</Title>
                   <Description>Sometimes, developers may need to create images of one shape only or render only a few shapes on the slide. In such cases, Aspose.Slides for .NET can help you to generate thumbnail images using GetThumbnail function with special parameters.</Description>
-                  <FolderName>CreatingShapeThumbnailImage</FolderName>
+                  <FolderName>creatingshapethumbnailimage</FolderName>
                   <Order>10</Order>
                   <DocLink>
                     <DisplayName>Creating Shape Thumbnail Image</DisplayName>
@@ -1356,15 +1356,15 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\demo0.gif</Path>
+                      <Path>..\data\demo0.gif</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo1.gif</Path>
+                      <Path>..\data\demo1.gif</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1372,7 +1372,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Managing Slide Transitions</Title>
                   <Description>Aspose.Slides for .NET allows developers to manage or customize the slide transition effects of the slides. This example demonstrates about controlling slide transitions with a great ease using Aspose.Slides for .NET</Description>
-                  <FolderName>ManagingSlideTransitions</FolderName>
+                  <FolderName>managingslidetransitions</FolderName>
                   <Order>11</Order>
                   <DocLink>
                     <DisplayName>Managing Slide Transitions</DisplayName>
@@ -1380,12 +1380,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1393,7 +1393,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Applying Custom Color Scheme to Presentation Slides</Title>
                   <Description>Aspose;Slides provide the feature to set the master custom color schemes for the presentation that will be applied on the slides inside presentation.</Description>
-                  <FolderName>ApplyingCustomColorSchemeToSlides</FolderName>
+                  <FolderName>applyingcustomcolorschemetoslides</FolderName>
                   <Order>12</Order>
                   <DocLink>
                     <DisplayName>Applying Custom Color Scheme to Presentation Slides</DisplayName>
@@ -1401,12 +1401,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1414,7 +1414,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Adding Line Shape to Slide</Title>
                   <Description>Aspose.Slides for .NET supports adding different kinds of shapes to the slides. In this example, we will add lines to the slides. Using Aspose.Slides for .NET , developers can not only create simple lines , but also some fancy lines can be drawn on the slides.</Description>
-                  <FolderName>AddingLineShapeToSlide</FolderName>
+                  <FolderName>addinglineshapetoslide</FolderName>
                   <Order>14</Order>
                   <DocLink>
                     <DisplayName>Adding Line Shape to Slide</DisplayName>
@@ -1422,12 +1422,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1435,7 +1435,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Adding Ellipse Shape to Slide</Title>
                   <Description>Aspose.Pdf allows adding ellipse shapes to slides. Aspose.Slides provides an easier set of APIs to draw different kinds of shapes with just a few lines of code.</Description>
-                  <FolderName>AddingEllipseShapetoSlide</FolderName>
+                  <FolderName>addingellipseshapetoslide</FolderName>
                   <Order>15</Order>
                   <DocLink>
                     <DisplayName>Adding Ellipse Shape to Slide</DisplayName>
@@ -1443,12 +1443,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1456,7 +1456,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Adding Rectangle Shape to Slide</Title>
                   <Description>Using Aspose.Slides, developers can add simple or formatted rectangles to their slides.</Description>
-                  <FolderName>AddingRectangleShapeToSlide</FolderName>
+                  <FolderName>addingrectangleshapetoslide</FolderName>
                   <Order>16</Order>
                   <DocLink>
                     <DisplayName>Adding Rectangle Shape to Slide</DisplayName>
@@ -1464,12 +1464,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1482,13 +1482,13 @@ This article explains how to clone presentation slides in different ways:
 
 1: Adding Slide Comments
 2: Accessing Slide Comments</Description>
-                  <FolderName>WorkingWithPPTSlideComments</FolderName>
+                  <FolderName>workingwithpptslidecomments</FolderName>
                   <Order>13</Order>
                   <Examples>
                     <Example>
                       <Title>Adding Slide Comments</Title>
                       <Description>In Aspose.Slides for .NET, the PPT slide comment collection is included in every Slide class. The CommentCollection class is used to hold the particular slide comments. The Comment class include information like author who added slide comment, his initials, time of creation, the position of slide comment on slide and the comment text. The CommentAuthor class is used to add the authors for slide comments on presentation level. The Presentation class holds the collection of authors for presentation in CommentAuthors class.</Description>
-                      <FolderName>AddingSlideComments</FolderName>
+                      <FolderName>addingslidecomments</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Working with PPT Slide Comments</DisplayName>
@@ -1496,7 +1496,7 @@ This article explains how to clone presentation slides in different ways:
                       </DocLink>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\Comments.ppt</Path>
+                          <Path>..\data\Comments.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1504,7 +1504,7 @@ This article explains how to clone presentation slides in different ways:
                     <Example>
                       <Title>Accessing Slide Comments</Title>
                       <Description>Aspose.Slides provides the feature to access the existing slide comments and modify the comments.</Description>
-                      <FolderName>AccessingSlideComments</FolderName>
+                      <FolderName>accessingslidecomments</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Accessing Slide Comments</DisplayName>
@@ -1512,7 +1512,7 @@ This article explains how to clone presentation slides in different ways:
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\Comments.ppt</Path>
+                          <Path>..\data\Comments.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <Type>Console</Type>
@@ -1524,13 +1524,13 @@ This article explains how to clone presentation slides in different ways:
             <Folder>
               <Title>Working with Shapes</Title>
               <Description>This section contains examples related to addition, formatting, rotating and accessing attributes of shapes in a presentation using Aspose.Slides.</Description>
-              <FolderName>WorkingWithShapes</FolderName>
+              <FolderName>workingwithshapes</FolderName>
               <Order>4</Order>
               <Examples>
                 <Example>
                   <Title>Filling Shapes with Picture</Title>
                   <Description>If a developer needs to fill a shape with an image of his own choice, Aspose.Slides gives full freedom to its users to fill a shape with any desired image. In this topic, we will discuss how to achieve this.</Description>
-                  <FolderName>FillShapeWithPicture</FolderName>
+                  <FolderName>fillshapewithpicture</FolderName>
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Filling Shapes with Picture</DisplayName>
@@ -1538,15 +1538,15 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                     <DataFile>
-                      <Path>..\Data\demo.jpg</Path>
+                      <Path>..\data\demo.jpg</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1554,7 +1554,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Formatting Lines of the Shapes</Title>
                   <Description>It is possible to change the format settings of the lines with which a shape is obtained. For example, you can change the width of the line, modify the color of the line, apply different kinds of styles on the lines etc.</Description>
-                  <FolderName>FormattingLinesOfShapes</FolderName>
+                  <FolderName>formattinglinesofshapes</FolderName>
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Formatting Lines of the Shapes</DisplayName>
@@ -1562,12 +1562,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1575,7 +1575,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Filling Shapes with Pattern</Title>
                   <Description>This example demonstrates how to fill shapes in more attractive styles using patterns. Aspose.Slides for .NET offers more than 45 pre-defined pattern styles that can be used by developers to enrich their presentations.</Description>
-                  <FolderName>FillingShapesWithPattern</FolderName>
+                  <FolderName>fillingshapeswithpattern</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Filling Shapes with Pattern</DisplayName>
@@ -1583,12 +1583,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1596,7 +1596,7 @@ This article explains how to clone presentation slides in different ways:
                 <Example>
                   <Title>Filling Shapes with Texture</Title>
                   <Description>Like gradient and pattern effects, texture styles are also used to fill shapes with different kinds of effects. Aspose.Slides for .NET offers more than 20 pre-defined texture styles that can be used by developers in their presentations.</Description>
-                  <FolderName>FillingShapesWithTexture</FolderName>
+                  <FolderName>fillingshapeswithtexture</FolderName>
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Filling Shapes with Texture</DisplayName>
@@ -1604,12 +1604,12 @@ This article explains how to clone presentation slides in different ways:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\demo.ppt</Path>
+                      <Path>..\data\demo.ppt</Path>
                     </DataFile>
                   </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\modified.ppt</Path>
+                      <Path>..\data\modified.ppt</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
@@ -1624,13 +1624,13 @@ This section includes the following examples:
 
 1: Applying Animation Effects
 2: Controlling Animation Order</Description>
-                  <FolderName>ApplyingAnimationsOnShapes</FolderName>
+                  <FolderName>applyinganimationsonshapes</FolderName>
                   <Order>2</Order>
                   <Examples>
                     <Example>
                       <Title>Applying Animation Effects</Title>
                       <Description>In this example, we have added a rectangle shape to the slide with the Spiral effect applied on it.</Description>
-                      <FolderName>ApplyingAnimationEffects</FolderName>
+                      <FolderName>applyinganimationeffects</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Applying Animations on Shapes</DisplayName>
@@ -1638,12 +1638,12 @@ This section includes the following examples:
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1651,7 +1651,7 @@ This section includes the following examples:
                     <Example>
                       <Title>Controlling Animation Order</Title>
                       <Description>In the example, we have added rectangle and ellipse shapes to the slide. Further, we have changed their animation order after applying animation effects on both shapes.</Description>
-                      <FolderName>ControllingAnimationOrder</FolderName>
+                      <FolderName>controllinganimationorder</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Applying Animations on Shapes</DisplayName>
@@ -1659,12 +1659,12 @@ This section includes the following examples:
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1679,7 +1679,7 @@ This section includes the following examples:
 2: Controlling Degree of Gradient
 3: Adjusting Gradient Fill Angle
 4: Applying Different Gradient Styles</Description>
-                  <FolderName>FillingShapesWithGradient</FolderName>
+                  <FolderName>fillingshapeswithgradient</FolderName>
                   <Order>4</Order>
                   <Examples>
                     <Example>
@@ -1687,7 +1687,7 @@ This section includes the following examples:
                       <Description>Developers can create gradient effects with One Color or Two Colors to fill shapes using Aspose.Slides for .NET . If developers use One Color to create the gradient effect , the shape is filled with a gradient from the foreground color of the shape to black, white or a shade of gray. 
 
 However, in the case of Two Colors, the shape's fill is faded from one color to the other. If you want to fill your shape with a gradient of Two Colors, you would need to set the foreground color of the shape as the first color and background color as the second one.</Description>
-                      <FolderName>UsingColorTypesInGradientToFillShapes</FolderName>
+                      <FolderName>usingcolortypesingradienttofillshapes</FolderName>
                       <Order>1</Order>
                       <DocLink>
                         <DisplayName>Filling Shapes with Gradient</DisplayName>
@@ -1695,12 +1695,12 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1708,7 +1708,7 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                     <Example>
                       <Title>Controlling Degree of Gradient</Title>
                       <Description>Degree of gradient is only used when a developer wants to use One Color type of gradient. Using Gradient Degree, developers can define the color to which the gradient color will be faded. Gradient Degree is configured by using an integer value ranging from 0 to 20. Each number represents a color.</Description>
-                      <FolderName>ControllingDegreeOfGradient</FolderName>
+                      <FolderName>controllingdegreeofgradient</FolderName>
                       <Order>2</Order>
                       <DocLink>
                         <DisplayName>Filling Shapes with Gradient</DisplayName>
@@ -1716,12 +1716,12 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1729,7 +1729,7 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                     <Example>
                       <Title>Adjusting Gradient Fill Angle</Title>
                       <Description>The Gradient Fill Angle is used to adjust the angle at which a gradient is filled. Gradient Fill Angle can be configured by using an integer value ranging from 0 to 179. By default, the fill angle for a gradient is 0, which starts filling the shape from its top and then goes straight down.</Description>
-                      <FolderName>AdjustingGradientFillAngle</FolderName>
+                      <FolderName>adjustinggradientfillangle</FolderName>
                       <Order>3</Order>
                       <DocLink>
                         <DisplayName>Filling Shapes with Gradient</DisplayName>
@@ -1737,12 +1737,12 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
@@ -1750,7 +1750,7 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                     <Example>
                       <Title>Applying Different Gradient Styles</Title>
                       <Description>Developers can use 8 different types of gradient styles (offered by Aspose.Slides for .NET ) to apply interesting effects to their gradients. There are two basic gradient styles: From Centerand From Corner. From Center style applies the gradient from the center of the shape whereas the From Corner style fades the gradient from one corner of the shape to the other.</Description>
-                      <FolderName>ApplyingDifferentGradientStyles</FolderName>
+                      <FolderName>applyingdifferentgradientstyles</FolderName>
                       <Order>4</Order>
                       <DocLink>
                         <DisplayName>Filling Shapes with Gradient</DisplayName>
@@ -1758,12 +1758,12 @@ However, in the case of Two Colors, the shape's fill is faded from one color to 
                       </DocLink>
                       <InputFiles>
                         <DataFile>
-                          <Path>..\Data\demo.ppt</Path>
+                          <Path>..\data\demo.ppt</Path>
                         </DataFile>
                       </InputFiles>
                       <OutputFiles>
                         <DataFile>
-                          <Path>..\Data\modified.ppt</Path>
+                          <Path>..\data\modified.ppt</Path>
                         </DataFile>
                       </OutputFiles>
                       <Type>Console</Type>
