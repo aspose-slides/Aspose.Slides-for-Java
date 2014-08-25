@@ -3,7 +3,7 @@
   <Folders>
     <Folder>
       <Title>Programmers Guide</Title>
-      <Description>Programmers Guide provides code samples about key programming concepts to build .NET and other applications that use Aspose.Slides.</Description>
+      <Description>Programmers Guide provides code samples about key programming concepts to build Java and other applications that use Aspose.Slides.</Description>
       <FolderName>programmersguide</FolderName>
       <Order>1</Order>
       <Folders>
@@ -27,7 +27,7 @@
           <Examples>
             <Example>
               <Title>Converting PPT to PPTX</Title>
-              <Description>Aspose.Slides for .NET now facilitates the developers to access the PPT using Presentation class instance and converting that to respective PPTX format. In this example, we will convert PPT file to PPTX using Aspose.Slides for .NET</Description>
+              <Description>Aspose.Slides for Java now facilitates the developers to access the PPT using Presentation class instance and converting that to respective PPTX format. In this example, we will convert PPT file to PPTX using Aspose.Slides for Java</Description>
               <FolderName>convertingppttopptx</FolderName>
               <Order>1</Order>
               <DocLink>
@@ -48,7 +48,7 @@
             </Example>
             <Example>
               <Title>Accessing OpenDocument Presentation</Title>
-              <Description>Aspose.Slides for .NET now facilitates the developers to access the OpenDocument Presentations (ODP) using Presentation class in read only mode. However, you can save the presentation in PPTX or PPT format.</Description>
+              <Description>Aspose.Slides for Java now facilitates the developers to access the OpenDocument Presentations (ODP) using Presentation class in read only mode. However, you can save the presentation in PPTX or PPT format.</Description>
               <FolderName>accessingopendocument</FolderName>
               <Order>2</Order>
               <DocLink>
@@ -69,7 +69,7 @@
             </Example>
             <Example>
               <Title>Converting Presentation to PDF</Title>
-              <Description>PDF documents are widely used as a standard format of exchanging documents between organizations, government sectors and individuals. It's a popular format so developers are often asked to convert Microsoft PowerPoint presentation files to PDF documents. Realizing this possible requirement, Aspose.Slides for .NET supports converting presentations to PDF documents without using any other component.</Description>
+              <Description>PDF documents are widely used as a standard format of exchanging documents between organizations, government sectors and individuals. It's a popular format so developers are often asked to convert Microsoft PowerPoint presentation files to PDF documents. Realizing this possible requirement, Aspose.Slides for Java supports converting presentations to PDF documents without using any other component.</Description>
               <FolderName>convertingtopdf</FolderName>
               <Order>3</Order>
               <DocLink>
@@ -90,7 +90,7 @@
             </Example>
             <Example>
               <Title>Converting Presentation to HTML</Title>
-              <Description>HTML is one of several widely used format for exchanging data. Aspose.Slides for .NET provides support for converting a presentation to HTML which is an embedded SVG.</Description>
+              <Description>HTML is one of several widely used format for exchanging data. Aspose.Slides for Java provides support for converting a presentation to HTML which is an embedded SVG.</Description>
               <FolderName>convertingpresentationtohtml</FolderName>
               <Order>9</Order>
               <DocLink>
@@ -111,7 +111,7 @@
             </Example>
             <Example>
               <Title>Converting Presentation with Notes to Tiff</Title>
-              <Description>TIFF is one of several widely used image formats that Aspose.Slides for .NET supports for converting a presentation with notes to images. You can also generate slide thumbnails in the Notes Slide view.</Description>
+              <Description>TIFF is one of several widely used image formats that Aspose.Slides for Java supports for converting a presentation with notes to images. You can also generate slide thumbnails in the Notes Slide view.</Description>
               <FolderName>convertingpresentationwithnotestotiff</FolderName>
               <Order>10</Order>
               <DocLink>
@@ -134,7 +134,7 @@
           <Folders>
             <Folder>
               <Title>Opening a Presentation</Title>
-              <Description>Using Aspose.Slides for .NET, developers can not only create PowerPoint presentations from scratch but also access or modify the existing ones. In this section, we will discuss the simplest approach to open and access an existing presentation.
+              <Description>Using Aspose.Slides for Java, developers can not only create PowerPoint presentations from scratch but also access or modify the existing ones. In this section, we will discuss the simplest approach to open and access an existing presentation.
 
     - Opening a Presentation.
     - Opening a Password Protected Presentation.
@@ -144,7 +144,7 @@
               <Examples>
                 <Example>
                   <Title>Opening a Presentation</Title>
-                  <Description>Aspose.Slides for .NET provides Presentation class that is used to open an existing presentation. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we have passed the name of the presentation file (to be opened) to the constructor of Presentation class. After the file is opened, we get the total number of slides present in the presentation.</Description>
+                  <Description>Aspose.Slides for Java provides Presentation class that is used to open an existing presentation. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we have passed the name of the presentation file (to be opened) to the constructor of Presentation class. After the file is opened, we get the total number of slides present in the presentation.</Description>
                   <FolderName>openingapresentation</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -160,7 +160,7 @@
                 </Example>
                 <Example>
                   <Title>Opening a Password Protected Presentation</Title>
-                  <Description>Aspose.Slides for .NET provides facility to open password protected presentation using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the password protected presentation. We will using LoadOptions class object to set the access password and then will use Presentation class to open presentation.</Description>
+                  <Description>Aspose.Slides for Java provides facility to open password protected presentation using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the password protected presentation. We will using LoadOptions class object to set the access password and then will use Presentation class to open presentation.</Description>
                   <FolderName>openingpasswordpresentation</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -176,7 +176,7 @@
                 </Example>
                 <Example>
                   <Title>Accessing the Document Properties of a Password Protected Presentation without Password.</Title>
-                  <Description>Aspose.Slides for .NET provides facility to access the Document Properties of the presentation in password protected presentation without supplying password using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the Document Properties of a password protected presentation. We will using LoadOptions class object to set the presentation access properties.</Description>
+                  <Description>Aspose.Slides for Java provides facility to access the Document Properties of the presentation in password protected presentation without supplying password using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the Document Properties of a password protected presentation. We will using LoadOptions class object to set the presentation access properties.</Description>
                   <FolderName>accessingdocumentproperties</FolderName>
                   <Order>3</Order>
                   <DocLink>
@@ -270,7 +270,7 @@
                 </Example>
                 <Example>
                   <Title>Removing Write Protection from a Presentation</Title>
-                  <Description>Spose.Slides for .NET provides a facility for accessing write protected presentation through the Presentation class. The IsWriteProtected property identifies whether a presentation is write protected or not. Then if it is write protected, the protection can be removed using the RemoveWriteProtection() method.</Description>
+                  <Description>Spose.Slides for Java provides a facility for accessing write protected presentation through the Presentation class. The IsWriteProtected property identifies whether a presentation is write protected or not. Then if it is write protected, the protection can be removed using the RemoveWriteProtection() method.</Description>
                   <FolderName>removingwriteprotection</FolderName>
                   <Order>5</Order>
                   <DocLink>
@@ -299,7 +299,7 @@
 
     - User Defined (Custom) Properties
 
-Built-in properties contain general information about the document like document title, author's name, document statistics and so on. Custom properties are those ones, which are defined by the users as Name/Value pairs, where both name and value are defined by the user. Using Aspose.Slides for .NET, developers can access and modify the values of built-in properties as well as custom properties.</Description>
+Built-in properties contain general information about the document like document title, author's name, document statistics and so on. Custom properties are those ones, which are defined by the users as Name/Value pairs, where both name and value are defined by the user. Using Aspose.Slides for Java, developers can access and modify the values of built-in properties as well as custom properties.</Description>
               <FolderName>managingpresentationproperties</FolderName>
               <Order>6</Order>
               <Examples>
@@ -342,7 +342,7 @@ Built-in properties contain general information about the document like document
                 </Example>
                 <Example>
                   <Title>Accessing and Modifying Custom Properties</Title>
-                  <Description>Aspose.Slides for .NET also allows developers to access the values of custom properties. An example is given below that shows how can you access and modify all of these custom properties for a presentation.</Description>
+                  <Description>Aspose.Slides for Java also allows developers to access the values of custom properties. An example is given below that shows how can you access and modify all of these custom properties for a presentation.</Description>
                   <FolderName>accessingmodifyingproperties</FolderName>
                   <Order>3</Order>
                   <DocLink>
@@ -365,7 +365,7 @@ Built-in properties contain general information about the document like document
             </Folder>
             <Folder>
               <Title>Converting Presentation to TIFF</Title>
-              <Description>TIFF format is known by its flexibility to accommodate multipage images and data. Keeping in view the importance and popularity of TIFF format, Aspose.Slides for .NET provides the support for converting presentations into TIFF document.
+              <Description>TIFF format is known by its flexibility to accommodate multipage images and data. Keeping in view the importance and popularity of TIFF format, Aspose.Slides for Java provides the support for converting presentations into TIFF document.
 
 There are two different tiff export options:
 
@@ -493,7 +493,7 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
           <Examples>
             <Example>
               <Title>Adding Slides To Presentation</Title>
-              <Description>Each PowerPoint presentation file contains Master / Layout slide and other Normal slides. It means that a presentation file contains at least one or more slides. It is important to know that presentation files without slides are not supported by Aspose.Slides for .NET. Each slide has unique Id and all the Normal Slides are arranged in an order specified by the zero based index.</Description>
+              <Description>Each PowerPoint presentation file contains Master / Layout slide and other Normal slides. It means that a presentation file contains at least one or more slides. It is important to know that presentation files without slides are not supported by Aspose.Slides for Java. Each slide has unique Id and all the Normal Slides are arranged in an order specified by the zero based index.</Description>
               <FolderName>addingslidestopresentation</FolderName>
               <Order>1</Order>
               <DocLink>
@@ -524,41 +524,8 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Changing the Position of a Slide</Title>
-              <Description>Using MS PowerPoint, you can drag a selected slide to any other position of the presentation. Aspose.Slides for .NET also allows to change the position of a slide within the presentation.</Description>
-              <FolderName>changingpositionofaslide</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Changing the Position of a Slide</DisplayName>
-                <Url>Changing+the+Position+of+a+Slide</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Setting the Background Color to a Gradient to Slides</Title>
-              <Description>Gradient is a graphic effect consisting of a gradual change in color. It is great for creating depth and highlights to sections of the images. It is possible to apply gradient effect on the background of a slide using Aspose.Slides for .NET.</Description>
-              <FolderName>settingbackgroundcolortogradienttoslides</FolderName>
-              <Order>7</Order>
-              <DocLink>
-                <DisplayName>Setting the Background Color to a Gradient to Slides</DisplayName>
-                <Url>Setting+the+Background+Color+to+a+Gradient+to+Slides</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Setting the Image as Background to Slides</Title>
-              <Description>You can fill the slide background with any image using Aspose.Slides for .NET.</Description>
-              <FolderName>settingimageasbackgroundtoslides</FolderName>
-              <Order>8</Order>
-              <DocLink>
-                <DisplayName>Setting the Image as Background to Slides</DisplayName>
-                <Url>Setting+the+Image+as+Background+to+Slides</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
               <Title>Creating Slides SVG Image</Title>
-              <Description>Aspose.Slides for .NET is used to create presentation files, complete with slides. These slides can be viewed by opening presentations using Microsoft PowerPoint. But sometimes, developers may also need to view slides as SVG images in their favorite image viewer. In such cases, Aspose.Slides for .NET lets you export an individual slide to an SVG image.</Description>
+              <Description>Aspose.Slides for Java is used to create presentation files, complete with slides. These slides can be viewed by opening presentations using Microsoft PowerPoint. But sometimes, developers may also need to view slides as SVG images in their favorite image viewer. In such cases, Aspose.Slides for Java lets you export an individual slide to an SVG image.</Description>
               <FolderName>creatingslidessvgimage</FolderName>
               <Order>11</Order>
               <DocLink>
@@ -635,58 +602,15 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
             </Folder>
             <Folder>
               <Title>Cloning Slides in Presentation</Title>
-              <Description>Cloning is the process of making an exact copy or replica of something. Aspose.Slides for .NET makes it possible to make a copy or clone of any slide and then insert s that cloned slide to the current or any other opened presentation. The process of slide cloning creates a new slide that can be modified by developers without changing the original slide.</Description>
+              <Description>Cloning is the process of making an exact copy or replica of something. Aspose.Slides for Java makes it possible to make a copy or clone of any slide and then insert s that cloned slide to the current or any other opened presentation. The process of slide cloning creates a new slide that can be modified by developers without changing the original slide.</Description>
               <FolderName>cloningslidesinpresentation</FolderName>
               <Order>4</Order>
               <Examples>
-                <Example>
-                  <Title>Within the Same Presentation from One Position to the End</Title>
-                  <Description>You can clone a slide and then use it within the same presentation file at the end of the existing slides using the AddClone method.</Description>
-                  <FolderName>withinsamepresentationfromonepositiontoend</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Cloning Slides in Presentation</DisplayName>
-                    <Url>Cloning+Slides+in+Presentation</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>From One Position to Another within the Same Presentation</Title>
-                  <Description>You can clone a slide and then use it within the same presentation file but at a different position by using the InsertClone method.</Description>
-                  <FolderName>fromonepositiontoanotherwithinsamepresentation</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Cloning Slides in Presentation</DisplayName>
-                    <Url>Cloning+Slides+in+Presentation</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>In Another Presentation at the End of the Existing Slides</Title>
-                  <Description>You can clone a slide (from the zero index of the source presentation) to the end of the destination presentation.</Description>
-                  <FolderName>inanotherpresentationatendofexistingslides</FolderName>
-                  <Order>3</Order>
-                  <DocLink>
-                    <DisplayName>Cloning Slides in Presentation</DisplayName>
-                    <Url>Cloning+Slides+in+Presentation</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>In Another Presentation at the Specified Position</Title>
-                  <Description>You can clone the desired slide from the source presentation to the specified position in destination presentation using InsertClone method.</Description>
-                  <FolderName>inanotherpresentationatspecifiedposition</FolderName>
-                  <Order>4</Order>
-                  <DocLink>
-                    <DisplayName>Cloning Slides in Presentation</DisplayName>
-                    <Url>Cloning+Slides+in+Presentation</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
+                                
                 <Example>
                   <Title>In Another Presentation with Master Slide from Source Presentation at the End of the Existing Slides</Title>
                   <Description>You can clone a slide with master slide from one presentation from and use it in another presentation. For that,  you need to clone the desired master slide from source presentation to destination presentation first. Then you need to use that master slide for cloning slide with master slide.</Description>
-                  <FolderName>inanotherpresentationwithmasterslidefromsourcepresentationattheendoftheexistingslides</FolderName>
+                  <FolderName>anotherpresentationwithmaster</FolderName>
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Cloning Slides in Presentation</DisplayName>
@@ -695,62 +619,17 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
                   <Type>Console</Type>
                 </Example>
               </Examples>
-            </Folder>
-            <Folder>
-              <Title>Setting the Background Color to Slides</Title>
-              <Description>Aspose.Slides for .NET may contain two types of slides: Master Slide &amp; Normal Slide.You can change the background colors of both types of the slides.</Description>
-              <FolderName>settingthebackgroundcolortoslides</FolderName>
-              <Order>6</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting the Background Color of a Master Slide</Title>
-                  <Description>A Master Slide is like a template that contains all formatting settings, which are applied on all other normal slides contained inside the presentation. Iif you change the background color of the master slide, all normal slides in the presentation would receive the same background color settings.</Description>
-                  <FolderName>settingbackgroundcolorofamasterslide</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting the Background Color to Slides</DisplayName>
-                    <Url>Setting+the+Background+Color+to+Slides</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Setting the Background Color of a Normal Slide</Title>
-                  <Description>A Normal Slide is that one that inherits its format settings from the master slide. If you want to modify its background settings, you can modify the slide settings and get the desired results.</Description>
-                  <FolderName>settingbackgroundcolorofanormalslide</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Setting the Background Color to Slides</DisplayName>
-                    <Url>Setting+the+Background+Color+to+Slides</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
+            </Folder>            
             <Folder>
               <Title>Creating Slides Thumbnail Image</Title>
-              <Description>Aspose.Slides for .NET is used to create presentation files containing slides. These slides can be viewed by opening presentation files using Microsoft PowerPoint. But sometimes, developers may need to view slides as images using their favorite image viewer. In such cases, Aspose.Slides for .NET help you generate thumbnail images of the slides.</Description>
+              <Description>Aspose.Slides for Java is used to create presentation files containing slides. These slides can be viewed by opening presentation files using Microsoft PowerPoint. But sometimes, developers may need to view slides as images using their favorite image viewer. In such cases, Aspose.Slides for Java help you generate thumbnail images of the slides.</Description>
               <FolderName>creatingslidesthumbnailimage</FolderName>
               <Order>9</Order>
               <Examples>
-                <Example>
-                  <Title>Generating a Thumbnail from a Slide</Title>
-                  <Description>To generate the thumbnail of any desired slide using Aspose.Slides for .NET:
-
-- Create an instance of the Presentation class.
-- Obtain the reference of any desired slide by using its ID or index.
-- Get the thumbnail image of the referenced slide on a specified scale.
-- Save the thumbnail image in any desired image format.</Description>
-                  <FolderName>generatingthumbnailfromslide</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Creating Slides Thumbnail Image</DisplayName>
-                    <Url>Creating+Slides+Thumbnail+Image</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
+               
                 <Example>
                   <Title>Generating a Thumbnail from a Slide with User Defined Dimensions</Title>
-                  <Description>To generate the thumbnail of any desired slide using Aspose.Slides for .NET:
+                  <Description>To generate the thumbnail of any desired slide using Aspose.Slides for Java:
 
 - Create an instance of the Presentation class.
 - Obtain the reference of any desired slide by using its ID or index.
@@ -777,7 +656,7 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
                 </Example>
                 <Example>
                   <Title>Generating a Thumbnail from a Slide in Notes Slides View</Title>
-                  <Description>To generate the thumbnail of any desired slide in Notes Slide View using Aspose.Slides for .NET:
+                  <Description>To generate the thumbnail of any desired slide in Notes Slide View using Aspose.Slides for Java:
 
 - Create an instance of the Presentation class.
 - Obtain the reference of any desired slide by using its ID or index.
@@ -802,60 +681,7 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
                   <Type>Console</Type>
                 </Example>
               </Examples>
-            </Folder>
-            <Folder>
-              <Title>Managing Slides Transitions</Title>
-              <Description>Aspose.Slides for .NET also allows developers to manage or customize the slide transition effects of the slides such as:
-
-- Managing Simple Slide Transitions
-- Managing Better Slide Transitions</Description>
-              <FolderName>managingslidestransitions</FolderName>
-              <Order>10</Order>
-              <Examples>
-                <Example>
-                  <Title>Managing Simple Slide Transitions</Title>
-                  <Description>Using Aspose.Slides for .NET, you can not only apply different slide transition effects on the slides, but also customize the behavior of these transition effects.</Description>
-                  <FolderName>managingsimpleslidetransitions</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Managing Slides Transitions</DisplayName>
-                    <Url>Managing+Slides+Transitions</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\data\Aspose.pptx</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\data\SampleTransition.pptx</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Managing Better Slide Transitions</Title>
-                  <Description>You can apply better and controlled transition effects on the slide.</Description>
-                  <FolderName>managingbetterslidetransitions</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Managing Slides Transitions</DisplayName>
-                    <Url>Managing+Slides+Transitions</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\data\Aspose.pptx</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\data\SampleTransition.pptx</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
+            </Folder>           
           </Folders>
         </Folder>
         <Folder>
@@ -881,26 +707,10 @@ Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to 
           <FolderName>workingwithshapes</FolderName>
           <Order>3</Order>
           <Examples>
-            <Example>
-              <Title>Finding A Shape In A Slide</Title>
-              <Description>PowerPoint Presentation files do not have any way to identify shapes on a slide except an internal unique Id. It seems to be difficult for developers to find a shape using its internal unique Id.
-In this example, we will see how we can find a shape in a slide using Aspose.Slides for .NET.</Description>
-              <FolderName>findingshapeinslide</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Finding a Shape in a Slide</DisplayName>
-                <Url>Finding+a+Shape+in+a+Slide</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\data\SamplePres.pptx</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
+            
             <Example>
               <Title>Applying Animations On Shapes Inside Slide</Title>
-              <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides for .NET also allows developers to apply different kinds of animation effects on different kinds of shapes. There is a separate namespace Aspose.Slides.Pptx.Animation that provides classes to handle the animations on PPTX presentations.</Description>
+              <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides for Java also allows developers to apply different kinds of animation effects on different kinds of shapes. There is a separate namespace Aspose.Slides.Pptx.Animation that provides classes to handle the animations on PPTX presentations.</Description>
               <FolderName>applyinganimationsonshapesinsideslide</FolderName>
               <Order>3</Order>
               <DocLink>
@@ -916,7 +726,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Example>
             <Example>
               <Title>Filling Shapes With Gradient</Title>
-              <Description>In this example, we will see how we can fill the shapes with the gradient of two colors using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can fill the shapes with the gradient of two colors using Aspose.Slides for Java.</Description>
               <FolderName>fillingshapesgradient</FolderName>
               <Order>5</Order>
               <DocLink>
@@ -927,7 +737,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Example>
             <Example>
               <Title>Filling Shapes With Pattern</Title>
-              <Description>You can use the patterns to fill the shapes in more attractive styles. Aspose.Slides for .NET offers more than 45 pre-defined pattern styles that can be used by developers to enrich their presentations.</Description>
+              <Description>You can use the patterns to fill the shapes in more attractive styles. Aspose.Slides for Java offers more than 45 pre-defined pattern styles that can be used by developers to enrich their presentations.</Description>
               <FolderName>fillingshapespattern</FolderName>
               <Order>6</Order>
               <DocLink>
@@ -938,7 +748,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Example>
             <Example>
               <Title>Filling Shapes With Picture</Title>
-              <Description>In this example, we will see how we can fill the shapes with picture using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can fill the shapes with picture using Aspose.Slides for Java.</Description>
               <FolderName>fillingshapespicture</FolderName>
               <Order>7</Order>
               <DocLink>
@@ -949,7 +759,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Example>
             <Example>
               <Title>Rotating Shapes</Title>
-              <Description>In this example, we will see how we can rotate the shapes in the presntation using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can rotate the shapes in the presntation using Aspose.Slides for Java.</Description>
               <FolderName>rotatingshapes</FolderName>
               <Order>8</Order>
               <DocLink>
@@ -958,51 +768,10 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
               </DocLink>
               <Type>Console</Type>
             </Example>
-            <Example>
-              <Title>Adding Audio Frame To Slide</Title>
-              <Description>An Audio Frame contains the embedded audio file. In this example, we will see how we can embed audio frames in the slides using Aspose.Slides for .NET.</Description>
-              <FolderName>addingaudioframe</FolderName>
-              <Order>10</Order>
-              <DocLink>
-                <DisplayName>Adding Audio Frame to Slide</DisplayName>
-                <Url>Adding+Audio+Frame+to+Slide</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\data\sampleaudio.wav</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\data\AudioFrameEmbed.pptx</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Adding Video Frame To Slide</Title>
-              <Description>Developers can also add and play video files in the slides to enrich their presentations. Aspose.Slides for .NET supports adding Video Frames to the slides that make it possible for developers to add videos to their presentations.</Description>
-              <FolderName>addingvideoframe</FolderName>
-              <Order>11</Order>
-              <DocLink>
-                <DisplayName>Adding Video Frame to Slide</DisplayName>
-                <Url>Adding+Video+Frame+to+Slide</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\data\video1.avi</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\data\VideoFrame.pptx</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
+                       
             <Example>
               <Title>Adding an Embedded Video Frame To Slide</Title>
-              <Description>Developers can also embed and play video files in the slides to enrich their presentations. Aspose.Slides for .NET supports adding Embedded Video Frames to the slides that make it possible for developers to add videos to their presentations.</Description>
+              <Description>Developers can also embed and play video files in the slides to enrich their presentations. Aspose.Slides for Java supports adding Embedded Video Frames to the slides that make it possible for developers to add videos to their presentations.</Description>
               <FolderName>embeddedvideoframe</FolderName>
               <Order>15</Order>
               <DocLink>
@@ -1023,7 +792,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Example>
             <Example>
               <Title>Calculating Connector Line Angle</Title>
-              <Description>In this example, we will see how we can calculate the angle of connector line added in slide using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can calculate the angle of connector line added in slide using Aspose.Slides for Java.</Description>
               <FolderName>connectorlineangle</FolderName>
               <Order>16</Order>
               <DocLink>
@@ -1036,24 +805,14 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
           <Folders>
             <Folder>
               <Title>Adding Line Shape To Slide</Title>
-              <Description>Aspose.Slides for .NET supports adding different kinds of shapes to the slides. In this topic, we will start working with shapes by adding lines to the slides. Using Aspose.Slides for .NET , developers can not only create simple lines , but some fancy lines can also be drawn on the slides.</Description>
+              <Description>Aspose.Slides for Java supports adding different kinds of shapes to the slides. In this topic, we will start working with shapes by adding lines to the slides. Using Aspose.Slides for Java , developers can not only create simple lines , but some fancy lines can also be drawn on the slides.</Description>
               <FolderName>addinglineshapetoslide</FolderName>
               <Order>1</Order>
               <Examples>
-                <Example>
-                  <Title>Adding Plain Line To Slide</Title>
-                  <Description>In this example, we will see how we can add a simple plain line to a selected slide of the presentation using Aspose,Slides for .NET.</Description>
-                  <FolderName>addingplainlinetoslide</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Adding Line Shape to Slide</DisplayName>
-                    <Url>Adding+Line+Shape+to+Slide</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
+                
                 <Example>
                   <Title>Adding Arrow Shaped Line To Slide</Title>
-                  <Description>Aspose.Slides for .NET  allows developers to configure some properties of the line to make it look more appealing. In this example, we will see how we can add arrow shaped line to the slide using Aspose.Slides for .NET.</Description>
+                  <Description>Aspose.Slides for Java  allows developers to configure some properties of the line to make it look more appealing. In this example, we will see how we can add arrow shaped line to the slide using Aspose.Slides for Java.</Description>
                   <FolderName>addingarrowshapedlinetoslide</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1079,7 +838,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
               <Examples>
                 <Example>
                   <Title>Formatting The Lines Of Shapes</Title>
-                  <Description>Using Aspose.Slides for .NET, you can change the format settings of the lines with which a shape is obtained. For example, you can change the width of the line, modify the color of the line, apply different kinds of styles on the lines etc.</Description>
+                  <Description>Using Aspose.Slides for Java, you can change the format settings of the lines with which a shape is obtained. For example, you can change the width of the line, modify the color of the line, apply different kinds of styles on the lines etc.</Description>
                   <FolderName>formattinglines</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1090,7 +849,7 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
                 </Example>
                 <Example>
                   <Title>FormattingThe Join Styles</Title>
-                  <Description>In this example, we will see how we can format the join styles using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can format the join styles using Aspose.Slides for Java.</Description>
                   <FolderName>formattingjoinstyles</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1103,13 +862,13 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
             </Folder>
             <Folder>
               <Title>Adding Picture Frame To Slide</Title>
-              <Description>Picture frame is also one of the shapes offered by Aspose.Slides for .NET . Adding picture frame to a slide is bit trickier than simple shapes. A picture frame is like a picture in a frame. You can add any desired picture to your slide as a picture frame.</Description>
+              <Description>Picture frame is also one of the shapes offered by Aspose.Slides for Java . Adding picture frame to a slide is bit trickier than simple shapes. A picture frame is like a picture in a frame. You can add any desired picture to your slide as a picture frame.</Description>
               <FolderName>addingpictureframe</FolderName>
               <Order>9</Order>
               <Examples>
                 <Example>
                   <Title>Adding Simple Picture Frames To Slides</Title>
-                  <Description>In this example, we will see how we can add simple picture frames to the slides using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add simple picture frames to the slides using Aspose.Slides for Java.</Description>
                   <FolderName>addingsimplepictureframes</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1127,33 +886,12 @@ In this example, we will see how we can find a shape in a slide using Aspose.Sli
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Controlling Picture Frame Formatting</Title>
-                  <Description>In this example, we will see how we can control the formatting of a picture frame according to the requirement using Aspose.Slides for .NET.</Description>
-                  <FolderName>controllingpictureframeformatting</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Adding Picture Frame to Slide</DisplayName>
-                    <Url>Adding+Picture+Frame+to+Slide</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\data\aspose-logo.jpg</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\data\RectPicFrameFormat.pptx</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
+                </Example>                
               </Examples>
             </Folder>
             <Folder>
               <Title>Working With OLE Object Frames</Title>
-              <Description>OLE stands for Object Linking &amp; Embedding . It's a Microsoft technology that allows objects created in one application to be embedded in another application. Aspose.Slides for .NET supports adding OLE Objects to the slides in the form of OLE Object Frames.
+              <Description>OLE stands for Object Linking &amp; Embedding . It's a Microsoft technology that allows objects created in one application to be embedded in another application. Aspose.Slides for Java supports adding OLE Objects to the slides in the form of OLE Object Frames.
 
 This article explains different examples of working with Ole frames:
 
@@ -1165,7 +903,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Adding An OLE Object Frame To A Slide</Title>
-                  <Description>In this example, we will see how we can add an OLE object frame to a slide using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add an OLE object frame to a slide using Aspose.Slides for Java.</Description>
                   <FolderName>addingoleobjectframe</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1184,53 +922,12 @@ This article explains different examples of working with Ole frames:
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
-                <Example>
-                  <Title>Accessing An OLE Object Frame From A Slide</Title>
-                  <Description>In this example, we will see how we can access an OLE object frame from a slide using Aspose.Slides for .NET.</Description>
-                  <FolderName>accessingoleobjectframe</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Working with OLE Object Frames</DisplayName>
-                    <Url>Working+with+OLE+Object+Frames</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\data\OleEmbed.pptx</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\data\excelFromOLE.xlsx</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Changing An OLE Object Data From A Slide</Title>
-                  <Description>In this example, we will see how we can change an OLE object data from a slide using Aspose.Slides for .NET.</Description>
-                  <FolderName>changingoleobjectdata</FolderName>
-                  <Order>3</Order>
-                  <DocLink>
-                    <DisplayName>Working with OLE Object Frames</DisplayName>
-                    <Url>Working+with+OLE+Object+Frames</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\data\OleEmbed.pptx</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\data\OleEdit.pptx</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
+                               
               </Examples>
             </Folder>
             <Folder>
               <Title>Adding Ellipse Shape To Slide</Title>
-              <Description>Aspose.Slides for .NET provides an easier set of APIs to draw different kinds of shapes with just a few lines of code. This section includes the following topics:
+              <Description>Aspose.Slides for Java provides an easier set of APIs to draw different kinds of shapes with just a few lines of code. This section includes the following topics:
 
  - Adding Simple Ellipse in the Slide
  - Adding Formatted Ellipse to the Slide</Description>
@@ -1239,7 +936,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Adding Simple Ellipse in the Slide</Title>
-                  <Description>In this example, we will see how we can add a simple ellipse to the first slide using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add a simple ellipse to the first slide using Aspose.Slides for Java.</Description>
                   <FolderName>simpleellipse</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1255,7 +952,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Adding Formatted Ellipse in the Slide</Title>
-                  <Description>In this example, we will see how we can add a formatted ellipse to the first slide of the presentation using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add a formatted ellipse to the first slide of the presentation using Aspose.Slides for Java.</Description>
                   <FolderName>formattedellipse</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1282,7 +979,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Adding Simple Rectangle in the Slide</Title>
-                  <Description>In this example, we will see how we can add simple rectangle to the first slide of the presentation using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add simple rectangle to the first slide of the presentation using Aspose.Slides for Java.</Description>
                   <FolderName>simplerectangle</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1331,7 +1028,7 @@ This article explains different examples of working with Ole frames:
           <Examples>
             <Example>
               <Title>Updating An Existing Chart</Title>
-              <Description>In this example, we will see how we can update the existing charts charts generated through Aspose.Slides or PowerPoint using Aspose.Slides for .NET.s</Description>
+              <Description>In this example, we will see how we can update the existing charts charts generated through Aspose.Slides or PowerPoint using Aspose.Slides for Java.s</Description>
               <FolderName>existingchart</FolderName>
               <Order>2</Order>
               <DocLink>
@@ -1352,7 +1049,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Formatting Chart Entities</Title>
-              <Description>In this example, we will see how we can format different chart entities including chart category and value axis using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can format different chart entities including chart category and value axis using Aspose.Slides for Java.</Description>
               <FolderName>chartentities</FolderName>
               <Order>3</Order>
               <DocLink>
@@ -1368,7 +1065,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Adding Chart Trend Lines</Title>
-              <Description>In this example, we will see how we can add the trend lines for the chart using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can add the trend lines for the chart using Aspose.Slides for Java.</Description>
               <FolderName>charttrendlines</FolderName>
               <Order>4</Order>
               <DocLink>
@@ -1384,7 +1081,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Setting Number Format For Chart Data Cell</Title>
-              <Description>In this example, we will see how we can set the chart data number format using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can set the chart data number format using Aspose.Slides for Java.</Description>
               <FolderName>numberformat</FolderName>
               <Order>5</Order>
               <DocLink>
@@ -1402,7 +1099,7 @@ This article explains different examples of working with Ole frames:
           <Folders>
             <Folder>
               <Title>Creating A Chart From Scratch</Title>
-              <Description>Aspose.Slides for .NET allows the developers to add custom charts into slides from scratch. It allows to create normal and scatter charts with multiple series from scratch. This topic includes the following examples:
+              <Description>Aspose.Slides for Java allows the developers to add custom charts into slides from scratch. It allows to create normal and scatter charts with multiple series from scratch. This topic includes the following examples:
 
  - Creating Normal Charts
  - Creating Scattered Chart with multiple series and different series markers</Description>
@@ -1411,7 +1108,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Creating Normal Charts</Title>
-                  <Description>In this example, we will see how we can create normal charts using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can create normal charts using Aspose.Slides for Java.</Description>
                   <FolderName>normalcharts</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1427,7 +1124,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Creating Scattered Chart With Multiple Series And Different Series Markers</Title>
-                  <Description>In this example, we will see how we can create a scattered chart with different series markers using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can create a scattered chart with different series markers using Aspose.Slides for Java.</Description>
                   <FolderName>scatteredchart</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1451,14 +1148,14 @@ This article explains different examples of working with Ole frames:
 
  - Creating a Table from Scratch in Slide
  - Accessing an Existing Table in Slide
- - Cells numbering used in MS PowerPoint and Aspose.Slides for .NET
+ - Cells numbering used in MS PowerPoint and Aspose.Slides for Java
  - Removing Row Or Column in Table</Description>
           <FolderName>workingwithtables</FolderName>
           <Order>5</Order>
           <Examples>
             <Example>
               <Title>Accessing An Existing Table In Slide</Title>
-              <Description>In this example, we will see how we can access a table that already exists in a slide using Aspose.Slides for .NET</Description>
+              <Description>In this example, we will see how we can access a table that already exists in a slide using Aspose.Slides for Java</Description>
               <FolderName>existingtable</FolderName>
               <Order>2</Order>
               <DocLink>
@@ -1479,7 +1176,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Removing Row Or Column In Table</Title>
-              <Description>In this example, we will see how we can remove the columns or rows belonging to the tables using Aspose.Slides for .NET</Description>
+              <Description>In this example, we will see how we can remove the columns or rows belonging to the tables using Aspose.Slides for Java</Description>
               <FolderName>removingrowcolumn</FolderName>
               <Order>3</Order>
               <DocLink>
@@ -1506,7 +1203,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Creating Table From Scratch</Title>
-                  <Description>In this example, we will see how we can create a table from scratch using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can create a table from scratch using Aspose.Slides for Java.</Description>
                   <FolderName>fromscratch</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1522,7 +1219,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Removing Table Cells Border</Title>
-                  <Description>In this example, we will see how we can remove the borders from table cells using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can remove the borders from table cells using Aspose.Slides for Java.</Description>
                   <FolderName>cellsborder</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1563,7 +1260,7 @@ This article explains different examples of working with Ole frames:
           <Examples>
             <Example>
               <Title>Replacing Text In A Placeholder</Title>
-              <Description>In this example, we will see how the text contained inside a Placeholder can be replaced or modified using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how the text contained inside a Placeholder can be replaced or modified using Aspose.Slides for Java.</Description>
               <FolderName>replacingtext</FolderName>
               <Order>1</Order>
               <DocLink>
@@ -1584,7 +1281,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Creating A TextBox On Slide</Title>
-              <Description>In this example, we will see how we can create a textbox on slides using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can create a textbox on slides using Aspose.Slides for Java.</Description>
               <FolderName>textboxonslide</FolderName>
               <Order>2</Order>
               <DocLink>
@@ -1600,7 +1297,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Creating TextBox With Hyperlink</Title>
-              <Description>In this example, we will see how we can create a TextBox with Hyperlink by using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can create a TextBox with Hyperlink by using Aspose.Slides for Java.</Description>
               <FolderName>textboxhyperlink</FolderName>
               <Order>3</Order>
               <DocLink>
@@ -1616,7 +1313,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Applying Shadow Effects On Slide Text</Title>
-              <Description>In this example, we will see how we can apply shadow effects on the text in a PPTX presentation using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can apply shadow effects on the text in a PPTX presentation using Aspose.Slides for Java.</Description>
               <FolderName>shadoweffects</FolderName>
               <Order>4</Order>
               <DocLink>
@@ -1632,7 +1329,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Managing Paragraphs Alignment</Title>
-              <Description>In this example, we will see how we can control the alignment of the text paragraphs in a slide using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can control the alignment of the text paragraphs in a slide using Aspose.Slides for Java.</Description>
               <FolderName>paragraphsalignment</FolderName>
               <Order>5</Order>
               <DocLink>
@@ -1674,7 +1371,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Managing Font Family Of Text</Title>
-              <Description>In this example, we will see how we can create a textbox with some text and then define a particular font, and various other properties of the font family category using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can create a textbox with some text and then define a particular font, and various other properties of the font family category using Aspose.Slides for Java.</Description>
               <FolderName>fontfamily</FolderName>
               <Order>7</Order>
               <DocLink>
@@ -1722,7 +1419,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Using Default Fonts For Rendering Presentation</Title>
-              <Description>In this example, we will see how we can set the default font fore rendering the presentation to PDF, XPS or thumbnails using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can set the default font fore rendering the presentation to PDF, XPS or thumbnails using Aspose.Slides for Java.</Description>
               <FolderName>defaultfonts</FolderName>
               <Order>11</Order>
               <DocLink>
@@ -1746,7 +1443,7 @@ This article explains different examples of working with Ole frames:
             </Example>
             <Example>
               <Title>Managing Paragraph Indent</Title>
-              <Description>In this example, we will see how we can manage the paragraph indent using Aspose.Slides for .NET.</Description>
+              <Description>In this example, we will see how we can manage the paragraph indent using Aspose.Slides for Java.</Description>
               <FolderName>paragraphindent</FolderName>
               <Order>12</Order>
               <DocLink>
@@ -1773,7 +1470,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Importing HTML Text In Paragraphs</Title>
-                  <Description>In this example, we will see how we can import the HTML text in paragraphs using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can import the HTML text in paragraphs using Aspose.Slides for Java.</Description>
                   <FolderName>importinghtmltext</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1794,7 +1491,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Exporting Paragraphs Text To HTML</Title>
-                  <Description>In this example, we will see how we can export the paragraph text to HTML using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can export the paragraph text to HTML using Aspose.Slides for Java.</Description>
                   <FolderName>exportingparagraphtext</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1840,7 +1537,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Creating A SmartArt Shape</Title>
-                  <Description>In this example, we will see how we can create a SmartArt shape using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can create a SmartArt shape using Aspose.Slides for Java.</Description>
                   <FolderName>creatingsmartartshape</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1856,7 +1553,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Accessing The SmartArt Shape In Slide</Title>
-                  <Description>In this example, we will see how we can access the SmartArt shapes added in presentation slide using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can access the SmartArt shapes added in presentation slide using Aspose.Slides for Java.</Description>
                   <FolderName>accessingsmartartshape</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1884,7 +1581,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Accessing SmartArt Shape With Particular Layout Type</Title>
-                  <Description>In this example, we will see how we can access the SmartArt shape with particular layout type using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can access the SmartArt shape with particular layout type using Aspose.Slides for Java.</Description>
                   <FolderName>accessingsmartart</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -1900,7 +1597,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Changing SmartArt Shape Style</Title>
-                  <Description>In this example, we will see how we can change the SmartArt shape style using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can change the SmartArt shape style using Aspose.Slides for Java.</Description>
                   <FolderName>changingsmartart</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -1921,7 +1618,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Changing SmartArt Shape Color Style</Title>
-                  <Description>In this example, we will see how we can change SmartArt shape color style using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can change SmartArt shape color style using Aspose.Slides for Java.</Description>
                   <FolderName>smartartcolorstyle</FolderName>
                   <Order>3</Order>
                   <DocLink>
@@ -1954,7 +1651,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Accessing SmartArt Shape Nodes</Title>
-                  <Description>In this example, we will see how we can access nodes inside SmartArt shape using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can access nodes inside SmartArt shape using Aspose.Slides for Java.</Description>
                   <FolderName>accesssmartart</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -2005,7 +1702,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Adding SmartArt Shape Nodes</Title>
-                  <Description>In this example, we will see how we can add node and child node inside SmartArt shape using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add node and child node inside SmartArt shape using Aspose.Slides for Java.</Description>
                   <FolderName>addingnodes</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -2026,7 +1723,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Adding SmartArt Shape Node At Specific Position</Title>
-                  <Description>In this example, we will see how we can add the child nodes belonging to respective nodes of SmartArt shape at particular position using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can add the child nodes belonging to respective nodes of SmartArt shape at particular position using Aspose.Slides for Java.</Description>
                   <FolderName>nodeatspecificposition</FolderName>
                   <Order>2</Order>
                   <DocLink>
@@ -2042,7 +1739,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Remove SmartArt Shape Node</Title>
-                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape using Aspose.Slides for Java.</Description>
                   <FolderName>removenode</FolderName>
                   <Order>3</Order>
                   <DocLink>
@@ -2063,7 +1760,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Remove SmartArt Shape Node At Specific Position</Title>
-                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape at particular position using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape at particular position using Aspose.Slides for Java.</Description>
                   <FolderName>removenodespecificposition</FolderName>
                   <Order>4</Order>
                   <DocLink>
@@ -2095,7 +1792,7 @@ This article explains different examples of working with Ole frames:
               <Examples>
                 <Example>
                   <Title>Checking Assistant Node In SmartArt Shape</Title>
-                  <Description>In this example, we will see how we can identify assistant nodes in the SmartArt nodes collection and changing them using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can identify assistant nodes in the SmartArt nodes collection and changing them using Aspose.Slides for Java.</Description>
                   <FolderName>assistantnode</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -2116,7 +1813,7 @@ This article explains different examples of working with Ole frames:
                 </Example>
                 <Example>
                   <Title>Checking SmartArt Node Level</Title>
-                  <Description>In this example, we will see how we can access the nodes of SmartArt shape at particular level using Aspose.Slides for .NET.</Description>
+                  <Description>In this example, we will see how we can access the nodes of SmartArt shape at particular level using Aspose.Slides for Java.</Description>
                   <FolderName>smartartnodelevel</FolderName>
                   <Order>2</Order>
                   <DocLink>
