@@ -16,8 +16,35 @@ public class RemoveNode
     {
         // The path to the documents directory.
         String dataDir = "src/programmersguide/smartartinpresentation/addremovenodes/removenode/data/";
-        
-        
+        //Load the desired the presentation
+        Presentation pres = new Presentation(dataDir+ "AddSmartArtNode.pptx");
+
+        //Traverse through every shape inside first slide
+        for(IShape shape : pres.getSlides().get_Item(0).getShapes())
+        {
+
+            //Check if shape is of SmartArt type
+            if (shape instanceof ISmartArt)
+            {
+                //Typecast shape to SmartArtEx
+                ISmartArt smart = (ISmartArt)shape;
+
+                if (smart.getAllNodes().getCount() > 0)
+                {
+                    //Accessing SmartArt node at index 0
+                    ISmartArtNode node = smart.getAllNodes().get_Item(0);
+
+                    //Removing the selected node
+                    smart.getAllNodes().removeNode(node);
+
+                }
+            }
+        }
+
+        //Save Presentation
+        pres.save(dataDir+ "RemoveSmartArtNode.pptx", SaveFormat.Pptx);
+
+
     }
 }
 

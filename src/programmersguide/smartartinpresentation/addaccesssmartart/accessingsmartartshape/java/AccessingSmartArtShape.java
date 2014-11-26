@@ -16,7 +16,22 @@ public class AccessingSmartArtShape
     {
         // The path to the documents directory.
         String dataDir = "src/programmersguide/smartartinpresentation/addaccesssmartart/accessingsmartartshape/data/";
-        
+        //Instantiate Presentation Class
+        Presentation pres = new Presentation(dataDir+ "SimpleSmartArt.pptx");
+
+        //Get first slide
+        ISlide slide = pres.getSlides().get_Item(0);
+
+        //Traverse through every shape inside first slide
+        for(IShape shape : pres.getSlides().get_Item(0).getShapes())
+        {
+            //Check if shape is of SmartArt type
+            if (shape instanceof ISmartArt)
+            {
+                //Typecast shape to SmartArtEx
+                ISmartArt smart = (ISmartArt)shape;
+            }
+        }
         
     }
 }

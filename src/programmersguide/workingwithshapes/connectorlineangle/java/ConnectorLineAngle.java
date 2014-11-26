@@ -25,11 +25,11 @@ public class ConnectorLineAngle
             if (shape instanceof AutoShape) {
                 AutoShape ashp = (AutoShape) shape;
                 if (ashp.getShapeType() == (byte) ShapeType.Line) {
-                    dir = getDirection(ashp.getWidth(), ashp.getHeight(), ashp.getFrame().getFlipH(), ashp.getFrame().getFlipV());
+                //    dir = getDirection(ashp.getWidth(), ashp.getHeight(), ashp.getFrame().getFlipH(), ashp.getFrame().getFlipV());
                 }
             } else if (shape instanceof Connector) {
                 Connector ashp = (Connector) shape;
-                dir = getDirection(ashp.getWidth(), ashp.getHeight(), ashp.getFrame().getFlipH(), ashp.getFrame().getFlipV());
+                //dir = getDirection(ashp.getWidth(), ashp.getHeight(), ashp.getFrame().getFlipH(), ashp.getFrame().getFlipV());
             }
 
             System.out.println(dir);

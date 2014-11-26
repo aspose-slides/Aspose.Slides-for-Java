@@ -16,8 +16,18 @@ public class CreatingSmartArtShape
     {
         // The path to the documents directory.
         String dataDir = "src/programmersguide/smartartinpresentation/addaccesssmartart/creatingsmartartshape/data/";
-        
-        
+
+        //Instantiate Presentation Class
+        Presentation pres = new Presentation();
+
+        //Get first slide
+        ISlide slide = pres.getSlides().get_Item(0);
+
+        //Add Smart Art Shape
+        ISmartArt smart = slide.getShapes().addSmartArt(0, 0, 400, 400, SmartArtLayoutType.BasicBlockList);
+
+        //Saving presentation
+        pres.save(dataDir+ "SimpleSmartArt.pptx", SaveFormat.Pptx);
     }
 }
 
