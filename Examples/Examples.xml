@@ -1,0 +1,1837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Folders>
+    <Folder>
+      <Title>Programmers Guide</Title>
+      <Description>Programmers Guide provides code samples about key programming concepts to build Java and other applications that use Aspose.Slides.</Description>
+      <FolderName>programmersguide</FolderName>
+      <Order>1</Order>
+      <Folders>
+        <Folder>
+          <Title>Working with Presentation</Title>
+          <Description>This section includes the following examples: 
+
+- Opening a Presentation
+- Saving a Presentation
+- Managing Presentation Properties
+- Converting PPT to PPTX
+- Accessing OpenDocument Presentation
+- Converting Presentation to PDF
+- Converting Presentation to TIFF
+- Converting Presentation to XPS
+- Converting Presentation to HTML
+- Converting Presentation with Notes to Tiff
+- Printing a Presentation</Description>
+          <FolderName>workingwithpresentation</FolderName>
+          <Order>1</Order>
+          <Examples>
+            <Example>
+              <Title>Converting PPT to PPTX</Title>
+              <Description>Aspose.Slides for Java now facilitates the developers to access the PPT using Presentation class instance and converting that to respective PPTX format. In this example, we will convert PPT file to PPTX using Aspose.Slides for Java</Description>
+              <FolderName>convertingppttopptx</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Converting PPT to PPTX</DisplayName>
+                <Url>Converting+PPT+to+PPTX</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Presentation1.ppt</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Accessing OpenDocument Presentation</Title>
+              <Description>Aspose.Slides for Java now facilitates the developers to access the OpenDocument Presentations (ODP) using Presentation class in read only mode. However, you can save the presentation in PPTX or PPT format.</Description>
+              <FolderName>accessingopendocument</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Accessing OpenDocument Presentation</DisplayName>
+                <Url>Accessing+OpenDocument+Presentation</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Source.odp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Converting Presentation to PDF</Title>
+              <Description>PDF documents are widely used as a standard format of exchanging documents between organizations, government sectors and individuals. It's a popular format so developers are often asked to convert Microsoft PowerPoint presentation files to PDF documents. Realizing this possible requirement, Aspose.Slides for Java supports converting presentations to PDF documents without using any other component.</Description>
+              <FolderName>convertingtopdf</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Converting Presentation to PDF</DisplayName>
+                <Url>Converting+Presentation+to+PDF</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\output.pdf</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Converting Presentation to HTML</Title>
+              <Description>HTML is one of several widely used format for exchanging data. Aspose.Slides for Java provides support for converting a presentation to HTML which is an embedded SVG.</Description>
+              <FolderName>convertingpresentationtohtml</FolderName>
+              <Order>9</Order>
+              <DocLink>
+                <DisplayName>Converting Presentation to HTML</DisplayName>
+                <Url>Converting+Presentation+to+HTML</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\demo.html</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Converting Presentation with Notes to Tiff</Title>
+              <Description>TIFF is one of several widely used image formats that Aspose.Slides for Java supports for converting a presentation with notes to images. You can also generate slide thumbnails in the Notes Slide view.</Description>
+              <FolderName>convertingpresentationwithnotestotiff</FolderName>
+              <Order>10</Order>
+              <DocLink>
+                <DisplayName>Converting Presentation with Notes to Tiff</DisplayName>
+                <Url>Converting+Presentation+with+Notes+to+Tiff</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\TestNotes.tiff</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Opening a Presentation</Title>
+              <Description>Using Aspose.Slides for Java, developers can not only create PowerPoint presentations from scratch but also access or modify the existing ones. In this section, we will discuss the simplest approach to open and access an existing presentation.
+
+    - Opening a Presentation.
+    - Opening a Password Protected Presentation.
+    - Accessing the Document Properties of a Password Protected Presentation without Password.</Description>
+              <FolderName>openingapresentation</FolderName>
+              <Order>4</Order>
+              <Examples>
+                <Example>
+                  <Title>Opening a Presentation</Title>
+                  <Description>Aspose.Slides for Java provides Presentation class that is used to open an existing presentation. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we have passed the name of the presentation file (to be opened) to the constructor of Presentation class. After the file is opened, we get the total number of slides present in the presentation.</Description>
+                  <FolderName>openingapresentation</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Opening a Presentation</DisplayName>
+                    <Url>Opening+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Opening a Password Protected Presentation</Title>
+                  <Description>Aspose.Slides for Java provides facility to open password protected presentation using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the password protected presentation. We will using LoadOptions class object to set the access password and then will use Presentation class to open presentation.</Description>
+                  <FolderName>openingpasswordpresentation</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Opening a Presentation</DisplayName>
+                    <Url>Opening+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing the Document Properties of a Password Protected Presentation without Password.</Title>
+                  <Description>Aspose.Slides for Java provides facility to access the Document Properties of the presentation in password protected presentation without supplying password using Presentation class. It offers few overloaded constructors and we can make use of one of the suitable constructors of Presentation class to create its object based on an existing presentation.In the example given below, we are accessing the Document Properties of a password protected presentation. We will using LoadOptions class object to set the presentation access properties.</Description>
+                  <FolderName>accessingdocumentproperties</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Opening a Presentation</DisplayName>
+                    <Url>Opening+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\demoPassDocument.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Saving a Presentation</Title>
+              <Description>The Presentation class holds the contents of a presentation. Whether you are creating a presentation from scratch or modifying an existing one, you want to save your presentation when you're finished.
+
+    - Save to file.
+    - Save with password protection.
+    - Saving a password protected presentation with read access to document properties.
+    - Save as read only.
+    - Remove write protection.</Description>
+              <FolderName>savingapresentation</FolderName>
+              <Order>5</Order>
+              <Examples>
+                <Example>
+                  <Title>Save to file</Title>
+                  <Description>Save a presentation to files by calling the Presentation class Write method. Simply pass the file name to the Write method as a string.</Description>
+                  <FolderName>savetofile</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Saving a Presentation</DisplayName>
+                    <Url>Saving+a+Presentation</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\Saved.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Save with password protection</Title>
+                  <Description>It's possible to save presentations with password protection. The presentation class exposes the Encrypt method which sets the password for the presentation. To do this, simply pass the password to the Encrypt method and then use the Write method exposed by the Presentation class as a string to save the presentation.</Description>
+                  <FolderName>savewithpasswordprotection</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Saving a Presentation</DisplayName>
+                    <Url>Saving+a+Presentation</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demoPass.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Saving a Password Protected Presentation with Read Access to Document Properties</Title>
+                  <Description>It's possible to save presentations with password protection. But in that case access to the presentation's document properties is also prohibited. Aspose.Slides offers a mechanism for password protecting a presentation but still being able to access the document properties in PowerPoint. The Presentation exposes the EncryptDocumentProperties property that takes a Boolean value to allow or disallow access to the document properties in password protected mode. By default, its value is set to true.</Description>
+                  <FolderName>savingapresentationproperties</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Saving a Presentation</DisplayName>
+                    <Url>Saving+a+Presentation</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demoPassDocument.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Save As Read Only</Title>
+                  <Description>Developers can now save presentations with write protection to allow the presentation to be read in read only mode. The Presentation class exposes the SetWriteProtection(string Password) method with which it is possible to save the presentation in read only mode by applying write protection on it. To do so, call the method and set the write protection password.</Description>
+                  <FolderName>saveasreadonly</FolderName>
+                  <Order>4</Order>
+                  <DocLink>
+                    <DisplayName>Saving a Presentation</DisplayName>
+                    <Url>Saving+a+Presentation</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demoWriteProtected.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Removing Write Protection from a Presentation</Title>
+                  <Description>Spose.Slides for Java provides a facility for accessing write protected presentation through the Presentation class. The IsWriteProtected property identifies whether a presentation is write protected or not. Then if it is write protected, the protection can be removed using the RemoveWriteProtection() method.</Description>
+                  <FolderName>removingwriteprotection</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Saving a Presentation</DisplayName>
+                    <Url>Saving+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\demoWriteProtected.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\newDemo.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Managing Presentation Properties</Title>
+              <Description>Microsoft PowerPoint provides a feature to add some properties to the presentation files. These document properties allow some useful information to be stored along with the documents (presentation files). There are two kinds of document properties as follows:
+
+    - System Defined (Built-in) Properties
+
+    - User Defined (Custom) Properties
+
+Built-in properties contain general information about the document like document title, author's name, document statistics and so on. Custom properties are those ones, which are defined by the users as Name/Value pairs, where both name and value are defined by the user. Using Aspose.Slides for Java, developers can access and modify the values of built-in properties as well as custom properties.</Description>
+              <FolderName>managingpresentationproperties</FolderName>
+              <Order>6</Order>
+              <Examples>
+                <Example>
+                  <Title>Accessing Built-in Properties</Title>
+                  <Description>These properties as exposed by IDocumentProperties object.</Description>
+                  <FolderName>accessingbuiltinproperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Managing Presentation Properties</DisplayName>
+                    <Url>Managing+Presentation+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Modifying Built-in Properties</Title>
+                  <Description>Modifying the built-in properties of presentation files is as easy as that of accessing them. You can simply assign a string value to any desired property and the property value would be modified. In the example given below, we have demonstrated that how we can modify the built-in document properties of the presentation file.</Description>
+                  <FolderName>modifyingbuiltinproperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Managing Presentation Properties</DisplayName>
+                    <Url>Managing+Presentation+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\DocProps.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing and Modifying Custom Properties</Title>
+                  <Description>Aspose.Slides for Java also allows developers to access the values of custom properties. An example is given below that shows how can you access and modify all of these custom properties for a presentation.</Description>
+                  <FolderName>accessingmodifyingproperties</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Managing Presentation Properties</DisplayName>
+                    <Url>Managing+Presentation+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\CustomDemoModified.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Converting Presentation to TIFF</Title>
+              <Description>TIFF format is known by its flexibility to accommodate multipage images and data. Keeping in view the importance and popularity of TIFF format, Aspose.Slides for Java provides the support for converting presentations into TIFF document.
+
+There are two different tiff export options:
+
+- Converting Presentation to TIFF with default size.
+- Converting Presentation to TIFF with custom size.</Description>
+              <FolderName>convertingpresentationtotiff</FolderName>
+              <Order>7</Order>
+              <Examples>
+                <Example>
+                  <Title>Converting Presentation to TIFF with default size</Title>
+                  <Description>Aspose.Slides helps you convert a presentation into TIFF document with default options.</Description>
+                  <FolderName>convertingwithdefaultsize</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Converting Presentation to TIFF</DisplayName>
+                    <Url>Converting+Presentation+to+TIFF</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demo.tiff</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Converting Presentation to TIFF with custom size</Title>
+                  <Description>You can convert a presentation into TIFF document with customized image size using TiffOptions class.</Description>
+                  <FolderName>convertingwithcustomsize</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Converting Presentation to TIFF</DisplayName>
+                    <Url>Converting+Presentation+to+TIFF</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demo.tiff</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Converting Presentation to XPS</Title>
+              <Description>The Save method exposed by Presentation class can be used to convert the whole presentation into XPS document. 
+Further, XpsOptions class exposes SaveMetafileAsPng property that can be set to true or false as per requirement.</Description>
+              <FolderName>convertingpresentationtoxps</FolderName>
+              <Order>8</Order>
+              <Examples>
+                <Example>
+                  <Title>Converting Presentation to XPS without XpsOptions</Title>
+                  <Description>You can convert a presentation into XPS document without using options provided by XpsOptions class.</Description>
+                  <FolderName>convertingwithoutxpsoptions</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Converting Presentation to XPS</DisplayName>
+                    <Url>Converting+Presentation+to+XPS</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demo.xps</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Converting Presentation to XPS with XpsOptions</Title>
+                  <Description>You can convert a presentation into XPS document using options provided by XpsOptions class.</Description>
+                  <FolderName>convertingwiithxpsoptions</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Converting Presentation to XPS</DisplayName>
+                    <Url>Converting+Presentation+to+XPS</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\demo.xps</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working With Slides in Presentation</Title>
+          <Description>This section includes the following examples:
+
+- Adding Slides to Presentation
+- Accessing Slides of a Presentation
+- Removing Slides from a Presentation
+- Cloning Slides in Presentation
+- Changing the Position of a Slide
+- Setting the Background Color to Slides
+- Setting the Background Color to a Gradient to Slides
+- Setting the Image as Background to Slides
+- Creating Slides Thumbnail Image
+- Managing Slides Transitions
+- Creating Slides SVG Image
+- Working with Slide Comments
+- Managing Slide Transitions</Description>
+          <FolderName>workingwithslidesinpresentation</FolderName>
+          <Order>2</Order>
+          <Examples>
+            <Example>
+              <Title>Adding Slides To Presentation</Title>
+              <Description>Each PowerPoint presentation file contains Master / Layout slide and other Normal slides. It means that a presentation file contains at least one or more slides. It is important to know that presentation files without slides are not supported by Aspose.Slides for Java. Each slide has unique Id and all the Normal Slides are arranged in an order specified by the zero based index.</Description>
+              <FolderName>addingslidestopresentation</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Adding Slides To Presentation</DisplayName>
+                <Url>Adding+Slides+to+Presentation</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\EmptySlide.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Accessing Slides of A Presentation</Title>
+              <Description>Each slide in a presentation has a unique Id. On the other hand, all the slides in the presentation are arranged in the order of the slide position starting from 0, that is, slide at position 1 will be accessible through 0 index of ISlideCollection associated with a Presentation object.</Description>
+              <FolderName>accessingslidesofapresentation</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Accessing Slides of A Presentation</DisplayName>
+                <Url>Accessing+Slides+of+a+Presentation</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Creating Slides SVG Image</Title>
+              <Description>Aspose.Slides for Java is used to create presentation files, complete with slides. These slides can be viewed by opening presentations using Microsoft PowerPoint. But sometimes, developers may also need to view slides as SVG images in their favorite image viewer. In such cases, Aspose.Slides for Java lets you export an individual slide to an SVG image.</Description>
+              <FolderName>creatingslidessvgimage</FolderName>
+              <Order>11</Order>
+              <DocLink>
+                <DisplayName>Creating Slides SVG Image</DisplayName>
+                <Url>Creating+Slides+SVG+Image</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.svg</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Removing Slides From A Presentation</Title>
+              <Description>Presentation class encapsulates a ISlideCollection that acts as a repository of all slides that are the part of the presentation. You can remove a slide from this Slides collection in two ways:
+
+- Using Slide Reference
+
+- Using Slide Index</Description>
+              <FolderName>removingslidesfromapresentation</FolderName>
+              <Order>3</Order>
+              <Examples>
+                <Example>
+                  <Title>Using Slide Reference</Title>
+                  <Description>In this example, we will see how we can remove a slide using a slide reference.</Description>
+                  <FolderName>usingslidereference</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Removing Slides from a Presentation</DisplayName>
+                    <Url>Removing+Slides+from+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\modified.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Using Slide Index</Title>
+                  <Description>In this example, we will see how we can remove a slide using its index position in the slides collection of the presentation,</Description>
+                  <FolderName>usingslideindex</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Removing Slides from a Presentation</DisplayName>
+                    <Url>Removing+Slides+from+a+Presentation</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\modified.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Cloning Slides in Presentation</Title>
+              <Description>Cloning is the process of making an exact copy or replica of something. Aspose.Slides for Java makes it possible to make a copy or clone of any slide and then insert s that cloned slide to the current or any other opened presentation. The process of slide cloning creates a new slide that can be modified by developers without changing the original slide.</Description>
+              <FolderName>cloningslidesinpresentation</FolderName>
+              <Order>4</Order>
+              <Examples>
+                                
+                <Example>
+                  <Title>In Another Presentation with Master Slide from Source Presentation at the End of the Existing Slides</Title>
+                  <Description>You can clone a slide with master slide from one presentation from and use it in another presentation. For that,  you need to clone the desired master slide from source presentation to destination presentation first. Then you need to use that master slide for cloning slide with master slide.</Description>
+                  <FolderName>anotherpresentationwithmaster</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Cloning Slides in Presentation</DisplayName>
+                    <Url>Cloning+Slides+in+Presentation</Url>
+                  </DocLink>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>            
+            <Folder>
+              <Title>Creating Slides Thumbnail Image</Title>
+              <Description>Aspose.Slides for Java is used to create presentation files containing slides. These slides can be viewed by opening presentation files using Microsoft PowerPoint. But sometimes, developers may need to view slides as images using their favorite image viewer. In such cases, Aspose.Slides for Java help you generate thumbnail images of the slides.</Description>
+              <FolderName>creatingslidesthumbnailimage</FolderName>
+              <Order>9</Order>
+              <Examples>
+               
+                <Example>
+                  <Title>Generating a Thumbnail from a Slide with User Defined Dimensions</Title>
+                  <Description>To generate the thumbnail of any desired slide using Aspose.Slides for Java:
+
+- Create an instance of the Presentation class.
+- Obtain the reference of any desired slide by using its ID or index.
+- Get the X and Y scaling factors based on user defined X and Y dimensions.
+- Get the thumbnail image of the referenced slide on a specified scale.
+- Save the thumbnail image in any desired image format.</Description>
+                  <FolderName>generatingthumbnailfromslidewithuserdefineddimensions</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Creating Slides Thumbnail Image</DisplayName>
+                    <Url>Creating+Slides+Thumbnail+Image</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\Thumbnail2.jpg</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Generating a Thumbnail from a Slide in Notes Slides View</Title>
+                  <Description>To generate the thumbnail of any desired slide in Notes Slide View using Aspose.Slides for Java:
+
+- Create an instance of the Presentation class.
+- Obtain the reference of any desired slide by using its ID or index.
+- Get the thumbnail image of the referenced slide on a specified scale in Notes Slide view.
+- Save the thumbnail image in any desired image format.</Description>
+                  <FolderName>generatingthumbnailfromslideinnotesslidesview</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Creating Slides Thumbnail Image</DisplayName>
+                    <Url>Creating+Slides+Thumbnail+Image</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\Aspose.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\Notes_tnail.jpg</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>           
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working With Shapes</Title>
+          <Description>This section includes the following topics:
+
+ - Adding Line Shape to Slide
+ - Finding a Shape in a Slide
+ - Applying Animations on Shapes inside Slide
+ - Formatting Lines of the Shapes
+ - Filling Shapes with Gradient
+ - Filling Shapes with Pattern
+ - Filling Shapes with Picture
+ - Filling Shapes with Solid Color
+ - Rotating Shapes
+ - Adding Picture Frame to Slide
+ - Adding Audio Frame to Slide
+ - Adding Video Frame to Slide
+ - Working with OLE Object Frames
+ - Adding Ellipse Shape to Slide
+ - Adding Rectangle Shape to Slide
+ - Adding an Embedded Video Frame to Slide</Description>
+          <FolderName>workingwithshapes</FolderName>
+          <Order>3</Order>
+          <Examples>
+            
+            <Example>
+              <Title>Applying Animations On Shapes Inside Slide</Title>
+              <Description>Animation is one of the most important parts of the presentations that make them more attractive and meaningful. Aspose.Slides for Java also allows developers to apply different kinds of animation effects on different kinds of shapes. There is a separate namespace Aspose.Slides.Pptx.Animation that provides classes to handle the animations on PPTX presentations.</Description>
+              <FolderName>applyinganimationsonshapesinsideslide</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Applying Animations on Shapes inside Slide</DisplayName>
+                <Url>Applying+Animations+on+Shapes+inside+Slide</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\AnimExample.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Filling Shapes With Gradient</Title>
+              <Description>In this example, we will see how we can fill the shapes with the gradient of two colors using Aspose.Slides for Java.</Description>
+              <FolderName>fillingshapesgradient</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>Filling Shapes with Gradient</DisplayName>
+                <Url>Filling+Shapes+with+Gradient</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Filling Shapes With Pattern</Title>
+              <Description>You can use the patterns to fill the shapes in more attractive styles. Aspose.Slides for Java offers more than 45 pre-defined pattern styles that can be used by developers to enrich their presentations.</Description>
+              <FolderName>fillingshapespattern</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Filling Shapes with Pattern</DisplayName>
+                <Url>Filling+Shapes+with+Pattern</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Filling Shapes With Picture</Title>
+              <Description>In this example, we will see how we can fill the shapes with picture using Aspose.Slides for Java.</Description>
+              <FolderName>fillingshapespicture</FolderName>
+              <Order>7</Order>
+              <DocLink>
+                <DisplayName>Filling Shapes with Picture</DisplayName>
+                <Url>Filling+Shapes+with+Picture</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Rotating Shapes</Title>
+              <Description>In this example, we will see how we can rotate the shapes in the presntation using Aspose.Slides for Java.</Description>
+              <FolderName>rotatingshapes</FolderName>
+              <Order>8</Order>
+              <DocLink>
+                <DisplayName>Rotating Shapes</DisplayName>
+                <Url>Rotating+Shapes</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+                       
+            <Example>
+              <Title>Adding an Embedded Video Frame To Slide</Title>
+              <Description>Developers can also embed and play video files in the slides to enrich their presentations. Aspose.Slides for Java supports adding Embedded Video Frames to the slides that make it possible for developers to add videos to their presentations.</Description>
+              <FolderName>embeddedvideoframe</FolderName>
+              <Order>15</Order>
+              <DocLink>
+                <DisplayName>Adding an Embedded Video Frame to Slide</DisplayName>
+                <Url>Adding+an+Embedded+Video+Frame+to+Slide</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Wildlife.wmv</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\VideoFrame.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Calculating Connector Line Angle</Title>
+              <Description>In this example, we will see how we can calculate the angle of connector line added in slide using Aspose.Slides for Java.</Description>
+              <FolderName>connectorlineangle</FolderName>
+              <Order>16</Order>
+              <DocLink>
+                <DisplayName>Calculating Connector Line Angle</DisplayName>
+                <Url>Calculating+Connector+Line+Angle</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Adding Line Shape To Slide</Title>
+              <Description>Aspose.Slides for Java supports adding different kinds of shapes to the slides. In this topic, we will start working with shapes by adding lines to the slides. Using Aspose.Slides for Java , developers can not only create simple lines , but some fancy lines can also be drawn on the slides.</Description>
+              <FolderName>addinglineshapetoslide</FolderName>
+              <Order>1</Order>
+              <Examples>
+                
+                <Example>
+                  <Title>Adding Arrow Shaped Line To Slide</Title>
+                  <Description>Aspose.Slides for Java  allows developers to configure some properties of the line to make it look more appealing. In this example, we will see how we can add arrow shaped line to the slide using Aspose.Slides for Java.</Description>
+                  <FolderName>addingarrowshapedlinetoslide</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Adding Line Shape to Slide</DisplayName>
+                    <Url>Adding+Line+Shape+to+Slide</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\LineShape2.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Formatting Lines Of The Shapes</Title>
+              <Description>This section includes the following topics:
+ - Formatting the Lines of Shapes
+ - Formatting the Join Styles</Description>
+              <FolderName>formattinglines</FolderName>
+              <Order>4</Order>
+              <Examples>
+                <Example>
+                  <Title>Formatting The Lines Of Shapes</Title>
+                  <Description>Using Aspose.Slides for Java, you can change the format settings of the lines with which a shape is obtained. For example, you can change the width of the line, modify the color of the line, apply different kinds of styles on the lines etc.</Description>
+                  <FolderName>formattinglines</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Formatting Lines of the Shapes</DisplayName>
+                    <Url>Formatting+Lines+of+the+Shapes</Url>
+                  </DocLink>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>FormattingThe Join Styles</Title>
+                  <Description>In this example, we will see how we can format the join styles using Aspose.Slides for Java.</Description>
+                  <FolderName>formattingjoinstyles</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Formatting Lines of the Shapes</DisplayName>
+                    <Url>Formatting+Lines+of+the+Shapes</Url>
+                  </DocLink>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Adding Picture Frame To Slide</Title>
+              <Description>Picture frame is also one of the shapes offered by Aspose.Slides for Java . Adding picture frame to a slide is bit trickier than simple shapes. A picture frame is like a picture in a frame. You can add any desired picture to your slide as a picture frame.</Description>
+              <FolderName>addingpictureframe</FolderName>
+              <Order>9</Order>
+              <Examples>
+                <Example>
+                  <Title>Adding Simple Picture Frames To Slides</Title>
+                  <Description>In this example, we will see how we can add simple picture frames to the slides using Aspose.Slides for Java.</Description>
+                  <FolderName>addingsimplepictureframes</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Adding Picture Frame to Slide</DisplayName>
+                    <Url>Adding+Picture+Frame+to+Slide</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\aspose-logo.jpg</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\RectPicFrame.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>                
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Working With OLE Object Frames</Title>
+              <Description>OLE stands for Object Linking &amp; Embedding . It's a Microsoft technology that allows objects created in one application to be embedded in another application. Aspose.Slides for Java supports adding OLE Objects to the slides in the form of OLE Object Frames.
+
+This article explains different examples of working with Ole frames:
+
+ - Adding an OLE Object Frame to a Slide
+ - Accessing an OLE Object Frame from a Slide
+ - Changing an OLE Object data from a Slide</Description>
+              <FolderName>oleobjectframes</FolderName>
+              <Order>12</Order>
+              <Examples>
+                <Example>
+                  <Title>Adding An OLE Object Frame To A Slide</Title>
+                  <Description>In this example, we will see how we can add an OLE object frame to a slide using Aspose.Slides for Java.</Description>
+                  <FolderName>addingoleobjectframe</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Working With OLE Object Frames</DisplayName>
+                    <Url>Working+with+OLE+Object+Frames</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\book1.xlsx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\OleEmbed.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                               
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Adding Ellipse Shape To Slide</Title>
+              <Description>Aspose.Slides for Java provides an easier set of APIs to draw different kinds of shapes with just a few lines of code. This section includes the following topics:
+
+ - Adding Simple Ellipse in the Slide
+ - Adding Formatted Ellipse to the Slide</Description>
+              <FolderName>addingellipseshape</FolderName>
+              <Order>13</Order>
+              <Examples>
+                <Example>
+                  <Title>Adding Simple Ellipse in the Slide</Title>
+                  <Description>In this example, we will see how we can add a simple ellipse to the first slide using Aspose.Slides for Java.</Description>
+                  <FolderName>simpleellipse</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Adding Ellipse Shape to Slide</DisplayName>
+                    <Url>Adding+Ellipse+Shape+to+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\EllipseShp1.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Adding Formatted Ellipse in the Slide</Title>
+                  <Description>In this example, we will see how we can add a formatted ellipse to the first slide of the presentation using Aspose.Slides for Java.</Description>
+                  <FolderName>formattedellipse</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Adding Ellipse Shape to Slide</DisplayName>
+                    <Url>Adding+Ellipse+Shape+to+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\EllipseShp2.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Adding Rectangle Shape to Slide</Title>
+              <Description>This section includes the following topics:
+
+ - Adding Simple Rectangle in the Slide
+ - Adding Formatted Rectangle to Slide</Description>
+              <FolderName>rectangleshape</FolderName>
+              <Order>14</Order>
+              <Examples>
+                <Example>
+                  <Title>Adding Simple Rectangle in the Slide</Title>
+                  <Description>In this example, we will see how we can add simple rectangle to the first slide of the presentation using Aspose.Slides for Java.</Description>
+                  <FolderName>simplerectangle</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Adding Rectangle Shape to Slide</DisplayName>
+                    <Url>Adding+Rectangle+Shape+to+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\RectShp1.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Adding Formatted Rectangle To Slide</Title>
+                  <Description>In this example, we will see how we can add the formatted rectangle to the slide using Aspose.Slides for ,NET.</Description>
+                  <FolderName>formattedrectangle</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Adding Rectangle Shape to Slide</DisplayName>
+                    <Url>Adding+Rectangle+Shape+to+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\RectShp2.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working with Charts</Title>
+          <Description>This section includes the following topics: 
+
+ - Creating a Chart from Scratch
+ - Updating an Existing Chart
+ - Setting Pie Chart Sector Colors
+ - Formatting Chart Entities
+ - Adding Chart Trend Lines
+ - Setting Number Format for Chart Data Cell</Description>
+          <FolderName>workingwithcharts</FolderName>
+          <Order>4</Order>
+          <Examples>
+            <Example>
+              <Title>Updating An Existing Chart</Title>
+              <Description>In this example, we will see how we can update the existing charts charts generated through Aspose.Slides or PowerPoint using Aspose.Slides for Java.s</Description>
+              <FolderName>existingchart</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Updating an Existing Chart</DisplayName>
+                <Url>Updating+an+Existing+Chart</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\AsposeChart.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\AsposeChartModified.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Formatting Chart Entities</Title>
+              <Description>In this example, we will see how we can format different chart entities including chart category and value axis using Aspose.Slides for Java.</Description>
+              <FolderName>chartentities</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Formatting Chart Entities</DisplayName>
+                <Url>Formatting+Chart+Entities</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\FormattedChart.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Adding Chart Trend Lines</Title>
+              <Description>In this example, we will see how we can add the trend lines for the chart using Aspose.Slides for Java.</Description>
+              <FolderName>charttrendlines</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Adding Chart Trend Lines</DisplayName>
+                <Url>Adding+Chart+Trend+Lines</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\ChartTrendLines.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Setting Number Format For Chart Data Cell</Title>
+              <Description>In this example, we will see how we can set the chart data number format using Aspose.Slides for Java.</Description>
+              <FolderName>numberformat</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>Setting Number Format for Chart Data Cell</DisplayName>
+                <Url>Setting+Number+Format+for+Chart+Data+Cell</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\PresetNumberFormat.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Creating A Chart From Scratch</Title>
+              <Description>Aspose.Slides for Java allows the developers to add custom charts into slides from scratch. It allows to create normal and scatter charts with multiple series from scratch. This topic includes the following examples:
+
+ - Creating Normal Charts
+ - Creating Scattered Chart with multiple series and different series markers</Description>
+              <FolderName>chartfromscratch</FolderName>
+              <Order>1</Order>
+              <Examples>
+                <Example>
+                  <Title>Creating Normal Charts</Title>
+                  <Description>In this example, we will see how we can create normal charts using Aspose.Slides for Java.</Description>
+                  <FolderName>normalcharts</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Creating a Chart from Scratch</DisplayName>
+                    <Url>Creating+a+Chart+from+Scratch</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\AsposeChart.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Creating Scattered Chart With Multiple Series And Different Series Markers</Title>
+                  <Description>In this example, we will see how we can create a scattered chart with different series markers using Aspose.Slides for Java.</Description>
+                  <FolderName>scatteredchart</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Creating a Chart from Scratch</DisplayName>
+                    <Url>Creating+a+Chart+from+Scratch</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\AsposeChart.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working With Tables</Title>
+          <Description>This section includes the following topics: 
+
+ - Creating a Table from Scratch in Slide
+ - Accessing an Existing Table in Slide
+ - Cells numbering used in MS PowerPoint and Aspose.Slides for Java
+ - Removing Row Or Column in Table</Description>
+          <FolderName>workingwithtables</FolderName>
+          <Order>5</Order>
+          <Examples>
+            <Example>
+              <Title>Accessing An Existing Table In Slide</Title>
+              <Description>In this example, we will see how we can access a table that already exists in a slide using Aspose.Slides for Java</Description>
+              <FolderName>existingtable</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Accessing an Existing Table in Slide</DisplayName>
+                <Url>Accessing+an+Existing+Table+in+Slide</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\table.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\table1.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Removing Row Or Column In Table</Title>
+              <Description>In this example, we will see how we can remove the columns or rows belonging to the tables using Aspose.Slides for Java</Description>
+              <FolderName>removingrowcolumn</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Removing Row Or Column in Table</DisplayName>
+                <Url>Removing+Row+Or+Column+in+Table</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\TestTable.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Creating A Table From Scratch In Slide</Title>
+              <Description>This section includes the following topics: 
+
+ - Creating Table from Scratch
+ - Remove Table Borders</Description>
+              <FolderName>tablefromscratch</FolderName>
+              <Order>1</Order>
+              <Examples>
+                <Example>
+                  <Title>Creating Table From Scratch</Title>
+                  <Description>In this example, we will see how we can create a table from scratch using Aspose.Slides for Java.</Description>
+                  <FolderName>fromscratch</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Creating a Table from Scratch in Slide</DisplayName>
+                    <Url>Creating+a+Table+from+Scratch+in+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\table.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Removing Table Cells Border</Title>
+                  <Description>In this example, we will see how we can remove the borders from table cells using Aspose.Slides for Java.</Description>
+                  <FolderName>cellsborder</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Creating a Table from Scratch in Slide</DisplayName>
+                    <Url>Creating+a+Table+from+Scratch+in+Slide</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\table.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working With Text In Presentation</Title>
+          <Description>This section includes the following topics: 
+
+ - Replacing Text in a Placeholder
+ - Creating a TextBox on Slide
+ - Creating TextBox with Hyperlink
+ - Applying Shadow Effects on Slide Text
+ - Managing Paragraphs Alignment
+ - Managing Font Related Properties
+ - Managing Font Family of Text
+ - Managing Multiple Paragraphs having Multiple Portions
+ - Managing Paragraph Bullets in PPTX
+ - Importing and Exporting HTML Text in PPTX
+ - Using Custom Fonts without Installing them
+ - Using Default Fonts for Rendering Presentation
+ - Managing Paragraph Indent
+ - Tabs and EffectiveTabs in Presentation</Description>
+          <FolderName>textinpresentation</FolderName>
+          <Order>6</Order>
+          <Examples>
+            <Example>
+              <Title>Replacing Text In A Placeholder</Title>
+              <Description>In this example, we will see how the text contained inside a Placeholder can be replaced or modified using Aspose.Slides for Java.</Description>
+              <FolderName>replacingtext</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Replacing Text in a Placeholder</DisplayName>
+                <Url>Replacing+Text+in+a+Placeholder</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\output.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Creating A TextBox On Slide</Title>
+              <Description>In this example, we will see how we can create a textbox on slides using Aspose.Slides for Java.</Description>
+              <FolderName>textboxonslide</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Creating a TextBox on Slide</DisplayName>
+                <Url>Creating+a+TextBox+on+Slide</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\TextBox.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Creating TextBox With Hyperlink</Title>
+              <Description>In this example, we will see how we can create a TextBox with Hyperlink by using Aspose.Slides for Java.</Description>
+              <FolderName>textboxhyperlink</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Creating TextBox with Hyperlink</DisplayName>
+                <Url>Creating+TextBox+with+Hyperlink</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\hLinkPPTX.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Applying Shadow Effects On Slide Text</Title>
+              <Description>In this example, we will see how we can apply shadow effects on the text in a PPTX presentation using Aspose.Slides for Java.</Description>
+              <FolderName>shadoweffects</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Applying Shadow Effects on Slide Text</DisplayName>
+                <Url>Applying+Shadow+Effects+on+Slide+Text</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\pres.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Paragraphs Alignment</Title>
+              <Description>In this example, we will see how we can control the alignment of the text paragraphs in a slide using Aspose.Slides for Java.</Description>
+              <FolderName>paragraphsalignment</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>Managing Paragraphs Alignment</DisplayName>
+                <Url>Managing+Paragraphs+Alignment</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\Centeralign.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Font Related Properties</Title>
+              <Description>Presentations usually contain both text and images. The text can be formatted in various way, either to highlight specific sections and words, or to conform with corporate styles. Text formatting helps users vary the look and feel of the presentation content.</Description>
+              <FolderName>fontproperties</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Managing Font Related Properties</DisplayName>
+                <Url>Managing+Font+Related+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\WelcomeFont.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Font Family Of Text</Title>
+              <Description>In this example, we will see how we can create a textbox with some text and then define a particular font, and various other properties of the font family category using Aspose.Slides for Java.</Description>
+              <FolderName>fontfamily</FolderName>
+              <Order>7</Order>
+              <DocLink>
+                <DisplayName>Managing Font Family of Text</DisplayName>
+                <Url>Managing+Font+Family+of+Text</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\pptxFont.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Multiple Paragraphs Having Multiple Portions</Title>
+              <Description>An   ITextFame object can have one or more Paragraphs (every paragraph is created through a carriage return), that is a collection of IParagraph objects. Furthermore, an  IParagraph object can have one or more Portions (a collection of IPortion objects. An  IPortion object manages text and its formatting properties. So, it means that IParagraph object has capacity to handle text with different formatting properties through its underlying IPortion objects.</Description>
+              <FolderName>multipleparagraphs</FolderName>
+              <Order>8</Order>
+              <DocLink>
+                <DisplayName>Managing Multiple Paragraphs having Multiple Portions</DisplayName>
+                <Url>Managing+Multiple+Paragraphs+having+Multiple+Portions</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\multiParaPort.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Paragraph Bullets In PPTX</Title>
+              <Description>Bullets are more useful where the something is to be described in steps. Moreover, text looks well organized with the use of bullets. Bulleted paragraphs are always easier to read and understand.</Description>
+              <FolderName>paragraphbullets</FolderName>
+              <Order>9</Order>
+              <DocLink>
+                <DisplayName>Managing Paragraph Bullets in PPTX</DisplayName>
+                <Url>Managing+Paragraph+Bullets+in+PPTX</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\Bullet.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Using Default Fonts For Rendering Presentation</Title>
+              <Description>In this example, we will see how we can set the default font fore rendering the presentation to PDF, XPS or thumbnails using Aspose.Slides for Java.</Description>
+              <FolderName>defaultfonts</FolderName>
+              <Order>11</Order>
+              <DocLink>
+                <DisplayName>Using Default Fonts for Rendering Presentation</DisplayName>
+                <Url>Using+Default+Fonts+for+Rendering+Presentation</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\data\Aspose.pptx</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\output.png</Path>
+                </DataFile>
+                <DataFile>
+                  <Path>..\data\output.xps</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Paragraph Indent</Title>
+              <Description>In this example, we will see how we can manage the paragraph indent using Aspose.Slides for Java.</Description>
+              <FolderName>paragraphindent</FolderName>
+              <Order>12</Order>
+              <DocLink>
+                <DisplayName>Managing Paragraph Indent</DisplayName>
+                <Url>Managing+Paragraph+Indent</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\data\InOutDent.pptx</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Importing and Exporting HTML Text in PPTX</Title>
+              <Description>This section includes the following topics: 
+
+ - Importing HTML Text in Paragraphs 
+ - Exporting Paragraphs Text to HTML</Description>
+              <FolderName>htmltext</FolderName>
+              <Order>10</Order>
+              <Examples>
+                <Example>
+                  <Title>Importing HTML Text In Paragraphs</Title>
+                  <Description>In this example, we will see how we can import the HTML text in paragraphs using Aspose.Slides for Java.</Description>
+                  <FolderName>importinghtmltext</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Importing HTML Text in Paragraphs</DisplayName>
+                    <Url>Importing+and+Exporting+HTML+Text+in+PPTX</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\file.html</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\output.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Exporting Paragraphs Text To HTML</Title>
+                  <Description>In this example, we will see how we can export the paragraph text to HTML using Aspose.Slides for Java.</Description>
+                  <FolderName>exportingparagraphtext</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Exporting Paragraphs Text to HTML</DisplayName>
+                    <Url>Importing+and+Exporting+HTML+Text+in+PPTX</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\input.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\output.html</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working With SmartArt In Presentation</Title>
+          <Description>This section includes the following topics: 
+
+ - Add and Access the SmartArt shape
+ - Managing SmartArt Style and Color Layouts
+ - Accessing SmartArt Nodes and Child Nodes
+ - Add and Remove SmartArt Nodes and Child Nodes
+ - Checking Assistant Nodes in SmartArt Shapes</Description>
+          <FolderName>smartartinpresentation</FolderName>
+          <Order>7</Order>
+          <Folders>
+            <Folder>
+              <Title>Add and Access the SmartArt Shape</Title>
+              <Description>This section includes the following topics: 
+
+ - Creating a SmartArt Shape
+ - Accessing the SmartArt shape in slide</Description>
+              <FolderName>addaccesssmartart</FolderName>
+              <Order>1</Order>
+              <Examples>
+                <Example>
+                  <Title>Creating A SmartArt Shape</Title>
+                  <Description>In this example, we will see how we can create a SmartArt shape using Aspose.Slides for Java.</Description>
+                  <FolderName>creatingsmartartshape</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Add and Access the SmartArt shape</DisplayName>
+                    <Url>Add+and+Access+the+SmartArt+shape</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing The SmartArt Shape In Slide</Title>
+                  <Description>In this example, we will see how we can access the SmartArt shapes added in presentation slide using Aspose.Slides for Java.</Description>
+                  <FolderName>accessingsmartartshape</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Add and Access the SmartArt shape</DisplayName>
+                    <Url>Add+and+Access+the+SmartArt+shape</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Managing SmartArt Style and Color Layouts</Title>
+              <Description>This section includes the following topics: 
+
+ - Accessing SmartArt Shape Layout type
+ - Changing SmartArt Shape Style
+ - Changing SmartArt Shape Color Style</Description>
+              <FolderName>managingsmartartstyle</FolderName>
+              <Order>2</Order>
+              <Examples>
+                <Example>
+                  <Title>Accessing SmartArt Shape With Particular Layout Type</Title>
+                  <Description>In this example, we will see how we can access the SmartArt shape with particular layout type using Aspose.Slides for Java.</Description>
+                  <FolderName>accessingsmartart</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Managing SmartArt Style and Color Layouts</DisplayName>
+                    <Url>Managing+SmartArt+Style+and+Color+Layouts</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Changing SmartArt Shape Style</Title>
+                  <Description>In this example, we will see how we can change the SmartArt shape style using Aspose.Slides for Java.</Description>
+                  <FolderName>changingsmartart</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Managing SmartArt Style and Color Layouts</DisplayName>
+                    <Url>Managing+SmartArt+Style+and+Color+Layouts</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\ChangeSmartArtStyle.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Changing SmartArt Shape Color Style</Title>
+                  <Description>In this example, we will see how we can change SmartArt shape color style using Aspose.Slides for Java.</Description>
+                  <FolderName>smartartcolorstyle</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Managing SmartArt Style and Color Layouts</DisplayName>
+                    <Url>Managing+SmartArt+Style+and+Color+Layouts</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\ChangeSmartArtColorStyle.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Accessing SmartArt Nodes and Child Nodes</Title>
+              <Description>This section includes the following topics: 
+
+ - Accessing SmartArt Shape Nodes
+ - Accessing SmartArt Shape Child Nodes
+ - Accessing SmartArt Shape Child Node at Specific Position</Description>
+              <FolderName>accesssmartartnodes</FolderName>
+              <Order>3</Order>
+              <Examples>
+                <Example>
+                  <Title>Accessing SmartArt Shape Nodes</Title>
+                  <Description>In this example, we will see how we can access nodes inside SmartArt shape using Aspose.Slides for Java.</Description>
+                  <FolderName>accesssmartart</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Accessing SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Accessing+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing SmartArt Shape Child Nodes</Title>
+                  <Description>In this example, we will see how we can access the child nodes belonging to respective nodes of SmartArt shape.</Description>
+                  <FolderName>accesschildnodes</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Accessing SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Accessing+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Accessing SmartArt Shape Child Node At Specific Position</Title>
+                  <Description>In this example, we will see how we can access the child nodes at some particular position belonging to respective nodes of SmartArt shape.</Description>
+                  <FolderName>childnodespecificposition</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Accessing SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Accessing+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Add And Remove SmartArt Nodes And Child Nodes</Title>
+              <Description>This section includes the following topics:
+
+ - Adding SmartArt Shape Nodes
+ - Adding SmartArt Shape Node at Specific Position
+ - Remove SmartArt Shape Node
+ - Remove SmartArt Shape Node at Specific Position</Description>
+              <FolderName>addremovenodes</FolderName>
+              <Order>4</Order>
+              <Examples>
+                <Example>
+                  <Title>Adding SmartArt Shape Nodes</Title>
+                  <Description>In this example, we will see how we can add node and child node inside SmartArt shape using Aspose.Slides for Java.</Description>
+                  <FolderName>addingnodes</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Add and Remove SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Add+and+Remove+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\AddSmartArtNode.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Adding SmartArt Shape Node At Specific Position</Title>
+                  <Description>In this example, we will see how we can add the child nodes belonging to respective nodes of SmartArt shape at particular position using Aspose.Slides for Java.</Description>
+                  <FolderName>nodeatspecificposition</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Add and Remove SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Add+and+Remove+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\AddSmartArtNodeByPosition.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Remove SmartArt Shape Node</Title>
+                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape using Aspose.Slides for Java.</Description>
+                  <FolderName>removenode</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Add and Remove SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Add+and+Remove+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\RemoveSmartArtNode.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Remove SmartArt Shape Node At Specific Position</Title>
+                  <Description>In this example, we will see how we can remove the nodes inside SmartArt shape at particular position using Aspose.Slides for Java.</Description>
+                  <FolderName>removenodespecificposition</FolderName>
+                  <Order>4</Order>
+                  <DocLink>
+                    <DisplayName>Add and Remove SmartArt Nodes and Child Nodes</DisplayName>
+                    <Url>Add+and+Remove+SmartArt+Nodes+and+Child+Nodes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\RemoveSmartArtNodeByPosition.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Checking Assistant Nodes In SmartArt Shapes</Title>
+              <Description>This section includes the following topics:
+
+ - Checking Assistant Node in SmartArt Shape
+ - Checking SmartArt Node level</Description>
+              <FolderName>checkassistantnodes</FolderName>
+              <Order>5</Order>
+              <Examples>
+                <Example>
+                  <Title>Checking Assistant Node In SmartArt Shape</Title>
+                  <Description>In this example, we will see how we can identify assistant nodes in the SmartArt nodes collection and changing them using Aspose.Slides for Java.</Description>
+                  <FolderName>assistantnode</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Checking Assistant Nodes in SmartArt Shapes</DisplayName>
+                    <Url>Checking+Assistant+Nodes+in+SmartArt+Shapes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\data\ChangeAssitantNode.pptx</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Checking SmartArt Node Level</Title>
+                  <Description>In this example, we will see how we can access the nodes of SmartArt shape at particular level using Aspose.Slides for Java.</Description>
+                  <FolderName>smartartnodelevel</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Checking Assistant Nodes in SmartArt Shapes</DisplayName>
+                    <Url>Checking+Assistant+Nodes+in+SmartArt+Shapes</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\data\SimpleSmartArt.pptx</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+</Data>
