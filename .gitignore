@@ -27,4 +27,4 @@ Out*/
 *.lic
 Data/*Out*
 .idea/
-pom.xml
+.project
