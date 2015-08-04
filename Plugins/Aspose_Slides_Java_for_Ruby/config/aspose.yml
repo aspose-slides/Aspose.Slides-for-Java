@@ -1,0 +1,5 @@
+jar_dir: ../asposeslidesjava/jars
+license_path: ../asposeslidesjava/license/path
+jvm_args: -Xms512m -Xmx1G
+
+
