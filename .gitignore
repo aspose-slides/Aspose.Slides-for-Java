@@ -9,7 +9,6 @@ bin/
 *.ldb
 _ReSharper*/
 *.iws
-*.iml
 *.ipr
 *.eml
 out/
@@ -26,5 +25,4 @@ Out*/
 .settings/
 *.lic
 Data/*Out*
-.idea/
 .project
