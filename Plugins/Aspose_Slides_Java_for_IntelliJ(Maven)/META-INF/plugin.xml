@@ -1,0 +1,28 @@
+<!--
+  ~ @author Adeel Ilyas <adeel.ilyas@aspose.com>
+  -->
+<idea-plugin version="2">
+    <id>com.aspose.slides.java.intellij.maven</id>
+    <name>Aspose.Slides Java for IntelliJ IDEA Maven</name>
+    <version>1.0.0.0</version>
+    <vendor email="slides@aspose.com" url="http://www.aspose.com">Aspose Pty Ltd.</vendor>
+
+
+    <description><![CDATA[<br/><b>Aspose.Slides for Java</b> is a unique PowerPoint management API that enables Java applications to read, write and manipulate PowerPoint documents (PPT, PPTX, POS, PPS, POTX, PPSX) PDF, HTML and image file formats without using Microsoft PowerPoint. Aspose.Slides for Java</b> is the first and only Java API that provides functionality to manage PowerPoint documents within your own applications. As with all Aspose Java APIs, Aspose.Slides for Java is written in pure Java.<br/><br/>The plugin's <b>Aspose.Slides Maven Project</b> wizard creates a Aspose.Slides Java API maven project by fetching and referencing the latest API artifact from the Aspose Cloud Maven Repository.<br/><br/><b>Aspose.Slides Maven Project</b> wizard also gives you option to download the example source codes of using Aspose.Slides for Java API<br/><br/>Once you are finished with the wizard i.e created project and downloaded examples. You can add those free of cost example source codes for using Aspose.Slides Java API in your project <br/><br/>The newly created project and the examples you added is now ready to be extended, all references and required resources will also be automatically added.<br/>
+    ]]></description>
+
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="139"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder builderClass="com.aspose.wizards.maven.AsposeMavenModuleBuilder"/>
+    </extensions>
+
+    <actions>
+        <action id="aspose.slides.example" class="com.aspose.examples.AsposeExampleAction" text="Aspose.Slides Example" icon="/resources/asposeSmall.png"
+                description="Aspose.Slides Examples allow you to add Aspose sourcecode examples to demonstrate Aspose.Slides Java API usage. Available samples are displayed in tree format from where you can select one. Selected category examples will be added to current project including source files and required data files.">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
