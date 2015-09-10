@@ -24,4 +24,4 @@ For more info about the **Aspose.Slides for Java API**, [please check the api do
 
 ## Plugin Documentation
 
-For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](http://www.aspose.com/docs/display/slidesjava/7.+Aspose.Slides+Java+for+IntelliJ+IDEA+%28Maven%29)
+For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](http://www.aspose.com/docs/display/slidesjava/4.+Aspose.Slides+Java+for+IntelliJ+IDEA+%28Maven%29)
