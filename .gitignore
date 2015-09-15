@@ -11,6 +11,7 @@ _ReSharper*/
 *.iws
 *.ipr
 *.eml
+*.iml
 out/
 *.user
 *.resx
@@ -26,3 +27,5 @@ Out*/
 *.lic
 Data/*Out*
 .project
+.idea/
+/dist/
