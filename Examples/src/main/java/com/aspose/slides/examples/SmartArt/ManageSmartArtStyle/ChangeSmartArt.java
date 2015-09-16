@@ -6,7 +6,7 @@
  * "as is", without warranty of any kind, either expressed or implied.
  */
  
-package com.aspose.slides.examples.SmartArt.managingsmartartstyle;
+package com.aspose.slides.examples.SmartArt.ManageSmartArtStyle;
 
 import com.aspose.slides.*;
 import com.aspose.slides.examples.Utils;
