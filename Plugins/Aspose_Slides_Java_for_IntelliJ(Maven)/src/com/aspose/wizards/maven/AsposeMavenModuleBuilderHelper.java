@@ -33,6 +33,7 @@ import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -106,19 +107,7 @@ public class AsposeMavenModuleBuilderHelper {
         });
     }
 
-    private void writeXmlDocumentToVirtualFile(VirtualFile pom, Document pomDocument) throws TransformerConfigurationException, TransformerException, IOException {
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-        DOMSource source = new DOMSource(pomDocument);
 
-        ByteOutputStream bytes = new ByteOutputStream();
-
-        StreamResult result = new StreamResult(bytes);
-        transformer.transform(source, result);
-        VfsUtil.saveText(pom, bytes.toString());
-    }
 
     private Document getXmlDocument(String xmlfile) throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -165,7 +154,7 @@ public class AsposeMavenModuleBuilderHelper {
             list.appendChild(listOption);
 
             // Write the content into misc xml file
-            writeXmlDocumentToVirtualFile(miscxml, pomDocument);
+            AsposeMavenProjectManager.writeXmlDocumentToVirtualFile(miscxml, pomDocument);
         } catch (IOException io) {
             io.printStackTrace();
         } catch (ParserConfigurationException pce) {
@@ -222,7 +211,7 @@ public class AsposeMavenModuleBuilderHelper {
 
             // Write the content into maven pom xml file
 
-            writeXmlDocumentToVirtualFile(pom, pomDocument);
+            AsposeMavenProjectManager.writeXmlDocumentToVirtualFile(pom, pomDocument);
 
 
         } catch (IOException io) {

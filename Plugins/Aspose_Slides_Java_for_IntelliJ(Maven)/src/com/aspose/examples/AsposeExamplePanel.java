@@ -167,7 +167,7 @@ public final class AsposeExamplePanel extends JPanel {
     //=========================================================================
     private boolean retrieveAPIDependency() {
         getComponentSelection().removeAllItems();
-        String versionNo = AsposeMavenProjectManager.getInstance().getDependencyVersionFromPOM(AsposeConstants.API_MAVEN_DEPENDENCY, AsposeMavenProjectManager.getInstance().getProjectHandle());
+        String versionNo = AsposeMavenProjectManager.getInstance().getDependencyVersionFromPOM(AsposeConstants.API_MAVEN_DEPENDENCY);
         if (versionNo == null) {
             getComponentSelection().addItem(AsposeConstants.API_DEPENDENCY_NOT_FOUND);
         } else {
@@ -183,7 +183,6 @@ public final class AsposeExamplePanel extends JPanel {
         DefaultTreeModel model = (DefaultTreeModel) getExamplesTree().getModel();
         model.setRoot(top);
         model.reload(top);
-        System.out.println("ITEM: " + item);
         if (item != null && !item.equals(AsposeConstants.API_DEPENDENCY_NOT_FOUND)) {
 
             AsposeExampleCallback callback = new AsposeExampleCallback(this, top);

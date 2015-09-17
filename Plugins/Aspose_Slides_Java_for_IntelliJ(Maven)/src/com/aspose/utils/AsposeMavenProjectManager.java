@@ -15,8 +15,13 @@ import com.aspose.maven.apis.artifacts.Metadata;
 import com.aspose.wizards.maven.AsposeMavenModuleBuilderHelper;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.vfs.LocalFileSystem;
+import com.intellij.openapi.vfs.VfsUtil;
+import com.intellij.openapi.vfs.VirtualFile;
+import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -26,6 +31,9 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.*;
 import java.io.*;
@@ -94,7 +102,7 @@ public class AsposeMavenProjectManager {
         return data;
     }
 
-    public  String getResolveSupportedJDK(String ProductURL) {
+    public String getResolveSupportedJDK(String ProductURL) {
         String supportedJDKs[] = {"jdk17", "jdk16", "jdk15", "jdk14", "jdk18"};
         String classifier = null;
         for (String jdkCheck : supportedJDKs) {
@@ -125,6 +133,130 @@ public class AsposeMavenProjectManager {
         }
     }
 
+    public void addMavenDependenciesInProject(NodeList addTheseDependencies) {
+        String mavenPomXmlfile = AsposeMavenUtil.getPOMXmlFile(projectHandle);
+
+        VirtualFile vf_mavenPomXmlfilel = LocalFileSystem.getInstance().findFileByPath(mavenPomXmlfile);
+
+
+        try {
+            Document pomDocument = getXmlDocument(mavenPomXmlfile);
+
+            Node dependenciesNode = pomDocument.getElementsByTagName("dependencies").item(0);
+
+
+            if (addTheseDependencies != null && addTheseDependencies.getLength() > 0) {
+                for (int n = 0; n < addTheseDependencies.getLength(); n++) {
+                    String artifactId = addTheseDependencies.item(n).getFirstChild().getNextSibling().getNextSibling().getNextSibling().getFirstChild().getNodeValue();
+
+                    XPathFactory xPathfactory = XPathFactory.newInstance();
+                    XPath xpath = xPathfactory.newXPath();
+                    String expression = "//artifactId[text()='" + artifactId + "']";
+
+                    XPathExpression xPathExpr = xpath.compile(expression);
+
+                    Node dependencyAlreadyExist = (Node) xPathExpr.evaluate(pomDocument, XPathConstants.NODE);
+
+                    if (dependencyAlreadyExist != null) {
+                        Node dependencies=pomDocument.getElementsByTagName("dependencies").item(0);
+                        dependencies.removeChild(dependencyAlreadyExist.getParentNode());
+                    }
+
+                    Node importedNode = pomDocument.importNode(addTheseDependencies.item(n), true);
+                    dependenciesNode.appendChild(importedNode);
+
+
+                }
+            }
+            removeEmptyLinesfromDOM(pomDocument);
+            writeXmlDocumentToVirtualFile(vf_mavenPomXmlfilel, pomDocument);
+
+        } catch (IOException io) {
+            io.printStackTrace();
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (SAXException sae) {
+            sae.printStackTrace();
+        } catch (TransformerException tfe) {
+            tfe.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    public void addMavenRepositoriesInProject(NodeList addTheseRepositories) {
+        String mavenPomXmlfile = AsposeMavenUtil.getPOMXmlFile(projectHandle);
+
+        VirtualFile vf_mavenPomXmlfilel = LocalFileSystem.getInstance().findFileByPath(mavenPomXmlfile);
+
+
+        try {
+            Document pomDocument = getXmlDocument(mavenPomXmlfile);
+
+            Node repositoriesNode = pomDocument.getElementsByTagName("repositories").item(0);
+
+
+            if (addTheseRepositories != null && addTheseRepositories.getLength() > 0) {
+                for (int n = 0; n < addTheseRepositories.getLength(); n++) {
+                    String repositoryId = addTheseRepositories.item(n).getFirstChild().getNextSibling().getFirstChild().getNodeValue();
+
+                    XPathFactory xPathfactory = XPathFactory.newInstance();
+                    XPath xpath = xPathfactory.newXPath();
+                    String expression = "//id[text()='" + repositoryId + "']";
+
+                    XPathExpression xPathExpr = xpath.compile(expression);
+
+                    Boolean repositoryAlreadyExist = (Boolean) xPathExpr.evaluate(pomDocument, XPathConstants.BOOLEAN);
+
+                    if (!repositoryAlreadyExist) {
+                        Node importedNode = pomDocument.importNode(addTheseRepositories.item(n), true);
+                        repositoriesNode.appendChild(importedNode);
+                    }
+
+                }
+            }
+            removeEmptyLinesfromDOM(pomDocument);
+            writeXmlDocumentToVirtualFile(vf_mavenPomXmlfilel, pomDocument);
+
+        } catch (IOException io) {
+            io.printStackTrace();
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (SAXException sae) {
+            sae.printStackTrace();
+        } catch (TransformerException tfe) {
+            tfe.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    private void removeEmptyLinesfromDOM(Document doc) throws XPathExpressionException{
+        XPath xp = XPathFactory.newInstance().newXPath();
+        NodeList nl = (NodeList) xp.evaluate("//text()[normalize-space(.)='']", doc, XPathConstants.NODESET);
+
+        for (int i=0; i < nl.getLength(); ++i) {
+            Node node = nl.item(i);
+            node.getParentNode().removeChild(node);
+        }
+    }
+    public static void writeXmlDocumentToVirtualFile(VirtualFile pom, Document pomDocument) throws TransformerConfigurationException, TransformerException, IOException {
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        DOMSource source = new DOMSource(pomDocument);
+
+        ByteOutputStream bytes = new ByteOutputStream();
+
+        StreamResult result = new StreamResult(bytes);
+        transformer.transform(source, result);
+
+        VfsUtil.saveText(pom, bytes.toString());
+    }
 
     public boolean retrieveAsposeMavenDependencies(@NotNull ProgressIndicator progressIndicator) {
         try {
@@ -181,9 +313,9 @@ public class AsposeMavenProjectManager {
         return pomDocument;
     }
 
-    public String getDependencyVersionFromPOM(String dependencyName, Project project) {
+    public String getDependencyVersionFromPOM(String dependencyName) {
         try {
-            String mavenPomXmlfile = AsposeMavenUtil.getPOMXmlFile(project);
+            String mavenPomXmlfile = AsposeMavenUtil.getPOMXmlFile(projectHandle);
 
             Document pomDocument = getXmlDocument(mavenPomXmlfile);
 
@@ -192,7 +324,6 @@ public class AsposeMavenProjectManager {
             String expression = "//version[ancestor::dependency/artifactId[text()='" + dependencyName + "']]";
             XPathExpression xPathExpr = xpath.compile(expression);
             NodeList nl = (NodeList) xPathExpr.evaluate(pomDocument, XPathConstants.NODESET);
-            AsposeConstants.println("NodeList length: " + nl.getLength());
             if (nl != null && nl.getLength() > 0) {
                 return nl.item(0).getTextContent();
             }
@@ -208,10 +339,63 @@ public class AsposeMavenProjectManager {
         return null;
     }
 
+    public NodeList getDependenciesFromPOM(String mavenPomXmlfile, String excludeGroup) {
+
+        try {
+
+            Document pomDocument = getXmlDocument(mavenPomXmlfile);
+
+            XPathFactory xPathfactory = XPathFactory.newInstance();
+            XPath xpath = xPathfactory.newXPath();
+            String expression = "//dependency[child::groupId[text()!='" + excludeGroup + "']]";
+            XPathExpression xPathExpr = xpath.compile(expression);
+            NodeList nl = (NodeList) xPathExpr.evaluate(pomDocument, XPathConstants.NODESET);
+            if (nl != null && nl.getLength() > 0) {
+                return nl;
+            }
+        } catch (IOException io) {
+            io.printStackTrace();
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (SAXException sae) {
+            sae.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public NodeList getRepositoriesFromPOM(String mavenPomXmlfile, String excludeURL) {
+
+        try {
+
+            Document pomDocument = getXmlDocument(mavenPomXmlfile);
+
+            XPathFactory xPathfactory = XPathFactory.newInstance();
+            XPath xpath = xPathfactory.newXPath();
+            String expression = "//repository[child::url[not(starts-with(.,'" + excludeURL + "'))]]";
+            XPathExpression xPathExpr = xpath.compile(expression);
+            NodeList nl = (NodeList) xPathExpr.evaluate(pomDocument, XPathConstants.NODESET);
+            if (nl != null && nl.getLength() > 0) {
+                return nl;
+            }
+        } catch (IOException io) {
+            io.printStackTrace();
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (SAXException sae) {
+            sae.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public String getAsposeHomePath() {
+
         String path = "";
         path = System.getProperty("user.home");
-        path = path + File.separator+"aspose"+File.separator;
+        path = path + File.separator + "aspose" + File.separator;
         return path;
     }
 
@@ -257,18 +441,21 @@ public class AsposeMavenProjectManager {
             folder.mkdirs();
         }
     }
+
     // Singleton instance
-    private static AsposeMavenProjectManager asposeMavenProjectManager= new AsposeMavenProjectManager();
+    private static AsposeMavenProjectManager asposeMavenProjectManager = new AsposeMavenProjectManager();
 
     public static AsposeMavenProjectManager getInstance() {
         return asposeMavenProjectManager;
     }
+
     public static AsposeMavenProjectManager initialize(Project projectId) {
-        asposeMavenProjectManager= new AsposeMavenProjectManager();
-        asposeMavenProjectManager.projectHandle =projectId;
+        asposeMavenProjectManager = new AsposeMavenProjectManager();
+        asposeMavenProjectManager.projectHandle = projectId;
         return asposeMavenProjectManager;
     }
 
-    private AsposeMavenProjectManager(){}
+    private AsposeMavenProjectManager() {
+    }
 
 }

@@ -20,7 +20,9 @@ import java.io.File;
 
 public class AsposeConstants {
 
+    public static final String ASPOSE_MAVEN_REPOSITORY = "http://maven.aspose.com";
     public static final String API_NAME = "Aspose.Slides";
+    public static final String ASPOSE_GROUP_ID = "com.aspose";
     public static final String API_MAVEN_DEPENDENCY = "aspose-slides";
     public static final String API_EXAMPLES_PACKAGE ="com"+File.separator+API_MAVEN_DEPENDENCY.replace("-",File.separator)+File.separator+"examples";
     public static final String SOURCE_API_EXAMPLES_LOCATION ="Examples"+File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator+API_EXAMPLES_PACKAGE;
@@ -29,6 +31,7 @@ public class AsposeConstants {
     public static final String DESTINATION_API_EXAMPLES_RESOURCES_LOCATION="src"+File.separator+"main"+File.separator+"resources"+File.separator+ API_EXAMPLES_PACKAGE;
 
     public static final String REPOSITORY_UTIL=SOURCE_API_EXAMPLES_LOCATION+File.separator+"Utils.java";
+
     public static final String API_DEPENDENCY_NOT_FOUND = "Dependency not found!";
 
     public static final String MAVEN_POM_XML = "pom.xml";
