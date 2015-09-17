@@ -15,6 +15,7 @@ package com.aspose.examples;
 import com.aspose.utils.*;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.DialogWrapper;
+import org.w3c.dom.NodeList;
 
 import javax.swing.*;
 import java.io.File;
@@ -90,6 +91,15 @@ public class AsposeExampleDialog extends DialogWrapper {
             String sourceRepositoryExamplePath = comp.getExPath();
 
             String repositorylocation = AsposeSlidesJavaAPI.getInstance().getLocalRepositoryPath();
+            String repositoryPOM_XML=repositorylocation+File.separator+"Examples"+File.separator+AsposeConstants.MAVEN_POM_XML;
+
+            NodeList examplesNoneAsposeDependencies=AsposeMavenProjectManager.getInstance().getDependenciesFromPOM(repositoryPOM_XML,AsposeConstants.ASPOSE_GROUP_ID);
+
+            AsposeMavenProjectManager.getInstance().addMavenDependenciesInProject(examplesNoneAsposeDependencies);
+
+            NodeList examplesNoneAsposeRepositories=AsposeMavenProjectManager.getInstance().getRepositoriesFromPOM(repositoryPOM_XML, AsposeConstants.ASPOSE_MAVEN_REPOSITORY);
+
+            AsposeMavenProjectManager.getInstance().addMavenRepositoriesInProject(examplesNoneAsposeRepositories);
 
             String sourceExamplesUtilsPath= repositorylocation+File.separator+AsposeConstants.REPOSITORY_UTIL;
             String destinationExamplesUtilsPath = projectPath + File.separator + sourceExamplesUtilsPath.replace(repositorylocation + File.separator + AsposeConstants.SOURCE_API_EXAMPLES_LOCATION, AsposeConstants.DESTINATION_API_EXAMPLES_LOCATION);
