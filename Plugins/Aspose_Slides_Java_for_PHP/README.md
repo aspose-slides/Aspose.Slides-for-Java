@@ -1,5 +1,5 @@
 # Aspose.Slides Java for PHP
-Aspose Slides Java for PHP is a PHP project that demonstrates / provides the Aspose.Words for Java API usage examples in PHP by using PHP/JAVA Bridge.
+Aspose Slides Java for PHP is a PHP project that demonstrates / provides the Aspose.Slides for Java API usage examples in PHP by using PHP/JAVA Bridge.
 
 You will need to configure PHP/Java Bridge before using any of the Aspose provided Java APIs in PHP e.g Aspose.Words, Aspose.Cells and Aspose.Slides etc.
 
