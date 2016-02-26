@@ -20,4 +20,4 @@ For most complete documentation of the project, check [Aspose.Slides Java For Jy
 
 This project is also hosted and maintained at CodePlex. To clone navigate to:
 
-* [Aspose.SlidesP Java for Jython on CodePlex - click here](https://asposeslidesjavajython.codeplex.com/SourceControl/latest)
+* [Aspose.Slides Java for Jython on CodePlex - click here](https://asposeslidesjavajython.codeplex.com/SourceControl/latest)
