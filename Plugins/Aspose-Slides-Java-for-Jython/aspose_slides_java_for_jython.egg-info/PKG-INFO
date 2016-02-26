@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: aspose-slides-java-for-jython
+Version: 1.0.0
+Summary: Aspose.slides Java for Jython is a project that demonstrates / provides the Aspose.Slides for Java API usage examples in Jython.
+Home-page: https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Plugins/Aspose-Slides-Java-for-Jython
+Author: Fahad Adeel
+Author-email: pdf@aspose.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
