@@ -1,0 +1,6 @@
+setup.py
+aspose_slides_java_for_jython.egg-info/PKG-INFO
+aspose_slides_java_for_jython.egg-info/SOURCES.txt
+aspose_slides_java_for_jython.egg-info/dependency_links.txt
+aspose_slides_java_for_jython.egg-info/top_level.txt
+asposeslides/__init__.py
