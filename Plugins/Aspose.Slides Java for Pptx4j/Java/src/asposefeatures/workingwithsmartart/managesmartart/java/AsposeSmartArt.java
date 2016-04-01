@@ -1,5 +1,5 @@
 /**
- * Copyright (c) Aspose 2002-2014. All Rights Reserved.
+ * Copyright (c) Aspose 2002-2016. All Rights Reserved.
  *
  * LICENSE: This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
