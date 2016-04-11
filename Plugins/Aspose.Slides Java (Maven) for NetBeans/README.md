@@ -41,4 +41,4 @@ For more info about the **Aspose.Slides for Java API**, [please check the api do
 
 ## Plugin Documentation
 
-For the most complete documentation,  [Please check this WIKI](http://www.aspose.com/docs/display/slidesjava/Aspose.Slides+Java+for+NetBeans+-+Maven)
+For the most complete documentation,  [Please check Aspose Docs](http://www.aspose.com/docs/display/slidesjava/Aspose.Slides+Java+for+NetBeans+-+Maven)
