@@ -29,7 +29,7 @@ public class ChartEntities
         IChart chart = slide.getShapes().addChart(ChartType.LineWithMarkers, 50, 50, 500, 400);
 
         //Setting Chart Titile
-        chart.hasTitle(true);
+        chart.hasTitle();
         chart.getChartTitle().addTextFrameForOverriding("");
         IPortion chartTitle = chart.getChartTitle().getTextFrameForOverriding().getParagraphs().get_Item(0).getPortions().get_Item(0);
         chartTitle.setText("Sample Chart");
@@ -56,7 +56,7 @@ public class ChartEntities
         chart.getAxes().getVerticalAxis().setNumberFormat("0.0%");
 
         //Setting chart maximum, minimum values
-        chart.getAxes().getVerticalAxis().isAutomaticMajorUnit(false);
+        chart.getAxes().getVerticalAxis().isAutomaticMajorUnit();
         chart.getAxes().getVerticalAxis().isAutomaticMaxValue(false);
         chart.getAxes().getVerticalAxis().isAutomaticMinorUnit(false);
         chart.getAxes().getVerticalAxis().isAutomaticMinValue(false);
