@@ -4,36 +4,39 @@ import com.aspose.slides.ISlide;
 import com.aspose.slides.ISmartArt;
 import com.aspose.slides.ISmartArtNode;
 import com.aspose.slides.Presentation;
+import com.aspose.slides.SaveFormat;
 import com.aspose.slides.SmartArtLayoutType;
 import com.aspose.slides.SmartArtNode;
 import com.aspose.slides.SmartArtNodeCollection;
 import com.aspose.slides.examples.Utils;
 
-public class AccessingSmartArtShapeChildNodeAtSpecificPosition {
+public class AddingSmartArtShapeNodeAtSpecificPosition {
 
 	public static void main(String[] args) {
 
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AccessingSmartArtShapeChildNodeAtSpecificPosition.class);
+		String dataDir = Utils.getDataDir(AddingSmartArtShapeNodeAtSpecificPosition.class);
 
-		// Instantiate the presentation
+		// Creating a presentation instance
 		Presentation pres = new Presentation();
 
-		// Accessing the first slide
+		// Access the presentation slide
 		ISlide slide = pres.getSlides().get_Item(0);
 
-		// Adding the SmartArt shape in first slide
+		// Add Smart Art IShape
 		ISmartArt smart = slide.getShapes().addSmartArt(0, 0, 400, 400, SmartArtLayoutType.StackedList);
 
 		// Accessing the SmartArt node at index 0
 		ISmartArtNode node = smart.getAllNodes().get_Item(0);
 
-		// Accessing the child node at position 1 in parent node
-		int position = 1;
-		SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).getNodeByPosition(position);
+		// Adding new child node at position 2 in parent node
+		SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).addNodeByPosition(2);
 
-		// Printing the SmartArt child node parameters
-		System.out.print("Text = " + chNode.getTextFrame().getText() + ",  Level = " + chNode.getLevel() + ", Position = " + chNode.getPosition());
+		// Add Text
+		chNode.getTextFrame().setText("Sample Text Added");
+
+		// Save Presentation
+		pres.save(dataDir + "AddSmartArtNodeByPosition.pptx", SaveFormat.Pptx);
 
 	}
 
