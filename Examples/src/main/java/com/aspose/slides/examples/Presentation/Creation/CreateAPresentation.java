@@ -12,7 +12,7 @@ public class CreateAPresentation {
 	public static final void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(CreateAPresentation.class);
+        	String dataDir = Utils.getDataDir(CreateAPresentation.class);
         
 		// Instantiate Presentation
 		Presentation pres = new Presentation();
