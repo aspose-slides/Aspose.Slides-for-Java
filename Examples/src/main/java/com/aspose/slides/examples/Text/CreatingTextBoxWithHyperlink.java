@@ -38,8 +38,8 @@ public class CreatingTextBoxWithHyperlink {
 		ITextFrame.getParagraphs().get_Item(0).getPortions().get_Item(0).setText("Aspose.Slides");
 
 		// Set Hyperlink for the portion text
-		IHyperlinkManager HypMan = ITextFrame.getParagraphs().get_Item(0).getPortions().get_Item(0).getPortionFormat().getHyperlinkManager();
-		HypMan.setExternalHyperlinkClick("http://www.aspose.com");
+		IHyperlinkManager hypMan = ITextFrame.getParagraphs().get_Item(0).getPortions().get_Item(0).getPortionFormat().getHyperlinkManager();
+		hypMan.setExternalHyperlinkClick("http://www.aspose.com");
 
 		// Save the PPTX to Disk
 		pres.save(dataDir + "hLinkPPTX.pptx", SaveFormat.Pptx);
