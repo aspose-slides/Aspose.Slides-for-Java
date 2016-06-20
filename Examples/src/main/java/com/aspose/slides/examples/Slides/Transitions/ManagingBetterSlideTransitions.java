@@ -10,7 +10,7 @@ public class ManagingBetterSlideTransitions {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(ManagingBetterSlideTransitions.class);
+	    	String dataDir = Utils.getDataDir(ManagingBetterSlideTransitions.class);
 
 		// Instantiate Presentation class that represents a presentation file
 		Presentation pres = new Presentation(dataDir + "BetterSlideTransitions.pptx");
@@ -39,7 +39,6 @@ public class ManagingBetterSlideTransitions {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "SampleTransition.pptx", SaveFormat.Pptx);
-
 
 	}
 
