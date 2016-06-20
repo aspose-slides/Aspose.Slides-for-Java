@@ -9,7 +9,7 @@ public class RemovingHyperlinksInsidePresentation {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(RemovingHyperlinksInsidePresentation.class);
+        	String dataDir = Utils.getDataDir(RemovingHyperlinksInsidePresentation.class);
         
 		//Instantiate a Presentation object that represents a PPTX file
 		Presentation pres = new Presentation(dataDir + "PresentationWithHyperlinks.pptx");
