@@ -32,8 +32,7 @@ public class AccessingSmartArtShapeChildNodes {
 					// Accessing SmartArt node at index i
 					SmartArtNode node0 = (SmartArtNode) smart.getAllNodes().get_Item(i);
 
-					// Traversing through the child nodes in SmartArt node at
-					// index i
+					// Traversing through the child nodes in SmartArt node at index i
 					for (int j = 0; j < node0.getChildNodes().size(); j++) {
 						// Accessing the child node in SmartArt node
 						SmartArtNode node = (SmartArtNode) node0.getChildNodes().get_Item(j);
