@@ -21,8 +21,7 @@ public class ChangingTextOnSmartArtNode {
 		ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
 
 		// Obtain the reference of a node by using its Index
-		ISmartArtNode node = smart.getNodes().get_Item(1); // select second root
-															// node
+		ISmartArtNode node = smart.getNodes().get_Item(1); // select second root node
 
 		// Setting the text of the TextFrame
 		node.getTextFrame().setText("Second root node");
