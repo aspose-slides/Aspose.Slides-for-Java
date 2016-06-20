@@ -10,12 +10,11 @@ public class AccessingAndModifyingCustomProperties {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(AccessingAndModifyingCustomProperties.class);
+        	String dataDir = Utils.getDataDir(AccessingAndModifyingCustomProperties.class);
         
 		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
 
-		// Create a reference to DocumentProperties object associated with
-		// Presentation
+		// Create a reference to DocumentProperties object associated with Presentation
 		IDocumentProperties dp = pres.getDocumentProperties();
 
 		// Access and modify custom properties
