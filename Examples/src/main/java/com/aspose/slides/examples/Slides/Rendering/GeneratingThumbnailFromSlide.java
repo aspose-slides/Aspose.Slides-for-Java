@@ -14,8 +14,8 @@ public class GeneratingThumbnailFromSlide {
 
 	public static void main(String[] args) {
 		
-		 // The path to the documents directory.
-	    String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlide.class);
+		// The path to the documents directory.
+		String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlide.class);
 
 		// Instantiate a Presentation class that represents the presentation file
 		Presentation pres = new Presentation(dataDir + "Sample.pptx");
