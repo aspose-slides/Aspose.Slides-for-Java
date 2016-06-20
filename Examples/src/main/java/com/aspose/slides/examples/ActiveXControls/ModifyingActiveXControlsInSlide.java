@@ -32,11 +32,10 @@ public class ModifyingActiveXControlsInSlide {
 			String newText = "Changed text";
 			control.getProperties().set_Item("Value", newText);
 
-			// changing substitute image. PowerPoint will replace this image
-			// during activeX activation, so sometime it's OK to leave image
-			// unchanged.
-
-			BufferedImage image = new BufferedImage((int) control.getFrame().getWidth(), (int) control.getFrame().getHeight(), BufferedImage.TYPE_INT_ARGB);
+			// Changing substitute image. PowerPoint will replace this image during activeX activation, 
+			// so sometime it's OK to leave image unchanged.
+			BufferedImage image = new BufferedImage((int) control.getFrame().getWidth(), (int) control.getFrame().getHeight(), 
+						BufferedImage.TYPE_INT_ARGB);
 
 			java.awt.Graphics graphics = image.getGraphics();
 			graphics.setColor(SystemColor.window);
@@ -67,14 +66,15 @@ public class ModifyingActiveXControlsInSlide {
 			control.getSubstitutePictureFormat().getPicture().setImage(pres.getImages().addImage(image));
 		}
 
-		// changing Button caption
+		// Changing Button caption
 		control = pres.getSlides().get_Item(0).getControls().get_Item(1);
 
 		if (control.getName().equalsIgnoreCase("CommandButton1") && control.getProperties() != null) {
 			String newCaption = "Show MessageBox";
 			control.getProperties().set_Item("Caption", newCaption);
-			// changing substitute
-			BufferedImage image = new BufferedImage((int) control.getFrame().getWidth(), (int) control.getFrame().getHeight(), BufferedImage.TYPE_INT_ARGB);
+			// Changing substitute
+			BufferedImage image = new BufferedImage((int) control.getFrame().getWidth(), (int) control.getFrame().getHeight(), 
+						BufferedImage.TYPE_INT_ARGB);
 			java.awt.Graphics graphics = image.getGraphics();
 			graphics.setColor(SystemColor.control);
 			graphics.fillRect(0, 0, image.getWidth(), image.getHeight());
@@ -108,7 +108,8 @@ public class ModifyingActiveXControlsInSlide {
 		// moving 100 points down
 		for (IControl ctl : pres.getSlides().get_Item(0).getControls()) {
 			IShapeFrame frame = ctl.getFrame();
-			ctl.setFrame(new ShapeFrame(frame.getX(), frame.getY() + 100, frame.getWidth(), frame.getHeight(), frame.getFlipH(), frame.getFlipV(), frame.getRotation()));
+			ctl.setFrame(new ShapeFrame(frame.getX(), frame.getY() + 100, 
+					frame.getWidth(), frame.getHeight(), frame.getFlipH(), frame.getFlipV(), frame.getRotation()));
 		}
 		pres.save(dataDir + "withActiveX-edited_java.pptm", SaveFormat.Pptm);
 
