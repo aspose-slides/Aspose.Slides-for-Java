@@ -19,8 +19,7 @@ public class CloningASlideFromOnePositionToAnotherWithinSamePresentation {
 		// same presentation
 		ISlideCollection slds = pres.getSlides();
 
-		// Clone the desired slide to the specified index in the same
-		// presentation
+		// Clone the desired slide to the specified index in the same presentation
 		slds.insertClone(2, pres.getSlides().get_Item(1));
 
 		// Write the modified presentation to disk
