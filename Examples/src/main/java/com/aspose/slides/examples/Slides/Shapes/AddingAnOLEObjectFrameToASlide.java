@@ -30,8 +30,10 @@ public class AddingAnOLEObjectFrameToASlide {
 		fstro.read(buf, 0, length);
 
 		// Add an Ole Object Frame shape
-		IOleObjectFrame oof = sld.getShapes().addOleObjectFrame((float) 0, (float) 0, (float) pres.getSlideSize().getSize().getWidth(), (float) pres.getSlideSize().getSize().getHeight(),
-				"Excel.Sheet.8", buf);
+		IOleObjectFrame oof = sld.getShapes().addOleObjectFrame((float) 0, (float) 0, 
+						(float) pres.getSlideSize().getSize().getWidth(), 
+						(float) pres.getSlideSize().getSize().getHeight(), 
+						"Excel.Sheet.8", buf);
 
 		// Write the PPTX to disk
 		pres.save(dataDir + "OleEmbed.pptx", SaveFormat.Pptx);
