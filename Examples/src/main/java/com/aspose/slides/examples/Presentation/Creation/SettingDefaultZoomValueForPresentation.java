@@ -9,16 +9,16 @@ public class SettingDefaultZoomValueForPresentation {
 	public static final void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(SettingDefaultZoomValueForPresentation.class);
+        	String dataDir = Utils.getDataDir(SettingDefaultZoomValueForPresentation.class);
         
 		// Create an instance of Presentation class 
-        Presentation pres = new Presentation();
+        	Presentation pres = new Presentation();
 
-        // Setting View Properties of Presentation
-        pres.getViewProperties().getSlideViewProperties().setScale(50); //zoom value in percentages for slide view
-        pres.getViewProperties().getNotesViewProperties().setScale(50); //zoom value in percentages for notes view 
+        	// Setting View Properties of Presentation
+        	pres.getViewProperties().getSlideViewProperties().setScale(50); //zoom value in percentages for slide view
+        	pres.getViewProperties().getNotesViewProperties().setScale(50); //zoom value in percentages for notes view 
 
-        // Write the presentation as a PPTX file 
+        	// Write the presentation as a PPTX file 
 		pres.save(dataDir + "Zoom.pptx", SaveFormat.Pptx);
 
 	}
