@@ -11,7 +11,7 @@ public class ConvertingPresentationToTIFFWithCustomImagePixelFormat {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithCustomImagePixelFormat.class);
+        	String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithCustomImagePixelFormat.class);
         
 		// Instantiate a Presentation object that represents a Presentation file
 		Presentation pres = new Presentation(dataDir + "demo.pptx");
