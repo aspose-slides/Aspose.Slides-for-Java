@@ -28,10 +28,8 @@ public class GeneratingThumbnailFromSlideInNotesSlidesView {
 		int desiredY = 800;
 
 		// Getting scaled value of X and Y
-		float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth())
-				* desiredX;
-		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight())
-				* desiredY;
+		float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth()) * desiredX;
+		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
 
 		// Create a full scale image
 		BufferedImage image = sld.getNotesSlide().getThumbnail(ScaleX, ScaleY);
