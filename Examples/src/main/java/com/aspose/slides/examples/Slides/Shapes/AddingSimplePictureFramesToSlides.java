@@ -31,6 +31,7 @@ public class AddingSimplePictureFramesToSlides {
 			imgx = pres.getImages().addImage(new FileInputStream(new File(dataDir + "asp1.jpg")));
 		} catch (IOException e) {
 		}
+		
 		// Add Picture Frame with height and width equivalent of Picture
 		sld.getShapes().addPictureFrame(ShapeType.Rectangle, 50, 150, imgx.getWidth(), imgx.getHeight(), imgx);
 
