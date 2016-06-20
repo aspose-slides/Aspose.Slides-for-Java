@@ -36,8 +36,7 @@ public class GeneratingThumbnailFromSlideInNotesSlidesView {
 
 		// Save the image to disk in JPEG format
 		try {
-			ImageIO.write(image, "jpeg", new File(dataDir
-					+ "ContentBG_tnail.jpg"));
+			ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
 		} catch (IOException e) {
 		}
 
