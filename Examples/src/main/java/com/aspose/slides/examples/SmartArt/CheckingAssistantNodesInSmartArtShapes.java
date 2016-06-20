@@ -33,8 +33,7 @@ public class CheckingAssistantNodesInSmartArtShapes {
 
 					// Check if node is Assistant node
 					if (node.isAssistant()) {
-						// Setting Assistant node to false and making it normal
-						// node
+						// Setting Assistant node to false and making it normal node
 						node.isAssistant();
 					}
 				}
