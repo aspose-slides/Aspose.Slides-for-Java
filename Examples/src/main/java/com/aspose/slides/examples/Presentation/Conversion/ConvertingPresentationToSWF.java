@@ -10,7 +10,7 @@ public class ConvertingPresentationToSWF {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(ConvertingPresentationToSWF.class);
+        	String dataDir = Utils.getDataDir(ConvertingPresentationToSWF.class);
         
 		Presentation pres = new Presentation(dataDir + "Sample.pptx");
 		try {

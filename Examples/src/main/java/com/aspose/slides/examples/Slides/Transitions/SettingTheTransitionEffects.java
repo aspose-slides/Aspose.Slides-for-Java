@@ -11,9 +11,9 @@ public class SettingTheTransitionEffects {
 	public static void main(String[] args) {
 		 
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(SettingTheTransitionEffects.class);
+	    	String dataDir = Utils.getDataDir(SettingTheTransitionEffects.class);
 		
-	    // Create an instance of Presentation class
+	    	// Create an instance of Presentation class
 		Presentation pres = new Presentation();
 
 		// Set effect

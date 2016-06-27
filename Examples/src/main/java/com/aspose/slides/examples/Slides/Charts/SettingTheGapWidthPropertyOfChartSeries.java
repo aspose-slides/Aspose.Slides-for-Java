@@ -14,9 +14,9 @@ public class SettingTheGapWidthPropertyOfChartSeries {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(SettingTheGapWidthPropertyOfChartSeries.class);
+	    	String dataDir = Utils.getDataDir(SettingTheGapWidthPropertyOfChartSeries.class);
 		
-	    // Creating empty presentation
+	    	// Creating empty presentation
 		Presentation pres = new Presentation();
 
 		// Access first slide

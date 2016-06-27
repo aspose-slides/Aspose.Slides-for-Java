@@ -15,7 +15,7 @@ public class GeneratingThumbnailOfUserDefinedWindowFromSlide {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(GeneratingThumbnailOfUserDefinedWindowFromSlide.class);
+	    	String dataDir = Utils.getDataDir(GeneratingThumbnailOfUserDefinedWindowFromSlide.class);
 	    
 		// Instantiate a Presentation class that represents the presentation file
 		Presentation pres = new Presentation(dataDir + "ThumbnailWithUserDefinedDimensions.pptx");
@@ -35,7 +35,6 @@ public class GeneratingThumbnailOfUserDefinedWindowFromSlide {
 			ImageIO.write(windowImage, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
 		} catch (IOException e) {
 		}
-
 
 	}
 

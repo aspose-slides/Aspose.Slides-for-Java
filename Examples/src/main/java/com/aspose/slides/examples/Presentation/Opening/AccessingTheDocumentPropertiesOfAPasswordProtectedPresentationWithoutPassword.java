@@ -9,7 +9,7 @@ public class AccessingTheDocumentPropertiesOfAPasswordProtectedPresentationWitho
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(AccessingTheDocumentPropertiesOfAPasswordProtectedPresentationWithoutPassword.class);
+        	String dataDir = Utils.getDataDir(AccessingTheDocumentPropertiesOfAPasswordProtectedPresentationWithoutPassword.class);
         
 		// Creating instance of load options to set the presentation access password
 		com.aspose.slides.LoadOptions loadOptions = new com.aspose.slides.LoadOptions();

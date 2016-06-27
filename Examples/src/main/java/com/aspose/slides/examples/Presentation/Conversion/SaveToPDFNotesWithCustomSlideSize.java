@@ -13,7 +13,7 @@ public class SaveToPDFNotesWithCustomSlideSize {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(SaveToPDFNotesWithCustomSlideSize.class);
+        	String dataDir = Utils.getDataDir(SaveToPDFNotesWithCustomSlideSize.class);
         
 		// Instantiate a Presentation object to load source file
 		Presentation presentation = new Presentation(dataDir + "demo.pptx");

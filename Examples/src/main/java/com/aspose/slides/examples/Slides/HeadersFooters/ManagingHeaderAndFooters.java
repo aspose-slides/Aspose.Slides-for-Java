@@ -14,9 +14,9 @@ public class ManagingHeaderAndFooters {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(ManagingHeaderAndFooters.class);
+	    	String dataDir = Utils.getDataDir(ManagingHeaderAndFooters.class);
 		
-	    // Load Presentation
+	    	// Load Presentation
 		Presentation pres = new Presentation(dataDir + "headerTest.pptx");
 
 		// Setting Footer

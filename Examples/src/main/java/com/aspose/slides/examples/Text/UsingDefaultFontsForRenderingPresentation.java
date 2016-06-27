@@ -36,7 +36,5 @@ public class UsingDefaultFontsForRenderingPresentation {
 
 		// Generate XPS
 		presentation.save(dataDir + "output.xps", SaveFormat.Xps);
-
 	}
-
 }

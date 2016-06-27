@@ -40,7 +40,6 @@ public class ExportingParagraphsTextToHTML {
 			writer.close();
 		} catch (Exception fo) {
 			fo.printStackTrace();
-
 		}
 
 	}

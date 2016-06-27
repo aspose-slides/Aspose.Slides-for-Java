@@ -17,8 +17,6 @@ public class CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition {
 
 		// Instantiate Presentation class for destination presentation (where slide is to be cloned)
 		Presentation destPres = new Presentation(dataDir + "demo.pptx");
-
-		// Clone the desired slide from the source presentation to the end of the collection of slides in destination presentation
 		ISlideCollection slds = destPres.getSlides();
 
 		// Clone the desired slide from the source presentation to the specified position in destination presentation

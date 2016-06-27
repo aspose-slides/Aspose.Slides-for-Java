@@ -14,8 +14,7 @@ public class ModifyingBuiltInProperties {
 
 		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
 
-		// Create a reference to IDocumentProperties object associated with
-		// Presentation
+		// Create a reference to IDocumentProperties object associated with Presentation
 		IDocumentProperties dp = pres.getDocumentProperties();
 
 		// Set the built-in properties

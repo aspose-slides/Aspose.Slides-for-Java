@@ -15,7 +15,7 @@ public class GeneratingThumbnailFromSlideWithUserDefinedDimensions {
 	public static void main(String[] args) {
 		 
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideWithUserDefinedDimensions.class);
+	    	String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideWithUserDefinedDimensions.class);
 
 		// Instantiate a Presentation class that represents the presentation file
 		Presentation pres = new Presentation(dataDir + "ThumbnailWithUserDefinedDimensions.pptx");
@@ -28,10 +28,8 @@ public class GeneratingThumbnailFromSlideWithUserDefinedDimensions {
 		int desiredY = 800;
 
 		// Getting scaled value of X and Y
-		float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth())
-				* desiredX;
-		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight())
-				* desiredY;
+		float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth()) * desiredX;
+		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
 
 		// Create a full scale image
 		BufferedImage image = sld.getThumbnail(ScaleX, ScaleY);

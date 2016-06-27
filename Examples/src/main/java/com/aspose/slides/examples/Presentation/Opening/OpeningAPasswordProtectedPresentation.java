@@ -9,7 +9,7 @@ public class OpeningAPasswordProtectedPresentation {
 	public static final void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(OpeningAPasswordProtectedPresentation.class);
+        	String dataDir = Utils.getDataDir(OpeningAPasswordProtectedPresentation.class);
         
 		// Creating instance of load options to set the presentation access password
 		LoadOptions loadOptions = new LoadOptions();

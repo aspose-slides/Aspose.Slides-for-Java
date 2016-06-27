@@ -14,8 +14,7 @@ public class AccessingBuiltInProperties {
 		// Instantiate the Presentation class that represents the presentation
 		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
 
-		// Create a reference to IDocumentProperties object associated with
-		// Presentation
+		// Create a reference to IDocumentProperties object associated with Presentation
 		IDocumentProperties dp = pres.getDocumentProperties();
 
 		// Display the built-in properties

@@ -9,7 +9,7 @@ public class SettingTheSlideNumber {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-        String dataDir = Utils.getDataDir(SettingTheSlideNumber.class);
+        	String dataDir = Utils.getDataDir(SettingTheSlideNumber.class);
         
 		// Opening the presentation file by passing the file path to the
 		// constructor of Presentation class

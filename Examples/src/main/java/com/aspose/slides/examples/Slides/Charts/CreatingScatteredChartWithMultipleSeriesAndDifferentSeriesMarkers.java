@@ -15,7 +15,7 @@ public class CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers.class);
+	    	String dataDir = Utils.getDataDir(CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers.class);
 	    
 		// Instantiate Presentation class that represents PPTX file
 		Presentation pres = new Presentation();
