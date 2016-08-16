@@ -25,5 +25,4 @@ public class ConvertingPresentationToPDFIncludingHiddenSlides {
 				pres.dispose();
 		}
 	}
-
 }

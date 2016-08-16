@@ -67,5 +67,4 @@ public class ManagingParagraphPictureBulletsInPPTX {
 				pres.dispose();
 		}
 	}
-
 }
