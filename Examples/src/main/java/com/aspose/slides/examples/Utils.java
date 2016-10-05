@@ -21,6 +21,7 @@ public class Utils {
     }
     
     public static String getSharedDataDir(Class c) {
+    	
         File dir = new File(System.getProperty("user.dir"));
         dir = new File(dir, "src");
         dir = new File(dir, "main");
