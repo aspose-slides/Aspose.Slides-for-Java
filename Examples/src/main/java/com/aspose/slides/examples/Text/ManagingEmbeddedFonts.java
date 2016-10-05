@@ -20,7 +20,7 @@ public class ManagingEmbeddedFonts {
 		// load the presentation with embedded "Calibri" font in it
 		Presentation pres = new Presentation(dataDir + "Pres.pptx");
 		try {
-			// render the presentation containing the text frame with the text using embedded "FunSized" font
+			// render the presentation containing the text frame with the text using embedded "Calibri" font
 			ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(new Dimension(960, 720)), "PNG", new File(dataDir + "pres-1.png"));
 
 			IFontsManager fontsManager = pres.getFontsManager();
