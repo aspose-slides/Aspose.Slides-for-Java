@@ -17,7 +17,7 @@ public class AnimatingCategoriesElements {
 	public static void main(String[] args) {
 
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AnimatingCategoriesElements.class);
+		String dataDir = Utils.getSharedDataDir(AnimatingCategoriesElements.class) + "Charts/";
 
 		// Load a presentation
 		Presentation pres = new Presentation(dataDir + "ExistingChart.pptx");
@@ -55,7 +55,7 @@ public class AnimatingCategoriesElements {
 			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 3, EffectType.Appear, EffectSubtype.None,
 					EffectTriggerType.AfterPrevious);
 
-			pres.save(dataDir + "Sample.pptx", SaveFormat.Pptx);
+			pres.save(dataDir + "AnimatingCategoriesElements_out.pptx", SaveFormat.Pptx);
 		} finally {
 			if (pres != null)
 				pres.dispose();
