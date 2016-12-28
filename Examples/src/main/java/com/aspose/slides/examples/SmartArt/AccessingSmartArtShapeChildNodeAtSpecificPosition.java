@@ -30,7 +30,7 @@ public class AccessingSmartArtShapeChildNodeAtSpecificPosition {
 
 		// Accessing the child node at position 1 in parent node
 		int position = 1;
-		SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).getNodeByPosition(position);
+		SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).get_Item(position);
 
 		// Printing the SmartArt child node parameters
 		System.out.print("Text = " + chNode.getTextFrame().getText() + ",  Level = " + chNode.getLevel() + ", Position = " + chNode.getPosition());

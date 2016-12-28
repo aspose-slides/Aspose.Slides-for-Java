@@ -1,14 +1,14 @@
 package com.aspose.slides.examples.Slides.Rendering;
 
+import com.aspose.slides.ISlide;
+import com.aspose.slides.Presentation;
+import com.aspose.slides.examples.Utils;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-
-import com.aspose.slides.ISlide;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.examples.Utils;
 
 public class GeneratingThumbnailFromSlideInNotesSlidesView {
 
@@ -32,7 +32,7 @@ public class GeneratingThumbnailFromSlideInNotesSlidesView {
 		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
 
 		// Create a full scale image
-		BufferedImage image = sld.getNotesSlide().getThumbnail(ScaleX, ScaleY);
+		BufferedImage image = sld.getNotesSlideManager().getNotesSlide().getThumbnail(ScaleX, ScaleY);
 
 		// Save the image to disk in JPEG format
 		try {
