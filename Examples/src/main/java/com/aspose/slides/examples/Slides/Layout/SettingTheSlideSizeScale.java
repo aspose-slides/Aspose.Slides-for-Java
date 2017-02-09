@@ -15,18 +15,18 @@ public class SettingTheSizeAndTypeOfASlide {
 
 		// Instantiate Presentation objects that represent presentation files
 		Presentation presentation = new Presentation(dataDir + "demo.pptx");
-		Presentation auxPresentation = new Presentation();
+		Presentation auxPresentation = new Presentation(dataDir+"demo.pptx");
 
 		ISlide slide = presentation.getSlides().get_Item(0);
 
-		// Set the slide size of generated presentations to that of source
-		auxPresentation.getSlideSize().setType(presentation.getSlideSize().getType());
-		auxPresentation.getSlideSize().setSize(presentation.getSlideSize().getSize());
-
-		// Clone required slide
-		auxPresentation.getSlides().addClone(presentation.getSlides().get_Item(0));
-		auxPresentation.getSlides().removeAt(0);
-
+		Presentation pres = new Presentation("presentation.ppt");
+              try {
+              pres.getSlideSize().setSize(540, 720, SlideSizeScaleType.EnsureFit); // Method SetSize is used for set slide size with scale content to ensure fit
+              pres.getSlideSize().setSize(SlideSizeType.A4Paper, SlideSizeScaleType.Maximize); // Method SetSize is used for set slide size with maximize size of content
+} 
+    finally {
+    pres.dispose();
+}
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "size.pptx", SaveFormat.Pptx);
 
