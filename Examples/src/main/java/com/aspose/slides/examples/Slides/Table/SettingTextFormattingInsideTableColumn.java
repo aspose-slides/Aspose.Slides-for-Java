@@ -13,7 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class SettingTextFormattingInsideTableColumn {
 
 	public static void main(String[] args) {
-
+                   ExStart:SettingTextFormattingInsideTableColumn
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTextFormattingInsideTableColumn.class);
 
@@ -38,7 +38,8 @@ public class SettingTextFormattingInsideTableColumn {
                someTable.Columns[1].SetTextFormat(textFrameFormat);
 		 // Save the PPTX to Disk
 		pres.save(dataDir + "Textbox.pptx", SaveFormat.Pptx);
-
+                   
+                   ExEnd:SettingTextFormattingInsideTableColumn
 
 
 

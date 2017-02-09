@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class UsingWorkBookChartCellAsDatalabel {
 
 	public static void main(String[] args) {
-
+                 ExStart:UsingWorkBookChartCellAsDatalabel
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UsingWorkBookChartCellAsDatalabel.class);
 
@@ -45,6 +45,8 @@ public class UsingWorkBookChartCellAsDatalabel {
 		// Saving presentation
 		pres.save(dataDir + "TestResult.pptx", SaveFormat.Pptx);
 
-	}
+                      ExEnd:UsingWorkBookChartCellAsDatalabel	
+ 
+ }
 
 }

@@ -8,7 +8,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingTheSizeAndTypeOfASlide {
 
 	public static void main(String[] args) {
-
+   
+           ExStart:SettingTheSizeAndTypeOfASlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheSizeAndTypeOfASlide.class);
 
@@ -29,6 +30,7 @@ public class SettingTheSizeAndTypeOfASlide {
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "size.pptx", SaveFormat.Pptx);
 
-	}
+                     ExEnd:SettingTheSizeAndTypeOfASlide	
+}
 
 }
