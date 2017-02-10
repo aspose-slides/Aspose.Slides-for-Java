@@ -10,7 +10,8 @@ public class SettingThePageSizeWhenGeneratingPDF {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+		//ExStart:SettingThePageSizeWhenGeneratingPDF
+// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingThePageSizeWhenGeneratingPDF.class);
 
 		// Instantiate a Presentation object that represents a presentation file
@@ -25,6 +26,7 @@ public class SettingThePageSizeWhenGeneratingPDF {
 
 		// Save presentation to disk
 		pres.save(dataDir + "Export.pdf", SaveFormat.Pdf, opts);
+//ExEnd:SettingThePageSizeWhenGeneratingPDF
 
 	}
 

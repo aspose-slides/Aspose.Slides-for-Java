@@ -10,6 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingLayoutSlidesToPresentation {
 
 	public static void main(String[] args) {
+//ExStart:AddingLayoutSlidesToPresentation
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingLayoutSlidesToPresentation.class);
@@ -62,6 +63,7 @@ public class AddingLayoutSlidesToPresentation {
 
 		// Save presentation
 		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+//ExEnd:AddingLayoutSlidesToPresentation
 
 	}
 
