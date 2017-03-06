@@ -10,6 +10,7 @@ public class CheckSlidesComparison {
 	public static void main(String[] args) {
    
          //ExStart:CheckSlidesComparison
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CheckSlidesComparison.class);
 
@@ -36,7 +37,7 @@ try {
         presentation2 = null;
     }
 }
-                  //ExStart:CheckSlidesComparison
+                  //ExEnd:CheckSlidesComparison
 }
 
 }
