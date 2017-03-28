@@ -10,4 +10,4 @@ This package contains Java Example Project for [Aspose.Slides for Java](https://
 
 ## How to Run the Examples?
 
-All the examples are arranged in src folder and any modern IDE like IntelliJ IDEA, Eclipse, Netbeans etc can import the source folder easily. Visit our [documentation website](http://www.aspose.com/docs/display/slidesjava/How+to+Run+the+Examples) for more details.
+All the examples are arranged in src folder and any modern IDE like IntelliJ IDEA, Eclipse, Netbeans etc can import the source folder easily. Visit our [documentation website](https://docs.aspose.com/display/slidesjava/How+to+Run+the+Examples) for more details.
