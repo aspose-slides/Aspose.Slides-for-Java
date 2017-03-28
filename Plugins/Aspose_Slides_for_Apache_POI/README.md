@@ -4,7 +4,7 @@ Aspose.Slides Java for Apache POI SL is a project to provide comparative source 
 
 Below are some code comparisons and features of Aspose.Slides for Java that are not available in Apache POI
 
-* [Code Comparison for common features in **Aspose.Slides** and **Apache POI SL**](https://docs.aspose.com//display/slidesjava/1.2+Code+Comparison+for+Common+Features+in+Aspose.Slides+and+Apache+POI+-+HSLF+and+XSLF)
+* [Code Comparison for common features in **Aspose.Slides** and **Apache POI SL**](https://docs.aspose.com/display/slidesjava/1.2+Code+Comparison+for+Common+Features+in+Aspose.Slides+and+Apache+POI+-+HSLF+and+XSLF)
 * [Missing Features of Apache POI SL available in Aspose.Slides](https://docs.aspose.com/display/slidesjava/1.3+Missing+Features+in+Apache+POI+SL+-+HSLF+and+XSLF)
 
 These examples are helpful for developers who want to compare Apache POI with Aspose.Slides OR migrate from Apache POI to Aspose.
