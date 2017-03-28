@@ -1,6 +1,6 @@
 ##Aspose.Slides for Java
 
-This package contains [Examples](https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Examples) and Showcase projects for [Aspose.Slides for Java](http://www.aspose.com/categories/java-components/aspose.Slides-for-java/default.aspx) and will help you write your own applications.
+This package contains [Examples](https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Examples) and Showcase projects for [Aspose.Slides for Java](https://www.aspose.com/products/slides/java) and will help you write your own applications.
 
 Aspose.Slides for Java is a unique PowerPoint management component that enables Java based applications to read, write and manipulate PowerPoint documents without using Microsoft PowerPoint.
 <p align="center">
