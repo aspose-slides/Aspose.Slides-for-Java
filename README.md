@@ -17,8 +17,8 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.aspose.com](http://www.aspose.com)
-+ **Product Home:** [Aspose.Slides for Java](http://www.aspose.com/java/powerpoint-component.aspx)
++ **Product Home:** [Aspose.Slides for Java](https://www.aspose.com/products/slides/java)
 + **Download:** [Download Aspose.Slides for Java](http://www.aspose.com/community/files/72/java-components/aspose.slides-for-java/default.aspx)
 + **Documentation:** [Aspose.Slides for Java Documentation](http://www.aspose.com/docs/display/slidesjava/Home)
-+ **Forum:** [Aspose.Slides for Java Forum](http://www.aspose.com/community/forums/aspose.slides-product-family/75/showforum.aspx)
++ **Forum:** [Aspose.Slides for Java Forum](https://www.aspose.com/community/forums/aspose.slides-product-family/109/showforum.aspx)
 + **Blog:** [Aspose.Slides for Java Blog](http://www.aspose.com/blogs/aspose-products/aspose-slides-product-family.html)
