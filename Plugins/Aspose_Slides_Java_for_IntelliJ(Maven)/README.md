@@ -20,8 +20,8 @@ The plugin contains two wizards:
 
 Aspose.Slides for Java is the first and only Java component that provides functionality to manage PowerPoint documents within your own applications. As with all Aspose Java components, Aspose.Slides for Java is written in pure Java, incredibly priced and lightning fast.
 
-For more info about the **Aspose.Slides for Java API**, [please check the api documentation - click here](http://goo.gl/WU9cOL)
+For more info about the **Aspose.Slides for Java API**, [please check the api documentation - click here](https://apireference.aspose.com/java/slides)
 
 ## Plugin Documentation
 
-For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](http://www.aspose.com/docs/display/slidesjava/4.+Aspose.Slides+Java+for+IntelliJ+IDEA+%28Maven%29)
+For the complete documentation of this Intellij IDEA plugin, [please go through this wiki - click here](https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+for+IntelliJ+IDEA+-+Maven)
