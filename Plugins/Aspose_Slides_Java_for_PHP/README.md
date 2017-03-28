@@ -14,6 +14,6 @@ http://www.aspose.com/downloads/slides/java
 
 For most complete documentation of the project, check Aspose.Slides Java for PHP confluence wiki link:
 
-https://docs.aspose.com//display/slidesjava/Aspose.Slides+Java+for+PHP
+https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+for+PHP
 
 
