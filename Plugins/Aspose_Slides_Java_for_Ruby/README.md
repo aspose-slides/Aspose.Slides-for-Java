@@ -9,13 +9,13 @@ Execute following command.
 
 To download Aspose.Slides for Java API to be used with these examples through RJB, Please navigate to:
 
-http://www.aspose.com/community/files/72/java-components/aspose.slides-for-java/
+http://www.aspose.com/downloads/slides/java
 
 Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Slides for java component into it.
 
 For most complete documentation of the project, check Aspose.Slides Java for Ruby confluence wiki link:
 
-http://www.aspose.com/docs/display/slidesjava/3.+Aspose.Slides+Java+For+Ruby
+https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+For+Ruby
 
 ## Usage
 
