@@ -12,7 +12,7 @@ These examples are helpful for developers who want to compare Apache POI with As
 ### Feedback and Suggestions
 
 * Many more examples are yet to come. [Keep visiting us](https://www.aspose.com/products/slides/java).
-* Raise your queries and suggest more examples via [Aspose Forums](http://www.aspose.com/community/forums/default.aspx) or via this social coding site.
+* Raise your queries and suggest more examples via [Aspose Forums](https://www.aspose.com/community/forums/default.aspx) or via this social coding site.
 
 ## Why Aspose for Apache POI ?
 
