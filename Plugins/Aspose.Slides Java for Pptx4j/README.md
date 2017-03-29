@@ -11,7 +11,7 @@ These examples are helpful for developers who want to compare Pptx4j with Aspose
 
 ### Feedback and Suggestions
 
-* Many more examples are yet to come. [Keep visiting us](http://www.aspose.com/java/total-component.aspx).
+* Many more examples are yet to come. [Keep visiting us](https://www.aspose.com/products/slides/java).
 * Raise your queries and suggest more examples via [Aspose Forums](http://www.aspose.com/community/forums/default.aspx) or via this social coding site.
 
 ## Why Aspose for Pptx4j ?
@@ -45,7 +45,7 @@ All the Aspose APIs don’t have any dependency over any other engine. For examp
 
 ### Aspose.Slides for Java
 
-[![Aspose.Slides for Java](http://www.aspose.com/App_Themes/V2/images/productLogos/JAVA/aspose_slides-for-java.jpg)](http://www.aspose.com/java/powerpoint-component.aspx)
+[![Aspose.Slides for Java](http://www.aspose.com/App_Themes/V2/images/productLogos/JAVA/aspose_slides-for-java.jpg)](https://www.aspose.com/products/slides/java)
 
 Aspose.Slides for Java is a unique PowerPoint management component that enables Java based applications to read, write and manipulate PowerPoint documents without using Microsoft PowerPoint.
 
@@ -53,7 +53,7 @@ One can generate, modify, copy, convert, render and print presentations without 
 
 Aspose.Slides for Java supports presentation file formats including PPT, PPS, POT, PresentationML (OOXML, PPTX) and Open Document Presentations (ODP).
 
-[Learn More](http://www.aspose.com/java/powerpoint-component.aspx)
+[Learn More](https://www.aspose.com/products/slides/java)
 
 ## Download Latest Versions?
 
