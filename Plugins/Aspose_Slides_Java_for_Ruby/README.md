@@ -1,4 +1,4 @@
-# Aspose_Slides_Java_for_Ruby
+# Aspose.Slides Java for Ruby
 Aspose.Slides Java for Ruby is a gem that demonstrates / provides the Aspose.Slides for Java API usage examples in Ruby by using Rjb - Ruby Java Bridge.
 
 ## Installation
@@ -7,15 +7,13 @@ Execute following command.
 
     $ gem install asposeslidesjava
 
-To download Aspose.Slides for Java API to be used with these examples through RJB, Please navigate to:
-
-http://www.aspose.com/downloads/slides/java
+To download Aspose.Slides for Java API to be used with these examples through RJB, Please navigate to [download section](https://downloads.aspose.com/slides/java).
 
 Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Slides for java component into it.
 
-For most complete documentation of the project, check Aspose.Slides Java for Ruby confluence wiki link:
+For most complete documentation of the project, check [Aspose.Slides Java for Ruby](https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+For+Ruby) in confluence wiki.
 
-https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+For+Ruby
+
 
 ## Usage
 
