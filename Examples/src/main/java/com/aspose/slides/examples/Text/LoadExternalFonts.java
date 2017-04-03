@@ -8,7 +8,8 @@ import com.aspose.slides.examples.Utils;
 public class LoadExternalFonts {
 
 	public static void main(String[] args) {
-            // ExStart:LoadExternalFonts
+            
+// ExStart:LoadExternalFonts
 		// The path to the documents directory.
 		
          String dataDir = Utils.getDataDir(LoadExternalFonts.class);
@@ -24,7 +25,7 @@ try
     // font SomeFont will be available during the rendering or other operations
          }
         finally { ((IDisposable)pres).dispose(); }
-              // ExStart:LoadExternalFonts
+              // ExEnd:LoadExternalFonts
 	
 }
 
