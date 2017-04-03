@@ -4,15 +4,15 @@ Aspose.Slides Java for Apache POI SL is a project to provide comparative source 
 
 Below are some code comparisons and features of Aspose.Slides for Java that are not available in Apache POI
 
-* [Code Comparison for common features in **Aspose.Slides** and **Apache POI SL**](http://www.aspose.com/docs/display/slidesjava/1.2+Code+Comparison+for+Common+Features+in+Aspose.Slides+and+Apache+POI+-+HSLF+and+XSLF)
-* [Missing Features of Apache POI SL available in Aspose.Slides](http://www.aspose.com/docs/display/slidesjava/1.3+Missing+Features+in+Apache+POI+SL+-+HSLF+and+XSLF)
+* [Code Comparison for common features in **Aspose.Slides** and **Apache POI SL**](https://docs.aspose.com/display/slidesjava/1.2+Code+Comparison+for+Common+Features+in+Aspose.Slides+and+Apache+POI+-+HSLF+and+XSLF)
+* [Missing Features of Apache POI SL available in Aspose.Slides](https://docs.aspose.com/display/slidesjava/1.3+Missing+Features+in+Apache+POI+SL+-+HSLF+and+XSLF)
 
 These examples are helpful for developers who want to compare Apache POI with Aspose.Slides OR migrate from Apache POI to Aspose.
 
 ### Feedback and Suggestions
 
-* Many more examples are yet to come. [Keep visiting us](http://www.aspose.com/java/excel-component.aspx).
-* Raise your queries and suggest more examples via [Aspose Forums](http://www.aspose.com/community/forums/default.aspx) or via this social coding site.
+* Many more examples are yet to come. [Keep visiting us](https://www.aspose.com/products/slides/java).
+* Raise your queries and suggest more examples via [Aspose Forums](https://www.aspose.com/community/forums/default.aspx) or via this social coding site.
 
 ## Why Aspose for Apache POI ?
 
@@ -45,7 +45,7 @@ All the Aspose APIs don’t have any dependency over any other engine. For examp
 
 ### Aspose.Slides for Java
 
-[![Aspose.Slides for Java](http://www.aspose.com/App_Themes/V2/images/productLogos/JAVA/aspose_slides-for-java.jpg)](http://www.aspose.com/java/powerpoint-component.aspx)
+[![Aspose.Slides for Java](http://www.aspose.com/App_Themes/V2/images/productLogos/JAVA/aspose_slides-for-java.jpg)](https://www.aspose.com/products/slides/java)
 
 Aspose.Slides for Java is a unique PowerPoint management component that enables Java based applications to read, write and manipulate PowerPoint documents without using Microsoft PowerPoint.
 
@@ -53,7 +53,7 @@ One can generate, modify, copy, convert, render and print presentations without 
 
 Aspose.Slides for Java supports presentation file formats including PPT, PPS, POT, PresentationML (OOXML, PPTX) and Open Document Presentations (ODP).
 
-[Learn More](http://www.aspose.com/java/powerpoint-component.aspx)
+[Learn More](https://www.aspose.com/products/slides/java)
 
 ## Download Latest Versions?
 
