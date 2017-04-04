@@ -6,6 +6,7 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
+public class ConvertingPresentationToHTMLWithMediaFiles {
 
 	public static void main(String[] args) {
 
