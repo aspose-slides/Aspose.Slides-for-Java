@@ -18,21 +18,24 @@ public class GetWidthHeightFromChartPlotArea{
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(GetWidthHeightFromChartPlotArea.class);
 
-       final Presentation pres = new Presentation("pres.pptx");
-try
-{
-    ISlide slide = pres.getSlides().get_Item(1);
-    IChart chart = (IChart)slide.getShapes().get_Item(0);
-    /*ChartDataSourceType*/ int sourceType = chart.getChartData().getDataSourceType();
-    if (sourceType == ChartDataSourceType.ExternalWorkbook)
-    {
-        String path = chart.getChartData().getExternalWorkbookPath();
-    }
-}
-finally { ((IDisposable)pres).dispose(); }
+      final Presentation pres = new Presentation();
+   try {
+        Chart chart = (Chart) pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 500, 350);
+        chart.validateChartLayout();
+
+        double x = chart.getPlotArea().getActualX();
+        double y = chart.getPlotArea().getActualY();
+        double w = chart.getPlotArea().getActualWidth();
+        double h = chart.getPlotArea().getActualHeight();
+     }
+       finally { ((IDisposable)pres).dispose();
+
+     }
+
           ExEnd:GetWidthHeightFromChartPlotArea
  
  
- }
+ 
+      }
 
- }
+      }
