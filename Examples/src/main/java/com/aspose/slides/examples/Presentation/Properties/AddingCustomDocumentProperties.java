@@ -9,6 +9,8 @@ public class AddingCustomDocumentProperties {
 
 	public static void main(String[] args) {
 
+                       ExStart:AddingCustomDocumentProperties
+                     
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingCustomDocumentProperties.class);
 
@@ -30,7 +32,9 @@ public class AddingCustomDocumentProperties {
 
 		// Saving presentation
 		presPPTX.save(dataDir + "CustomDemo.pptx", SaveFormat.Pptx);
-
-	}
+              
+                ExEnd:AddingCustomDocumentProperties
+	
+}
 
 }

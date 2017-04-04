@@ -8,8 +8,10 @@ import com.aspose.slides.examples.Utils;
 public class AccessingAndModifyingCustomProperties {
 
 	public static void main(String[] args) {
-		
-		// The path to the documents directory.
+		//ExStart:AccessingAndModifyingCustomProperties
+
+	
+	// The path to the documents directory.
         	String dataDir = Utils.getDataDir(AccessingAndModifyingCustomProperties.class);
         
 		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
@@ -29,7 +31,7 @@ public class AccessingAndModifyingCustomProperties {
 
 		// Save your presentation to a file
 		pres.save(dataDir + "CustomDemoModified.pptx", SaveFormat.Pptx);
-
+ExEnd:AccessingAndModifyingCustomProperties
 	}
 
 }

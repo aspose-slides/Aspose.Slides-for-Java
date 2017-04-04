@@ -12,6 +12,7 @@ public class RemoveSmartArtShapeNodeAtSpecificPosition {
 
 	public static void main(String[] args) {
 
+               ExStart:RemoveSmartArtShapeNodeAtSpecificPosition 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveSmartArtShapeNodeAtSpecificPosition.class);
 
@@ -43,6 +44,7 @@ public class RemoveSmartArtShapeNodeAtSpecificPosition {
 		// Save Presentation
 		pres.save(dataDir + "RemoveSmartArtNodeByPosition.pptx", SaveFormat.Pptx);
 
-	}
+	ExEnd:RemoveSmartArtShapeNodeAtSpecificPosition 
+      }
 
 }
