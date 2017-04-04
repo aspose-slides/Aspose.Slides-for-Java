@@ -18,13 +18,13 @@ public class AccessingAndModifyingCustomProperties {
 		IDocumentProperties dp = pres.getDocumentProperties();
 
 		// Access and modify custom properties
-		for (int i = 0; i < dp.getCount(); i++) {
+		for (int i = 0; i < dp.getCountOfCustomProperties(); i++) {
 			// Display names and values of custom properties
-			System.out.println("Custom Property Name : " + dp.getPropertyName(i));
-			System.out.println("Custom Property Value : " + dp.get_Item(dp.getPropertyName(i)));
+			System.out.println("Custom Property Name : " + dp.getCustomPropertyName(i));
+			System.out.println("Custom Property Value : " + dp.get_Item(dp.getCustomPropertyName(i)));
 
 			// Modify values of custom properties
-			dp.set_Item(dp.getPropertyName(i), "New Value " + (i + 1));
+			dp.set_Item(dp.getCustomPropertyName(i), "New Value " + (i + 1));
 		}
 
 		// Save your presentation to a file

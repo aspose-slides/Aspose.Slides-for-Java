@@ -32,7 +32,7 @@ public class RemoveSmartArtShapeNodeAtSpecificPosition {
 
 					if (node.getChildNodes().size() >= 2) {
 						// Removing the child node at position 1
-						((SmartArtNodeCollection) node.getChildNodes()).removeNodeByPosition(1);
+						(node.getChildNodes()).removeNode(1);
 					}
 
 				}
