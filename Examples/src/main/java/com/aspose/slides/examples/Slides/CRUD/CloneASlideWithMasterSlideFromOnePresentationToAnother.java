@@ -31,7 +31,7 @@ public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 		IMasterSlide iSlide = masters.addClone(SourceMaster);
 
 		ISlideCollection slds = destPres.getSlides();
-		slds.addClone(sourceSlide, iSlide);
+		slds.addClone(sourceSlide, iSlide, true);
 
 		// Save the destination presentation to disk
 		destPres.save(dataDir + "helloworld_dest3.pptx", SaveFormat.Pptx);

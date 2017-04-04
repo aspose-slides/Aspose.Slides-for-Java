@@ -23,10 +23,10 @@ public class AddingCustomDocumentProperties {
 		dProps.set_Item("Custom", 124);
 
 		// Getting property name at particular index
-		String getPropertyName = dProps.getPropertyName(2);
+		String getPropertyName = dProps.getCustomPropertyName(2);
 
 		// Removing selected property
-		dProps.remove(getPropertyName);
+		dProps.removeCustomProperty(getPropertyName);
 
 		// Saving presentation
 		presPPTX.save(dataDir + "CustomDemo.pptx", SaveFormat.Pptx);
