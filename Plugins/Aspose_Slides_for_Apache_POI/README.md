@@ -55,14 +55,4 @@ Aspose.Slides for Java supports presentation file formats including PPT, PPS, PO
 
 [Learn More](https://www.aspose.com/products/slides/java)
 
-## Download Latest Versions?
-
-* [Latest Releases on Codeplex](https://asposeslidesjavaapachepoi.codeplex.com/releases/view/618722)
-
-## Clone Plugin SourceCodes?
-
-This project is also hosted and maintained at CodePlex. To clone navigate to:
-
-* [Aspose.Slides Java for Apache POI SL on CodePlex - click here](https://asposeslidesjavaapachepoi.codeplex.com/SourceControl/latest)
-
 
