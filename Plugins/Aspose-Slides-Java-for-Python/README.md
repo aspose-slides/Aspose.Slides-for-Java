@@ -11,12 +11,3 @@ Aspose.Slides Java for Python is a project that demonstrates / provides the Aspo
 
 For most complete documentation of the project, check [Aspose.Slides Java For Python confluence wiki](https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+for+Python).
 
-## Download Latest Versions?
-
-* [Latest Releases on Codeplex](http://asposeslidesjavapython.codeplex.com/releasesce)
-
-## Clone Plugin SourceCodes?
-
-This project is also hosted and maintained at CodePlex. To clone navigate to:
-
-* [Aspose.Slides Java for Python on CodePlex - click here](https://asposeslidesjavapython.codeplex.com/SourceControl/latest)
