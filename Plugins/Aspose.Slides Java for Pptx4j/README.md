@@ -1,5 +1,4 @@
 ## Aspose.Slides Java for Pptx4j
-
 Aspose.Slides Java for Pptx4j is a project to provide comparative source code examples to do the same file processing tasks using Aspose.Slides for Java API and Pptx4j. Additionally, this project provides source code examples for advanced features offered by Aspose.Slides for Java which are missing in Pptx4j.
 
 Below are some code comparisons and features of Aspose.Slides for Java that are not available in Pptx4j.
@@ -55,13 +54,4 @@ Aspose.Slides for Java supports presentation file formats including PPT, PPS, PO
 
 [Learn More](https://www.aspose.com/products/slides/java)
 
-## Download Latest Versions?
-
-* [Latest Releases on Codeplex](https://asposeslidesjavapptx4j.codeplex.com/releases/view/618978)
-
-## Clone Plugin SourceCodes?
-
-This project is also hosted and maintained at CodePlex. To clone navigate to:
-
-* [Aspose.Slides Java for Pptx4j on CodePlex - click here](https://asposeslidesjavapptx4j.codeplex.com/SourceControl/latest)
 

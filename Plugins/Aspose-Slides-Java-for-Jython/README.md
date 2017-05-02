@@ -12,12 +12,3 @@ Aspose.Slides Java for Jython is a project that demonstrates / provides the Aspo
 
 For most complete documentation of the project, check [Aspose.Slides Java For Jython confluence wiki](https://docs.aspose.com/display/slidesjava/Aspose.Slides+Java+for+Jython).
 
-## Download Latest Versions?
-
-* [Latest Releases on Codeplex](http://asposeslidesjavajython.codeplex.com/releasesce)
-
-## Clone Plugin SourceCodes?
-
-This project is also hosted and maintained at CodePlex. To clone navigate to:
-
-* [Aspose.Slides Java for Jython on CodePlex - click here](https://asposeslidesjavajython.codeplex.com/SourceControl/latest)
