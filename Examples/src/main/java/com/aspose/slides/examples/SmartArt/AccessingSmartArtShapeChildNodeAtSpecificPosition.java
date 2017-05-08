@@ -13,7 +13,8 @@ public class AccessingSmartArtShapeChildNodeAtSpecificPosition {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+	ExStart:AccessingSmartArtShapeChildNodeAtSpecificPosition 
+              	// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingSmartArtShapeChildNodeAtSpecificPosition.class);
 
 		// Instantiate the presentation
@@ -35,6 +36,7 @@ public class AccessingSmartArtShapeChildNodeAtSpecificPosition {
 		// Printing the SmartArt child node parameters
 		System.out.print("Text = " + chNode.getTextFrame().getText() + ",  Level = " + chNode.getLevel() + ", Position = " + chNode.getPosition());
 
+ExEnd:AccessingSmartArtShapeChildNodeAtSpecificPosition 
 	}
 
 }
