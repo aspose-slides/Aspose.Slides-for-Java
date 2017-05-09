@@ -22,14 +22,8 @@ public class CheckPresentationModified {
             String app = props.getNameOfApplication();
             String ver = props.getAppVersion();
 
-
-       
-  
-  
-  }
-
+            }
 
 	}
                         ExEnd:CheckPresentationModified
-
-}
+      }

@@ -29,13 +29,13 @@ public class ExtractFlashObjects {
          if (control.getName() == "ShockwaveFlash1")
          {
              flashControl = (Control)control;
-         }
+          }
     
-      }
+       }
       
-      }   
+    }   
 
-        }
+  }
 
         ExEnd:ExtractFlashObjects
 
