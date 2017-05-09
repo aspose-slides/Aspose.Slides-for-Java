@@ -15,7 +15,8 @@ public class ExtractFlashObjects {
 
 	public static void main(String[] args) throws IOException {
 		
-		// The path to the documents directory.
+            ExStart:ExtractFlashObjects	
+	// The path to the documents directory.
 	    String dataDir = Utils.getDataDir(ExtractFlashObjects.class);
 	
 
@@ -34,12 +35,12 @@ public class ExtractFlashObjects {
       
       }   
 
+        }
+
+        ExEnd:ExtractFlashObjects
 
 
 
-
-
-
-	}
-
+	
+  
 }
