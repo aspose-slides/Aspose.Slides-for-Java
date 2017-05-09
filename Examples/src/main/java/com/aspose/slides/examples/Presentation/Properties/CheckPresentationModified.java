@@ -11,25 +11,16 @@ public class CheckPresentationModified {
 
 	ExStart:CheckPresentationModified
 	// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CheckPresentationModified.class);
-              
-              
-            IPresentationInfo info =
-                  PresentationFactory.getInstance().getPresentationInfo( dataDir+"props.pptx");
+          String dataDir = Utils.getDataDir(CheckPresentationModified.class);
+              IPresentationInfo info=PresentationFactory.getInstance().getPresentationInfo( dataDir+"props.pptx");
+            
+               IDocumentProperties props = info.readDocumentProperties();
 
-            IDocumentProperties props = info.readDocumentProperties();
+               String app = props.getNameOfApplication();
+               String ver = props.getAppVersion();
 
-            String app = props.getNameOfApplication();
-            String ver = props.getAppVersion();
-
-
-       
-  
-  
-  }
-
+            }
 
 	}
                         ExEnd:CheckPresentationModified
-
-}
+      }
