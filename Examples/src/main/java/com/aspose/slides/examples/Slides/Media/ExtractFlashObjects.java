@@ -17,23 +17,19 @@ public class ExtractFlashObjects {
 		
             ExStart:ExtractFlashObjects	
 	// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(ExtractFlashObjects.class);
+	   String dataDir = Utils.getDataDir(ExtractFlashObjects.class);
 	   Presentation pres = new Presentation(dataDir+"withFlash.pptm");
-{
-          IControlCollection controls = pres.getSlides().get_Item(0).getControls();
-          Control flashControl = null;
-            for (IControl control : controls)
-    {
-         if (control.getName() == "ShockwaveFlash1")
+
+           IControlCollection controls = pres.getSlides().get_Item(0).getControls();
+           Control flashControl = null;
+           for (IControl control : controls){
+         
+             if (control.getName() == "ShockwaveFlash1")
          {
-             flashControl = (Control)control;
+                 flashControl = (Control)control;
           }
     
        }
       
-    }   
-
-  }
-
         ExEnd:ExtractFlashObjects
 }
