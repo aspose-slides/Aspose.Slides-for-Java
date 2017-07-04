@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToSWF {
 
 	public static void main(String[] args) {
-		
+		//ExStart:ConvertingPresentationToSWF
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(ConvertingPresentationToSWF.class);
         
@@ -27,5 +27,5 @@ public class ConvertingPresentationToSWF {
 		}
 
 	}
-
+                //ExEnd:ConvertingPresentationToSWF
 }

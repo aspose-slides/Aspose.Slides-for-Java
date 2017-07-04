@@ -9,7 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToTIFFWithCustomSize {
 
 	public static void main(String[] args) {
-
+                 //ExStart:ConvertingPresentationToTIFFWithCustomSize 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithCustomSize.class);
 
@@ -41,7 +41,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 
 		// Save the presentation to TIFF with specified image size
 		pres.save(dataDir + "demo.tiff", SaveFormat.Tiff, opts);
-
+                //ExEnd:ConvertingPresentationToTIFFWithCustomSize 
 	}
 
 }

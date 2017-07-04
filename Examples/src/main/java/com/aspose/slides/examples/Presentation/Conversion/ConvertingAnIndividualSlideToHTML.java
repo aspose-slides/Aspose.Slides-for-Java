@@ -18,7 +18,8 @@ public class ConvertingAnIndividualSlideToHTML {
 	}
 
 	public static void CustomHtmlExport() {
-		// The path to the documents directory.
+		//ExStart:ConvertingAnIndividualSlideToHTML
+             // The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingAnIndividualSlideToHTML.class);
 
 		// Instantiate a Presentation object that represents a presentation file
@@ -61,5 +62,5 @@ public class ConvertingAnIndividualSlideToHTML {
 		public void writeShapeEnd(IHtmlGenerator generator, IShape shape) {
 		}
 	}
-
+                   //ExEnd:ConvertingAnIndividualSlideToHTML
 }

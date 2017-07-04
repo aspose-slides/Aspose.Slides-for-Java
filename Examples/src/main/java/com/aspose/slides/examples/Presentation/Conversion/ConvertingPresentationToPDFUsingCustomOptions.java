@@ -10,7 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToPDFUsingCustomOptions {
 
 	public static void main(String[] args) {
-
+             //ExStart:ConvertingPresentationToPDFUsingCustomOptions
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToPDFUsingCustomOptions.class);
 
@@ -33,8 +33,7 @@ public class ConvertingPresentationToPDFUsingCustomOptions {
 		opts.setCompliance(PdfCompliance.Pdf15);
 
 		// Save the presentation to PDF with specified options
-		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
-
+       		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
 	}
-
+                 //ExEnd:ConvertingPresentationToPDFUsingCustomOptions
 }
