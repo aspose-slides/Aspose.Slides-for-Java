@@ -1,4 +1,4 @@
-package com.aspose.slides.examples.Presentation.Conversion;
+﻿package com.aspose.slides.examples.Presentation.Conversion;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
@@ -18,7 +18,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 
 		// Instantiate the TiffOptions class
 		TiffOptions opts = new TiffOptions();
-
+                opts.setIncludeComments(true);
 		// Setting compression type
 		// Possible values are:
 		// Default - Specifies the default compression scheme (LZW).

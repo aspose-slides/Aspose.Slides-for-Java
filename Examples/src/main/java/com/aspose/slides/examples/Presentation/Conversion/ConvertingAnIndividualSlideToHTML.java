@@ -26,7 +26,8 @@ public class ConvertingAnIndividualSlideToHTML {
 
 		// Setting HTML Options
 		HtmlOptions opts = new HtmlOptions();
-		opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
+		opts.setIncludeComments(true);
+                opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
 
 		// Saving to individual files
 		for (int i = 0; i < pres.getSlides().size(); i++)

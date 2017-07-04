@@ -19,7 +19,7 @@ public class ConvertingPresentationToPDFUsingCustomOptions {
 
 		// Instantiate the PdfOptions class
 		PdfOptions opts = new PdfOptions();
-
+                 opts.setIncludeComments(true);
 		// Set JPEG Quality
 		opts.setJpegQuality((byte) 90);
 

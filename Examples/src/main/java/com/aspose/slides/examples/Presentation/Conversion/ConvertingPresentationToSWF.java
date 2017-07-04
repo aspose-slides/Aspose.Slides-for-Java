@@ -15,7 +15,8 @@ public class ConvertingPresentationToSWF {
 		Presentation pres = new Presentation(dataDir + "Sample.pptx");
 		try {
 			SwfOptions swfOptions = new SwfOptions();
-			swfOptions.setViewerIncluded(false);
+			swfOptions.setIncludeComments(true);
+                        swfOptions.setViewerIncluded(false);
 			// Saving presentation
 			pres.save(dataDir + "Sample.swf", SaveFormat.Swf, swfOptions);
 		} catch (Exception e) {
