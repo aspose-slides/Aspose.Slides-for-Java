@@ -8,14 +8,15 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToSWF {
 
 	public static void main(String[] args) {
-		
+		//ExStart:ConvertingPresentationToSWF
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(ConvertingPresentationToSWF.class);
         
 		Presentation pres = new Presentation(dataDir + "Sample.pptx");
 		try {
 			SwfOptions swfOptions = new SwfOptions();
-			swfOptions.setViewerIncluded(false);
+			swfOptions.setIncludeComments(true);
+                        swfOptions.setViewerIncluded(false);
 			// Saving presentation
 			pres.save(dataDir + "Sample.swf", SaveFormat.Swf, swfOptions);
 		} catch (Exception e) {
@@ -26,5 +27,5 @@ public class ConvertingPresentationToSWF {
 		}
 
 	}
-
+                //ExEnd:ConvertingPresentationToSWF
 }

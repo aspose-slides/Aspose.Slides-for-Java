@@ -18,7 +18,8 @@ public class ConvertingAnIndividualSlideToHTML {
 	}
 
 	public static void CustomHtmlExport() {
-		// The path to the documents directory.
+		//ExStart:ConvertingAnIndividualSlideToHTML
+             // The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingAnIndividualSlideToHTML.class);
 
 		// Instantiate a Presentation object that represents a presentation file
@@ -26,7 +27,8 @@ public class ConvertingAnIndividualSlideToHTML {
 
 		// Setting HTML Options
 		HtmlOptions opts = new HtmlOptions();
-		opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
+		opts.setIncludeComments(true);
+                opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
 
 		// Saving to individual files
 		for (int i = 0; i < pres.getSlides().size(); i++)
@@ -60,5 +62,5 @@ public class ConvertingAnIndividualSlideToHTML {
 		public void writeShapeEnd(IHtmlGenerator generator, IShape shape) {
 		}
 	}
-
+                   //ExEnd:ConvertingAnIndividualSlideToHTML
 }

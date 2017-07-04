@@ -1,4 +1,4 @@
-package com.aspose.slides.examples.Presentation.Conversion;
+﻿package com.aspose.slides.examples.Presentation.Conversion;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
@@ -9,7 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToTIFFWithCustomSize {
 
 	public static void main(String[] args) {
-
+                 //ExStart:ConvertingPresentationToTIFFWithCustomSize 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithCustomSize.class);
 
@@ -18,7 +18,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 
 		// Instantiate the TiffOptions class
 		TiffOptions opts = new TiffOptions();
-
+                opts.setIncludeComments(true);
 		// Setting compression type
 		// Possible values are:
 		// Default - Specifies the default compression scheme (LZW).
@@ -41,7 +41,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 
 		// Save the presentation to TIFF with specified image size
 		pres.save(dataDir + "demo.tiff", SaveFormat.Tiff, opts);
-
+                //ExEnd:ConvertingPresentationToTIFFWithCustomSize 
 	}
 
 }
