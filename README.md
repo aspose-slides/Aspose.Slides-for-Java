@@ -20,5 +20,5 @@ Directory | Description
 + **Product Home:** [Aspose.Slides for Java](https://www.aspose.com/products/slides/java)
 + **Download:** [Download Aspose.Slides for Java](https://downloads.aspose.com/slides/java)
 + **Documentation:** [Aspose.Slides for Java Documentation](https://docs.aspose.com/display/slidesjava/Home)
-+ **Forum:** [Aspose.Slides for Java Forum](https://www.aspose.com/community/forums/aspose.slides-product-family/109/showforum.aspx)
++ **Forum:** [Aspose.Slides for Java Forum](https://forum.aspose.com/c/slides)
 + **Blog:** [Aspose.Slides for Java Blog](https://blog.aspose.com/category/aspose-products/aspose-slides-product-family/)
