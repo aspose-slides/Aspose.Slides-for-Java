@@ -20,6 +20,7 @@ public class SettingTheChartMarkerOptionsOnDataPointsLevel {
 
 	public static void main(String[] args) {
 
+//ExStart:SettingTheChartMarkerOptionsOnDataPointsLevel
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheChartMarkerOptionsOnDataPointsLevel.class);
 
@@ -84,6 +85,7 @@ public class SettingTheChartMarkerOptionsOnDataPointsLevel {
 
 		// Save presentation with chart
 		pres.save(dataDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheChartMarkerOptionsOnDataPointsLevel
 
 	}
 }

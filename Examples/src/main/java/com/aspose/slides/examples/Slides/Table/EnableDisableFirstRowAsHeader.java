@@ -9,7 +9,8 @@ import com.aspose.slides.examples.Utils;
 public class EnableDisableFirstRowAsHeader {
 
 	public static void main(String[] args) {
-		
+			//ExStart:EnableDisableFirstRowAsHeader
+	
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(EnableDisableFirstRowAsHeader.class);
 
@@ -34,6 +35,7 @@ public class EnableDisableFirstRowAsHeader {
 
 		//Set the first row of a table as header with a special formatting.
 		tbl.setFirstRow(true);
-	}
+			//ExEnd:EnableDisableFirstRowAsHeader
+}
 
 }

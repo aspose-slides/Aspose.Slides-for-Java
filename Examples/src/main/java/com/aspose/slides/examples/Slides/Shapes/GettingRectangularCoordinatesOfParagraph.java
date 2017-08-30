@@ -12,6 +12,7 @@ public class GettingRectangularCoordinatesOfParagraph {
 
 	public static void main(String[] args) {
 
+//ExStart:GettingRectangularCoordinatesOfParagraph
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GettingRectangularCoordinatesOfParagraph.class);
 
@@ -21,6 +22,7 @@ public class GettingRectangularCoordinatesOfParagraph {
 		ITextFrame textFrame = (ITextFrame) shape.getTextFrame();
 		Rectangle2D.Float rect = ((IParagraph) textFrame.getParagraphs().get_Item(0)).getRect();
 		System.out.println("X: " + rect.x + " Y: " + rect.y + " Width: " + rect.width + " Height: " + rect.height);
+//ExEnd:GettingRectangularCoordinatesOfParagraph
 
 	}
 

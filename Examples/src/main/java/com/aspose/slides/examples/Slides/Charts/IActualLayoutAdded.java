@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class IActualLayoutAdded{
 
 	public static void main(String[] args) {
-            ExStart:IActualLayoutAdded
+            //ExStart:IActualLayoutAdded
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(IActualLayoutAdded.class);
 
@@ -29,7 +29,7 @@ try {
     double h = chart.getPlotArea().getActualHeight();
 }
 finally { ((IDisposable)pres).dispose(); }
-          ExEnd:IActualLayoutAdded
+          //ExEnd:IActualLayoutAdded
  
  
  }

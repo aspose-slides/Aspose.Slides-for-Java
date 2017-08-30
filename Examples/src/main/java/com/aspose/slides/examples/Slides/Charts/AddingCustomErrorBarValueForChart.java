@@ -14,6 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingCustomErrorBarValueForChart {
 
 	public static void main(String[] args) {
+//ExStart:AddingCustomErrorBarValueForChart
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingCustomErrorBarValueForChart.class);
@@ -51,6 +52,7 @@ public class AddingCustomErrorBarValueForChart {
 
 		// Saving presentation
 		pres.save(dataDir + "ErrorBarsCustomValues.pptx", SaveFormat.Pptx);
+//ExEnd:AddingCustomErrorBarValueForChart
 
 	}
 

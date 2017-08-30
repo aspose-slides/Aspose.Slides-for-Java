@@ -12,6 +12,7 @@ import com.aspose.slides.examples.Utils;
 public class GeneratingAThumbnailFromASlideWithUserDefinedScalingFactor {
 
 	public static void main(String[] args) {
+//ExStart:GeneratingAThumbnailFromASlideWithUserDefinedScalingFactor
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GeneratingAThumbnailFromASlideWithUserDefinedScalingFactor.class);
@@ -27,6 +28,7 @@ public class GeneratingAThumbnailFromASlideWithUserDefinedScalingFactor {
 		} catch (Exception e) {
 		}
 
+//ExEnd:GeneratingAThumbnailFromASlideWithUserDefinedScalingFactor
 	}
 
 }

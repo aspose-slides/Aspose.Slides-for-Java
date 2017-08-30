@@ -22,6 +22,8 @@ import com.aspose.slides.examples.Utils;
 public class FormattingChartEntities {
 
 	public static void main(String[] args) {
+//ExStart:FormattingChartEntities
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FormattingChartEntities.class);
 
@@ -178,6 +180,7 @@ public class FormattingChartEntities {
 		// Save Presentation
 		pres.save(dataDir + "FormattedChart.pptx", SaveFormat.Pptx);
 
+//ExEnd:FormattingChartEntities
 	}
 
 }

@@ -13,6 +13,8 @@ import com.aspose.slides.examples.Utils;
 public class GeneratingAShapeThumbnailInTheBoundsOfAShapesAppearance {
 
 	public static void main(String[] args) {
+//ExStart:GeneratingAShapeThumbnailInTheBoundsOfAShapesAppearance
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GeneratingAShapeThumbnailInTheBoundsOfAShapesAppearance.class);
@@ -26,6 +28,7 @@ public class GeneratingAShapeThumbnailInTheBoundsOfAShapesAppearance {
 			ImageIO.write(image, "jpeg", new File(dataDir + "PPTX_thumbnail.jpg"));
 		} catch (IOException e) {
 		}
+//ExEnd:GeneratingAShapeThumbnailInTheBoundsOfAShapesAppearance
 
 	}
 

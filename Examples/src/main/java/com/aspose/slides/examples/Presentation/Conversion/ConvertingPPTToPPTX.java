@@ -7,6 +7,8 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPPTToPPTX {
 
 	public static void main(String[] args) {
+//ExStart:ConvertingPPTToPPTX
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPPTToPPTX.class);
@@ -16,6 +18,7 @@ public class ConvertingPPTToPPTX {
 
 		// Saving the PPTX presentation to PPTX format
 		pres.save(dataDir + "ConvertedAspose.pptx", SaveFormat.Pptx);
+//ExEnd:ConvertingPPTToPPTX
 
 	}
 

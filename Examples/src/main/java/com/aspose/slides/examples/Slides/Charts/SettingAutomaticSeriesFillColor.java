@@ -9,6 +9,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingAutomaticSeriesFillColor {
 
 	public static void main(String[] args) {
+//ExStart:SettingAutomaticSeriesFillColor
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingAutomaticSeriesFillColor.class);
@@ -27,6 +29,7 @@ public class SettingAutomaticSeriesFillColor {
 		// Saving presentation
 		pres.save(dataDir + "AutoFillSeries.pptx", SaveFormat.Pptx);
 
+//ExEnd:SettingAutomaticSeriesFillColor
 	}
 
 }

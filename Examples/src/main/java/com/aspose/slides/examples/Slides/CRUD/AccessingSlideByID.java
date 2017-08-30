@@ -7,6 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class AccessingSlideByID {
 
 	public static void main(String[] args) {
+//ExStart:AccessingSlideByID
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingSlideByID.class);
 
@@ -18,7 +19,7 @@ public class AccessingSlideByID {
 
 		// Accessing Slide by ID
 		IBaseSlide slide = presentation.getSlideById(id);
-
+//ExEnd:AccessingSlideByID
 	}
 
 }

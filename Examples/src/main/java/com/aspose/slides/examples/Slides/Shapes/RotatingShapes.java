@@ -10,6 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class RotatingShapes {
 
 	public static void main(String[] args) {
+//ExStart:RotatingShapes
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RotatingShapes.class);
@@ -28,6 +29,7 @@ public class RotatingShapes {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpRot.pptx", SaveFormat.Pptx);
+//ExEnd:RotatingShapes
 
 	}
 

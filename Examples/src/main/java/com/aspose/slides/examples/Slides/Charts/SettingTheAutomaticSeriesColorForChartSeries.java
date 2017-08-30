@@ -15,6 +15,7 @@ import com.aspose.slides.examples.Utils;
 public class SettingTheAutomaticSeriesColorForChartSeries {
 
 	public static void main(String[] args) {
+//ExStart:SettingTheAutomaticSeriesColorForChartSeries
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheAutomaticSeriesColorForChartSeries.class);
@@ -77,6 +78,7 @@ public class SettingTheAutomaticSeriesColorForChartSeries {
 
 		// Save presentation with chart
 		pres.save(dataDir + "AutomaticColor.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheAutomaticSeriesColorForChartSeries
 
 	}
 

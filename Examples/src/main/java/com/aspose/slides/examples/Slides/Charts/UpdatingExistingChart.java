@@ -13,6 +13,8 @@ public class UpdatingExistingChart {
 
 	public static void main(String[] args) {
 
+//ExStart:UpdatingExistingChart
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UpdatingExistingChart.class);
 
@@ -72,6 +74,7 @@ public class UpdatingExistingChart {
 
 		// Save presentation with chart
 		pres.save(dataDir + "AsposeChartModified.pptx", SaveFormat.Pptx);
+//ExEnd:UpdatingExistingChart
 
 	}
 

@@ -11,7 +11,9 @@ public class BetterTransition {
 
 	public static void main(String[] args) {
 		
-		 // The path to the documents directory.
+		//ExStart:BetterTransition 
+
+	 // The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(BetterTransition.class);
 
 		// Instantiate a Presentation object that represents a PPTX file
@@ -35,6 +37,7 @@ public class BetterTransition {
 		// Writing the presentation as a PPTX file
 		pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
 
+//ExEnd:BetterTransition
 	}
 
 }

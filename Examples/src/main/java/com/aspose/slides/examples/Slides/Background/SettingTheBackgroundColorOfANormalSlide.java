@@ -12,6 +12,7 @@ public class SettingTheBackgroundColorOfANormalSlide {
 
 	public static void main(String[] args) {
 		
+//ExStart:SettingTheBackgroundColorOfANormalSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheBackgroundColorOfANormalSlide.class);
 		
@@ -24,6 +25,7 @@ public class SettingTheBackgroundColorOfANormalSlide {
 		pres.getSlides().get_Item(0).getBackground().getFillFormat().getSolidFillColor().setColor(Color.BLUE);
 
 		pres.save(dataDir + "ContentBG.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheBackgroundColorOfANormalSlide
 
 	}
 

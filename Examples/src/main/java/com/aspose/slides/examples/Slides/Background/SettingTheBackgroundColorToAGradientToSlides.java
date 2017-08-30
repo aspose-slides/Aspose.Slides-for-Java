@@ -11,6 +11,7 @@ public class SettingTheBackgroundColorToAGradientToSlides {
 
 	public static void main(String[] args) {
 
+//ExStart:SettingTheBackgroundColorToAGradientToSlides
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheBackgroundColorToAGradientToSlides.class);
 
@@ -24,6 +25,7 @@ public class SettingTheBackgroundColorToAGradientToSlides {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "ContentBG_Grad.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheBackgroundColorToAGradientToSlides
 
 	}
 }

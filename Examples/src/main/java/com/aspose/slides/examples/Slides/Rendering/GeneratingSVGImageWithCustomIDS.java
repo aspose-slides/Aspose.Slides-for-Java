@@ -7,12 +7,12 @@ import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
 
-public class GeneratingSVGImageFromSlide {
+public class GeneratingSVGImageWithCustomIDS {
 
 	public static void main(String[] args) {
 
 // The path to the documents directory.
-//ExStart:GeneratingSVGImageWithCustomIDS				
+//ExStart:GeneratingSVGImageWithCustomIDS
  String dataDir = Utils.getDataDir(GeneratingSVGImageWithCustomIDS.class);
  Presentation pres = new Presentation(dataDir+"pptxFileName.pptx");
  try
@@ -36,5 +36,5 @@ public class GeneratingSVGImageFromSlide {
         if (pres != null) pres.dispose();
       }		
 
-//ExEnd:GeneratingSVGImageWithCustomIDS
+//ExEnd:GGeneratingSVGImageWithCustomIDS
 }

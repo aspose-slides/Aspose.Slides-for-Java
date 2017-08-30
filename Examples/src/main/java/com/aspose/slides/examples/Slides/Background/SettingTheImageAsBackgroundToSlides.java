@@ -16,6 +16,7 @@ public class SettingTheImageAsBackgroundToSlides {
 
 	public static void main(String[] args) {
 
+//ExStart:SettingTheImageAsBackgroundToSlides
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheImageAsBackgroundToSlides.class);
 
@@ -41,6 +42,7 @@ public class SettingTheImageAsBackgroundToSlides {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "ContentBG_Img.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheImageAsBackgroundToSlides
 
 	}
 

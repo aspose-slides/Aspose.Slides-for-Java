@@ -9,7 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class HidingTheShapesFromSlide {
 
 	public static void main(String[] args) {
-
+//ExStart:HidingTheShapesFromSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(HidingTheShapesFromSlide.class);
 		Presentation presentation1 = new Presentation();
@@ -19,6 +19,7 @@ public class HidingTheShapesFromSlide {
 			ashp.setHidden(true);
 		}
 		presentation1.save(dataDir + "sample_output.pptx", SaveFormat.Pptx);
+//ExEnd:HidingTheShapesFromSlide
 
 	}
 

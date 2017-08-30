@@ -11,6 +11,7 @@ import com.aspose.slides.examples.Utils;
 public class CloningShapesInSlides {
 
 	public static void main(String[] args) {
+//ExStart:CloningShapesInSlides
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloningShapesInSlides.class);
@@ -38,6 +39,7 @@ public class CloningShapesInSlides {
 
 		// Write the PPTX file to disk
 		srcPres.save(dataDir + "CloneShape.pptx", SaveFormat.Pptx);
+//ExEnd:CloningShapesInSlides
 
 	}
 }

@@ -18,6 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class VerticallyAlignTheTextInTableCell {
 
 	public static void main(String[] args) {
+//ExStart:VerticallyAlignTheTextInTableCell
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(VerticallyAlignTheTextInTableCell.class);
@@ -59,6 +60,7 @@ public class VerticallyAlignTheTextInTableCell {
 
 		// Save Presentation
 		pres.save(dataDir + "TableCellVertical.pptx", SaveFormat.Pptx);
+//ExEnd:VerticallyAlignTheTextInTableCell
 
 	}
 

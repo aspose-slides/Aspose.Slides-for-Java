@@ -21,6 +21,7 @@ import com.aspose.slides.examples.Utils;
 public class SettingPieChartSectorColors {
 
 	public static void main(String[] args) {
+//ExStart:SettingPieChartSectorColors
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingPieChartSectorColors.class);
@@ -125,7 +126,7 @@ public class SettingPieChartSectorColors {
 
 		// Save presentation with chart
 		pres.save(dataDir + "AsposePieChart.pptx", SaveFormat.Pptx);
-
+//ExEnd:SettingPieChartSectorColors
 	}
 
 }

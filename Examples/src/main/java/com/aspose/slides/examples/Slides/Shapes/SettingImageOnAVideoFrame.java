@@ -14,6 +14,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingImageOnAVideoFrame {
 
 	public static void main(String[] args) throws FileNotFoundException {
+//ExStart:SettingImageOnAVideoFrame
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingImageOnAVideoFrame.class);
 		// Create an instance of Presentation class
@@ -32,6 +34,7 @@ public class SettingImageOnAVideoFrame {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
+//ExEnd:SettingImageOnAVideoFrame
 	}
 
 }

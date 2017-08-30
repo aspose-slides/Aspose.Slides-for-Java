@@ -15,6 +15,8 @@ import com.aspose.slides.examples.Utils;
 public class FormattingTheLinesOfShapes {
 
 	public static void main(String[] args) {
+	//ExStart:FormattingTheLinesOfShapes
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FormattingTheLinesOfShapes.class);
 
@@ -42,6 +44,8 @@ public class FormattingTheLinesOfShapes {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpLn.pptx", SaveFormat.Pptx);
+//ExEnd:FormattingTheLinesOfShapes
+
 
 	}
 

@@ -15,7 +15,8 @@ public class AddingAudioFrameToSlide {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+	//ExStart:AddingAudioFrameToSlide
+	// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingAudioFrameToSlide.class);
 
 		// Instantiate Presentation class that represents the PPTX
@@ -38,6 +39,7 @@ public class AddingAudioFrameToSlide {
 		// Write the PPTX file to disk
 		pres.save(dataDir + "AudioFrameEmbed.pptx", SaveFormat.Pptx);
 
-	}
+		//ExEnd:AddingAudioFrameToSlide
+}
 
 }

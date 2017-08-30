@@ -13,6 +13,8 @@ public class AddingFixedErrorBarValueForChart {
 
 	public static void main(String[] args) {
 
+//ExStart:AddingFixedErrorBarValueForChart
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingFixedErrorBarValueForChart.class);
 
@@ -38,6 +40,6 @@ public class AddingFixedErrorBarValueForChart {
 
 		// Saving presentation
 		pres.save(dataDir + "ErrorBars.pptx", SaveFormat.Pptx);
-
+//ExEnd:AddingFixedErrorBarValueForChart
 	}
 }

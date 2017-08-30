@@ -8,6 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class CloningASlideFromOnePositionToAnotherWithinSamePresentation {
 
 	public static void main(String[] args) {
+	ExStart:CloningASlideFromOnePositionToAnotherWithinSamePresentation
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloningASlideFromOnePositionToAnotherWithinSamePresentation.class);
@@ -24,6 +25,8 @@ public class CloningASlideFromOnePositionToAnotherWithinSamePresentation {
 
 		// Write the modified presentation to disk
 		pres.save(dataDir + "helloworld_clonedPost.pptx", SaveFormat.Pptx);
+
+	ExEnd:CloningASlideFromOnePositionToAnotherWithinSamePresentation
 
 	}
 

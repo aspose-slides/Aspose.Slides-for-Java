@@ -13,6 +13,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingTheAlternativeTextPropertyOfShapes {
 
 	public static void main(String[] args) {
+//ExStart:SettingTheAlternativeTextPropertyOfShapes
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheAlternativeTextPropertyOfShapes.class);
@@ -29,6 +31,7 @@ public class SettingTheAlternativeTextPropertyOfShapes {
 			}
 		}
 		presentation1.save(dataDir + "sample_output.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheAlternativeTextPropertyOfShapes
 
 	}
 

@@ -14,6 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class ApplyingInnerShadow {
 
 	public static void main(String[] args) {
+//ExStart:ApplyingInnerShadow
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ApplyingInnerShadow.class);
@@ -44,6 +45,7 @@ public class ApplyingInnerShadow {
 
 		// Write the presentation to disk
 		Pres.save(dataDir + "ShadowPres.pptx", SaveFormat.Pptx);
+//ExEnd:ApplyingInnerShadow
 
 	}
 

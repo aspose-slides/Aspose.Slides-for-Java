@@ -10,6 +10,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingCustomLocationAndSizeForChartLegend {
 
 	public static void main(String[] args) {
+//ExStart:SettingCustomLocationAndSizeForChartLegend
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingCustomLocationAndSizeForChartLegend.class);
@@ -31,6 +33,8 @@ public class SettingCustomLocationAndSizeForChartLegend {
 
 		// Write presentation to disk
 		pres.save(dataDir + "Legend.pptx", SaveFormat.Pptx);
+
+//ExEnd:SettingCustomLocationAndSizeForChartLegend
 
 	}
 

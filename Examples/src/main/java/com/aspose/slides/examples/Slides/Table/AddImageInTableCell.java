@@ -14,7 +14,7 @@ public class AddImageInTableCell {
 
 	public static void main(String[] args) {
                 
-              //  ExStart:AddImageInTableCell
+              //ExStart:AddImageInTableCell
 
 		// The path to the documents directory.
  String dataDir = Utils.getDataDir(AddImageInTableCell.class);
@@ -53,7 +53,7 @@ public class AddImageInTableCell {
 
    //Save PPTX to Disk
    pres.save("D:\\Data\\table.pptx", SaveFormat.Pptx);
-// ExEnd:AddImageInTableCell
+//ExEnd:AddImageInTableCell
 
 
                 

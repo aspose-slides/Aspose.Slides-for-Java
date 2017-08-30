@@ -14,6 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingSimplePictureFramesToSlides {
 
 	public static void main(String[] args) {
+//ExStart:AddingSimplePictureFramesToSlides
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSimplePictureFramesToSlides.class);
@@ -38,6 +39,7 @@ public class AddingSimplePictureFramesToSlides {
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectPicFrame.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:AddingSimplePictureFramesToSlides
+}
 
 }

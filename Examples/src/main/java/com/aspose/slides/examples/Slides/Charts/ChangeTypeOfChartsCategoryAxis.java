@@ -11,6 +11,7 @@ public class ChangeTypeOfChartsCategoryAxis {
 
 	public static void main(String[] args) {
 
+//ExStart:ChangeTypeOfChartsCategoryAxis
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangeTypeOfChartsCategoryAxis.class);
 
@@ -26,5 +27,6 @@ public class ChangeTypeOfChartsCategoryAxis {
 			if (pres != null)
 				pres.dispose();
 		}
+//ExEnd:ChangeTypeOfChartsCategoryAxis
 	}
 }

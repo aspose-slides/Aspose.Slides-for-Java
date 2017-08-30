@@ -18,6 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class AddAnImageInATableCell {
 
 	public static void main(String[] args) throws IOException {
+	//ExStart:AddAnImageInATableCell
 		
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddAnImageInATableCell.class);
@@ -47,6 +48,7 @@ public class AddAnImageInATableCell {
 
 		// Save PPTX to Disk
 		pres.save(dataDir + "table.pptx", SaveFormat.Pptx);
+	//ExEnd:AddAnImageInATableCell
 	}
 
 }

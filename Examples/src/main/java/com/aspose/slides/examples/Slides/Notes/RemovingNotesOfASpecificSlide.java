@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class RemovingNotesOfASpecificSlide {
 
 	public static void main(String[] args) {
-
+		 //ExStart:RemovingNotesOfASpecificSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemovingNotesOfASpecificSlide.class);
 
@@ -21,7 +21,7 @@ public class RemovingNotesOfASpecificSlide {
 
 		// Saving presentation to disk
 		pres.save(dataDir + "test.pptx", SaveFormat.Pptx);
-
+		 //ExEnd:RemovingNotesOfASpecificSlide
 	}
 
 }

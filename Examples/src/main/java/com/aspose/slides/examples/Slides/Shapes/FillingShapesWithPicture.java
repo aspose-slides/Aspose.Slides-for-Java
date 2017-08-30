@@ -17,7 +17,7 @@ import com.aspose.slides.examples.Utils;
 public class FillingShapesWithPicture {
 
 	public static void main(String[] args) {
-
+	//ExStart:FillingShapesWithPicture
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FillingShapesWithPicture.class);
 
@@ -47,6 +47,7 @@ public class FillingShapesWithPicture {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpPic.pptx", SaveFormat.Pptx);
+	//ExEnd:FillingShapesWithPicture
 
 	}
 

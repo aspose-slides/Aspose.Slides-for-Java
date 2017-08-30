@@ -15,7 +15,8 @@ public class FillingShapesWithPattern {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+	//ExStart:FillingShapesWithPattern
+	// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FillingShapesWithPattern.class);
 
 		// Instantiate Presentation class that represents the PPTX
@@ -39,6 +40,7 @@ public class FillingShapesWithPattern {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpPatt.pptx", SaveFormat.Pptx);
+	//ExEnd:FillingShapesWithPattern
 
 	}
 

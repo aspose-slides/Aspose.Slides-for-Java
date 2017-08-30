@@ -10,6 +10,7 @@ public class SettingTheTransitionEffects {
 
 	public static void main(String[] args) {
 		 
+	//ExStart:SettingTheTransitionEffects
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(SettingTheTransitionEffects.class);
 		
@@ -23,6 +24,7 @@ public class SettingTheTransitionEffects {
 		// Write the presentation to disk
 		pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
 
+	//ExEnd:SettingTheTransitionEffects
 	}
 
 }

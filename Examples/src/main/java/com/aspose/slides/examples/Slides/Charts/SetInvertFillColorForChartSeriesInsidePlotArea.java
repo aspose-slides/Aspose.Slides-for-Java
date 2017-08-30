@@ -18,6 +18,7 @@ public class SetInvertFillColorForChartSeriesInsidePlotArea {
 			
 	public static void main(String[] args) {
 		
+//ExStart:SetInvertFillColorForChartSeriesInsidePlotArea
 		Color inverColor = Color.red;
 		Color seriesColor;
 
@@ -58,5 +59,7 @@ public class SetInvertFillColorForChartSeriesInsidePlotArea {
 				pres.dispose();
 			}
 		}
+//ExEnd:SetInvertFillColorForChartSeriesInsidePlotArea
+
 	}
 }

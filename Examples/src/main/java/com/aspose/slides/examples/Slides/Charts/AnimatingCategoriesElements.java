@@ -15,6 +15,7 @@ import com.aspose.slides.examples.Utils;
 public class AnimatingCategoriesElements {
 
 	public static void main(String[] args) {
+//ExStart:AnimatingCategoriesElements
 
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(AnimatingCategoriesElements.class) + "Charts/";
@@ -60,6 +61,7 @@ public class AnimatingCategoriesElements {
 			if (pres != null)
 				pres.dispose();
 		}
+//ExEnd:AnimatingCategoriesElements
 
 	}
 

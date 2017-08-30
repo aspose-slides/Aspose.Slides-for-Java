@@ -12,6 +12,8 @@ public class AccessingAnOLEObjectFrameFromASlide {
 
 	public static void main(String[] args) throws Exception {
 
+//ExStart:AccessingAnOLEObjectFrameFromASlide
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingAnOLEObjectFrameFromASlide.class);
 
@@ -37,6 +39,7 @@ public class AccessingAnOLEObjectFrameFromASlide {
 		}
 		// Write the PPTX to disk
 		pres.save(dataDir + "OleEmbed.pptx", SaveFormat.Pptx);
+//ExEnd:AccessingAnOLEObjectFrameFromASlide
 
 	}
 

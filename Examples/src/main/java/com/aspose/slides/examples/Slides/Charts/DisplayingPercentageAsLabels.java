@@ -16,6 +16,7 @@ import com.aspose.slides.examples.Utils;
 public class DisplayingPercentageAsLabels {
 
 	public static void main(String[] args) {
+//ExStart:DisplayingPercentageAsLabels
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(DisplayingPercentageAsLabels.class);
@@ -68,6 +69,8 @@ public class DisplayingPercentageAsLabels {
 
 		// Save presentation with chart
 		pres.save(dataDir + "test.pptx", SaveFormat.Pptx);
-	}
+	//ExEnd:DisplayingPercentageAsLabels
+
+}
 
 }

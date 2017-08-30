@@ -13,6 +13,8 @@ import com.aspose.slides.examples.Utils;
 public class AddingVideoFrameWithVideoFromWebSource {
 
 	public static void main(String[] args) {
+
+//ExStart:AddingVideoFrameWithVideoFromWebSource
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingVideoFrameWithVideoFromWebSource.class);
 
@@ -38,5 +40,6 @@ public class AddingVideoFrameWithVideoFromWebSource {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+//ExEnd:AddingVideoFrameWithVideoFromWebSource
 	}
 }

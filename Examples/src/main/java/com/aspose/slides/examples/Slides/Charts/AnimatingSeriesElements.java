@@ -15,6 +15,7 @@ import com.aspose.slides.examples.Utils;
 public class AnimatingSeriesElements {
 
 	public static void main(String[] args) {
+//ExStart:AnimatingSeriesElements
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AnimatingSeriesElements.class);
@@ -60,6 +61,7 @@ public class AnimatingSeriesElements {
 			if (pres != null)
 				pres.dispose();
 		}
+//ExEnd:AnimatingSeriesElements
 
 	}
 

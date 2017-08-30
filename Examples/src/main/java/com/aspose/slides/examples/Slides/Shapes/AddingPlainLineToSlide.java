@@ -10,7 +10,8 @@ public class AddingPlainLineToSlide {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+//ExStart:AddingPlainLineToSlide
+			// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingPlainLineToSlide.class);
 
 		// Instantiate PresentationEx class that represents the PPTX file
@@ -25,6 +26,7 @@ public class AddingPlainLineToSlide {
 		// Write the PPTX to Disk
 		pres.save(dataDir + "LineShape1.pptx", SaveFormat.Pptx);
 
+//ExEnd:AddingPlainLineToSlide
 	}
 
 }

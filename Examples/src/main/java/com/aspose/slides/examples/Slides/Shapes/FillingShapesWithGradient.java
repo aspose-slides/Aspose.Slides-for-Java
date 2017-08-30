@@ -16,6 +16,7 @@ public class FillingShapesWithGradient {
 
 	public static void main(String[] args) {
 
+//ExStart:FillingShapesWithGradient
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FillingShapesWithGradient.class);
 
@@ -42,6 +43,7 @@ public class FillingShapesWithGradient {
 		// Write the PPTX file to disk
 		pres.save(dataDir + "EllipseShpGrad.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:FillingShapesWithGradient
+}
 
 }

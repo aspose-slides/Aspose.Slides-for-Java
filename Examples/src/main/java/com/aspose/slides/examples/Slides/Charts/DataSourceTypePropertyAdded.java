@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class DataSourceTypePropertyAdded{
 
 	public static void main(String[] args) {
-            ExStart:DataSourceTypePropertyAdded
+            //ExStart:DataSourceTypePropertyAdded
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(DataSourceTypePropertyAdded.class);
 
@@ -30,7 +30,7 @@ try
     }
 }
 finally { ((IDisposable)pres).dispose(); }
-          ExEnd:DataSourceTypePropertyAdded
+         //ExEnd:DataSourceTypePropertyAdded
  
  
  }

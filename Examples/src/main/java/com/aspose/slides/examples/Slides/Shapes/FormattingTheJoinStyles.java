@@ -16,6 +16,8 @@ public class FormattingTheJoinStyles {
 
 	public static void main(String[] args) {
 
+	//ExStart:FormattingTheJoinStyles
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FormattingTheJoinStyles.class);
 
@@ -65,6 +67,7 @@ public class FormattingTheJoinStyles {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpLnJoin.pptx", SaveFormat.Pptx);
+	//ExEnd:FormattingTheJoinStyles
 
 	}
 

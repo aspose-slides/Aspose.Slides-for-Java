@@ -11,6 +11,7 @@ public class SettingTheLabelDistanceFromCategoryAxis {
 
 	public static void main(String[] args) {
 
+//ExStart:SettingTheLabelDistanceFromCategoryAxis
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheLabelDistanceFromCategoryAxis.class);
 
@@ -28,6 +29,7 @@ public class SettingTheLabelDistanceFromCategoryAxis {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "Position.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheLabelDistanceFromCategoryAxis
 
 	}
 

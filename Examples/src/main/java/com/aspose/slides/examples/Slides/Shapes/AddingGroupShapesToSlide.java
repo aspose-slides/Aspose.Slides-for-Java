@@ -13,6 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingGroupShapesToSlide {
 
 	public static void main(String[] args) {
+	//ExStart:AddingGroupShapesToSlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingGroupShapesToSlide.class);
@@ -40,6 +41,7 @@ public class AddingGroupShapesToSlide {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "GroupShape.pptx", SaveFormat.Pptx);
+	//ExEnd:AddingGroupShapesToSlide
 
 	}
 

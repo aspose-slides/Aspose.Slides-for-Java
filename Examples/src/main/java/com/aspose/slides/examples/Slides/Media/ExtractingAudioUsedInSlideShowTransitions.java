@@ -8,7 +8,8 @@ import com.aspose.slides.examples.Utils;
 public class ExtractingAudioUsedInSlideShowTransitions {
 
 	public static void main(String[] args) {
-		
+		            //ExStart:ExtractingAudioUsedInSlideShowTransitions
+
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(ExtractingAudioUsedInSlideShowTransitions.class);
 	    
@@ -25,6 +26,7 @@ public class ExtractingAudioUsedInSlideShowTransitions {
 		// Extract sound in byte array
 		byte[] audio = transition.getSound().getBinaryData();
 		System.out.println("Length: " + audio.length);
-	}
+	            //ExEnd:ExtractingAudioUsedInSlideShowTransitions
+}
 
 }

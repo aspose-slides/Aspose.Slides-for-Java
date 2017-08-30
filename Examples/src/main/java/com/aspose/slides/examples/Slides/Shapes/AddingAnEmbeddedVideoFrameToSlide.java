@@ -15,6 +15,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingAnEmbeddedVideoFrameToSlide {
 
 	public static void main(String[] args) {
+//ExStart:AddingAnEmbeddedVideoFrameToSlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingAnEmbeddedVideoFrameToSlide.class);
@@ -43,6 +44,7 @@ public class AddingAnEmbeddedVideoFrameToSlide {
 			pres.save(dataDir + "VideoFrame.pptx", SaveFormat.Pptx);
 		} catch (Exception e) {
 		}
+//ExEnd:AddingAnEmbeddedVideoFrameToSlide
 
 	}
 

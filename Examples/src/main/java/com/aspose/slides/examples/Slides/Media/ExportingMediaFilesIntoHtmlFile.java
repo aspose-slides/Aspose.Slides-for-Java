@@ -12,6 +12,7 @@ import com.aspose.slides.examples.Utils;
 public class ExportingMediaFilesIntoHtmlFile {
 
 	public static void main(String[] args) {
+            //ExStart:ExportingMediaFilesIntoHtmlFile
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ExportingMediaFilesIntoHtmlFile.class);
@@ -38,6 +39,7 @@ public class ExportingMediaFilesIntoHtmlFile {
 			if (pres != null)
 				pres.dispose();
 		}
+            //ExEnd:ExportingMediaFilesIntoHtmlFile
 
 	}
 }

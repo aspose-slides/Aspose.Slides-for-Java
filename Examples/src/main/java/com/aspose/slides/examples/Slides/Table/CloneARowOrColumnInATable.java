@@ -12,7 +12,8 @@ import com.aspose.slides.examples.Utils;
 public class CloneARowOrColumnInATable {
 
 	public static void main(String[] args) {
-		
+		//ExStart:CloneARowOrColumnInATable
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloneARowOrColumnInATable.class);
 		
@@ -78,6 +79,7 @@ public class CloneARowOrColumnInATable {
 
 		// Save PPTX to Disk
 		pres.save(dataDir + "Cloning.pptx", SaveFormat.Pptx);
+	//ExEnd:CloneARowOrColumnInATable
 
 	}
 

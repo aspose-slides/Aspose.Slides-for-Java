@@ -15,7 +15,9 @@ public class ExtractingVideoFromASlide {
 
 	public static void main(String[] args) throws IOException {
 		
-		// The path to the documents directory.
+			            //ExStart:ExtractingVideoFromASlide
+
+	// The path to the documents directory.
 	    String dataDir = Utils.getDataDir(ExtractingVideoFromASlide.class);
 	    
 		Presentation template = new Presentation(dataDir + "VideoSample.pptx");
@@ -39,6 +41,8 @@ public class ExtractingVideoFromASlide {
 				}
 			}
 		}
-	}
+		            //ExEnd:ExtractingVideoFromASlide
+	
+}
 
 }

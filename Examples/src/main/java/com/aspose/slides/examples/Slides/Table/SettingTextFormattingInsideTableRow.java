@@ -14,7 +14,7 @@ public class SettingTextFormattingInsideTableRow {
 
 	public static void main(String[] args) {
                 
-                ExStart:SettingTextFormattingInsideTableRow
+                //ExStart:SettingTextFormattingInsideTableRow
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTextFormattingInsideTableRow.class);
@@ -42,7 +42,7 @@ public class SettingTextFormattingInsideTableRow {
 		pres.save(dataDir + "Textbox.pptx", SaveFormat.Pptx);
 
 
-                        ExEnd:SettingTextFormattingInsideTableRow
+                        //ExEnd:SettingTextFormattingInsideTableRow
 
 
                 

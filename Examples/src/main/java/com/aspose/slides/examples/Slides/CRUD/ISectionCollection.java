@@ -7,7 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class ISectionCollection {
 
 	public static void main(String[] args) {
-                 //ExStart:ISectionCollection		
+              //ExStart:ISectionCollection
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ISectionCollection.class);
 		Presentation pres=new Presentation(path+"Presentation1.pptx");
@@ -17,6 +17,7 @@ public class ISectionCollection {
                pres.getSections().appendEmptySection("Last empty section");
                pres.getSections().addSection("First empty", pres.getSlides().get_Item(0));
                pres.save(path+"Result.pptx",SaveFormat.Pptx);
-              }
+            //ExEnd:ISectionCollection
+   }
              }
-             //ExEnd:ISectionCollection 
+            

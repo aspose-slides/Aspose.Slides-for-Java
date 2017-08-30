@@ -12,6 +12,8 @@ public class SettingTheBackgroundColorOfAMasterSlide {
 
 	public static void main(String[] args) {
 		
+//ExStart:SettingTheBackgroundColorOfAMasterSlide
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheBackgroundColorOfAMasterSlide.class);
 		
@@ -26,6 +28,7 @@ public class SettingTheBackgroundColorOfAMasterSlide {
 		// Write the presentation to disk
 		pres.save(dataDir + "MasterBG.pptx", SaveFormat.Pptx);
 
+//ExEnd:SettingTheBackgroundColorOfAMasterSlide
 	}
 
 }

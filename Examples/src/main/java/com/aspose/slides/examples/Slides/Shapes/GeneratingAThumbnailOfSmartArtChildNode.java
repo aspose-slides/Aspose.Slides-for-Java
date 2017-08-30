@@ -14,6 +14,8 @@ import com.aspose.slides.examples.Utils;
 public class GeneratingAThumbnailOfSmartArtChildNode {
 
 	public static void main(String[] args) {
+//ExStart:GeneratingAThumbnailOfSmartArtChildNode
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GeneratingAThumbnailOfSmartArtChildNode.class);
@@ -35,6 +37,7 @@ public class GeneratingAThumbnailOfSmartArtChildNode {
 			ImageIO.write(image, "png", new File(dataDir + "NodeImage.png"));
 		} catch (Exception e) {
 		}
+//ExEnd:GeneratingAThumbnailOfSmartArtChildNode
 
 	}
 

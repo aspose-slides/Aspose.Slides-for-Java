@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class GetValuesAndUnitScaleFromAxis{
 
 	public static void main(String[] args) {
-            ExStart:GetValuesAndUnitScaleFromAxis
+            //ExStart:GetValuesAndUnitScaleFromAxis
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(GetValuesAndUnitScaleFromAxis.class);
 
@@ -31,7 +31,7 @@ try
     double minorUnit = chart.getAxes().getHorizontalAxis().getActualMinorUnit();
 }
 finally { ((IDisposable)pres).dispose(); }
-          ExEnd:GetValuesAndUnitScaleFromAxis
+          //ExEnd:GetValuesAndUnitScaleFromAxis
  
  
  }

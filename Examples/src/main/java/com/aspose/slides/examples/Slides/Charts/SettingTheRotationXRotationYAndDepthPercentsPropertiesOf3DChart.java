@@ -12,6 +12,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingTheRotationXRotationYAndDepthPercentsPropertiesOf3DChart {
 
 	public static void main(String[] args) {
+//ExStart:SettingTheRotationXRotationYAndDepthPercentsPropertiesOf3DChart
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheRotationXRotationYAndDepthPercentsPropertiesOf3DChart.class);
 
@@ -65,6 +67,7 @@ public class SettingTheRotationXRotationYAndDepthPercentsPropertiesOf3DChart {
 		// Save presentation with chart
 		pres.save(dataDir + "3Drotation.pptx", SaveFormat.Pptx);
 
+//ExEnd:SettingTheRotationXRotationYAndDepthPercentsPropertiesOf3DChart
 	}
 
 }

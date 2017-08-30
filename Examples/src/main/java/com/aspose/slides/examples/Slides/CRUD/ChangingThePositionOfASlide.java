@@ -8,6 +8,8 @@ import com.aspose.slides.examples.Utils;
 public class ChangingThePositionOfASlide {
 
 	public static void main(String[] args) {
+//ExStart:ChangingThePositionOfASlide
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingThePositionOfASlide.class);
@@ -23,6 +25,8 @@ public class ChangingThePositionOfASlide {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "helloworld_Pos.pptx", SaveFormat.Pptx);
+//ExEnd:ChangingThePositionOfASlide
+
 
 	}
 

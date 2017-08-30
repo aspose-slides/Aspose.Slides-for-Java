@@ -7,6 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingASpecificSlideToPDF {
 
 	public static void main(String[] args) {
+//ExStart:ConvertingASpecificSlideToPDF
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingASpecificSlideToPDF.class);
@@ -18,6 +19,7 @@ public class ConvertingASpecificSlideToPDF {
 
 		// Save the presentation to PDF
 		pres.save(dataDir + "demo.pdf", slides, SaveFormat.Pdf);
+//ExEnd:ConvertingASpecificSlideToPDF
 
 	}
 

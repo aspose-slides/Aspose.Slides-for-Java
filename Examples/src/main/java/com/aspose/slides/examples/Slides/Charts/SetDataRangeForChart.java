@@ -9,6 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class SetDataRangeForChart {
 
 	public static void main(String[] args) {
+//ExStart:SetDataRangeForChart
 		// The path to the documents directory.
 		String dataDir = Utils.getSharedDataDir(SetDataRangeForChart.class) + "Charts/";
 				
@@ -24,5 +25,6 @@ public class SetDataRangeForChart {
 		chart.getChartData().setRange("Sheet1!A1:B4");
 
 		presentation.save(dataDir + "SetDataRangeForChart_Out.pptx", SaveFormat.Pptx);
+//ExEnd:SetDataRangeForChart
 	}
 }

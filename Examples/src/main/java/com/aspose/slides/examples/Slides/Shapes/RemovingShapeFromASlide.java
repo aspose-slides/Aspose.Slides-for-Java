@@ -9,6 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class RemovingShapeFromASlide {
 
 	public static void main(String[] args) {
+//ExStart:RemovingShapeFromASlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemovingShapeFromASlide.class);
@@ -23,6 +24,7 @@ public class RemovingShapeFromASlide {
 			}
 		}
 		presentation1.save(dataDir + "sample_output.pptx", SaveFormat.Pptx);
+//ExEnd:RemovingShapeFromASlide
 
 	}
 

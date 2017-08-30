@@ -9,6 +9,9 @@ import com.aspose.slides.examples.Utils;
 public class SpecifyingDoughnutChartHoleSize {
 
 	public static void main(String[] args) {
+//ExStart:SpecifyingDoughnutChartHoleSize
+
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SpecifyingDoughnutChartHoleSize.class);
 
@@ -18,6 +21,8 @@ public class SpecifyingDoughnutChartHoleSize {
 			chart.getChartData().getSeriesGroups().get_Item(0).setDoughnutHoleSize((byte) 90);
 			pres.save(dataDir + "ChartSeries.API.DoughnutHoleSize.pptx", SaveFormat.Pptx);
 		}
+//ExEnd:SpecifyingDoughnutChartHoleSize
+
 
 	}
 

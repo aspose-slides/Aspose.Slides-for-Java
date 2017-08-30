@@ -16,7 +16,10 @@ public class CalculatingConnectorLineAngle {
 	}
 
 	public static void TestLineDirection() {
+
+//ExStart:CalculatingConnectorLineAngle
 		// The path to the documents directory.
+
 		String dataDir = Utils.getDataDir(CalculatingConnectorLineAngle.class);
 		Presentation pres = new Presentation(dataDir + "ConnectorLineAngle.pptx");
 		Slide slide = (Slide) pres.getSlides().get_Item(0);
@@ -47,6 +50,7 @@ public class CalculatingConnectorLineAngle {
 		if (angle < 0)
 			angle += 2 * Math.PI;
 		return angle * 180.0 / Math.PI;
-	}
+//ExEnd:CalculatingConnectorLineAngle	}
+
 
 }

@@ -14,6 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingChartTrendLines {
 
 	public static void main(String[] args) {
+//ExStart:AddingChartTrendLines
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingChartTrendLines.class);
@@ -60,6 +61,7 @@ public class AddingChartTrendLines {
 		// Saving presentation
 		pres.save(dataDir + "ChartTrendLines.pptx", SaveFormat.Pptx);
 
+//ExEnd:AddingChartTrendLines
 	}
 
 }

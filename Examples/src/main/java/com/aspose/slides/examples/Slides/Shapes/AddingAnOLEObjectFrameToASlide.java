@@ -12,6 +12,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingAnOLEObjectFrameToASlide {
 
 	public static void main(String[] args) throws Exception {
+//ExStart:AddingAnOLEObjectFrameToASlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingAnOLEObjectFrameToASlide.class);
@@ -37,6 +38,7 @@ public class AddingAnOLEObjectFrameToASlide {
 
 		// Write the PPTX to disk
 		pres.save(dataDir + "OleEmbed.pptx", SaveFormat.Pptx);
+//ExEnd:AddingAnOLEObjectFrameToASlide
 
 	}
 

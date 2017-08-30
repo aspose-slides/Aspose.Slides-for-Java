@@ -12,6 +12,8 @@ public class ConnectingShapesUsingConnectors {
 
 	public static void main(String[] args) {
 
+//ExStart:ConnectingShapesUsingConnectors
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConnectingShapesUsingConnectors.class);
 
@@ -37,6 +39,7 @@ public class ConnectingShapesUsingConnectors {
 		// Saving Presentation
 		input.save(dataDir + "output.pptx", SaveFormat.Pptx);
 
+//ExEnd:ConnectingShapesUsingConnectors
 	}
 
 }

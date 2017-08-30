@@ -15,7 +15,7 @@ public class ExtractFlashObjects {
 
 	public static void main(String[] args) throws IOException {
 		
-            ExStart:ExtractFlashObjects	
+            //ExStart:ExtractFlashObjects
 	// The path to the documents directory.
 	   String dataDir = Utils.getDataDir(ExtractFlashObjects.class);
 	   Presentation pres = new Presentation(dataDir+"withFlash.pptm");
@@ -31,5 +31,5 @@ public class ExtractFlashObjects {
     
        }
       
-        ExEnd:ExtractFlashObjects
+        //ExEnd:ExtractFlashObjects
 }

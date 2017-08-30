@@ -12,6 +12,8 @@ import com.aspose.slides.examples.Utils;
 public class SettingTheGapWidthPropertyOfChartSeries {
 
 	public static void main(String[] args) {
+//ExStart:SettingTheGapWidthPropertyOfChartSeries
+
 		
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(SettingTheGapWidthPropertyOfChartSeries.class);
@@ -62,6 +64,7 @@ public class SettingTheGapWidthPropertyOfChartSeries {
 
 		// Save presentation with chart
 		pres.save(dataDir + "3Drotation.pptx", SaveFormat.Pptx);
+//ExEnd:SettingTheGapWidthPropertyOfChartSeries
 
 
 	}

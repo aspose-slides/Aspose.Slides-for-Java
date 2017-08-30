@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class GetPositionOfChartDataLabel{
 
 	public static void main(String[] args) {
-            ExStart:GetPositionOfChartDataLabel
+            //ExStart:GetPositionOfChartDataLabel
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(GetPositionOfChartDataLabel.class);
 
@@ -51,7 +51,7 @@ try {
 } finally {
 	if (pres != null) pres.dispose();
 }
-          ExEnd:GetPositionOfChartDataLabel
+          //ExEnd:GetPositionOfChartDataLabel
  
  
  

@@ -6,8 +6,9 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
 
 public class FindShapeInSlide {
-
+	//ExStart:FindShapeInSlide
 	public static void main(String[] args) {
+	
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FindShapeInSlide.class);
 		// Instantiate a Presentation object that represents a presentation file
@@ -32,4 +33,6 @@ public class FindShapeInSlide {
 		return null;
 
 	}
+	//ExEnd:FindShapeInSlide
+
 }

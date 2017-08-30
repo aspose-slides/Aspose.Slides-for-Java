@@ -10,7 +10,8 @@ import com.aspose.slides.examples.Utils;
 public class RemoveBordersOfATableCells {
 
 	public static void main(String[] args) {
-
+//ExStart:RemoveBordersOfATableCells
+	
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveBordersOfATableCells.class);
 
@@ -43,6 +44,7 @@ public class RemoveBordersOfATableCells {
 		// Save PPTX to Disk
 		pres.save(dataDir + "table_no_border.pptx", SaveFormat.Pptx);
 		
-	}
+//ExEnd:RemoveBordersOfATableCells
+		}
 
 }

@@ -6,10 +6,10 @@ import java.io.IOException;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
-
- //ExStart:CustomSvgShapeFormattingController
+//ExStart:CustomSvgShapeFormattingController
 class CustomSvgShapeFormattingController implements ISvgShapeFormattingController
 {
+ 
     private int m_shapeIndex;
 
     public CustomSvgShapeFormattingController() {
@@ -26,5 +26,6 @@ class CustomSvgShapeFormattingController implements ISvgShapeFormattingControlle
         svgShape.setId("shape-" + m_shapeIndex++);
     }
 }
-//ExEnd:CustomSvgShapeFormattingController
+
 }
+//ExEnd:CustomSvgShapeFormattingController

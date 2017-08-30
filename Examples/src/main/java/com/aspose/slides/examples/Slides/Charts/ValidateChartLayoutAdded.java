@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class ValidateChartLayoutAdded {
 
 	public static void main(String[] args) {
-            ExStart:ValidateChartLayoutAdded
+            //ExStart:ValidateChartLayoutAdded
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(ValidateChartLayoutAdded.class);
 
@@ -31,7 +31,7 @@ public class ValidateChartLayoutAdded {
           finally { ((IDisposable)pres).dispose(); }
 
 
-          ExEnd:ValidateChartLayoutAdded	
+          //ExEnd:ValidateChartLayoutAdded
  
  
  }

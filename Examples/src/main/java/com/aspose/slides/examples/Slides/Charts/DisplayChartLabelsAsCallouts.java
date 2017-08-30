@@ -10,6 +10,7 @@ public class DisplayChartLabelsAsCallouts {
 
 	public static void main(String[] args) {
 
+//ExStart:DisplayChartLabelsAsCallouts
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(DisplayChartLabelsAsCallouts.class);
 
@@ -26,6 +27,8 @@ public class DisplayChartLabelsAsCallouts {
 			if (pres != null)
 				pres.dispose();
 		}
+//ExEnd:DisplayChartLabelsAsCallouts
+
 	}
 
 }

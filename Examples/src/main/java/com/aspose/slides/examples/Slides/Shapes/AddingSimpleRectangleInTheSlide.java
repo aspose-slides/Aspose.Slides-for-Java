@@ -10,6 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingSimpleRectangleInTheSlide {
 
 	public static void main(String[] args) {
+//ExStart:AddingSimpleRectangleInTheSlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSimpleRectangleInTheSlide.class);
@@ -26,6 +27,7 @@ public class AddingSimpleRectangleInTheSlide {
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RecShp1.pptx", SaveFormat.Pptx);
 
+//ExEnd:AddingSimpleRectangleInTheSlide
 	}
 
 }

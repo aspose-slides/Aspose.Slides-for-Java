@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class GetWidthHeightFromChartPlotArea{
 
 	public static void main(String[] args) {
-            ExStart:GetWidthHeightFromChartPlotArea
+            //ExStart:GetWidthHeightFromChartPlotArea
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(GetWidthHeightFromChartPlotArea.class);
 
@@ -32,7 +32,7 @@ public class GetWidthHeightFromChartPlotArea{
 
      }
 
-          ExEnd:GetWidthHeightFromChartPlotArea
+          //ExEnd:GetWidthHeightFromChartPlotArea
  
  
  

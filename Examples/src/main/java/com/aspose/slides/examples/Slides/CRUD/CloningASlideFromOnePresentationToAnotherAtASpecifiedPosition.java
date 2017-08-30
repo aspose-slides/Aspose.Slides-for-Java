@@ -9,6 +9,8 @@ public class CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition {
 
 	public static void main(String[] args) {
 		
+	ExStart:CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition
+
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition.class);
 		
@@ -24,6 +26,7 @@ public class CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition {
 
 		// Write the destination presentation to disk
 		destPres.save(dataDir + "demo.pptx", SaveFormat.Pptx);
+	ExEnd:CloningASlideFromOnePresentationToAnotherAtASpecifiedPosition
 
 	}
 

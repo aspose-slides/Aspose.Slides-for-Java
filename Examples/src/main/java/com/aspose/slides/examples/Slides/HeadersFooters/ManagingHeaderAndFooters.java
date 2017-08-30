@@ -10,8 +10,11 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 public class ManagingHeaderAndFooters {
+            //ExStart:ManagingHeaderAndFooters
 
 	public static void main(String[] args) {
+
+
 		
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(ManagingHeaderAndFooters.class);
@@ -44,6 +47,7 @@ public class ManagingHeaderAndFooters {
 			}
 		}
 	}
+            //ExEnd:ManagingHeaderAndFooters
 
 
 }

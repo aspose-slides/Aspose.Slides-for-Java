@@ -12,6 +12,7 @@ import com.aspose.slides.examples.Utils;
 public class SecondPlotOptionsForPieOfPieAndBarOfPieChart {
 
 	public static void main(String[] args) {
+//ExStart:SecondPlotOptionsForPieOfPieAndBarOfPieChart
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SecondPlotOptionsForPieOfPieAndBarOfPieChart.class);
@@ -37,6 +38,7 @@ public class SecondPlotOptionsForPieOfPieAndBarOfPieChart {
 
 		// Saving presentation to disk
 		pres.save(dataDir + "pieOFpie.pptx", SaveFormat.Pptx);
+//ExEnd:SecondPlotOptionsForPieOfPieAndBarOfPieChart
 
 	}
 

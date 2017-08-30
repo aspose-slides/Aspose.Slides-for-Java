@@ -8,6 +8,7 @@ public class RemoveASlideUsingSlideIndex {
 
 	public static void main(String[] args) {
 		
+              //ExStart:RemoveASlideUsingSlideIndex
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveASlideUsingSlideIndex.class);
 		
@@ -19,6 +20,7 @@ public class RemoveASlideUsingSlideIndex {
 
 		// Writing the presentation file
 		pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
+              //ExEnd:RemoveASlideUsingSlideIndex
 
 	}
 

@@ -14,7 +14,7 @@ import com.aspose.slides.examples.Utils;
 public class ChangingOrderOfShapes {
 
 	public static void main(String[] args) {
-
+//ExStart:ChangingOrderOfShapes
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingOrderOfShapes.class);
 		Presentation presentation1 = new Presentation();
@@ -31,6 +31,7 @@ public class ChangingOrderOfShapes {
 		;
 		presentation1.save(dataDir + "sample_output.pptx", SaveFormat.Pptx);
 
+//ExEnd:ChangingOrderOfShapes
 	}
 
 }

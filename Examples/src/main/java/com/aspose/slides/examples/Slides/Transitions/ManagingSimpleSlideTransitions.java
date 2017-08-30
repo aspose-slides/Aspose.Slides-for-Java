@@ -9,7 +9,8 @@ public class ManagingSimpleSlideTransitions {
 
 	public static void main(String[] args) {
 		
-		// The path to the documents directory.
+	//ExStart:ManagingSimpleSlideTransitions
+			// The path to the documents directory.
 	    String dataDir = Utils.getDataDir(ManagingSimpleSlideTransitions.class);
 	    
 		// Instantiate Presentation class that represents a presentation file
@@ -26,7 +27,8 @@ public class ManagingSimpleSlideTransitions {
 
 		// Write the presentation to disk
 		pres.save(dataDir + "SampleTransition.pptx", SaveFormat.Pptx);
-
+	//ExEnd:ManagingSimpleSlideTransitions
+	
 
 
 	}

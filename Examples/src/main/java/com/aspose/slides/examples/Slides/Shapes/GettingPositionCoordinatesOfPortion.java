@@ -12,6 +12,8 @@ import com.aspose.slides.examples.Utils;
 public class GettingPositionCoordinatesOfPortion {
 
 	public static void main(String[] args) {
+//ExStart:GettingPositionCoordinatesOfPortion
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GettingPositionCoordinatesOfPortion.class);
@@ -28,5 +30,6 @@ public class GettingPositionCoordinatesOfPortion {
 				System.out.println("X: " + point.x + " Y: " + point.y);
 			}
 		}
+//ExEnd:GettingPositionCoordinatesOfPortion
 	}
 }

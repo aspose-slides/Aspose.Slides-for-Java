@@ -17,6 +17,7 @@ import com.aspose.slides.examples.Utils;
 public class ControllingPictureFrameFormatting {
 
 	public static void main(String[] args) {
+//ExStart:ControllingPictureFrameFormatting
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ControllingPictureFrameFormatting.class);
@@ -46,6 +47,7 @@ public class ControllingPictureFrameFormatting {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectPicFrame.pptx", SaveFormat.Pptx);
+//ExEnd:ControllingPictureFrameFormatting
 
 	}
 

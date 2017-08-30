@@ -10,6 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class AccessAnExistingTableInSlide {
 
 	public static void main(String[] args) {
+	//ExStart:AccessAnExistingTableInSlide
 		
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessAnExistingTableInSlide.class);
@@ -36,6 +37,7 @@ public class AccessAnExistingTableInSlide {
 		// Save the PPTX to Disk
 		pres.save(dataDir + "table1.pptx", SaveFormat.Pptx);
 
+	//ExEnd:AccessAnExistingTableInSlide
 	}
 
 }

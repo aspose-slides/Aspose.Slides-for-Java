@@ -12,6 +12,7 @@ import com.aspose.slides.examples.Utils;
 public class CreateATableFromScratchInASlide {
 
 	public static void main(String[] args) {
+		//ExStart:CreateATableFromScratchInASlide
 		
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CreateATableFromScratchInASlide.class);
@@ -62,6 +63,7 @@ public class CreateATableFromScratchInASlide {
 
 		// Save PPTX to Disk
 		pres.save(dataDir + "table.pptx", SaveFormat.Pptx);
+		//ExEnd:CreateATableFromScratchInASlide
 
 	}
 

@@ -14,7 +14,8 @@ public class FillingShapesWithSolidColor {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+		//ExStart:FillingShapesWithSolidColor
+	// The path to the documents directory.
 		String dataDir = Utils.getDataDir(FillingShapesWithSolidColor.class);
 
 		// Instantiate Presentation class that represents the PPTX
@@ -34,6 +35,7 @@ public class FillingShapesWithSolidColor {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectShpSolid.pptx", SaveFormat.Pptx);
+		//ExEnd:FillingShapesWithSolidColor
 
 	}
 

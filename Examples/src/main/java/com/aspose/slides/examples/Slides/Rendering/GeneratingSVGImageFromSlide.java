@@ -11,6 +11,7 @@ public class GeneratingSVGImageFromSlide {
 
 	public static void main(String[] args) {
 
+//ExStart:GeneratingSVGImageFromSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(GeneratingSVGImageFromSlide.class);
 
@@ -33,6 +34,7 @@ public class GeneratingSVGImageFromSlide {
 			}
 
 		}
+//ExEnd:GeneratingSVGImageFromSlide
 	}
 
 }

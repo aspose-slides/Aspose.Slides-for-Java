@@ -16,7 +16,8 @@ public class AddingPictureFrameWithRelativeScale {
 
 	public static void main(String[] args) {
 
-		// The path to the documents directory.
+	//ExStart:AddingPictureFrameWithRelativeScale
+	// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingPictureFrameWithRelativeScale.class);
 
 		// Instantiate Presentation class that represents the PPTX
@@ -42,6 +43,7 @@ public class AddingPictureFrameWithRelativeScale {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "RectPicFrame.pptx", SaveFormat.Pptx);
-
+//ExEnd:AddingPictureFrameWithRelativeScale
+	
 	}
 }

@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
 public class GeneratingThumbnailFromSlideInNotesSlidesView {
 
 	public static void main(String[] args) {
-                   ExStart:GeneratingThumbnailFromSlideInNotesSlidesView 
+                //ExStart:GeneratingThumbnailFromSlideInNotesSlidesView
 		
               // The path to the documents directory.
 		String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideInNotesSlidesView.class);
@@ -42,7 +42,7 @@ public class GeneratingThumbnailFromSlideInNotesSlidesView {
 		} catch (IOException e) {
 		}
 
-               ExEnd:GeneratingThumbnailFromSlideInNotesSlidesView 	
+               //ExEnd:GeneratingThumbnailFromSlideInNotesSlidesView
 
 }
 }

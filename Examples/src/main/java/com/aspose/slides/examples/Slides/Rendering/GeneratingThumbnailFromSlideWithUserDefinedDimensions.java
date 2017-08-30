@@ -13,7 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class GeneratingThumbnailFromSlideWithUserDefinedDimensions {
 
 	public static void main(String[] args) {
-		 
+//ExStart:GeneratingThumbnailFromSlideWithUserDefinedDimensions 
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideWithUserDefinedDimensions.class);
 
@@ -39,6 +39,6 @@ public class GeneratingThumbnailFromSlideWithUserDefinedDimensions {
 			ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
 		} catch (IOException e) {
 		}
-
+//ExEnd:GeneratingThumbnailFromSlideWithUserDefinedDimensions
 	}
 }

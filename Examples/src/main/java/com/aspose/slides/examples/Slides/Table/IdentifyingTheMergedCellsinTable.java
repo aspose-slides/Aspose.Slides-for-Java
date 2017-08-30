@@ -14,7 +14,7 @@ public class IdentifyingTheMergedCellsinTable {
 
 	public static void main(String[] args) {
                 
-                ExStart:IdentifyingTheMergedCellsinTable
+                //ExStart:IdentifyingTheMergedCellsinTable
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(IdentifyingTheMergedCellsinTable.class);
@@ -46,7 +46,7 @@ try
     }
 }
 
-                        ExEnd:IdentifyingTheMergedCellsinTable
+                        //ExEnd:IdentifyingTheMergedCellsinTable
 
 
                 

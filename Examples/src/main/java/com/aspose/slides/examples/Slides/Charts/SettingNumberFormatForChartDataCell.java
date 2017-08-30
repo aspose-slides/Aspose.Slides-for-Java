@@ -13,6 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class SettingNumberFormatForChartDataCell {
 
 	public static void main(String[] args) {
+//ExStart:SettingNumberFormatForChartDataCell
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingNumberFormatForChartDataCell.class);
@@ -41,6 +42,7 @@ public class SettingNumberFormatForChartDataCell {
 
 		// Saving presentation
 		pres.save(dataDir + "PresetNumberFormat.pptx", SaveFormat.Pptx);
+//ExEnd:SettingNumberFormatForChartDataCell
 
 	}
 

@@ -13,6 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class GeneratingThumbnailOfUserDefinedWindowFromSlide {
 
 	public static void main(String[] args) {
+//ExStart:GeneratingThumbnailOfUserDefinedWindowFromSlide 
 		
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(GeneratingThumbnailOfUserDefinedWindowFromSlide.class);
@@ -35,6 +36,7 @@ public class GeneratingThumbnailOfUserDefinedWindowFromSlide {
 			ImageIO.write(windowImage, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
 		} catch (IOException e) {
 		}
+//ExEnd:GeneratingThumbnailOfUserDefinedWindowFromSlide
 
 	}
 

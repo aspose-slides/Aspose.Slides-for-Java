@@ -18,6 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingArrowShapedLineToSlide {
 
 	public static void main(String[] args) {
+//ExStart:AddingArrowShapedLineToSlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingArrowShapedLineToSlide.class);
@@ -49,6 +50,7 @@ public class AddingArrowShapedLineToSlide {
 		// Write the PPTX to Disk
 		pres.save(dataDir + "LineShape2.pptx", SaveFormat.Pptx);
 
+//ExEnd:AddingArrowShapedLineToSlide
 	}
 
 }

@@ -11,6 +11,7 @@ import com.aspose.slides.examples.Utils;
 public class ConnectingShapeWithConnectorOnDesiredConnectionSite {
 
 	public static void main(String[] args) {
+//ExStart:ConnectingShapeWithConnectorOnDesiredConnectionSite
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConnectingShapeWithConnectorOnDesiredConnectionSite.class);
@@ -45,6 +46,7 @@ public class ConnectingShapeWithConnectorOnDesiredConnectionSite {
 
 		// Saving presentation
 		input.save(dataDir + "output.pptx", SaveFormat.Pptx);
+//ExEnd:ConnectingShapeWithConnectorOnDesiredConnectionSite
 
 	}
 

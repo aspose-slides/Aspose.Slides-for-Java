@@ -16,6 +16,7 @@ public class AnimatingACategory {
 
 	public static void main(String[] args) {
 
+//ExStart:AnimatingACategory
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AnimatingACategory.class);
 
@@ -37,6 +38,7 @@ public class AnimatingACategory {
 			if (pres != null)
 				pres.dispose();
 		}
+//ExEnd:AnimatingACategory
 
 	}
 }

@@ -13,6 +13,8 @@ import com.aspose.slides.examples.Utils;
 public class CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers {
 
 	public static void main(String[] args) {
+//ExStart:CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers
+
 		
 		// The path to the documents directory.
 	    	String dataDir = Utils.getDataDir(CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers.class);
@@ -75,6 +77,8 @@ public class CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers {
 		series.getMarker().setSymbol(MarkerStyleType.Circle);
 		// Save presentation with chart
 		pres.save(dataDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
+
+//ExEnd:CreatingScatteredChartWithMultipleSeriesAndDifferentSeriesMarkers
 
 	}
 

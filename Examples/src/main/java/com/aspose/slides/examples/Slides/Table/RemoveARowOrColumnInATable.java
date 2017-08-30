@@ -9,7 +9,8 @@ import com.aspose.slides.examples.Utils;
 public class RemoveARowOrColumnInATable {
 
 	public static void main(String[] args) {
-
+	//ExStart:RemoveARowOrColumnInATable
+	
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveARowOrColumnInATable.class);
 
@@ -26,6 +27,7 @@ public class RemoveARowOrColumnInATable {
 
 		pres.save(dataDir + "TestTable.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:RemoveARowOrColumnInATable
+		}
 
 }

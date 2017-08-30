@@ -8,6 +8,8 @@ import com.aspose.slides.examples.Utils;
 public class AddingSlidesToPresentation {
 
 	public static void main(String[] args) {
+//ExStart:AddingSlidesToPresentation
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSlidesToPresentation.class);
@@ -27,6 +29,7 @@ public class AddingSlidesToPresentation {
 
 		// Save the PPTX file to the Disk
 		pres.save(dataDir + "EmptySlide.pptx", SaveFormat.Pptx);
+//ExEnd:AddingSlidesToPresentation
 
 	}
 }

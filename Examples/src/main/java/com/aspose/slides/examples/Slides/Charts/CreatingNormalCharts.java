@@ -17,6 +17,8 @@ import com.aspose.slides.examples.Utils;
 public class CreatingNormalCharts {
 
 	public static void main(String[] args) {
+//ExStart:CreatingNormalCharts
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CreatingNormalCharts.class);
@@ -102,6 +104,7 @@ public class CreatingNormalCharts {
 
 		// Save presentation with chart
 		pres.save(dataDir + "AsposeChart.pptx", SaveFormat.Pptx);
+//ExEnd:CreatingNormalCharts
 
 	}
 

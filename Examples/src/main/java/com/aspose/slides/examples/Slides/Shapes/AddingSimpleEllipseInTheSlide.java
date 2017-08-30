@@ -9,6 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingSimpleEllipseInTheSlide {
 
 	public static void main(String[] args) {
+//ExStart:AddingSimpleEllipseInTheSlide
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSimpleEllipseInTheSlide.class);
@@ -24,6 +25,7 @@ public class AddingSimpleEllipseInTheSlide {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "EllipseShp1.pptx", SaveFormat.Pptx);
+//ExEnd:AddingSimpleEllipseInTheSlide
 
 	}
 

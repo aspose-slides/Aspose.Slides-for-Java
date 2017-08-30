@@ -18,6 +18,8 @@ import com.aspose.slides.examples.Utils;
 public class Adding3DBavelEffectsToShape {
 
 	public static void main(String[] args) {
+//ExStart:Adding3DBavelEffectsToShape
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(Adding3DBavelEffectsToShape.class);
@@ -47,6 +49,7 @@ public class Adding3DBavelEffectsToShape {
 		// Write the presentation as a PPTX file
 		pres.save(dataDir + "Bavel.pptx", SaveFormat.Pptx);
 
+//ExEnd:Adding3DBavelEffectsToShape
 	}
 
 }
