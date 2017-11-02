@@ -16,7 +16,8 @@ import com.aspose.slides.examples.Utils;
 
 public class SupportForAddingSuperscriptAndSubscriptTextInTextFrame {
 
-	public static void main(String[] args) {
+	
+                public static void main(String[] args) {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SupportForAddingSuperscriptAndSubscriptTextInTextFrame.class);
@@ -32,8 +33,8 @@ public class SupportForAddingSuperscriptAndSubscriptTextInTextFrame {
                  ITextFrame textFrame = shape.getTextFrame();
                  textFrame.getParagraphs().clear();
  
-               // Create paragraph for superscript text
-               IParagraph superPar = new Paragraph();
+                // Create paragraph for superscript text
+                IParagraph superPar = new Paragraph();
  
               // Create portion with usual text
               IPortion portion1 = new Portion();
