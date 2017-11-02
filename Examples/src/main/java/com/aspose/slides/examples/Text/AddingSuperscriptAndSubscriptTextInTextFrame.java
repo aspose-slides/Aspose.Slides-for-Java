@@ -20,8 +20,8 @@ public class AddingSuperscriptAndSubscriptTextInTextFrame {
                   public static void main(String[] args) {
 
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptTextInTextFrame.class);
-                //ExStart:AddingSuperscriptAndSubscriptTextInTextFrame
+		 String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptTextInTextFrame.class);
+                 //ExStart:AddingSuperscriptAndSubscriptTextInTextFrame
 		  Presentation presentation = new Presentation()
             try
               {
