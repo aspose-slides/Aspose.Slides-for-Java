@@ -17,7 +17,7 @@ public class SettingFillFormatForSmartArtNode {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingFillFormatForSmartArtNode.class);
-
+                    //ExEnd:SettingFillFormatForSmartArtNode
 		// Instantiate the presentation
 		Presentation pres = new Presentation();
 
@@ -37,7 +37,8 @@ public class SettingFillFormatForSmartArtNode {
 
 		// Save the presentation
 		pres.save(dataDir + "TestSmart.pptx", SaveFormat.Pptx);
-
-	}
+            // ExEnd:SettingFillFormatForSmartArtNode
+	
+         }
 
 }

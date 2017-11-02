@@ -17,7 +17,8 @@ public class ManagingEmbeddedFonts {
 	private static final String dataDir = Utils.getSharedDataDir(ManagingEmbeddedFonts.class) + "Text/";
 	
 	public static void main(String[] args) throws IOException {
-		// load the presentation with embedded "Calibri" font in it
+		//ExStart:ManagingEmbeddedFonts
+               // load the presentation with embedded "Calibri" font in it
 		Presentation pres = new Presentation(dataDir + "Pres.pptx");
 		try {
 			// render the presentation containing the text frame with the text using embedded "Calibri" font
@@ -50,5 +51,6 @@ public class ManagingEmbeddedFonts {
 			if (pres != null)
 				pres.dispose();
 		}
-	}
+	//ExEnd:ManagingEmbeddedFonts
+             }
 }

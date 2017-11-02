@@ -9,7 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class ReplacingFontsExplicitlyInsidePresentation {
 
 	public static void main(String[] args) {
-
+                 //ExStart:ReplacingFontsExplicitlyInsidePresentation
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ReplacingFontsExplicitlyInsidePresentation.class);
 
@@ -27,7 +27,7 @@ public class ReplacingFontsExplicitlyInsidePresentation {
 
 		// Save the presentation
 		pres.save(dataDir + "PresContainsTimesNoewRomanFont.pptx", SaveFormat.Pptx);
-
+               // ExEnd:ReplacingFontsExplicitlyInsidePresentation
 	}
 
 }

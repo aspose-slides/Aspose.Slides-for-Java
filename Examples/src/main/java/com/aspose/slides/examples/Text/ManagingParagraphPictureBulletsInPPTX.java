@@ -21,7 +21,8 @@ public class ManagingParagraphPictureBulletsInPPTX {
 
 	public static void main(String[] args) {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ManagingParagraphPictureBulletsInPPTX.class);
+		//ExStart:ManagingParagraphPictureBulletsInPPTX
+                String dataDir = Utils.getDataDir(ManagingParagraphPictureBulletsInPPTX.class);
 		Presentation pres = new Presentation();
 		try {
 			// Accessing the first slide
@@ -66,5 +67,6 @@ public class ManagingParagraphPictureBulletsInPPTX {
 			if (pres != null)
 				pres.dispose();
 		}
-	}
+	//ExEnd:ManagingParagraphPictureBulletsInPPTX
+              }
 }

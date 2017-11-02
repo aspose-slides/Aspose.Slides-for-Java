@@ -9,7 +9,8 @@ import com.aspose.slides.examples.Utils;
 public class UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate {
 
 	public static void main(String args[]) {
-		updateByTemplate();
+		//ExStart:UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate
+            updateByTemplate();
 	}
 
 	private static void updateByTemplate() {
@@ -38,5 +39,6 @@ public class UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsA
 		IPresentationInfo toUpdate = PresentationFactory.getInstance().getPresentationInfo(path);
 		toUpdate.updateDocumentProperties(template);
 		toUpdate.writeBindedPresentation(path);
-	}
+	//ExEnd:UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate
+     }
 }

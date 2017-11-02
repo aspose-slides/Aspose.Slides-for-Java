@@ -12,7 +12,7 @@ public class AddingVBAMacrosInPresentation {
 	public static void main(String[] args) {
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingVBAMacrosInPresentation.class);
-
+                     //ExStart:AddingVBAMacrosInPresentation
 		// Instantiate Presentation
 		Presentation pres = new Presentation();
 
@@ -38,6 +38,7 @@ public class AddingVBAMacrosInPresentation {
 
 		pres.save(dataDir + "test.pptm", SaveFormat.Pptm);
 
+             //ExEnd:AddingVBAMacrosInPresentation
 	}
 
 }

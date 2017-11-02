@@ -9,7 +9,8 @@ public class LinkingVideoWithMediaPlayerActiveXControl {
 	public static void main(String[] args) {
 
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(LinkingVideoWithMediaPlayerActiveXControl.class);
+		//ExStart:LinkingVideoWithMediaPlayerActiveXControl
+                String dataDir = Utils.getDataDir(LinkingVideoWithMediaPlayerActiveXControl.class);
 
 		// Accessing the presentation with ActiveX controls
 		Presentation pres = new Presentation(dataDir + "template.pptx");
@@ -29,6 +30,7 @@ public class LinkingVideoWithMediaPlayerActiveXControl {
 		// Save the Presentation
 		newPptx.save(dataDir + "Output.pptx", SaveFormat.Pptx);
 
-	}
+              //ExEnd:LinkingVideoWithMediaPlayerActiveXControl	
+}
 
 }

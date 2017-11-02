@@ -10,7 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class CreateAPresentation {
 
 	public static final void main(String[] args) {
-		
+		//ExStart:CreateAPresentation
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(CreateAPresentation.class);
         
@@ -40,6 +40,7 @@ public class CreateAPresentation {
 
 		// Save the presentation to disk
 		pres.save(dataDir + "HelloWorld.pptx", com.aspose.slides.SaveFormat.Pptx);
+                //ExEnd:CreateAPresentation
 
 	}
 }

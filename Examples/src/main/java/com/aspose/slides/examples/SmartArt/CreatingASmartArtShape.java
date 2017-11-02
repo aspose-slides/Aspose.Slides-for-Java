@@ -13,7 +13,7 @@ public class CreatingASmartArtShape {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CreatingASmartArtShape.class);
-
+            // ExStart:CreatingASmartArtShape
 		// Instantiate Presentation Class
 		Presentation pres = new Presentation();
 
@@ -25,6 +25,7 @@ public class CreatingASmartArtShape {
 
 		// Saving presentation
 		pres.save(dataDir + "SimpleSmartArt.pptx", SaveFormat.Pptx);
+            //ExEnd:CreatingASmartArtShape
 
 	}
 

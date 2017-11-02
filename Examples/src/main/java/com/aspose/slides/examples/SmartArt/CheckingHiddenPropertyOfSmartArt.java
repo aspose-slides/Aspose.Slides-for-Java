@@ -10,7 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class CheckingHiddenPropertyOfSmartArt {
 
 	public static void main(String[] args) {
-
+                //ExStart:CheckingHiddenPropertyOfSmartArt
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CheckingHiddenPropertyOfSmartArt.class);
 
@@ -33,6 +33,7 @@ public class CheckingHiddenPropertyOfSmartArt {
 		// Saving Presentation
 		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:CheckingHiddenPropertyOfSmartArt
+        }
 
 }

@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class ModifyingBuiltInProperties {
 
 	public static void main(String[] args) {
-
+                   //ExStart:ModifyingBuiltInProperties
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ModifyingBuiltInProperties.class);
 
@@ -27,6 +27,7 @@ public class ModifyingBuiltInProperties {
 		// Save your presentation to a file
 		pres.save(dataDir + "DocProps.pptx", SaveFormat.Pptx);
 
+              //ExEnd:ModifyingBuiltInProperties
 	}
 
 }

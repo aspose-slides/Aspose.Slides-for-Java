@@ -13,6 +13,7 @@ public class RemoveSmartArtShapeNode {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveSmartArtShapeNode.class);
+                //ExStart:RemoveSmartArtShapeNode {
 
 		// Load the desired the presentation
 		Presentation pres = new Presentation(dataDir + "AddSmartArtNode.pptx");
@@ -38,6 +39,7 @@ public class RemoveSmartArtShapeNode {
 
 		// Save Presentation
 		pres.save(dataDir + "RemoveSmartArtNode.pptx", SaveFormat.Pptx);
+                //ExEnd:RemoveSmartArtShapeNode {
 
 	}
 

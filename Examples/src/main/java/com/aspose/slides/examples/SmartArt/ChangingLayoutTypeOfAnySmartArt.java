@@ -12,7 +12,7 @@ public class ChangingLayoutTypeOfAnySmartArt {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingLayoutTypeOfAnySmartArt.class);
-
+                 //ExStart:ChangingLayoutTypeOfAnySmartArt {
 		// Instantiate Presentation class that represents the PPTX file
 		Presentation pres = new Presentation();
 
@@ -25,6 +25,7 @@ public class ChangingLayoutTypeOfAnySmartArt {
 		// Saving Presentation
 		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
 
+              //ExEnd:ChangingLayoutTypeOfAnySmartArt {
 	}
 
 }

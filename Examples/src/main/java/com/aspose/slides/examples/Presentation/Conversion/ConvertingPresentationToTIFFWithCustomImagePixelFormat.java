@@ -12,7 +12,7 @@ public class ConvertingPresentationToTIFFWithCustomImagePixelFormat {
 		
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithCustomImagePixelFormat.class);
-        
+                  // ExStart:ConvertingPresentationToTIFFWithCustomImagePixelFormat 
 		// Instantiate a Presentation object that represents a Presentation file
 		Presentation pres = new Presentation(dataDir + "demo.pptx");
 
@@ -33,6 +33,7 @@ public class ConvertingPresentationToTIFFWithCustomImagePixelFormat {
 		// Save the presentation to TIFF with specified image size
 		pres.save(dataDir + "demo.tiff", SaveFormat.Tiff, options);
 
+            //ExEnd:ConvertingPresentationToTIFFWithCustomImagePixelFormat 
 	}
 
 }

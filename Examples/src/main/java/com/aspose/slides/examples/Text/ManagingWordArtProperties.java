@@ -19,7 +19,7 @@ public class ManagingWordArtProperties {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingWordArtProperties.class);
-
+                  //ExStart:ManagingWordArtProperties
 		// Create an instance of Presentation class
 		Presentation pres = new Presentation();
 
@@ -54,6 +54,7 @@ public class ManagingWordArtProperties {
 
 		// Write the presentation as a PPTX file
 		pres.save(dataDir + "WordArt.pptx", SaveFormat.Pptx);
+               // ExEnd:ManagingWordArtProperties
 
 	}
 

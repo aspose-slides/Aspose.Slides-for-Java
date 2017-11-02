@@ -14,7 +14,7 @@ public class CheckingAssistantNodesInSmartArtShapes {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CheckingAssistantNodesInSmartArtShapes.class);
-
+                 // ExStart:CheckingAssistantNodesInSmartArtShapes
 		// Creating a presentation instance
 		Presentation pres = new Presentation(dataDir + "AddNodes.pptx");
 
@@ -41,7 +41,7 @@ public class CheckingAssistantNodesInSmartArtShapes {
 		}
 		// Save Presentation
 		pres.save(dataDir + "ChangeAssitantNode.pptx", SaveFormat.Pptx);
-
+           // ExEnd:CheckingAssistantNodesInSmartArtShapes
 	}
 
 }

@@ -10,7 +10,7 @@ public class OpeningAPasswordProtectedPresentation {
 		
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(OpeningAPasswordProtectedPresentation.class);
-        
+                 //ExStart:OpeningAPasswordProtectedPresentation
 		// Creating instance of load options to set the presentation access password
 		LoadOptions loadOptions = new LoadOptions();
 
@@ -23,6 +23,6 @@ public class OpeningAPasswordProtectedPresentation {
 
 		// Printing the total number of slides present in the presentation
 		System.out.println(pres.getSlides().size());
-
+               //  ExEnd:OpeningAPasswordProtectedPresentation
 	}
 }

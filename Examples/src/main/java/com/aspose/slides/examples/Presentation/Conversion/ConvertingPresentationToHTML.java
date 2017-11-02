@@ -11,7 +11,8 @@ public class ConvertingPresentationToHTML {
 	public static void main(String[] args) {
 
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationToHTML.class);
+		//ExStart:ConvertingPresentationToHTML
+               String dataDir = Utils.getDataDir(ConvertingPresentationToHTML.class);
 
 		// Instantiate a Presentation object that represents a presentation file
 		Presentation pres = new Presentation(dataDir + "demo.pptx");
@@ -20,8 +21,8 @@ public class ConvertingPresentationToHTML {
 		htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
 
 		// Saving the presentation to HTML
-		pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
-
+       		pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
+                  // ExEnd:ConvertingPresentationToHTML
 	}
 
 }

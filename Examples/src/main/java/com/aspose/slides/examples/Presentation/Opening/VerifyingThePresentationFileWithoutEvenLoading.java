@@ -6,7 +6,7 @@ import com.aspose.slides.examples.Utils;
 public class VerifyingThePresentationFileWithoutEvenLoading {
 
 	public static void main(String[] args) {
-
+                  //ExStart:VerifyingThePresentationFileWithoutEvenLoading
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(VerifyingThePresentationFileWithoutEvenLoading.class);
 
@@ -16,6 +16,7 @@ public class VerifyingThePresentationFileWithoutEvenLoading {
 
 		// It will return "LoadFormat.Unknown" or 255 if the file is other than presentation formats
 
+               //ExEnd:VerifyingThePresentationFileWithoutEvenLoading
 	}
 
 }

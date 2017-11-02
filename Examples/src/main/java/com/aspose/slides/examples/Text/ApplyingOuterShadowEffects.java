@@ -18,7 +18,7 @@ public class ApplyingOuterShadowEffects {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ApplyingOuterShadowEffects.class);
-
+               // ExStart: ApplyingOuterShadowEffects
 		// Create an instance of Presentation class
 		Presentation Pres = new Presentation();
 
@@ -45,6 +45,7 @@ public class ApplyingOuterShadowEffects {
 
 		// Write the presentation to disk
 		Pres.save(dataDir + "OutShadow.pptx", SaveFormat.Pptx);
+               //ExEnd:ApplyingOuterShadowEffects
 
 	}
 

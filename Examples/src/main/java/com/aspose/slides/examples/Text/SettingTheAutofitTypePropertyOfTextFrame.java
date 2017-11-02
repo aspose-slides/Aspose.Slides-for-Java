@@ -20,7 +20,7 @@ public class SettingTheAutofitTypePropertyOfTextFrame {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheAutofitTypePropertyOfTextFrame.class);
-
+                  //ExStart:SettingTheAutofitTypePropertyOfTextFrame
 		// Create an instance of Presentation class
 		Presentation pres = new Presentation();
 
@@ -52,7 +52,7 @@ public class SettingTheAutofitTypePropertyOfTextFrame {
 
 		// Save Presentation
 		pres.save(dataDir + "formatText.pptx", SaveFormat.Pptx);
-
+              // ExEnd:SettingTheAutofitTypePropertyOfTextFrame
 	}
 
 }

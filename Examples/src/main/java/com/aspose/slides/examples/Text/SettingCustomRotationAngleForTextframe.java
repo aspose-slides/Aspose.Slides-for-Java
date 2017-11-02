@@ -13,7 +13,7 @@ public class SettingCustomRotationAngleForTextframe {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingCustomRotationAngleForTextframe.class);
-
+                  // ExStart:SettingCustomRotationAngleForTextframe
 		Presentation pres = new Presentation();
 
 		IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 500, 300);
@@ -28,6 +28,7 @@ public class SettingCustomRotationAngleForTextframe {
 
 		pres.save(dataDir + "out.pptx", SaveFormat.Pptx);
 
+           //ExEnd:SettingCustomRotationAngleForTextframe
 	}
 
 }

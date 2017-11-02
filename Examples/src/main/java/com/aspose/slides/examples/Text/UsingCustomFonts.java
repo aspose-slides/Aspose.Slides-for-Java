@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class UsingCustomFonts {
 
 	public static void main(String[] args) {
-
+                // ExStart:UsingCustomFonts
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UsingCustomFonts.class);
 
@@ -25,7 +25,7 @@ public class UsingCustomFonts {
 
 		// Clear Font Cache
 		FontsLoader.clearCache();
-
+               //ExEnd:UsingCustomFonts
 	}
 
 }

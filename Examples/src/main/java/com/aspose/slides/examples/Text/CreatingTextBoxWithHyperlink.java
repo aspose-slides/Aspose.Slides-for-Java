@@ -16,7 +16,7 @@ public class CreatingTextBoxWithHyperlink {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CreatingTextBoxWithHyperlink.class);
-
+            //ExStart:CreatingTextBoxWithHyperlink
 		// Instantiate Presentation class that represents PPTX
 		Presentation pres = new Presentation();
 
@@ -44,6 +44,7 @@ public class CreatingTextBoxWithHyperlink {
 		// Save the PPTX to Disk
 		pres.save(dataDir + "hLinkPPTX.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:CreatingTextBoxWithHyperlink
+         }
 
 }

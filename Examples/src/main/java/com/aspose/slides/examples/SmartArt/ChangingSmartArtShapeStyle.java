@@ -14,7 +14,7 @@ public class ChangingSmartArtShapeStyle {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingSmartArtShapeStyle.class);
-
+                   //ExStart:ChangingSmartArtShapeStyle
 		// Instantiate Presentation Class
 		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
 
@@ -38,6 +38,7 @@ public class ChangingSmartArtShapeStyle {
 		// Saving presentation
 		pres.save(dataDir + "ChangeSmartArtStyle.pptx", SaveFormat.Pptx);
 
+              // ExEnd:ChangingSmartArtShapeStyle
 	}
 
 }

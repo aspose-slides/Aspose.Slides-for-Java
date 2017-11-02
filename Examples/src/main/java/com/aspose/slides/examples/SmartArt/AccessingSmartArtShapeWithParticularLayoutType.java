@@ -11,7 +11,7 @@ import com.aspose.slides.examples.Utils;
 public class AccessingSmartArtShapeWithParticularLayoutType {
 
 	public static void main(String[] args) {
-
+                   //ExEnd:AccessingSmartArtShapeWithParticularLayoutType
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingSmartArtShapeWithParticularLayoutType.class);
 
@@ -39,6 +39,7 @@ public class AccessingSmartArtShapeWithParticularLayoutType {
 		// Saving presentation
 		pres.save(dataDir + "SimpleSmartArt.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:AccessingSmartArtShapeWithParticularLayoutType
+          }
 
 }

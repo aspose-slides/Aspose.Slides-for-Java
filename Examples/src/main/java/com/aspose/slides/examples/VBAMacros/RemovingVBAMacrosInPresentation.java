@@ -10,7 +10,7 @@ public class RemovingVBAMacrosInPresentation {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemovingVBAMacrosInPresentation.class);
-
+               // ExStart:RemovingVBAMacrosInPresentation 
 		// Load Presentation
 		Presentation pres = new Presentation(dataDir + "VBA.pptm");
 
@@ -20,6 +20,7 @@ public class RemovingVBAMacrosInPresentation {
 		// Save Presentation
 		pres.save(dataDir + "test.pptm", SaveFormat.Pptm);
 
+              //ExEnd:RemovingVBAMacrosInPresentation 
 	}
 
 }

@@ -10,7 +10,8 @@ public class AdvancedDocumentProperties {
 
 	public static void main(String[] args) {
 		// The path to the resource directory.
-    	String dataDir = Utils.getSharedDataDir(AdvancedDocumentProperties.class) + "Properties/";
+    	//ExStart:AdvancedDocumentProperties
+         String dataDir = Utils.getSharedDataDir(AdvancedDocumentProperties.class) + "Properties/";
 		readAndUpdateDocumentProperties(dataDir);
 		
 		usePropertiesOfAPresentationAsATemplateToUpdateOtherPresentations(dataDir);
@@ -81,5 +82,5 @@ public class AdvancedDocumentProperties {
 		toUpdate.updateDocumentProperties(template);
 		toUpdate.writeBindedPresentation(path);
 	}
-
+     // ExEnd:AdvancedDocumentProperties
 }

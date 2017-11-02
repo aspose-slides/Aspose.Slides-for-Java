@@ -12,7 +12,8 @@ public class ConvertingPresentationToResponsiveHTML {
 	private static final String dataDir = Utils.getSharedDataDir(ConvertingPresentationToResponsiveHTML.class) + "Conversion/";
 
 	public static void main(String[] args) {
-		Presentation pres = new Presentation(dataDir + "presentation.pptx");
+		//ExStart:ConvertingPresentationToResponsiveHTML
+                Presentation pres = new Presentation(dataDir + "presentation.pptx");
 		try {
 			ResponsiveHtmlController controller = new ResponsiveHtmlController();
 			HtmlOptions htmlOptions = new HtmlOptions();
@@ -23,5 +24,6 @@ public class ConvertingPresentationToResponsiveHTML {
 			if (pres != null)
 				pres.dispose();
 		}
+                //ExEnd:ConvertingPresentationToResponsiveHTML
 	}
 }

@@ -20,7 +20,7 @@ public class ManagingParagraphBulletsInPPTX {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingParagraphBulletsInPPTX.class);
-
+               //ExStart:ManagingParagraphBulletsInPPTX 
 		// Instantiate a Presentation class that represents a PPTX file
 		Presentation pres = new Presentation();
 
@@ -89,7 +89,7 @@ public class ManagingParagraphBulletsInPPTX {
 
 		// saving the presentation as a PPTX file
 		pres.save(dataDir + "Bullet.pptx", SaveFormat.Pptx);
-
+               //ExEnd:ManagingParagraphBulletsInPPTX 
 	}
 
 }

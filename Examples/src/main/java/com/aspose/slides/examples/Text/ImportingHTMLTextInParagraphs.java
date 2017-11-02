@@ -20,7 +20,7 @@ import com.aspose.slides.examples.Utils;
 public class ImportingHTMLTextInParagraphs {
 
 	public static void main(String[] args) throws Exception {
-
+                 // ExStart:ImportingHTMLTextInParagraphs
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ImportingHTMLTextInParagraphs.class);
 
@@ -86,5 +86,6 @@ public class ImportingHTMLTextInParagraphs {
 		return contents.toString();
 
 	}
+      //ExEnd:ImportingHTMLTextInParagraphs
 
 }

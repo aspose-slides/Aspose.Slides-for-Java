@@ -13,7 +13,7 @@ public class AddingSmartArtShapeNodes {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSmartArtShapeNodes.class);
-
+               // ExStart:AddingSmartArtShapeNodes
 		// Load the desired the presentation
 		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
 
@@ -44,6 +44,7 @@ public class AddingSmartArtShapeNodes {
 		// Saving Presentation
 		pres.save(dataDir + "AddSmartArtNode.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:AddingSmartArtShapeNodes
+         }
 
 }

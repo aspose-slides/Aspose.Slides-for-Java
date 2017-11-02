@@ -19,7 +19,7 @@ import com.aspose.slides.examples.Utils;
 public class ManagingMultipleParagraphsHavingMultiplePortions {
 
 	public static void main(String[] args) {
-
+                  //ExStart:ManagingMultipleParagraphsHavingMultiplePortions 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingMultipleParagraphsHavingMultiplePortions.class);
 
@@ -78,7 +78,7 @@ public class ManagingMultipleParagraphsHavingMultiplePortions {
 
 		// SavePPTX to Disk
 		pres.save(dataDir + "multiParaPort.pptx", SaveFormat.Pptx);
-
+           //ExEnd:ManagingMultipleParagraphsHavingMultiplePortions 
 	}
 
 }

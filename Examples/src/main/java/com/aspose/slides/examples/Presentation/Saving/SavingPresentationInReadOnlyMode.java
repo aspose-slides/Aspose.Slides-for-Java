@@ -6,9 +6,10 @@ import com.aspose.slides.examples.Utils;
 public class SavingPresentationInReadOnlyMode {
 
 	public static void main(String[] args) {
-
+                  ExStart:SavingPresentationInReadOnlyMode
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SavingPresentationInReadOnlyMode.class);
+		
+                String dataDir = Utils.getDataDir(SavingPresentationInReadOnlyMode.class);
 
 		// Instantiate a Presentation object that represents a PPT file
 		Presentation pres = new Presentation();
@@ -21,6 +22,7 @@ public class SavingPresentationInReadOnlyMode {
 		// Save your presentation to a file
 		pres.save(dataDir + "demoWriteProtected.pptx", com.aspose.slides.SaveFormat.Pptx);
 
-	}
+	//ExEnd:SavingPresentationInReadOnlyMode
+              }
 
 }

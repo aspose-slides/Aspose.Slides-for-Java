@@ -11,7 +11,7 @@ public class ConvertingPresentationToPasswordProtectedPDF {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToPasswordProtectedPDF.class);
-
+                // ExStart: ConvertingPresentationToPasswordProtectedPDF
 		// Instantiate a Presentation object that represents a presentation file
 		Presentation pres = new Presentation(dataDir + "demo.pptx");
 
@@ -23,6 +23,7 @@ public class ConvertingPresentationToPasswordProtectedPDF {
 
 		// Save the presentation to password protected PDF
 		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
+               //ExEnd:ConvertingPresentationToPasswordProtectedPDF
 
 	}
 

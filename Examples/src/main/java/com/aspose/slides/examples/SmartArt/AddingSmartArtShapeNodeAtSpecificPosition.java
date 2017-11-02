@@ -13,7 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingSmartArtShapeNodeAtSpecificPosition {
 
 	public static void main(String[] args) {
-
+                   //ExStart:AddingSmartArtShapeNodeAtSpecificPosition
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSmartArtShapeNodeAtSpecificPosition.class);
 
@@ -38,6 +38,7 @@ public class AddingSmartArtShapeNodeAtSpecificPosition {
 		// Save Presentation
 		pres.save(dataDir + "AddSmartArtNodeByPosition.pptx", SaveFormat.Pptx);
 
+               //ExEnd:AddingSmartArtShapeNodeAtSpecificPosition
 	}
 
 }

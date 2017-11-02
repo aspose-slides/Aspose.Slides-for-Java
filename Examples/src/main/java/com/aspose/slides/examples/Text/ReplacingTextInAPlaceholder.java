@@ -13,7 +13,7 @@ public class ReplacingTextInAPlaceholder {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ReplacingTextInAPlaceholder.class);
-
+               // ExStart:ReplacingTextInAPlaceholder
 		// Instantiate Presentation class that represents PPTX
 		Presentation pres = new Presentation(dataDir + "welcome.pptx");
 
@@ -30,6 +30,7 @@ public class ReplacingTextInAPlaceholder {
 		// Save the PPTX to Disk
 		pres.save(dataDir + "welcome_PH.pptx", SaveFormat.Pptx);
 
+               //ExEnd:ReplacingTextInAPlaceholder
 	}
 
 }

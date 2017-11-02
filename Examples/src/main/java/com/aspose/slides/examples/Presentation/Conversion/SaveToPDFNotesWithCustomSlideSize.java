@@ -11,7 +11,7 @@ import com.aspose.slides.examples.Utils;
 public class SaveToPDFNotesWithCustomSlideSize {
 
 	public static void main(String[] args) {
-		
+		//ExStart:SaveToPDFNotesWithCustomSlideSize
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(SaveToPDFNotesWithCustomSlideSize.class);
         
@@ -38,6 +38,7 @@ public class SaveToPDFNotesWithCustomSlideSize {
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "testPDFnotes.pdf", SaveFormat.PdfNotes);
 
+         //   ExEnd:SaveToPDFNotesWithCustomSlideSize
 	}
 
 }

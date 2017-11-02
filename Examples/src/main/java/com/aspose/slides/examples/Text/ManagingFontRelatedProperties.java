@@ -18,7 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class ManagingFontRelatedProperties {
 
 	public static void main(String[] args) {
-
+                // ExStart:ManagingFontRelatedProperties
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingFontRelatedProperties.class);
 
@@ -67,7 +67,7 @@ public class ManagingFontRelatedProperties {
 
 		// Save the PPTX to disk
 		pres.save(dataDir + "WelcomeFont.pptx", SaveFormat.Pptx);
-
+                //ExEnd:ManagingFontRelatedProperties
 	}
 
 }

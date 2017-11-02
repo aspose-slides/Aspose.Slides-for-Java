@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class SavePresentationWithPredefinedViewType {
 
 	public static void main(String[] args) {
-
+                //  ExStart:SavePresentationWithPredefinedViewType 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SavePresentationWithPredefinedViewType.class);
 
@@ -20,6 +20,7 @@ public class SavePresentationWithPredefinedViewType {
 		// Saving presentation
 		pres.save(dataDir + "newDemo.pptx", SaveFormat.Pptx);
 
+           //  ExEnd:SavePresentationWithPredefinedViewType 
 	}
 
 }

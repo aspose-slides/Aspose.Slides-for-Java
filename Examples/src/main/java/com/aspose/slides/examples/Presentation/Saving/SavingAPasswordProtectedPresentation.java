@@ -6,7 +6,7 @@ import com.aspose.slides.examples.Utils;
 public class SavingAPasswordProtectedPresentation {
 
 	public static void main(String[] args) {
-
+                 //ExStart:SavingAPasswordProtectedPresentation
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SavingAPasswordProtectedPresentation.class);
 
@@ -21,6 +21,7 @@ public class SavingAPasswordProtectedPresentation {
 		// Save your presentation to a file
 		pres.save(dataDir + "demoPass.pptx", com.aspose.slides.SaveFormat.Pptx);
 
-	}
+               //ExEnd:SavingAPasswordProtectedPresentation
+ 	}
 
 }

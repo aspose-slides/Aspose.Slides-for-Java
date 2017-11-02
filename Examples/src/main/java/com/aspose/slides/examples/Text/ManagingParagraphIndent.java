@@ -16,7 +16,7 @@ import com.aspose.slides.examples.Utils;
 public class ManagingParagraphIndent {
 
 	public static void main(String[] args) {
-
+                //ExStart:ManagingParagraphIndent
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingParagraphIndent.class);
 
@@ -67,7 +67,7 @@ public class ManagingParagraphIndent {
 
 		// Write the Presentation to disk
 		pres.save(dataDir + "InOutDent.pptx", SaveFormat.Pptx);
-
+               //ExEnd:ManagingParagraphIndent
 	}
 
 }

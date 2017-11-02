@@ -15,7 +15,7 @@ import com.aspose.slides.examples.Utils;
 public class UsingDefaultFontsForRenderingPresentation {
 
 	public static void main(String[] args) throws IOException {
-
+                   //ExStart:UsingDefaultFontsForRenderingPresentation
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UsingDefaultFontsForRenderingPresentation.class);
 
@@ -36,5 +36,6 @@ public class UsingDefaultFontsForRenderingPresentation {
 
 		// Generate XPS
 		presentation.save(dataDir + "output.xps", SaveFormat.Xps);
+            //ExEnd:UsingDefaultFontsForRenderingPresentation
 	}
 }

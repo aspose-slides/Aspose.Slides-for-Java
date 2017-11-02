@@ -6,7 +6,7 @@ import com.aspose.slides.examples.Utils;
 public class OpeningAPresentation {
 
 	public static final void main(String[] args) {
-		
+		// ExStart: OpeningAPresentation
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(OpeningAPresentation.class);
         
@@ -16,5 +16,6 @@ public class OpeningAPresentation {
 		// Printing the total number of slides present in the presentation
 		System.out.println(pres.getSlides().size());
 
+             //ExEnd:OpeningAPresentation
 	}
 }

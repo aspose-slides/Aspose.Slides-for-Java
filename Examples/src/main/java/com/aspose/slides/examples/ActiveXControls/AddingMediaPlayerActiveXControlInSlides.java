@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class AddingMediaPlayerActiveXControlInSlides {
 
 	public static void main(String[] args) {
-
+                //ExStart:AddingMediaPlayerActiveXControlInSlides
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingMediaPlayerActiveXControlInSlides.class);
 
@@ -24,6 +24,7 @@ public class AddingMediaPlayerActiveXControlInSlides {
 		// Save the Presentation
 		newPptx.save(dataDir + "Output.pptx", SaveFormat.Pptx);
 
+               //ExEnd:AddingMediaPlayerActiveXControlInSlides
 	}
 
 }

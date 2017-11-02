@@ -18,6 +18,7 @@ public class SettingTheAnchorOfTextFrame {
 
 	public static void main(String[] args) {
 
+            // ExStart:SettingTheAnchorOfTextFrame
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheAnchorOfTextFrame.class);
 
@@ -51,6 +52,7 @@ public class SettingTheAnchorOfTextFrame {
 
 		// Save Presentation
 		pres.save(dataDir + "AnchorText.pptx", SaveFormat.Pptx);
+                //ExEnd:SettingTheAnchorOfTextFrame
 
 	}
 

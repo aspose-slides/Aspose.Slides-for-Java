@@ -20,7 +20,7 @@ public class RotatingTheText {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RotatingTheText.class);
-
+               // ExStart:RotatingTheText
 		// Create an instance of Presentation class
 		Presentation pres = new Presentation();
 
@@ -51,7 +51,8 @@ public class RotatingTheText {
 
 		// Save Presentation
 		pres.save(dataDir + "VerticleText.pptx", SaveFormat.Pptx);
-
-	}
+            //ExEnd:RotatingTheText
+	
+          }
 
 }

@@ -16,7 +16,7 @@ public class RuleBasedFontsReplacementInsidePresentation {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RuleBasedFontsReplacementInsidePresentation.class);
-
+               //ExStart:RuleBasedFontsReplacementInsidePresentation
 		// Load presentation
 		Presentation pres = new Presentation(dataDir + "Fonts.pptx");
 
@@ -35,7 +35,8 @@ public class RuleBasedFontsReplacementInsidePresentation {
 
 		// Add font rule collection to rule list
 		pres.getFontsManager().setFontSubstRuleList(fontSubstRuleCollection);
-
+ 
+               //ExEnd:RuleBasedFontsReplacementInsidePresentation
 	}
 
 }

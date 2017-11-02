@@ -7,7 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class RemovingHyperlinksInsidePresentation {
 
 	public static void main(String[] args) {
-		
+		ExStart:RemovingHyperlinksInsidePresentation
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(RemovingHyperlinksInsidePresentation.class);
         
@@ -20,6 +20,7 @@ public class RemovingHyperlinksInsidePresentation {
 		//Writing the presentation as a PPTX file
 		pres.save(dataDir + "TestSaved.pptx", SaveFormat.Pptx);
 
-	}
+	//ExEnd:RemovingHyperlinksInsidePresentation
+          }
 
 }

@@ -7,7 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class AccessingBuiltInProperties {
 
 	public static void main(String[] args) {
-
+                  //ExStart:AccessingBuiltInProperties
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingBuiltInProperties.class);
 
@@ -33,6 +33,7 @@ public class AccessingBuiltInProperties {
 		System.out.println("Subject : " + dp.getSubject());
 		System.out.println("Title : " + dp.getTitle());
 
+           //ExEnd:AccessingBuiltInProperties
 	}
 
 }
