@@ -1,7 +1,6 @@
 package com.aspose.slides.examples.Text;
 
 import java.awt.Color;
-
 import com.aspose.slides.FillType;
 import com.aspose.slides.IAutoShape;
 import com.aspose.slides.IParagraph;
