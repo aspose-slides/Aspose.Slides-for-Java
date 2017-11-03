@@ -13,14 +13,14 @@ import com.aspose.slides.ShapeType;
 import com.aspose.slides.TextAutofitType;
 import com.aspose.slides.examples.Utils;
 
-public class AddingSuperscriptAndSubscriptTextInTextFrame {
+public class AddingSuperscriptAndSubscriptText{
 
 	
                   public static void main(String[] args) {
 
 		// The path to the documents directory.
-		 String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptTextInTextFrame.class);
-                 //ExStart:AddingSuperscriptAndSubscriptTextInTextFrame
+		 String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptText.class);
+                 //ExStart:AddingSuperscriptAndSubscriptText
 		  Presentation presentation = new Presentation()
             try
               {
@@ -71,7 +71,8 @@ public class AddingSuperscriptAndSubscriptTextInTextFrame {
              presentation.dispose()
           }
 	   pres.save(dataDir + "formatText.pptx", SaveFormat.Pptx);
-         //ExEnd:AddingSuperscriptAndSubscriptTextInTextFrame
+
+         //ExEnd:AddingSuperscriptAndSubscriptText
          }
    
         }

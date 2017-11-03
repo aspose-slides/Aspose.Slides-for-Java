@@ -9,7 +9,9 @@ import com.aspose.slides.examples.Utils;
 public class SettingAutomicPieChartSliceColors {
 
 	public static void main(String[] args) {
-        //ExStart:SettingAutomicPieChartSliceColors
+
+       //ExStart:SettingAutomicPieChartSliceColors
+	
 		// The path to the documents directory.
 	String dataDir = Utils.getSharedDataDir(SettingAutomicPieChartSliceColors.class) + "Charts/";
 				
@@ -57,11 +59,12 @@ public class SettingAutomicPieChartSliceColors {
 
          series.getParentSeriesGroup().setColorVaried(true);
 
-         presentation.save("C:\\Aspose Data\\Pie.pptx", SaveFormat.Pptx);
-     }
+    
+	presentation.save(dataDir + "PieChartSlice_Out.pptx", SaveFormat.Pptx);
 
-	presentation.save(dataDir + "SetDataRangeForChart_Out.pptx", SaveFormat.Pptx);
-           //ExEnd:SettingAutomicPieChartSliceColors
+        
+               //ExEnd:SettingAutomicPieChartSliceColors
+
 	
   }
 }
