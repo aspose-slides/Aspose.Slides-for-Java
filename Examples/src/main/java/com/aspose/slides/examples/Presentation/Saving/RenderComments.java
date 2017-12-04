@@ -17,14 +17,14 @@ public class RenderComments {
                 BufferedImage image = new BufferedImage((int)size.getWidth(), (int)size.getHeight(), BufferedImage.TYPE_INT_ARGB);
 
                 java.awt.Graphics graphics = image.createGraphics();
-           try
-             {
+             try
+              {
               slide.renderToGraphics(renderNotes, graphics);
               }
                finally 
-             {
+              {
                if (graphics != null) graphics.dispose();
-             }
+              }
   
              imageToStream(image, outputStream);
 
