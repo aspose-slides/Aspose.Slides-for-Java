@@ -14,12 +14,12 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
 
-public class EndParaGraphProperties {
+public class EndParaGraph {
 
 	public static void main(String[] args) {
 
 		 // The path to the documents directory.
-		 String dataDir = Utils.getDataDir(EndParaGraphProperties.class);
+		 String dataDir = Utils.getDataDir(EndParaGraph.class);
                 //ExStart:EndParaGraphProperties
 		// Instantiate a Presentation class that represents a PPTX file
 		Presentation p=new Presentation(path+"ppt.pptx");
@@ -37,7 +37,7 @@ public class EndParaGraphProperties {
                 shape.getTextFrame().getParagraphs().add(para2);
                  p.save(Path+"result.pptx",SaveFormat.Pptx);
           }
-               //ExEnd:EndParaGraphProperties
+               //ExEnd:EndParaGraph
 	}
 
 
