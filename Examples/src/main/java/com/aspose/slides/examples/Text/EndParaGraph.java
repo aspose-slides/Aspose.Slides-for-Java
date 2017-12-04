@@ -20,7 +20,7 @@ public class EndParaGraph {
 
 		 // The path to the documents directory.
 		 String dataDir = Utils.getDataDir(EndParaGraph.class);
-                //ExStart:EndParaGraphProperties
+                //ExStart:EndParaGraph
 		// Instantiate a Presentation class that represents a PPTX file
 		Presentation p=new Presentation(path+"ppt.pptx");
                 ISlide slide = p.getSlides().get_Item(0);
