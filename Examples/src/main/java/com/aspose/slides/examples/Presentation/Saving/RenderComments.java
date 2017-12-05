@@ -10,24 +10,22 @@ public class RenderComments {
 		// The path to the documents directory.
 		//ExStart:RenderComments
                 String dataDir = Utils.getDataDir(RenderComments.class);
-                Presentation _document = new Presentation(presentationStream)
-                ISlide slide = _document.getSlides().get_Item(pageNumber - 1);
-                Dimension2D size = _document.getSlideSize().getSize();
+                   
+                Presentation pres = new Presentation(path+"testexample.pptx");
 
-                BufferedImage image = new BufferedImage((int)size.getWidth(), (int)size.getHeight(), BufferedImage.TYPE_INT_ARGB);
-
+                BufferedImage image = new BufferedImage(740, 960, BufferedImage.TYPE_INT_ARGB);
                 java.awt.Graphics graphics = image.createGraphics();
-             try
-              {
-              slide.renderToGraphics(renderNotes, graphics);
-              }
-               finally 
-              {
-               if (graphics != null) graphics.dispose();
-              }
-  
-             imageToStream(image, outputStream);
-
-              //ExEnd:RenderComments
-	}
-}
+            try
+            {
+               pres.getSlides().get_Item(0).renderToGraphics(true, (Graphics2D) graphics);    
+            }
+           finally 
+            {
+              if (graphics != null) graphics.dispose();
+            }
+              ImageIO.write(image, "png", new java.io.File(path+"OutPresBitmap123.png"));
+            }
+    
+            //ExEnd:RenderComments	
+           }
+          }
