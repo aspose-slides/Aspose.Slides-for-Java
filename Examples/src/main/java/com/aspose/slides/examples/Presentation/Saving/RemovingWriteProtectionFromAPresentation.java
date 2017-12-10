@@ -6,7 +6,7 @@ import com.aspose.slides.examples.Utils;
 public class RemovingWriteProtectionFromAPresentation {
 
 	public static void main(String[] args) {
-                    ExStart:RemovingWriteProtectionFromAPresentation
+                 //   ExStart:RemovingWriteProtectionFromAPresentation
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemovingWriteProtectionFromAPresentation.class);
 

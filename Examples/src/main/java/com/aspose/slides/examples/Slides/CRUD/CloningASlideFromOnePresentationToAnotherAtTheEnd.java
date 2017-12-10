@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class CloningASlideFromOnePresentationToAnotherAtTheEnd {
 
 	public static void main(String[] args) {
-	ExStart:CloningASlideFromOnePresentationToAnotherAtTheEnd
+	//ExStart:CloningASlideFromOnePresentationToAnotherAtTheEnd
 		
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloningASlideFromOnePresentationToAnotherAtTheEnd.class);
@@ -27,7 +27,7 @@ public class CloningASlideFromOnePresentationToAnotherAtTheEnd {
 		// Write the destination presentation to disk
 		destPres.save(dataDir + "helloworld_dest2.pptx", SaveFormat.Pptx);
 
-	ExEnd:CloningASlideFromOnePresentationToAnotherAtTheEnd
+	//ExEnd:CloningASlideFromOnePresentationToAnotherAtTheEnd
 	}
 
 }

@@ -3,14 +3,17 @@ package com.aspose.slides.examples.Presentation.Conversion;
 import com.aspose.slides.HtmlFormatter;
 import com.aspose.slides.HtmlOptions;
 import com.aspose.slides.Presentation;
+import com.aspose.slides.SVGOptions;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.SlideImageFormat;
+import com.aspose.slides.VideoPlayerHtmlController;
 import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToHTMLWithMediaFiles {
 
 	public static void main(String[] args) {
 
-	ExStart:ConvertingPresentationToHTMLWithMediaFiles	
+	//ExStart:ConvertingPresentationToHTMLWithMediaFiles	
         // The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToHTMLWithMediaFiles.class);
 
@@ -35,7 +38,7 @@ public class ConvertingPresentationToHTMLWithMediaFiles {
  if (pres != null) pres.dispose();
  
 }
-ExEnd:ConvertingPresentationToHTMLWithMediaFiles	
+//ExEnd:ConvertingPresentationToHTMLWithMediaFiles	
 }
 
 }

@@ -3,6 +3,8 @@ package com.aspose.slides.examples.Slides.Layout;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.SlideSizeScaleType;
+import com.aspose.slides.SlideSizeType;
 import com.aspose.slides.examples.Utils;
 
 public class SettingTheSlideSizeScale {

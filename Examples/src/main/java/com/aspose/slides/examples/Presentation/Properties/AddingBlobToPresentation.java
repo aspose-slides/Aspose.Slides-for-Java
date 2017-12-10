@@ -3,11 +3,19 @@ package com.aspose.slides.examples.Presentation.Properties;
 import com.aspose.slides.DocumentProperties;
 import com.aspose.slides.IDocumentProperties;
 import com.aspose.slides.IPresentationInfo;
+import com.aspose.slides.IVideo;
+import com.aspose.slides.LoadingStreamBehavior;
+import com.aspose.slides.Presentation;
 import com.aspose.slides.PresentationFactory;
+import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class AddingBlobToPresentation{
-         public static final void main(String[] args) {
+         public static final void main(String[] args) throws FileNotFoundException, IOException {
         //ExStart:AddingBlobToPresentation
          // The path to the documents directory.
 	 String dataDir = Utils.getDataDir(AddingBlobToPresentation.class);
@@ -15,7 +23,7 @@ public class AddingBlobToPresentation{
        final String pathToVeryLargeVideo = "veryLargeVideo.avi";
 
     // create a new presentation which will contain this video
-    Presentation pres = new Presentation();
+       Presentation pres = new Presentation();
     try{
         InputStream fileStream = new FileInputStream(pathToVeryLargeVideo);
         try{
@@ -37,5 +45,4 @@ public class AddingBlobToPresentation{
     }
 //ExEnd:AddingBlobToPresentation
 	
-}
-}
+

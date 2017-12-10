@@ -1,7 +1,12 @@
 package com.aspose.slides.examples.Slides.CRUD;
 
+import com.aspose.slides.BulletType;
+import com.aspose.slides.IMasterNotesSlide;
+import com.aspose.slides.IParagraphFormat;
 import com.aspose.slides.ISlide;
+import com.aspose.slides.ITextStyle;
 import com.aspose.slides.Presentation;
+import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 public class AddNotesSlideWithNotesStyle {
@@ -18,7 +23,7 @@ public class AddNotesSlideWithNotesStyle {
 	Presentation pres = new Presentation(dataDir + "demo.pptx");
 
 
-	IMasterNotesSlide notesMaster = presentation.getMasterNotesSlideManager().getMasterNotesSlide();
+	IMasterNotesSlide notesMaster = pres.getMasterNotesSlideManager().getMasterNotesSlide();
  
 	if (notesMaster != null) 
 	{

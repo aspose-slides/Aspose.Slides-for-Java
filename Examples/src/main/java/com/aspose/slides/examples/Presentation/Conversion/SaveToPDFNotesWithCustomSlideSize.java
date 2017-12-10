@@ -5,6 +5,7 @@ import java.awt.geom.Dimension2D;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.SlideSizeScaleType;
 import com.aspose.slides.SlideSizeType;
 import com.aspose.slides.examples.Utils;
 
@@ -28,12 +29,13 @@ public class SaveToPDFNotesWithCustomSlideSize {
 		auxPresentation.getSlides().insertClone(0, slide);
 
 		// Set slide size type
-		auxPresentation.getSlideSize().setType(SlideSizeType.Custom);
+		auxPresentation.getSlideSize().setSize(SlideSizeType.Custom,SlideSizeScaleType.DoNotScale);
+                    //    setType(SlideSizeType.Custom);
 
 		// Setting custom slide size
 		Dimension2D dimension = presentation.getSlideSize().getSize();
 		dimension.setSize(612F, 792F);
-		auxPresentation.getSlideSize().setSize(dimension);
+		auxPresentation.getSlideSize().setSize(7,10);
 
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "testPDFnotes.pdf", SaveFormat.PdfNotes);

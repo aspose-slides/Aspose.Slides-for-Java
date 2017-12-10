@@ -4,10 +4,16 @@ import com.aspose.slides.IAutoShape;
 import com.aspose.slides.IParagraph;
 import com.aspose.slides.IPortion;
 import com.aspose.slides.ISlide;
+import com.aspose.slides.ITable;
 import com.aspose.slides.ITextFrame;
+import com.aspose.slides.ParagraphFormat;
+import com.aspose.slides.PortionFormat;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
+import com.aspose.slides.TextAlignment;
+import com.aspose.slides.TextFrameFormat;
+import com.aspose.slides.TextVerticalType;
 import com.aspose.slides.examples.Utils;
 
 public class SettingTextFormattingInsideTable {
@@ -22,7 +28,7 @@ public class SettingTextFormattingInsideTable {
 
 		// Access first slide
 		ISlide sld = pres.getSlides().get_Item(0);
-                 ITable someTable = (ITable)presentation.getSlides().get_Item(0).getShapes().get_Item(0); // let's say that the first shape on the first slide is a table
+                 ITable someTable = (ITable)pres.getSlides().get_Item(0).getShapes().get_Item(0); // let's say that the first shape on the first slide is a table
 
                   // setting table cells' font height
                   PortionFormat portionFormat = new PortionFormat();

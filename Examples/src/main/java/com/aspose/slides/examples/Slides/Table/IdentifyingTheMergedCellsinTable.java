@@ -1,9 +1,11 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.Slides.Table;
 
 import com.aspose.slides.IAutoShape;
+import com.aspose.slides.ICell;
 import com.aspose.slides.IParagraph;
 import com.aspose.slides.IPortion;
 import com.aspose.slides.ISlide;
+import com.aspose.slides.ITable;
 import com.aspose.slides.ITextFrame;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;

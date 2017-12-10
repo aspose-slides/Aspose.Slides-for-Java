@@ -7,7 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationInNotesSlideViewToTIFF {
 
 	public static void main(String[] args) {
-                  ExStart:ConvertingPresentationInNotesSlideViewToTIFF
+                 // ExStart:ConvertingPresentationInNotesSlideViewToTIFF
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationInNotesSlideViewToTIFF.class);
 

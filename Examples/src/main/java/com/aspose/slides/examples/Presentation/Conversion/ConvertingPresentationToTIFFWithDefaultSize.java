@@ -9,7 +9,7 @@ public class ConvertingPresentationToTIFFWithDefaultSize {
 	public static void main(String[] args) {
 
 		// The path to the documents directory.
-		ExStart:ConvertingPresentationToTIFFWithDefaultSize
+		//ExStart:ConvertingPresentationToTIFFWithDefaultSize
                 String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithDefaultSize.class);
 
 		// Instantiate a Presentation object that represents a presentation file

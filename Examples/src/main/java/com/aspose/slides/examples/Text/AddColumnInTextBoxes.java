@@ -7,6 +7,7 @@ import com.aspose.slides.ColorType;
 import com.aspose.slides.IAutoShape;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.ITextFrame;
+import com.aspose.slides.ITextFrameFormat;
 import com.aspose.slides.NumberedBulletStyle;
 import com.aspose.slides.Paragraph;
 import com.aspose.slides.Presentation;

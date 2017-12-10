@@ -13,7 +13,7 @@ public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
+	//ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
 
              String dataDir = Utils.getDataDir(CloneASlideWithMasterSlideFromOnePresentationToAnother.class);
 		
@@ -38,7 +38,7 @@ public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 		// Save the destination presentation to disk
 		destPres.save(dataDir + "helloworld_dest3.pptx", SaveFormat.Pptx);
            
-            ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
+          //  ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
 	
 }
 

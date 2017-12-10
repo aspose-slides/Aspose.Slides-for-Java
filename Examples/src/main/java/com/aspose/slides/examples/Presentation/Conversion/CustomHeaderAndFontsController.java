@@ -1,16 +1,19 @@
 package com.aspose.slides.examples.Presentation.Conversion;
 
+import com.aspose.slides.EmbedAllFontsHtmlController;
+import com.aspose.slides.IHtmlGenerator;
+import com.aspose.slides.IPresentation;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.XpsOptions;
 import com.aspose.slides.examples.Utils;
 
 //ExStart:CustomHeaderAndFontsController
-Public class LinkAllFontsHtmlController extends EmbedAllFontsHtmlController
+public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController
 {
-    private final String m_basePath;
+    private final int m_basePath=0;
 
-    public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController {
+    
     // Custom header template
     final static String Header = "<!DOCTYPE html>\n" +
             "<html>\n" +
@@ -23,22 +26,22 @@ Public class LinkAllFontsHtmlController extends EmbedAllFontsHtmlController
 
     private final String m_cssFileName;
 
-    public CustomHeaderAndFontsController(String cssFileName) {
+    public CustomHeaderAndFontsController(String cssFileName) 
+    {
         m_cssFileName = cssFileName;
     }
 
-    @Override
+    
     public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation) {
         generator.addHtml(String.format(Header, m_cssFileName));
         writeAllFonts(generator, presentation);
     }
 
-    @Override
+    
     public void writeAllFonts(IHtmlGenerator generator, IPresentation presentation) {
         generator.addHtml("<!-- Embedded fonts -->");
         super.writeAllFonts(generator, presentation);
     }
   //ExEnd:CustomHeaderAndFontsController
 }
-}
- ExEnd:LinkAllFontsHtmlController
+

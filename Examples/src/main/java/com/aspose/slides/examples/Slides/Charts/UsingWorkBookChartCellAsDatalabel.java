@@ -5,7 +5,9 @@ import com.aspose.slides.DataSourceType;
 import com.aspose.slides.ErrorBarValueType;
 import com.aspose.slides.IChart;
 import com.aspose.slides.IChartDataPointCollection;
+import com.aspose.slides.IChartDataWorkbook;
 import com.aspose.slides.IChartSeries;
+import com.aspose.slides.IChartSeriesCollection;
 import com.aspose.slides.IErrorBarsFormat;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
@@ -23,7 +25,7 @@ public class UsingWorkBookChartCellAsDatalabel {
                  String lbl1 = "Label 1 cell value";
                  String lbl2 = "Label 2 cell value";
 
-                Presentation pres = new Presentation(path+"Test.pptx");
+                Presentation pres = new Presentation(dataDir+"Test.pptx");
                try {
 
                IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 600, 400, true);

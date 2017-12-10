@@ -7,7 +7,7 @@ import com.aspose.slides.examples.Utils;
 public class RemovingHyperlinksInsidePresentation {
 
 	public static void main(String[] args) {
-		ExStart:RemovingHyperlinksInsidePresentation
+		//ExStart:RemovingHyperlinksInsidePresentation
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(RemovingHyperlinksInsidePresentation.class);
         

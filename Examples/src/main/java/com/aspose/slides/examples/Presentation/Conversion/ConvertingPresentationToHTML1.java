@@ -6,23 +6,23 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
-public class ConvertingPresentationToHTML {
+public class ConvertingPresentationToHTML1 {
 
 	public static void main(String[] args) {
-
+                  //ExStart:ConvertingPresentationToHTML1
 		// The path to the documents directory.
-		//ExStart:ConvertingPresentationToHTML
-               String dataDir = Utils.getDataDir(ConvertingPresentationToHTML.class);
+		String dataDir = Utils.getDataDir(ConvertingPresentationToHTML1.class);
 
 		// Instantiate a Presentation object that represents a presentation file
 		Presentation pres = new Presentation(dataDir + "demo.pptx");
 
 		HtmlOptions htmlOpt = new HtmlOptions();
+                htmlOpt.setIncludeComments(true);
 		htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
 
 		// Saving the presentation to HTML
-       		pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
-                  // ExEnd:ConvertingPresentationToHTML
+		pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
+                //ExEnd:ConvertingPresentationToHTML1
 	}
 
 }

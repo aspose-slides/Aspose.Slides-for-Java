@@ -5,11 +5,13 @@ import java.io.IOException;
 
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
+import com.aspose.slides.SVGOptions;
 import com.aspose.slides.examples.Utils;
+import java.io.FileNotFoundException;
 
 public class GeneratingSVGImageWithCustomIDS {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 
 // The path to the documents directory.
 //ExStart:GeneratingSVGImageWithCustomIDS
@@ -20,7 +22,7 @@ public class GeneratingSVGImageWithCustomIDS {
        FileOutputStream stream = null;
  try 
       {
-         stream = new FileOutputStream(new java.io.File(outputPath));
+         stream = new FileOutputStream(new java.io.File(dataDir));
          SVGOptions svgOptions = new SVGOptions();
          svgOptions.setShapeFormattingController(new CustomSvgShapeFormattingController());
 
@@ -37,4 +39,6 @@ public class GeneratingSVGImageWithCustomIDS {
       }		
 
 //ExEnd:GGeneratingSVGImageWithCustomIDS
+
+        }
 }

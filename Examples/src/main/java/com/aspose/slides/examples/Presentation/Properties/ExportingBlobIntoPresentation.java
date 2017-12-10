@@ -3,11 +3,20 @@ package com.aspose.slides.examples.Presentation.Properties;
 import com.aspose.slides.DocumentProperties;
 import com.aspose.slides.IDocumentProperties;
 import com.aspose.slides.IPresentationInfo;
+import com.aspose.slides.IVideo;
+import com.aspose.slides.LoadOptions;
+import com.aspose.slides.Presentation;
 import com.aspose.slides.PresentationFactory;
+import com.aspose.slides.PresentationLockingBehavior;
 import com.aspose.slides.examples.Utils;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class ExportingBlobIntoPresentation{
-         public static final void main(String[] args) {
+         public static final void main(String[] args) throws FileNotFoundException, IOException {
         //ExStart:ExportingBlobIntoPresentation
          // The path to the documents directory.
 	 String dataDir = Utils.getDataDir(ExportingBlobIntoPresentation.class);

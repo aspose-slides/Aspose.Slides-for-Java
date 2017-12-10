@@ -1,9 +1,12 @@
 package com.aspose.slides.examples.Slides.Rendering;
 
+import com.aspose.slides.IShape;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import com.aspose.slides.ISlide;
+import com.aspose.slides.ISvgShape;
+import com.aspose.slides.ISvgShapeFormattingController;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
 //ExStart:CustomSvgShapeFormattingController
@@ -25,7 +28,9 @@ class CustomSvgShapeFormattingController implements ISvgShapeFormattingControlle
     {
         svgShape.setId("shape-" + m_shapeIndex++);
     }
-}
 
-}
+
+    }
+
+
 //ExEnd:CustomSvgShapeFormattingController

@@ -1,18 +1,26 @@
 package com.aspose.slides.examples.Slides.Shapes;
 
+import com.aspose.slides.FillType;
+import com.aspose.slides.IAutoShape;
 import com.aspose.slides.IGroupShape;
+import com.aspose.slides.IPPImage;
 import com.aspose.slides.IShapeCollection;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.NullableBool;
+import com.aspose.slides.PictureFillMode;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeFrame;
 import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class AddStretchOffsetForImageFill {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 	//ExStart:AddStretchOffsetForImageFill
 
 		// The path to the documents directory.

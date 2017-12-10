@@ -8,24 +8,25 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 public class SavingHTMLAndCSSFileWhenExportingIntoHTML {
-
-	private static final String dataDir = Utils.getSharedDataDir(SavingHTMLAndCSSFileWhenExportingIntoHTML.class) + "Conversion/";
+public static void main (String[] args){
+	 String dataDir = Utils.getDataDir(SavingHTMLAndCSSFileWhenExportingIntoHTML.class);
               //ExStart:SavingHTMLAndCSSFileWhenExportingIntoHTML
-	    Presentation pres = new Presentation("pres.pptx");
-         try{
-           final CustomHeaderAndFontsController htmlController = new CustomHeaderAndFontsController("styles.css");
-           HtmlOptions options = new HtmlOptions(){{
-           setHtmlFormatter(HtmlFormatter.createCustomFormatter(htmlController));
-          }
-          };
-           pres.save("pres.html", SaveFormat.Html, options);
-          }   
-        finally 
-          {
-           pres.dispose();
-          }
-              
-              //ExEnd:SavingHTMLAndCSSFileWhenExportingIntoHTML
+	 Presentation pres = new Presentation("pres.pptx");
+       try{
+         final CustomHeaderAndFontsController htmlController = new CustomHeaderAndFontsController("styles.css");
+         HtmlOptions options = new HtmlOptions(){{
+         setHtmlFormatter(HtmlFormatter.createCustomFormatter(htmlController));
+        }};
+         pres.save("pres.html", SaveFormat.Html, options);
+         }  
+       finally 
+       {
+         pres.dispose();
+   }}}
 
-        }
-        }
+               
+             //ExEnd:SavingHTMLAndCSSFileWhenExportingIntoHTML
+
+       
+   
+         

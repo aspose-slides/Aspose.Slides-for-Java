@@ -7,6 +7,8 @@ import com.aspose.slides.IParagraph;
 import com.aspose.slides.IPortion;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.ITextFrame;
+import com.aspose.slides.Paragraph;
+import com.aspose.slides.Portion;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
@@ -21,11 +23,10 @@ public class AddingSuperscriptAndSubscriptText{
 		// The path to the documents directory.
 		 String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptText.class);
                  //ExStart:AddingSuperscriptAndSubscriptText
-		  Presentation presentation = new Presentation()
-            try
-              {
+		  Presentation presentation = new Presentation();
+          
                   // Get slide
-                  ISlide slide = presentation.getSlides().getItem(0);
+                  ISlide slide = presentation.getSlides().get_Item(0);
 
                  // Create text box
                  IAutoShape shape = slide.getShapes().addAutoShape(ShapeType.Rectangle, 100, 100, 200, 100);
@@ -64,15 +65,13 @@ public class AddingSuperscriptAndSubscriptText{
            textFrame.getParagraphs().add(superPar);
            textFrame.getParagraphs().add(paragraph2);
  
-           presentation.getSlides().getItem(0).getThumbnail(2f, 2f).save("TestOut.png", ImageFormat.Png);
-         } 
-          finally
-          {
-             presentation.dispose()
-          }
-	   pres.save(dataDir + "formatText.pptx", SaveFormat.Pptx);
+           presentation.getSlides().get_Item(0).getThumbnail(2f, 2f).save("TestOut.png", ImageFormat.Png);
+          
+         
+	   presentation.save(dataDir +"formatText.pptx",SaveFormat.Pptx);
 
          //ExEnd:AddingSuperscriptAndSubscriptText
          }
    
         }
+

@@ -34,7 +34,8 @@ public class GeneratingThumbnailFromSlideInNotesSlidesView {
 		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
 
 		// Create a full scale image
-		BufferedImage image = sld.getNotesSlideManager().getThumbnail(ScaleX, ScaleY);
+		BufferedImage image = sld.getNotesSlideManager().getNotesSlide().getThumbnail(ScaleY, ScaleY);
+                       // getThumbnail(ScaleX, ScaleY);
 
 		// Save the image to disk in JPEG format
 		try {

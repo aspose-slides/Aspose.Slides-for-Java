@@ -53,4 +53,5 @@ public class CalculatingConnectorLineAngle {
 //ExEnd:CalculatingConnectorLineAngle	}
 
 
+        }
 }

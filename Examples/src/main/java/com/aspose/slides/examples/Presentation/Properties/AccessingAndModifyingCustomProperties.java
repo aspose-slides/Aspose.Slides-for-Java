@@ -31,7 +31,7 @@ public class AccessingAndModifyingCustomProperties {
 
 		// Save your presentation to a file
 		pres.save(dataDir + "CustomDemoModified.pptx", SaveFormat.Pptx);
-ExEnd:AccessingAndModifyingCustomProperties
+           //ExEnd:AccessingAndModifyingCustomProperties
 	}
 
 }

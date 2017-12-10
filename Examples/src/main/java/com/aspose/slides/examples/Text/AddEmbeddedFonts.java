@@ -1,11 +1,12 @@
 package com.aspose.slides.examples.Text;
 
 import com.aspose.slides.FontsLoader;
+import com.aspose.slides.IFontData;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
-public class LoadExternalFonts {
+public class AddEmbeddedFonts  {
 
 	public static void main(String[] args) {
             
@@ -18,7 +19,7 @@ IFontData[] allFonts = pres.getFontsManager().getFonts();
 IFontData[] embeddedFonts = pres.getFontsManager().getEmbeddedFonts();
 for (IFontData font : except(allFonts, embeddedFonts))
 {
-pres.getFontsManager().addEmbeddedFont(font, EmbedFontCharacters.All);
+pres.getFontsManager().addEmbeddedFont(font,EmbedFontCharacters.All);
 }
               // ExEnd:AddEmbeddedFonts
 	

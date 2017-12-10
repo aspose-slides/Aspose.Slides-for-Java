@@ -3,12 +3,17 @@ package com.aspose.slides.examples.Slides.Charts;
 import com.aspose.slides.ChartType;
 import com.aspose.slides.DataSourceType;
 import com.aspose.slides.ErrorBarValueType;
+import com.aspose.slides.FillType;
+import com.aspose.slides.IAutoShape;
 import com.aspose.slides.IChart;
+import com.aspose.slides.IChartDataPoint;
 import com.aspose.slides.IChartDataPointCollection;
 import com.aspose.slides.IChartSeries;
 import com.aspose.slides.IErrorBarsFormat;
+import com.aspose.slides.LegendDataLabelPosition;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
 
 public class GetPositionOfChartDataLabel{

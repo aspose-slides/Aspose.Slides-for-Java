@@ -4,9 +4,12 @@ import com.aspose.slides.ChartType;
 import com.aspose.slides.DataSourceType;
 import com.aspose.slides.ErrorBarValueType;
 import com.aspose.slides.IChart;
+import com.aspose.slides.IChartCategory;
 import com.aspose.slides.IChartDataPointCollection;
+import com.aspose.slides.IChartDataWorkbook;
 import com.aspose.slides.IChartSeries;
 import com.aspose.slides.IErrorBarsFormat;
+import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
@@ -18,7 +21,7 @@ import com.aspose.slides.examples.Utils;
              // The path to the documents directory.
 	     String dataDir = Utils.getDataDir(MultiCategoryChart.class);
 
-             Presentation pres = new Presentation(path+"test.pptx");
+             Presentation pres = new Presentation(dataDir+"test.pptx");
 
              // Access first slide
             ISlide sld = pres.getSlides().get_Item(0);
@@ -53,11 +56,11 @@ import com.aspose.slides.examples.Utils;
            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D7", 60));
            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D8", 70));
            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D9", 80));
-           pres.save(path+"AsposeChart.pptx", SaveFormat.Pptx);
+           pres.save(dataDir+"AsposeChart.pptx", SaveFormat.Pptx);
 }
 
           //ExEnd:MultiCategoryChart
  
  }
 
- }
+ 

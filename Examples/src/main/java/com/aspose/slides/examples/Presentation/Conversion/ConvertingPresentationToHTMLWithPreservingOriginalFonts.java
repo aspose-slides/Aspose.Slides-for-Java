@@ -1,5 +1,6 @@
 package com.aspose.slides.examples.Presentation.Conversion;
 
+import com.aspose.slides.EmbedAllFontsHtmlController;
 import com.aspose.slides.HtmlFormatter;
 import com.aspose.slides.HtmlOptions;
 import com.aspose.slides.Presentation;

@@ -1,7 +1,20 @@
 package com.aspose.slides.examples.Presentation.Opening;
 
 import com.aspose.slides.Presentation;
+import com.aspose.slides.PresentationLockingBehavior;
+import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+import java.io.File;
+import com.aspose.slides.DocumentProperties;
+import com.aspose.slides.IDocumentProperties;
+import com.aspose.slides.IPresentationInfo;
+import com.aspose.slides.IVideo;
+import com.aspose.slides.LoadOptions;
+import com.aspose.slides.Presentation;
+import com.aspose.slides.PresentationFactory;
+import com.aspose.slides.PresentationLockingBehavior;
+import com.aspose.slides.examples.Utils;
+import com.aspose.slides.PresentationLockingBehavior;
 
 public class OpenVeryLargePresentation {
 
@@ -13,12 +26,12 @@ public class OpenVeryLargePresentation {
                   final String pathToVeryLargePresentationFile = "veryLargePresentation.pptx";
 
                   LoadOptions loadOptions = new LoadOptions();
-               // let's choose the KeepLocked behavior - the "veryLargePresentation.pptx" will be locked for
-              // the Presentation's instance lifetime, but we don't need to load it into memory or copy into
-             // thetemporary file
+             
                  loadOptions.getBlobManagementOptions().setPresentationLockingBehavior(PresentationLockingBehavior.KeepLocked);
 
-                  Presentation pres = new Presentation(pathToVeryLargePresentationFile, loadOptions);
+                 
+                 
+                  Presentation pres = new Presentation(pathToVeryLargePresentationFile);
     try{
             // the huge presentation is loaded and ready to use, but the memory consumption is still low.
 
@@ -42,4 +55,3 @@ public class OpenVeryLargePresentation {
 
 //ExEnd:OpenVeryLargePresentation
 	}
-}

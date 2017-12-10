@@ -9,7 +9,7 @@ public class CloningASlideFromOnePositionToTheEndWithinSamePresentation {
 
 	public static void main(String[] args) {
 		
-	ExStart:CloningASlideFromOnePositionToTheEndWithinSamePresentation
+	//ExStart:CloningASlideFromOnePositionToTheEndWithinSamePresentation
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CloningASlideFromOnePositionToTheEndWithinSamePresentation.class);
@@ -24,7 +24,7 @@ public class CloningASlideFromOnePositionToTheEndWithinSamePresentation {
 
 		// Write the modified presentation to disk
 		pres.save(dataDir + "helloworld_cloned.pptx", SaveFormat.Pptx);
-	ExEnd:CloningASlideFromOnePositionToTheEndWithinSamePresentation
+	//ExEnd:CloningASlideFromOnePositionToTheEndWithinSamePresentation
 
 	}
 

@@ -6,7 +6,7 @@ import com.aspose.slides.examples.Utils;
 public class SavingPresentationInReadOnlyMode {
 
 	public static void main(String[] args) {
-                  ExStart:SavingPresentationInReadOnlyMode
+               //   ExStart:SavingPresentationInReadOnlyMode
 		// The path to the documents directory.
 		
                 String dataDir = Utils.getDataDir(SavingPresentationInReadOnlyMode.class);

@@ -1,4 +1,4 @@
-﻿package com.aspose.slides.examples.Presentation.Conversion;
+package com.aspose.slides.examples.Presentation.Conversion;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
@@ -30,7 +30,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 		opts.setCompressionType(TiffCompressionTypes.Default);
 
 		// Depth – depends on the compression type and cannot be set manually.
-		// Resolution unit – is always equal to “2” (dots per inch)
+		// Resolution unit – is always equal to “2�? (dots per inch)
 
 		// Setting image DPI
 		opts.setDpiX(200);

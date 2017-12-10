@@ -1,5 +1,6 @@
 package com.aspose.slides.examples.Slides.Charts;
 
+import com.aspose.slides.Chart;
 import com.aspose.slides.ChartType;
 import com.aspose.slides.DataSourceType;
 import com.aspose.slides.ErrorBarValueType;
@@ -10,6 +11,7 @@ import com.aspose.slides.IErrorBarsFormat;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+import com.aspose.slides.ms.System.IDisposable;
 
 public class IActualLayoutAdded{
 

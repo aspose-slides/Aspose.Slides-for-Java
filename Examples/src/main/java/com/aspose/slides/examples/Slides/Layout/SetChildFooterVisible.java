@@ -1,5 +1,6 @@
 package com.aspose.slides.examples.Slides.Layout;
 
+import com.aspose.slides.IMasterSlideHeaderFooterManager;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;

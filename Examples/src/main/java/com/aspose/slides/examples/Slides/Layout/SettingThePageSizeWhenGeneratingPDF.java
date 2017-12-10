@@ -3,6 +3,7 @@ package com.aspose.slides.examples.Slides.Layout;
 import com.aspose.slides.PdfOptions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.SlideSizeScaleType;
 import com.aspose.slides.SlideSizeType;
 import com.aspose.slides.examples.Utils;
 
@@ -18,7 +19,8 @@ public class SettingThePageSizeWhenGeneratingPDF {
 		Presentation pres = new Presentation();
 
 		// Set SlideSize.Type Property
-		pres.getSlideSize().setType(SlideSizeType.A4Paper);
+		pres.getSlideSize().setSize(SlideSizeType.A4Paper,SlideSizeScaleType.DoNotScale);
+                     
 
 		// Set different properties of PDF Options
 		PdfOptions opts = new PdfOptions();

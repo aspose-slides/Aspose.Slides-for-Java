@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class ConvertingPresentationToXPSWithXpsOptions {
 
 	public static void main(String[] args) {
-		ExStart:ConvertingPresentationToXPSWithXpsOptions
+		//ExStart:ConvertingPresentationToXPSWithXpsOptions
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(ConvertingPresentationToXPSWithXpsOptions.class);
         

@@ -1,14 +1,21 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.Slides.Table;
 
+import com.aspose.slides.FillType;
 import com.aspose.slides.IAutoShape;
+import com.aspose.slides.IPPImage;
 import com.aspose.slides.IParagraph;
 import com.aspose.slides.IPortion;
 import com.aspose.slides.ISlide;
+import com.aspose.slides.ITable;
 import com.aspose.slides.ITextFrame;
+import com.aspose.slides.PictureFillMode;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class AddImageInTableCell {
 
