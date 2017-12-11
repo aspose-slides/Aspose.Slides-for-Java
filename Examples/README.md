@@ -1,6 +1,6 @@
 ## Aspose.Slides for Java Examples
 
-This package contains Java Example Project for [Aspose.Slides for Java](https://www.aspose.com/products/slides/java).
+This package contains Java Example Project for [Aspose.Slides for Java](https://products.aspose.com/slides/java).
 
 <p align="center">
   <a title="Download complete Aspose.Slides for Java source code" href="https://github.com/asposeslides/Aspose_Slides_Java/archive/master.zip">
