@@ -1,4 +1,4 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.Slides.Table;
 
 import com.aspose.slides.IAutoShape;
 import com.aspose.slides.IParagraph;

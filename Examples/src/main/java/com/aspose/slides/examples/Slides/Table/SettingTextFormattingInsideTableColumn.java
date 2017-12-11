@@ -1,4 +1,4 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.Slides.Table;
 
 import static com.aspose.slides.EffectSubtype.Right;
 import com.aspose.slides.IAutoShape;

@@ -8,10 +8,10 @@ import com.aspose.slides.IChart;
 import com.aspose.slides.IChartDataPointCollection;
 import com.aspose.slides.IChartSeries;
 import com.aspose.slides.IErrorBarsFormat;
-import static com.aspose.slides.PlaceholderType.Chart;
+import  com.aspose.slides.Chart;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
-import static com.aspose.slides.SlideLayoutType.Chart;
+import com.aspose.slides.Chart;
 import com.aspose.slides.examples.Utils;
 import com.aspose.slides.ms.System.IDisposable;
 
