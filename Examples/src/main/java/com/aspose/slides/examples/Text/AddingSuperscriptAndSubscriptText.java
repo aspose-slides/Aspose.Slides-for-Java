@@ -14,11 +14,15 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
 import com.aspose.slides.TextAutofitType;
 import com.aspose.slides.examples.Utils;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class AddingSuperscriptAndSubscriptText{
 
 	
-                  public static void main(String[] args) {
+                  public static void main(String[] args) throws IOException {
 
 		// The path to the documents directory.
 		 String dataDir = Utils.getDataDir(AddingSuperscriptAndSubscriptText.class);
@@ -64,11 +68,10 @@ public class AddingSuperscriptAndSubscriptText{
         // Add paragraphs to text box
            textFrame.getParagraphs().add(superPar);
            textFrame.getParagraphs().add(paragraph2);
- 
-           presentation.getSlides().get_Item(0).getThumbnail(2f, 2f).save("TestOut.png", ImageFormat.Png);
-          
-         
-	   presentation.save(dataDir +"formatText.pptx",SaveFormat.Pptx);
+           BufferedImage bi = presentation.getSlides().get_Item(0).getThumbnail(2f, 2f);
+          File outputfile = new File("TestOut.png");
+          ImageIO.write(bi, "png", outputfile);
+           presentation.save(dataDir +"formatText.pptx",SaveFormat.Pptx);
 
          //ExEnd:AddingSuperscriptAndSubscriptText
          }
