@@ -9,7 +9,7 @@ public class MeteredLicensing
 
 	public static void main(String[] args) 
         {
-            //Exstart:MeteredLicensing 	
+            //ExStart:MeteredLicensing 	
        com.aspose.slides.Metered metered=new com.aspose.slide.Metered();
      
         // Access the setMeteredKey property and pass public and private keys as parameters
