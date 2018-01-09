@@ -19,10 +19,7 @@ public class MeteredLicensing
             BigDecimal quantityOld = com.aspose.slide.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantityOld);
 
-        // DO PROCESSING
-        //com.aspose.cad.fileformats.cad.CadImage image = 
-        //        (com.aspose.cad.fileformats.cad.CadImage)com.aspose.cad.Image.load("BlockRefDgn.dwg");
-        
+      
         
         // Get consumed qantity value after accessing API
             BigDecimal quantity = com.aspose.slide.Metered.getConsumptionQuantity();
