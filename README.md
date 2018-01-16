@@ -16,7 +16,7 @@ Directory | Description
 
 ## Resources
 
-+ **Website:** [www.aspose.com](http://www.aspose.com)
++ **Website:** [www.aspose.com](https://www.aspose.com)
 + **Product Home:** [Aspose.Slides for Java](https://products.aspose.com/slides/java)
 + **Download:** [Download Aspose.Slides for Java](https://downloads.aspose.com/slides/java)
 + **Documentation:** [Aspose.Slides for Java Documentation](https://docs.aspose.com/display/slidesjava/Home)
