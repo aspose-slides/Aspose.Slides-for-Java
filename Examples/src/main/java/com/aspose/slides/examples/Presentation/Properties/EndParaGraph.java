@@ -1,4 +1,4 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.Presentation.Properties;
 
 import java.awt.Color;
 
