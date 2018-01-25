@@ -8,7 +8,6 @@ import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
-import com.sun.istack.internal.logging.Logger;
 import java.util.logging.Level;
 
 public class SetChartDataFromWorkBook {
@@ -17,22 +16,26 @@ public class SetChartDataFromWorkBook {
 
 //ExStart:SetChartDataFromWorkBook
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SetChartDataFromWorkBook.class);
+            // The path to the documents directory.
+            String dataDir = Utils.getDataDir(SetChartDataFromWorkBook.class);
 
-	         Presentation pres = new Presentation(dataDir+"Test.pptx");
+            Presentation pres = new Presentation();
 
-                IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Pie, 50, 50, 500, 400);
-                byte[] msln =chart.getChartData().readWorkbookStream();
-                chart.getChartData().getChartDataWorkbook().clear(0);
-                Workbook workbook=null;
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Pie, 50, 50, 500, 400);
+            byte[] msln =chart.getChartData().readWorkbookStream();
+            chart.getChartData().getChartDataWorkbook().clear(0);
+            com.aspose.cells.Workbook workbook=null;
             try {
               workbook = new com.aspose.cells.Workbook(dataDir+"a1.xlsx");
              } catch (Exception ex) {
-               Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
+               java.util.logging.Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
               }
                java.io.ByteArrayOutputStream mem = new java.io.ByteArrayOutputStream();
-               workbook.save(mem, com.aspose.cells.SaveFormat.XLSX);
+            try {
+                workbook.save(mem, com.aspose.cells.SaveFormat.XLSX);
+            } catch (Exception ex) {
+                java.util.logging.Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
               chart.getChartData().getChartDataWorkbook();
               chart.getChartData().writeWorkbookStream(mem.toByteArray());
