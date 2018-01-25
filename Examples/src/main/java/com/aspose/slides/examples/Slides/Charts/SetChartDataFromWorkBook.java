@@ -29,7 +29,7 @@ public class SetChartDataFromWorkBook {
             try {
               workbook = new com.aspose.cells.Workbook(dataDir+"a1.xlsx");
              } catch (Exception ex) {
-               Logger.getLogger(JavaApplication1.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
               }
                java.io.ByteArrayOutputStream mem = new java.io.ByteArrayOutputStream();
                workbook.save(mem, com.aspose.cells.SaveFormat.XLSX);
