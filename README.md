@@ -18,7 +18,7 @@ Directory | Description
 
 + **Website:** [www.aspose.com](https://www.aspose.com)
 + **Product Home:** [Aspose.Slides for Java](https://products.aspose.com/slides/java)
-+ **Download:** [Download Aspose.Slides for Java](https://downloads.aspose.com/slides/java)
++ **Download:** [Download Aspose.Slides for Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-slides/)
 + **Documentation:** [Aspose.Slides for Java Documentation](https://docs.aspose.com/display/slidesjava/Home)
 + **Forum:** [Aspose.Slides for Java Forum](https://forum.aspose.com/c/slides)
 + **Blog:** [Aspose.Slides for Java Blog](https://blog.aspose.com/category/aspose-products/aspose-slides-product-family/)
