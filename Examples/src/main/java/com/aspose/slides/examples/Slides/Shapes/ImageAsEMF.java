@@ -21,7 +21,8 @@ public class ImageAsEMF {
 public static void main(String[] args) {
 
     String dataDir = Utils.getDataDir(ImageAsEMF.class);
-     Workbook book = new Workbook(dataDir + "chart.xlsx");
+    //ExStart:ImageAsEMF
+    Workbook book = new Workbook(dataDir + "chart.xlsx");
      Worksheet sheet = book.getWorksheets().get(0); //or get_Item()
      com.aspose.cells.ImageOrPrintOptions options = new com.aspose.cells.ImageOrPrintOptions();
      options.HorizontalResolution = 200;
@@ -48,7 +49,7 @@ public static void main(String[] args) {
            (float)pres.getSlideSize().getSize().getWidth(), (float)pres.getSlideSize().getSize().getHeight(), emfImage);
     
      }
-   
+     //ExEnd:ImageAsEMF
      }
   
 }
