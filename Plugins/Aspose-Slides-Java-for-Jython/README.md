@@ -4,7 +4,7 @@ Aspose.Slides Java for Jython is a project that demonstrates / provides the Aspo
 
 ## Download
 
-* To download Aspose.Slides for Java API to be used with these examples, Please navigate to [Aspose.Slides for Java](https://downloads.aspose.com/slides/java) 
+* To download Aspose.Slides for Java API to be used with these examples, Please navigate to [Aspose.Slides for Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-slides/) 
 * Place downloaded jar file into "lib" directory. 
 * Replace "your-lib" with the jar filename.
 

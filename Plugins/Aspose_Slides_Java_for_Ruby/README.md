@@ -7,7 +7,7 @@ Execute following command.
 
     $ gem install asposeslidesjava
 
-To download Aspose.Slides for Java API to be used with these examples through RJB, Please navigate to [download section](https://downloads.aspose.com/slides/java).
+To download Aspose.Slides for Java API to be used with these examples through RJB, Please navigate to [download section](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-slides/).
 
 Note: Create jars folder at root of the gem folder and copy downloaded Aspose.Slides for java component into it.
 
