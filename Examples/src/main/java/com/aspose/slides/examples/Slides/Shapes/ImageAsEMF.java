@@ -11,7 +11,6 @@ import com.aspose.cells.Workbook;
 import com.aspose.cells.Worksheet;
 import com.aspose.slides.examples.Utils;
 import java.awt.Color;
-
 import com.aspose.slides.FillType;
 import com.aspose.slides.IShape;
 import com.aspose.slides.ISlide;
@@ -32,7 +31,6 @@ public static void main(String[] args) throws Exception {
      options.HorizontalResolution = 200;
      options.VerticalResolution = 200;
      options.ImageFormat = ImageFormat.Emf;// <- check this
-
      //Save the workbook to stream
      SheetRender sr = new SheetRender(sheet, options);
      Presentation pres = new Presentation();
