@@ -19,7 +19,8 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cells</artifactId>
-            <version>18.1</version>
+            <version>17.12</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <repositories>

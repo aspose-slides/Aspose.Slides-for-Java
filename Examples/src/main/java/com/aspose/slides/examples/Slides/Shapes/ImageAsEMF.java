@@ -5,6 +5,10 @@
  */
 package com.aspose.slides.examples.Slides.Shapes;
 
+import com.aspose.cells.ImageFormat;
+import com.aspose.cells.SheetRender;
+import com.aspose.cells.Workbook;
+import com.aspose.cells.Worksheet;
 import com.aspose.slides.examples.Utils;
 import java.awt.Color;
 
@@ -18,7 +22,7 @@ import com.aspose.slides.examples.Utils;
 
 public class ImageAsEMF {
     
-public static void main(String[] args) {
+public static void main(String[] args) throws Exception {
 
     String dataDir = Utils.getDataDir(ImageAsEMF.class);
     //ExStart:ImageAsEMF
