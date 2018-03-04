@@ -9,7 +9,7 @@ import com.aspose.slides.examples.Utils;
 public class AccessingTheSmartArtShapeInSlide {
 
 	public static void main(String[] args) {
-                  // ExStart:AccessingTheSmartArtShapeInSlide
+                  //ExStart:AccessingTheSmartArtShapeInSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingTheSmartArtShapeInSlide.class);
 

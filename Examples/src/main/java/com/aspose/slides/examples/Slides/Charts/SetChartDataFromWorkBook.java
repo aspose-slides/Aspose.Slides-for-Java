@@ -9,6 +9,7 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class SetChartDataFromWorkBook {
 
@@ -28,11 +29,11 @@ public class SetChartDataFromWorkBook {
             try {
               workbook = new com.aspose.cells.Workbook(dataDir+"a1.xlsx");
              } catch (Exception ex) {
-<<<<<<< HEAD
+
                Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
-=======
+
                java.util.logging.Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
->>>>>>> f98c60e7a50ff983995b7a1283b3d5a635c62f90
+
               }
                java.io.ByteArrayOutputStream mem = new java.io.ByteArrayOutputStream();
             try {

@@ -15,7 +15,7 @@ public class ManagingParagraphsAlignment {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingParagraphsAlignment.class);
-               // ExStart:ManagingParagraphsAlignment
+               //ExStart:ManagingParagraphsAlignment
 		// Instantiate a Presentation object that represents a PPTX file
 		Presentation pres = new Presentation(dataDir + "ParagraphsAlignment.pptx");
 

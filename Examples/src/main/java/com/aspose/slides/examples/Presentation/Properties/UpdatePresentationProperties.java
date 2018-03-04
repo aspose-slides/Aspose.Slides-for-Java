@@ -8,7 +8,7 @@ import com.aspose.slides.examples.Utils;
 public class UpdatePresentationProperties {
 
 	public static void main(String[] args) {
-		// ExStart:UpdatePresentationProperties
+		//ExStart:UpdatePresentationProperties
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UpdatePresentationProperties.class);
 
@@ -25,6 +25,6 @@ public class UpdatePresentationProperties {
 		// update the presentation with a new values
 		info.updateDocumentProperties(props);
 		info.writeBindedPresentation(dataDir + "Presentation.pptx");
-		// ExEnd:UpdatePresentationProperties
+		//ExEnd:UpdatePresentationProperties
 	}
 }

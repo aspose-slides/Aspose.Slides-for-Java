@@ -18,7 +18,7 @@ public class ApplyingOuterShadowEffects {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ApplyingOuterShadowEffects.class);
-               // ExStart: ApplyingOuterShadowEffects
+               //ExStart: ApplyingOuterShadowEffects
 		// Create an instance of Presentation class
 		Presentation Pres = new Presentation();
 

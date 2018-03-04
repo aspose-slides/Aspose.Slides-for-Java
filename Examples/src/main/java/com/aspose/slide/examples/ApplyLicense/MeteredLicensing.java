@@ -10,19 +10,19 @@ public class MeteredLicensing
 	public static void main(String[] args) 
         {
             //ExStart:MeteredLicensing 	
-       com.aspose.slides.Metered metered=new com.aspose.slide.Metered();
+       com.aspose.slides.Metered metered=new com.aspose.slides.Metered();
      
         // Access the setMeteredKey property and pass public and private keys as parameters
         metered.setMeteredKey("<valid pablic key>", "<valid private key>");
         
         // Get consumed qantity value before accessing API
-            BigDecimal quantityOld = com.aspose.slide.Metered.getConsumptionQuantity();
+            BigDecimal quantityOld = com.aspose.slides.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantityOld);
 
       
         
         // Get consumed qantity value after accessing API
-            BigDecimal quantity = com.aspose.slide.Metered.getConsumptionQuantity();
+            BigDecimal quantity = com.aspose.slides.Metered.getConsumptionQuantity();
         System.out.println("Consumption quantity" + quantity());
 		
 

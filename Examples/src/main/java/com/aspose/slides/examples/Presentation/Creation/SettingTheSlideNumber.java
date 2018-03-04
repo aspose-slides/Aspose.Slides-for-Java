@@ -10,7 +10,7 @@ public class SettingTheSlideNumber {
 		
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(SettingTheSlideNumber.class);
-                 // ExStart:SettingTheSlideNumber
+                 //ExStart:SettingTheSlideNumber
 		// Opening the presentation file by passing the file path to the
 		// constructor of Presentation class
 		Presentation pres = new Presentation(dataDir + "Presentation.pptx");

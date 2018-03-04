@@ -38,7 +38,7 @@ public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 		// Save the destination presentation to disk
 		destPres.save(dataDir + "helloworld_dest3.pptx", SaveFormat.Pptx);
            
-          //  ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
+          //ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
 	
 }
 

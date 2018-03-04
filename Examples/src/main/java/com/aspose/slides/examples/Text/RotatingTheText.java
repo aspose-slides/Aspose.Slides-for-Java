@@ -20,7 +20,7 @@ public class RotatingTheText {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RotatingTheText.class);
-               // ExStart:RotatingTheText
+               //ExStart:RotatingTheText
 		// Create an instance of Presentation class
 		Presentation pres = new Presentation();
 

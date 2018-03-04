@@ -18,7 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class ManagingFontFamilyOfText {
 
 	public static void main(String[] args) {
-                // ExStart:ManagingFontFamilyOfText
+                //ExStart:ManagingFontFamilyOfText
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingFontFamilyOfText.class);
 

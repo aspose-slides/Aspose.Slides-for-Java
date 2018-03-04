@@ -13,7 +13,7 @@ public class AddingSmartArtShapeNodes {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingSmartArtShapeNodes.class);
-               // ExStart:AddingSmartArtShapeNodes
+               //ExStart:AddingSmartArtShapeNodes
 		// Load the desired the presentation
 		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
 

@@ -14,7 +14,7 @@ public class ManagingLineSpacingOfTheParagraph {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingLineSpacingOfTheParagraph.class);
-                   //  ExStart:ManagingLineSpacingOfTheParagraph
+                   //ExStart:ManagingLineSpacingOfTheParagraph
 		// Loading a presentation with an AutoShape having some text in it.
 		Presentation pres = new Presentation(dataDir + "Paragraphs.pptx");
 

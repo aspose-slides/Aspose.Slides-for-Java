@@ -13,7 +13,7 @@ public class AccessingSmartArtShapeChildNodes {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingSmartArtShapeChildNodes.class);
-               //  ExStart:AccessingSmartArtShapeChildNodes
+               //ExStart:AccessingSmartArtShapeChildNodes
 		// Instantiate Presentation Class
 		Presentation pres = new Presentation(dataDir + "AccessChildNodes.pptx");
 

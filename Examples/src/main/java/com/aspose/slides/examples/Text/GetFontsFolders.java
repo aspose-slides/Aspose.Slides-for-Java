@@ -9,12 +9,12 @@ public class GetFontsFolders {
 
 	public static void main(String[] args) {
             
-// ExStart:GetFontsFolders
+//ExStart:GetFontsFolders
 		// The path to the documents directory.
 		
         String[] fontFolders = FontsLoader.getFontFolders();
 
-              // ExEnd:GetFontsFolders
+              //ExEnd:GetFontsFolders
 	
 }
 
