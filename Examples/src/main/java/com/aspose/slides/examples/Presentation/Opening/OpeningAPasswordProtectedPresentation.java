@@ -23,6 +23,6 @@ public class OpeningAPasswordProtectedPresentation {
 
 		// Printing the total number of slides present in the presentation
 		System.out.println(pres.getSlides().size());
-               //  ExEnd:OpeningAPasswordProtectedPresentation
+               //ExEnd:OpeningAPasswordProtectedPresentation
 	}
 }

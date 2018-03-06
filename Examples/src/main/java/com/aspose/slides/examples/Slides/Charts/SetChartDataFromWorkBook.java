@@ -32,7 +32,12 @@ public class SetChartDataFromWorkBook {
 
                Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
 
+<<<<<<< HEAD
               
+=======
+               java.util.logging.Logger.getLogger(SetChartDataFromWorkBook.class.getName()).log(Level.SEVERE, null, ex);
+
+>>>>>>> 892f9dc1d13c64adf13b58f64081931f8f533637
               }
                java.io.ByteArrayOutputStream mem = new java.io.ByteArrayOutputStream();
             try {

@@ -14,7 +14,7 @@ public class ChangingSmartArtShapeColorStyle {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingSmartArtShapeColorStyle.class);
-                  // ExStart:ChangingSmartArtShapeColorStyle
+                  //ExStart:ChangingSmartArtShapeColorStyle
 		// Instantiate Presentation Class
 		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
 

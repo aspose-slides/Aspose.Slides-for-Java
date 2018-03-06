@@ -37,7 +37,7 @@ public class SettingFillFormatForSmartArtNode {
 
 		// Save the presentation
 		pres.save(dataDir + "TestSmart.pptx", SaveFormat.Pptx);
-            // ExEnd:SettingFillFormatForSmartArtNode
+            //ExEnd:SettingFillFormatForSmartArtNode
 	
          }
 

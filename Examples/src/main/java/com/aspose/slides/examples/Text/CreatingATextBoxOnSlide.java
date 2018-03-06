@@ -13,7 +13,7 @@ import com.aspose.slides.examples.Utils;
 public class CreatingATextBoxOnSlide {
 
 	public static void main(String[] args) {
-                  //  ExStart:CreatingATextBoxOnSlide
+                  //ExStart:CreatingATextBoxOnSlide
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(CreatingATextBoxOnSlide.class);
 

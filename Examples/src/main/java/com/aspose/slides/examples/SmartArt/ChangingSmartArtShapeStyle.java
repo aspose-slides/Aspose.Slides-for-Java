@@ -38,7 +38,7 @@ public class ChangingSmartArtShapeStyle {
 		// Saving presentation
 		pres.save(dataDir + "ChangeSmartArtStyle.pptx", SaveFormat.Pptx);
 
-              // ExEnd:ChangingSmartArtShapeStyle
+              //ExEnd:ChangingSmartArtShapeStyle
 	}
 
 }

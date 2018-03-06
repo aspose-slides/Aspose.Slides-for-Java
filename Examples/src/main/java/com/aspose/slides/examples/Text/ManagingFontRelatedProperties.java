@@ -18,7 +18,7 @@ import com.aspose.slides.examples.Utils;
 public class ManagingFontRelatedProperties {
 
 	public static void main(String[] args) {
-                // ExStart:ManagingFontRelatedProperties
+                //ExStart:ManagingFontRelatedProperties
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ManagingFontRelatedProperties.class);
 

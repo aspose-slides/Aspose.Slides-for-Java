@@ -10,7 +10,7 @@ import com.aspose.slides.examples.Utils;
 public class ChangingTextOnSmartArtNode {
 
 	public static void main(String[] args) {
-                //  ExStart:ChangingTextOnSmartArtNode 
+                //ExStart:ChangingTextOnSmartArtNode 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ChangingTextOnSmartArtNode.class);
 
@@ -30,7 +30,7 @@ public class ChangingTextOnSmartArtNode {
 		// Saving Presentation
 		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
 
-	// ExEnd:ChangingTextOnSmartArtNode 
+	//ExEnd:ChangingTextOnSmartArtNode 
           }
 
 }

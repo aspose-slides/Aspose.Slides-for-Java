@@ -18,7 +18,7 @@ public class SettingTheAnchorOfTextFrame {
 
 	public static void main(String[] args) {
 
-            // ExStart:SettingTheAnchorOfTextFrame
+            //ExStart:SettingTheAnchorOfTextFrame
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheAnchorOfTextFrame.class);
 

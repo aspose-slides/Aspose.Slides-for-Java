@@ -11,7 +11,7 @@ public class AddEmbeddedFonts  {
 
 	public static void main(String[] args) {
             
-// ExStart:AddEmbeddedFonts
+//ExStart:AddEmbeddedFonts
 		// The path to the documents directory.
 		
          String dataDir = Utils.getDataDir(AddEmbeddedFonts.class);
@@ -22,7 +22,7 @@ for (IFontData font : except(allFonts, embeddedFonts))
 {
 pres.getFontsManager().addEmbeddedFont(font,EmbedFontCharacters.All);
 }
-              // ExEnd:AddEmbeddedFonts
+              //ExEnd:AddEmbeddedFonts
 	
 }
 

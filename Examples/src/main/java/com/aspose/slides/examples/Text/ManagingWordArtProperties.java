@@ -54,7 +54,7 @@ public class ManagingWordArtProperties {
 
 		// Write the presentation as a PPTX file
 		pres.save(dataDir + "WordArt.pptx", SaveFormat.Pptx);
-               // ExEnd:ManagingWordArtProperties
+               //ExEnd:ManagingWordArtProperties
 
 	}
 

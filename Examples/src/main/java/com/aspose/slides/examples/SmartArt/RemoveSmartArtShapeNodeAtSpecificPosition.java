@@ -12,7 +12,7 @@ public class RemoveSmartArtShapeNodeAtSpecificPosition {
 
 	public static void main(String[] args) {
 
-             //  ExStart:RemoveSmartArtShapeNodeAtSpecificPosition 
+             //ExStart:RemoveSmartArtShapeNodeAtSpecificPosition 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(RemoveSmartArtShapeNodeAtSpecificPosition.class);
 
