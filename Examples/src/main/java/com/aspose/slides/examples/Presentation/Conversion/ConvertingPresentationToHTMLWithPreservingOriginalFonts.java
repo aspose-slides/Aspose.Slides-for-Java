@@ -17,7 +17,7 @@ public class ConvertingPresentationToHTMLWithPreservingOriginalFonts{
         Presentation pres = new Presentation("input.pptx");
         try
         {
-            // exclude default presentation fonts
+            //Exclude default presentation fonts
             String[] fontNameExcludeList = { "Calibri", "Arial" };
 
             EmbedAllFontsHtmlController embedFontsController = new EmbedAllFontsHtmlController(fontNameExcludeList);

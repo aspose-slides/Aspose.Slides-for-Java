@@ -19,7 +19,7 @@ public class ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController {
      Presentation pres = new Presentation(dataDir+"pres.pptx");
   try
      {
-         // exclude default presentation fonts
+         //Exclude default presentation fonts
          String[] fontNameExcludeList = { "Calibri", "Arial" };
 
 

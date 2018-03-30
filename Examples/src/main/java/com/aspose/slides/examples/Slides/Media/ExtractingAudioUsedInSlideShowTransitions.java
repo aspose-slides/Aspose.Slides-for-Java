@@ -23,7 +23,7 @@ public class ExtractingAudioUsedInSlideShowTransitions {
 		// Get the slideshow transition effects for slide
 		ISlideShowTransition transition = slide.getSlideShowTransition();
 
-		// Extract sound in byte array
+		//Extract sound in byte array
 		byte[] audio = transition.getSound().getBinaryData();
 		System.out.println("Length: " + audio.length);
 	            //ExEnd:ExtractingAudioUsedInSlideShowTransitions

@@ -34,7 +34,7 @@ public class ExportingParagraphsTextToHTML {
 			OutputStream os = new FileOutputStream(dataDir + "file.html");
 			Writer writer = new OutputStreamWriter(os, "UTF-8");
 
-			// Extracting first paragraph as HTML
+			//Extracting first paragraph as HTML
 			// Writing Paragraphs data to HTML by providing paragraph starting index, total paragraphs to be copied
 			writer.write(ashape.getTextFrame().getParagraphs().exportToHtml(0, ashape.getTextFrame().getParagraphs().getCount(), null));
 			writer.close();
