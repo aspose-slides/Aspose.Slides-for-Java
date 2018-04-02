@@ -40,7 +40,7 @@ public class SaveToPDFNotesWithCustomSlideSize {
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "testPDFnotes.pdf", SaveFormat.PdfNotes);
 
-         //   ExEnd:SaveToPDFNotesWithCustomSlideSize
+         //ExEnd:SaveToPDFNotesWithCustomSlideSize
 	}
 
 }

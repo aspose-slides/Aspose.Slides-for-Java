@@ -5,10 +5,6 @@
  */
 package com.aspose.slides.examples.Slides.Charts;
 
-/**
- *
- * @author Rizwan Khan
- */
 class Workbook {
     
 }

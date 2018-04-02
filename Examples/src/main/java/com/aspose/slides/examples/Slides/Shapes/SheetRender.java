@@ -5,10 +5,7 @@
  */
 package com.aspose.slides.examples.Slides.Shapes;
 
-/**
- *
- * @author Rizwan Khan
- */
+
 class SheetRender {
     
 }

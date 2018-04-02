@@ -38,7 +38,7 @@ public class GeneratingSVGImageWithCustomIDS {
         if (pres != null) pres.dispose();
       }		
 
-//ExEnd:GGeneratingSVGImageWithCustomIDS
+//ExEnd:GeneratingSVGImageWithCustomIDS
 
         }
 }

@@ -5,10 +5,7 @@
  */
 package com.aspose.slide;
 
-/**
- *
- * @author Rizwan Khan
- */
+
 public class Metered extends com.aspose.slides.Metered {
     
 }

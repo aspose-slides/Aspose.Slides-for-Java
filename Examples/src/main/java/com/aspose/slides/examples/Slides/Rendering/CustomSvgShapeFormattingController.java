@@ -9,9 +9,10 @@ import com.aspose.slides.ISvgShape;
 import com.aspose.slides.ISvgShapeFormattingController;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
-//ExStart:CustomSvgShapeFormattingController
+
 class CustomSvgShapeFormattingController implements ISvgShapeFormattingController
 {
+    //ExStart:CustomSvgShapeFormattingController
  
     private int m_shapeIndex;
 

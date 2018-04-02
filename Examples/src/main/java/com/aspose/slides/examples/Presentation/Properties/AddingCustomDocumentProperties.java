@@ -9,7 +9,7 @@ public class AddingCustomDocumentProperties {
 
 	public static void main(String[] args) {
 
-                     //ExStart:AddingCustomDocumentProperties
+                //ExStart:AddingCustomDocumentProperties
                      
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingCustomDocumentProperties.class);

@@ -9,7 +9,7 @@ public class  DetectionMicrosoftPowerPoint95presentations{
 
 	public static final void main(String[] args) {
 	
-  //ExStart: DetectionMicrosoftPowerPoint95presentations	
+  //ExStart:DetectionMicrosoftPowerPoint95presentations	
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(DetectionMicrosoftPowerPoint95presentations.class);
             String path = null;

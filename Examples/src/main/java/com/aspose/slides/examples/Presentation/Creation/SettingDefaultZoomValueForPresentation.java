@@ -8,6 +8,7 @@ public class SettingDefaultZoomValueForPresentation {
 	
 	public static final void main(String[] args) {
 		
+            //ExStart:SettingDefaultZoomValueForPresentation
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(SettingDefaultZoomValueForPresentation.class);
         
@@ -22,4 +23,5 @@ public class SettingDefaultZoomValueForPresentation {
 		pres.save(dataDir + "Zoom.pptx", SaveFormat.Pptx);
 
 	}
+        //ExEnd:SettingDefaultZoomValueForPresentation
 }
