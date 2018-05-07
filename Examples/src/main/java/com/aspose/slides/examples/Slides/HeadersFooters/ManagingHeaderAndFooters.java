@@ -23,8 +23,8 @@ public class ManagingHeaderAndFooters {
 		Presentation pres = new Presentation(dataDir + "headerTest.pptx");
 
 		// Setting Footer
-		pres.getHeaderFooterManager().setFooterText("My Footer text");
-		pres.getHeaderFooterManager().setFooterVisible(true);
+		pres.getHeaderFooterManager().setAllFootersText("My Footer text");
+		pres.getHeaderFooterManager().setAllFootersVisibility(true);
 
 		// Access and Update Header
 		IMasterNotesSlide masterNotesSlide = pres.getMasterNotesSlideManager().getMasterNotesSlide();

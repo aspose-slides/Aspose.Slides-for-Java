@@ -6,6 +6,7 @@ import com.aspose.slides.IChartDataWorkbook;
 import com.aspose.slides.IChartSeries;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.examples.Utils;
 
 
 public class FunnelChart {

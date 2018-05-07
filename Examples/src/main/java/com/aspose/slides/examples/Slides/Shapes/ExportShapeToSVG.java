@@ -1,6 +1,7 @@
 package com.aspose.slides.examples.Slides.Shapes;
 
 import com.aspose.slides.Presentation;
+import com.aspose.slides.examples.Utils;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 

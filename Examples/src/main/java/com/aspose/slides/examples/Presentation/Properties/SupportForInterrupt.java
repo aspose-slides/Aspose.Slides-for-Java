@@ -4,6 +4,7 @@ import com.aspose.slides.InterruptionTokenSource;
 import com.aspose.slides.LoadOptions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.examples.Utils;
 import java.awt.Dimension;
 
 

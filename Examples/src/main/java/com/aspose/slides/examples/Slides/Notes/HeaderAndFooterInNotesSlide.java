@@ -6,6 +6,7 @@ import com.aspose.slides.INotesSlide;
 import com.aspose.slides.INotesSlideHeaderFooterManager;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.examples.Utils;
 
 
 public class HeaderAndFooterInNotesSlide {

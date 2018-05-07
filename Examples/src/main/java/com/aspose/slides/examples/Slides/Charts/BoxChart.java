@@ -7,6 +7,7 @@ import com.aspose.slides.IChartSeries;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.QuartileMethodType;
 import com.aspose.slides.SaveFormat;
+import com.aspose.slides.examples.Utils;
 
 
 public class BoxChart {
