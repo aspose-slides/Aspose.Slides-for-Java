@@ -16,7 +16,7 @@ public class UpdatePresentationPropertiesUsingNewTemplate {
 
 	private static void updateByTemplate() {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate.class);
+		String dataDir = Utils.getDataDir(UpdatePresentationPropertiesUsingNewTemplate.class);
 
 		DocumentProperties template = new DocumentProperties();
 		template.setAuthor("Template Author");
