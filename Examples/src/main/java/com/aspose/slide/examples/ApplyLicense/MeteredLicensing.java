@@ -4,12 +4,12 @@ import java.math.BigDecimal;
 
 
 
-public class MeteredLicensing 
-{
+public class MeteredLicensing {
 
 	public static void main(String[] args) 
         {
-            //ExStart:MeteredLicensing 	
+            //ExStart:MeteredLicensing
+	
        com.aspose.slides.Metered metered=new com.aspose.slides.Metered();
      
         // Access the setMeteredKey property and pass public and private keys as parameters
@@ -31,5 +31,6 @@ public class MeteredLicensing
     private static String quantity() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    //ExEnd:MeteredLicensing 
+
+    //ExEnd:MeteredLicensing
 }

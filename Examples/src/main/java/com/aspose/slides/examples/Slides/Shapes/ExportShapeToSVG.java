@@ -8,7 +8,8 @@ import java.io.OutputStream;
 
 public class ExportShapeToSVG {
     
-//ExStart:ExportShapeToSVG 
+//ExStart:ExportShapeToSVG
+
 public static void main(String[] args) {
 String dataDir = Utils.getDataDir(ExportShapeToSVG.class);
 String pptxFileName = "Presentation.pptx";
@@ -21,5 +22,7 @@ pres.dispose();
 }
 
   }
-//ExEnd:ExportShapeToSVG 
+
+//ExEnd:ExportShapeToSVG
+
 }

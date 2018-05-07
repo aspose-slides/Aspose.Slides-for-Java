@@ -11,10 +11,10 @@ import com.aspose.slides.examples.Utils;
 public class AccessingSmartArtShapeWithParticularLayoutType {
 
 	public static void main(String[] args) {
-                   //ExEnd:AccessingSmartArtShapeWithParticularLayoutType
+                   
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AccessingSmartArtShapeWithParticularLayoutType.class);
-
+//ExStart:AccessingSmartArtShapeWithParticularLayoutType
 		// Instantiate Presentation Class
 		Presentation pres = new Presentation(dataDir + "SmartArtNode.pptx");
 

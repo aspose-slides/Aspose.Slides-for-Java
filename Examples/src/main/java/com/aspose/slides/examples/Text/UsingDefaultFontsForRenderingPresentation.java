@@ -15,9 +15,11 @@ import com.aspose.slides.examples.Utils;
 public class UsingDefaultFontsForRenderingPresentation {
 
 	public static void main(String[] args) throws IOException {
-                   //ExStart:UsingDefaultFontsForRenderingPresentation
-		// The path to the documents directory.
+                 
+ 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(UsingDefaultFontsForRenderingPresentation.class);
+
+ //ExStart:UsingDefaultFontsForRenderingPresentation
 
 		// Use load options to define the default regualr and asian fonts
 		LoadOptions lo = new LoadOptions(LoadFormat.Auto);
@@ -36,6 +38,8 @@ public class UsingDefaultFontsForRenderingPresentation {
 
 		// Generate XPS
 		presentation.save(dataDir + "output.xps", SaveFormat.Xps);
-            //ExEnd:UsingDefaultFontsForRenderingPresentation
+        
+    //ExEnd:UsingDefaultFontsForRenderingPresentation
+
 	}
 }

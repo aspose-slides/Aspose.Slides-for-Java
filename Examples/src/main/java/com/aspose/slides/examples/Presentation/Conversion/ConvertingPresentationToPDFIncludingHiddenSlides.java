@@ -10,7 +10,9 @@ public class ConvertingPresentationToPDFIncludingHiddenSlides {
 	public static void main(String[] args) {
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ConvertingPresentationToPDFIncludingHiddenSlides.class);
-		//ExStart:ConvertingPresentationToPDFIncludingHiddenSlides
+		
+//ExStart:ConvertingPresentationToPDFIncludingHiddenSlides
+
                   Presentation pres = new Presentation(dataDir + "demo.pptx");
 		try {
 			// Instantiate the PdfOptions class
@@ -24,7 +26,9 @@ public class ConvertingPresentationToPDFIncludingHiddenSlides {
 		} finally {
 			if (pres != null)
 				pres.dispose();
-                 //ExEnd:ConvertingPresentationToPDFIncludingHiddenSlides
+               
+  //ExEnd:ConvertingPresentationToPDFIncludingHiddenSlides
+
 		}
 	}
 }

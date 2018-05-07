@@ -13,8 +13,11 @@ public class HeaderAndFooterInNotesSlide {
     
 public static void main(String[] args) {
 
- //ExStart:HeaderAndFooterInNotesSlide    
+  
 String dataDir = Utils.getDataDir(HeaderAndFooterInNotesSlide.class);
+
+//ExStart:HeaderAndFooterInNotesSlide
+
 Presentation presentation = new Presentation("presentation.pptx");
 {
 // Change Header and Footer settings for notes master and all notes slides

@@ -18,7 +18,9 @@ public class ModifyingActiveXControlsInSlide {
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(ModifyingActiveXControlsInSlide.class);
+
                 //ExStart:ModifyingActiveXControlsInSlide
+
 		// Accessing the presentation with ActiveX controls
 		Presentation pres = new Presentation(dataDir + "ActiveX.pptm");
 
@@ -116,6 +118,7 @@ public class ModifyingActiveXControlsInSlide {
 		// removing controls
 		pres.getSlides().get_Item(0).getControls().clear();
 		pres.save(dataDir + "withActiveX-cleared_java.pptm", SaveFormat.Pptm);
+
                //ExEnd:ModifyingActiveXControlsInSlide
 	}
 

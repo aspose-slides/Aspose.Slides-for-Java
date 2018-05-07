@@ -14,11 +14,13 @@ import com.aspose.slides.examples.Utils;
 public class AddingFormattedEllipseInTheSlide {
 
 	public static void main(String[] args) {
-	//ExStart:AddingFormattedEllipseInTheSlide
+
 
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(AddingFormattedEllipseInTheSlide.class);
+
+	//ExStart:AddingFormattedEllipseInTheSlide
 
 		// Instantiate Presentation class that represents the PPTX
 		Presentation pres = new Presentation();
@@ -40,6 +42,7 @@ public class AddingFormattedEllipseInTheSlide {
 
 		// Write the PPTX file to disk
 		pres.save(dataDir + "EllipseShp1.pptx", SaveFormat.Pptx);
+
 	//ExEnd:AddingFormattedEllipseInTheSlide
 
 	}

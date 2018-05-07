@@ -6,16 +6,19 @@ import com.aspose.slides.IPresentationInfo;
 import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.Utils;
 
-public class UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate {
+public class UpdatePresPropsUsingAnotherPresentationAsTemplate {
+	
+//ExStart:UpdatePresPropsUsingAnotherPresentationAsTemplate
 
 	public static void main(String args[]) {
-		//ExStart:UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate
+
+	
             updateByTemplate();
 	}
 
 	private static void updateByTemplate() {
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate.class);
+		String dataDir = Utils.getDataDir(UpdatePresPropsUsingAnotherPresentationAsTemplate.class);
 
 		DocumentProperties template;
 		IPresentationInfo info = PresentationFactory.getInstance().getPresentationInfo(dataDir + "Presentation.pptx");
@@ -39,6 +42,7 @@ public class UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsA
 		IPresentationInfo toUpdate = PresentationFactory.getInstance().getPresentationInfo(path);
 		toUpdate.updateDocumentProperties(template);
 		toUpdate.writeBindedPresentation(path);
-	//ExEnd:UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate
      }
+	//ExEnd:UpdatePresPropsUsingAnotherPresentationAsTemplate
+
 }

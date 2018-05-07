@@ -3,12 +3,15 @@ package com.aspose.slides.examples.Presentation.Saving;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
 
-public class SavingAPasswordProtectedPresentationWithReadAccessToDocumentProperties {
+public class SavingAPassProtectPresWithReadAccessToDocProps {
 
 	public static void main(String[] args) {
-               //ExStart:SavingAPasswordProtectedPresentationWithReadAccessToDocumentProperties
+
+
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SavingAPasswordProtectedPresentationWithReadAccessToDocumentProperties.class);
+		String dataDir = Utils.getDataDir(SavingAPassProtectPresWithReadAccessToDocProps.class);
+
+               //ExStart:SavingAPassProtectPresWithReadAccessToDocProps
 
 		// Instantiate a Presentation object that represents a PPT file
 		Presentation pres = new Presentation();
@@ -24,7 +27,8 @@ public class SavingAPasswordProtectedPresentationWithReadAccessToDocumentPropert
 		// Save your presentation to a file
 		pres.save(dataDir + "demoPassDocument.pptx", com.aspose.slides.SaveFormat.Pptx);
 
-	 //ExEnd:SavingAPasswordProtectedPresentationWithReadAccessToDocumentProperties
+	 //ExEnd:SavingAPassProtectPresWithReadAccessToDocProps
+
           }
 
 }

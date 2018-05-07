@@ -26,6 +26,7 @@ public class EmbedFontsInHtml {
 	public static void main(String[] args) throws IOException {
 
 		//ExStart:EmbedFontsInHtml
+
                // The path to the documents directory.
 		String dataDir = Utils.getDataDir(EmbedFontsInHtml.class);
              //   byte[] memoryFont1 = ReadAllBytesFromFile("customfonts\\CustomFont1.ttf");

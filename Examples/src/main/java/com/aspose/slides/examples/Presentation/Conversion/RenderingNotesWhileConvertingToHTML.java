@@ -11,9 +11,12 @@ public class RenderingNotesWhileConvertingToHTML {
 
 	private static final String dataDir = Utils.getSharedDataDir(RenderingNotesWhileConvertingToHTML.class) + "Conversion/";
 
-         //ExStart:RenderingNotesWhileConvertingToHTML
+       
 	public static void main(String[] args) {
-        Presentation pres = new Presentation("Presentation.pptx");
+        
+  //ExStart:RenderingNotesWhileConvertingToHTML
+
+Presentation pres = new Presentation("Presentation.pptx");
      try {
           // Saving notes pages
         pres.save("Output.html", SaveFormat.HtmlNotes);
@@ -21,5 +24,7 @@ public class RenderingNotesWhileConvertingToHTML {
         finally {
         pres.dispose();
         }
+
          //ExEnd:RenderingNotesWhileConvertingToHTML
+
         }}

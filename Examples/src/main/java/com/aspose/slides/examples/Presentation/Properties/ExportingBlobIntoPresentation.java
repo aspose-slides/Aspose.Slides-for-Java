@@ -17,9 +17,13 @@ import java.io.OutputStream;
 
 public class ExportingBlobIntoPresentation{
          public static final void main(String[] args) throws FileNotFoundException, IOException {
-        //ExStart:ExportingBlobIntoPresentation
+      
+
          // The path to the documents directory.
 	 String dataDir = Utils.getDataDir(ExportingBlobIntoPresentation.class);
+
+  //ExStart:ExportingBlobIntoPresentation
+
            // supposed the presentation contains a multiple audios and videos and it size is huge.
     final String hugePresentationWithAudiosAndVideosFile = "Large_Video_File_Test1.pptx";
 

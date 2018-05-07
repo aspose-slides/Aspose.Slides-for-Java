@@ -11,9 +11,11 @@ public class SettingTheSizeAndTypeOfASlide {
 
 	public static void main(String[] args) {
 
-            //ExStart:SettingTheSizeAndTypeOfASlide
+ 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SettingTheSizeAndTypeOfASlide.class);
+
+           //ExStart:SettingTheSizeAndTypeOfASlide
 
 		// Instantiate Presentation objects that represent presentation files
 		Presentation presentation = new Presentation(dataDir + "demo.pptx");
@@ -33,7 +35,8 @@ public class SettingTheSizeAndTypeOfASlide {
 
 		// Save Presentation to disk
 		auxPresentation.save(dataDir + "size.pptx", SaveFormat.Pptx);
-            //ExEnd:SettingTheSizeAndTypeOfASlide
+            
+//ExEnd:SettingTheSizeAndTypeOfASlide
 
 	}
 

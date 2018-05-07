@@ -15,8 +15,11 @@ public class HistogramChart {
     
 public static void main(String[] args) {
       
-    //ExStart:HistogramChart
+
         String dataDir = Utils.getDataDir(HistogramChart.class);
+
+    //ExStart:HistogramChart
+
         Presentation pres = new Presentation();
      try {
         IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Histogram, 50, 50, 500, 400);
@@ -43,6 +46,9 @@ public static void main(String[] args) {
         pres.dispose();
         
       }
+
+//ExEnd:HistogramChart
     }
-    //ExEnd:HistogramChart
+
+    
 }

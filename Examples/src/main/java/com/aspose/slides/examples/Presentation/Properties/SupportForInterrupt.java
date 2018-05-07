@@ -13,7 +13,8 @@ public class SupportForInterrupt {
     public static void main(String[] args) throws InterruptedException  { 
      
 String dataDir = Utils.getDataDir(SupportForInterrupt.class);
-   //ExStart:SupportForInterrupt
+   
+//ExStart:SupportForInterrupt
         
    final InterruptionTokenSource tokenSource = new InterruptionTokenSource();
  

@@ -12,10 +12,13 @@ import com.aspose.slides.examples.Utils;
 public class SecondPlotOptionsForPieOfPieAndBarOfPieChart {
 
 	public static void main(String[] args) {
-//ExStart:SecondPlotOptionsForPieOfPieAndBarOfPieChart
+
 
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SecondPlotOptionsForPieOfPieAndBarOfPieChart.class);
+
+//ExStart:SecondPlotOptionsForPieOfPieAndBarOfPieChart
+
 
 		// Second plot options for Pie of Pie and Bar of Pie chart
 		// Instantiate Presentation object
@@ -38,6 +41,7 @@ public class SecondPlotOptionsForPieOfPieAndBarOfPieChart {
 
 		// Saving presentation to disk
 		pres.save(dataDir + "pieOFpie.pptx", SaveFormat.Pptx);
+
 //ExEnd:SecondPlotOptionsForPieOfPieAndBarOfPieChart
 
 	}

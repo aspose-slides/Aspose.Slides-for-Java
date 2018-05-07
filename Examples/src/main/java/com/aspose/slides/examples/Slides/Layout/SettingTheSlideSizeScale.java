@@ -11,9 +11,10 @@ public class SettingTheSlideSizeScale {
 
 	public static void main(String[] args) {
    
-         //ExStart:SettingTheSlideSizeScale
 		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheSizeAndTypeOfASlide.class);
+		String dataDir = Utils.getDataDir(SettingTheSlideSizeScale .class);
+
+         //ExStart:SettingTheSlideSizeScale
 
 		// Instantiate Presentation objects that represent presentation files
 		Presentation presentation = new Presentation(dataDir + "demo.pptx");

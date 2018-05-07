@@ -19,9 +19,11 @@ import com.aspose.slides.PresentationLockingBehavior;
 public class OpenVeryLargePresentation {
 
 	public static final void main(String[] args) {
-		//ExStart:OpenVeryLargePresentation
+
 		// The path to the documents directory.
                   String dataDir = Utils.getDataDir(OpenVeryLargePresentation.class);
+
+		//ExStart:OpenVeryLargePresentation
         
                   final String pathToVeryLargePresentationFile = "veryLargePresentation.pptx";
 
@@ -54,4 +56,5 @@ public class OpenVeryLargePresentation {
 }
 
 //ExEnd:OpenVeryLargePresentation
+
 	}

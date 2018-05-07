@@ -7,7 +7,9 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.Utils;
 
 public class UpdatePresentationPropertiesUsingNewTemplate {
+
 	//ExStart:UpdatePresentationPropertiesUsingNewTemplate
+
 	public static void main(String args[]) {
 		updateByTemplate();
 	}
@@ -36,5 +38,7 @@ public class UpdatePresentationPropertiesUsingNewTemplate {
 		toUpdate.updateDocumentProperties(template);
 		toUpdate.writeBindedPresentation(path);
 	}
-	//ExEnd:UpdatePresentationPropertiesUsingNewTemplate
+	
+//ExEnd:UpdatePresentationPropertiesUsingNewTemplate
+
 }

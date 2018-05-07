@@ -13,9 +13,11 @@ public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 	public static void main(String[] args) {
 		
 		// The path to the documents directory.
-	//ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
+
 
              String dataDir = Utils.getDataDir(CloneASlideWithMasterSlideFromOnePresentationToAnother.class);
+
+	//ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
 		
 		// Instantiate Presentation class to load the source presentation file
 		Presentation srcPres = new Presentation(dataDir + "Presentation.pptx");
