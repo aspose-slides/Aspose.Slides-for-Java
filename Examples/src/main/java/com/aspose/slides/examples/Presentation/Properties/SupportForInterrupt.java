@@ -21,7 +21,8 @@ String dataDir = Utils.getDataDir(SupportForInterrupt.class);
    Runnable interruption = new Runnable() {
    public void run() {
    LoadOptions loadOptions = new LoadOptions();
-   loadOptions.setInterruptionToken(tokenSource.getToken().Clone());
+   loadOptions.setInterruptionToken(tokenSource.getToken());
+       
    Presentation pres = new Presentation("pres.pptx", loadOptions);
 try{
    pres.getSlides().get_Item(0).getThumbnail(new Dimension(960, 720));
