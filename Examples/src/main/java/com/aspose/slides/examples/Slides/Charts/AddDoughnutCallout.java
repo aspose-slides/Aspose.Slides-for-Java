@@ -20,7 +20,8 @@ import com.aspose.slides.examples.Utils;
 
 
   
-    
+    public class AddDoughnutCallout {
+
    public static void main(String[] args){
     
     //ExStart:AddDoughnutCallout 
