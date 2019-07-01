@@ -2,6 +2,8 @@ package com.aspose.slides.examples.Presentation.Conversion;
 
 import com.aspose.slides.HtmlFormatter;
 import com.aspose.slides.HtmlOptions;
+import com.aspose.slides.INotesCommentsLayoutingOptions;
+import com.aspose.slides.NotesPositions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.ResponsiveHtmlController;
 import com.aspose.slides.SaveFormat;
@@ -16,10 +18,13 @@ public class RenderingNotesWhileConvertingToHTML {
         
   //ExStart:RenderingNotesWhileConvertingToHTML
 
-Presentation pres = new Presentation("Presentation.pptx");
+Presentation pres = new Presentation(dataDir + "Presentation.pptx");
      try {
+         HtmlOptions opts = new HtmlOptions();
+         INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+                        options.setNotesPosition(NotesPositions.BottomFull);
           // Saving notes pages
-        pres.save("Output.html", SaveFormat.HtmlNotes);
+        pres.save(dataDir + "Output.html", SaveFormat.Html,opts);
         } 
         finally {
         pres.dispose();

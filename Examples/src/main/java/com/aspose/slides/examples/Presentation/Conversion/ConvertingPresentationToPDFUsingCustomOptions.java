@@ -1,5 +1,7 @@
 package com.aspose.slides.examples.Presentation.Conversion;
 
+import com.aspose.slides.INotesCommentsLayoutingOptions;
+import com.aspose.slides.NotesPositions;
 import com.aspose.slides.PdfCompliance;
 import com.aspose.slides.PdfOptions;
 import com.aspose.slides.PdfTextCompression;
@@ -19,7 +21,7 @@ public class ConvertingPresentationToPDFUsingCustomOptions {
 
 		// Instantiate the PdfOptions class
 		PdfOptions opts = new PdfOptions();
-                 opts.setIncludeComments(true);
+                 
 		// Set JPEG Quality
 		opts.setJpegQuality((byte) 90);
 
@@ -31,6 +33,9 @@ public class ConvertingPresentationToPDFUsingCustomOptions {
 
 		// Define the PDF standard
 		opts.setCompliance(PdfCompliance.Pdf15);
+                
+                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+                options.setNotesPosition(NotesPositions.BottomFull);
 
 		// Save the presentation to PDF with specified options
        		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);

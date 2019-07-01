@@ -1,5 +1,7 @@
 package com.aspose.slides.examples.Presentation.Conversion;
 
+import com.aspose.slides.INotesCommentsLayoutingOptions;
+import com.aspose.slides.NotesPositions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.TiffCompressionTypes;
@@ -18,7 +20,7 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 
 		// Instantiate the TiffOptions class
 		TiffOptions opts = new TiffOptions();
-                opts.setIncludeComments(true);
+                
 		// Setting compression type
 		// Possible values are:
 		// Default - Specifies the default compression scheme (LZW).
@@ -39,6 +41,8 @@ public class ConvertingPresentationToTIFFWithCustomSize {
 		// Set Image Size
 		opts.setImageSize(new java.awt.Dimension(1728, 1078));
 
+                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+                options.setNotesPosition(NotesPositions.BottomFull);
 		// Save the presentation to TIFF with specified image size
 		pres.save(dataDir + "demo.tiff", SaveFormat.Tiff, opts);
                 //ExEnd:ConvertingPresentationToTIFFWithCustomSize 

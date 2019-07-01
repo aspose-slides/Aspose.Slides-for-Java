@@ -4,9 +4,11 @@ import com.aspose.slides.HtmlFormatter;
 import com.aspose.slides.HtmlOptions;
 import com.aspose.slides.IHtmlFormattingController;
 import com.aspose.slides.IHtmlGenerator;
+import com.aspose.slides.INotesCommentsLayoutingOptions;
 import com.aspose.slides.IPresentation;
 import com.aspose.slides.IShape;
 import com.aspose.slides.ISlide;
+import com.aspose.slides.NotesPositions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
@@ -27,9 +29,11 @@ public class ConvertingAnIndividualSlideToHTML {
 
 		// Setting HTML Options
 		HtmlOptions opts = new HtmlOptions();
-		opts.setIncludeComments(true);
+		
                 opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
 
+                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+                        options.setNotesPosition(NotesPositions.BottomFull);
 		// Saving to individual files
 		for (int i = 0; i < pres.getSlides().size(); i++)
 			pres.save(dataDir + "slide" + (i + 1) + ".html", new int[] { i + 1 }, SaveFormat.Html, opts);

@@ -1,8 +1,11 @@
 package com.aspose.slides.examples.Presentation.Conversion;
 
+import com.aspose.slides.INotesCommentsLayoutingOptions;
 import java.awt.geom.Dimension2D;
 
 import com.aspose.slides.ISlide;
+import com.aspose.slides.NotesPositions;
+import com.aspose.slides.PdfOptions;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.SlideSizeScaleType;
@@ -37,8 +40,11 @@ public class SaveToPDFNotesWithCustomSlideSize {
 		dimension.setSize(612F, 792F);
 		auxPresentation.getSlideSize().setSize(7,10);
 
+            PdfOptions pdfOptions = new PdfOptions();
+            INotesCommentsLayoutingOptions options = pdfOptions.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
 		// Save Presentation to disk
-		auxPresentation.save(dataDir + "testPDFnotes.pdf", SaveFormat.PdfNotes);
+		auxPresentation.save(dataDir + "testPDFnotes.pdf", SaveFormat.Pdf,pdfOptions);
 
          //ExEnd:SaveToPDFNotesWithCustomSlideSize
 	}
