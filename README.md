@@ -14,6 +14,15 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Examples)  | A collection of Java examples that help you learn how to use product features.
 
+
+## How to Run the Examples?
+
+After you have downloaded the ZIP file from the [Download ZIP](https://github.com/aspose-slides/Aspose.Slides-for-Java/archive/master.zip) link above, please check the following link with detailed instructions on how to run these Source Code Examples.
+
+[How to Run the Examples](https://docs.aspose.com/display/slidesjava/How+to+Run+the+Examples)
+
+
+
 ## Resources
 
 + **Website:** [www.aspose.com](https://www.aspose.com)
