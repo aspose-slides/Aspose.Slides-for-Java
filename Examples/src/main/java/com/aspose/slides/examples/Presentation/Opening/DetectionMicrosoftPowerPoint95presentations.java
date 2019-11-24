@@ -12,7 +12,7 @@ public class  DetectionMicrosoftPowerPoint95presentations{
   //ExStart:DetectionMicrosoftPowerPoint95presentations	
 		// The path to the documents directory.
         	String dataDir = Utils.getDataDir(DetectionMicrosoftPowerPoint95presentations.class);
-            String path = null;
+            String path = dataDir +"PowerPoint95.ppt";
                  
 		//Code snippet to check whether the presentation format is old Microsoft PowerPoint 95
          boolean isOldFormat = PresentationFactory.getInstance().getPresentationInfo(path).getLoadFormat() == LoadFormat.Ppt95;
