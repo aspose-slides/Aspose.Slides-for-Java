@@ -15,8 +15,8 @@ public class ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController {
 	public static void main(String[] args) {
 
 	//ExStart:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController	
-        String dataDir = Utils.getDataDir_Conversion();
-     Presentation pres = new Presentation(dataDir+"pres.pptx");
+        String dataDir = Utils.getSharedDataDir(ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController.class) + "Conversion/";
+     Presentation pres = new Presentation(dataDir+"presentation.pptx");
   try
      {
          //Exclude default presentation fonts

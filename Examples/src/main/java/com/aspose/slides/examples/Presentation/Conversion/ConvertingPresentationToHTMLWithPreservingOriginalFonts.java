@@ -14,7 +14,7 @@ public class ConvertingPresentationToHTMLWithPreservingOriginalFonts{
 
 	public static void main(String[] args) {
              //ExStart:ConvertingPresentationToHTMLWithPreservingOriginalFonts 
-        Presentation pres = new Presentation("input.pptx");
+        Presentation pres = new Presentation(dataDir + "presentation.pptx");
         try
         {
             //Exclude default presentation fonts
@@ -25,7 +25,7 @@ public class ConvertingPresentationToHTMLWithPreservingOriginalFonts{
             HtmlOptions htmlOptionsEmbed = new HtmlOptions();
             htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter(embedFontsController));
 
-            pres.save("input-PFDinDisplayPro-Regular-installed.html", SaveFormat.Html, htmlOptionsEmbed);
+            pres.save(dataDir+ "input-PFDinDisplayPro-Regular-installed.html", SaveFormat.Html, htmlOptionsEmbed);
         } finally {
          if (pres != null) pres.dispose();
         }

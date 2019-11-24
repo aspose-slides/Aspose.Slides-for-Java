@@ -11,13 +11,13 @@ public class SavingHTMLAndCSSFileWhenExportingIntoHTML {
 public static void main (String[] args){
 	 String dataDir = Utils.getDataDir(SavingHTMLAndCSSFileWhenExportingIntoHTML.class);
               //ExStart:SavingHTMLAndCSSFileWhenExportingIntoHTML
-	 Presentation pres = new Presentation("pres.pptx");
+	 Presentation pres = new Presentation(dataDir+"pres.pptx");
        try{
          final CustomHeaderAndFontsController htmlController = new CustomHeaderAndFontsController("styles.css");
          HtmlOptions options = new HtmlOptions(){{
          setHtmlFormatter(HtmlFormatter.createCustomFormatter(htmlController));
         }};
-         pres.save("pres.html", SaveFormat.Html, options);
+         pres.save(dataDir+"pres.html", SaveFormat.Html, options);
          }  
        finally 
        {
