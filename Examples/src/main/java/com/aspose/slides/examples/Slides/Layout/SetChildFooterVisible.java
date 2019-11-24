@@ -13,7 +13,7 @@ public class SetChildFooterVisible {
          //ExStart:SetChildFooterVisible
 		// The path to the documents directory.
 		String dataDir = Utils.getDataDir(SetChildFooterVisible.class);
-               Presentation presentation = new Presentation("presentation.ppt");
+               Presentation presentation = new Presentation(dataDir + "presentation.ppt");
 try{
     IMasterSlideHeaderFooterManager headerFooterManager = presentation.getMasters().get_Item(0).getHeaderFooterManager();
     headerFooterManager.setFooterAndChildFootersVisibility(true); // Method setFooterAndChildFootersVisibility is used for making a master slide and all child footer placeholders visible.

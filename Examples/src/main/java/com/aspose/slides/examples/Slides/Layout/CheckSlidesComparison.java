@@ -17,8 +17,8 @@ public class CheckSlidesComparison {
 		Presentation presentation1 = null;
                  Presentation presentation2 = null;
 try {
-    presentation1 = new Presentation("SomePresentation1.pptx");
-    presentation2 = new Presentation("SomePresentation2.pptx");
+    presentation1 = new Presentation(dataDir + "SomePresentation1.pptx");
+    presentation2 = new Presentation(dataDir + "SomePresentation2.pptx");
     for (int i = 0; i < presentation1.getMasters().size(); i++)
     {
         for (int j = 0; j < presentation2.getMasters().size(); j++)
