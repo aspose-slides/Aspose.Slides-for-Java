@@ -2,9 +2,11 @@ package com.aspose.slides.examples.Slides.CRUD;
 
 import com.aspose.slides.IBaseSlide;
 import com.aspose.slides.IPPImage;
+import com.aspose.slides.ISvgImage;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
+import com.aspose.slides.SvgImage;
 import com.aspose.slides.examples.Utils;
 
 public class InsertSvgIntoSlide {
@@ -17,7 +19,8 @@ public class InsertSvgIntoSlide {
                 Presentation p = new Presentation();
 {
                String svgContent = ReadAllTextFromFile(dataDir);
-               IPPImage emfImage = p.getImages().addFromSvg(svgContent);
+               ISvgImage svgImage = new SvgImage(svgContent);
+               IPPImage emfImage = p.getImages().addImage(svgImage);
                p.getSlides().get_Item(0).getShapes().addPictureFrame(ShapeType.Rectangle, 0, 0, emfImage.getWidth(), emfImage.getHeight(), emfImage);
                p.save(dataDir+"", SaveFormat.Pptx);
 } 
