@@ -20,33 +20,36 @@ import com.aspose.slides.SmartArt;
 import com.aspose.slides.TextVerticalType;
 import com.aspose.slides.examples.Utils;
 
-public class SmartArtNodeAlternativeText
-{
-        public static void main(String[] args)
-{
-                 
-                 //ExStart:SmartArtNodeAlternativeText
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SmartArtNodeAlternativeText.class);
+public class SmartArtNodeAlternativeText {
+    public static void main(String[] args) {
 
-		Presentation presentation = new Presentation("testalt.pptx");
-                ISlide slide = presentation.getSlides().get_Item(0);
-                IShapeCollection shapes = slide.getShapes();
-                for(int i = 0; i < shapes.size(); i++)
-          {
-        	SmartArt shape = (SmartArt) shapes.get_Item(i);
-	        ISmartArtNodeCollection nodes = shape.getAllNodes();
-	        for(ISmartArtNode smartArtNode : nodes)
-	    {		
-		ISmartArtShapeCollection smartshapes = smartArtNode.getShapes();
-		for(ISmartArtShape smartshape : smartshapes){
-			if(smartshape.getShapeType() == ShapeType.Rectangle)
-				System.out.println(smartshape.getAlternativeText());
-		}
-	   }
-         }
-                presentation.save("test2.pptx", com.aspose.slides.SaveFormat.Pptx);
-     }
-           //ExEnd:SmartArtNodeAlternativeText
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SmartArtNodeAlternativeText.class);
+
+        //ExStart:SmartArtNodeAlternativeText
+        // Create an instance of Presentation class
+        Presentation presentation = new Presentation(dataDir + "testalt.pptx");
+        try {
+            ISlide slide = presentation.getSlides().get_Item(0);
+
+            IShapeCollection shapes = slide.getShapes();
+            for (int i = 0; i < shapes.size(); i++) {
+                SmartArt shape = (SmartArt) shapes.get_Item(i);
+                ISmartArtNodeCollection nodes = shape.getAllNodes();
+                for (ISmartArtNode smartArtNode : nodes) {
+                    ISmartArtShapeCollection smartshapes = smartArtNode.getShapes();
+                    for (ISmartArtShape smartshape : smartshapes) {
+                        if (smartshape.getShapeType() == ShapeType.Rectangle)
+                            System.out.println(smartshape.getAlternativeText());
+                    }
+                }
+            }
+
+            presentation.save("test2.pptx", com.aspose.slides.SaveFormat.Pptx);
+        } finally {
+            if (presentation != null) presentation.dispose();
+        }
+        //ExEnd:SmartArtNodeAlternativeText
+    }
 
 }

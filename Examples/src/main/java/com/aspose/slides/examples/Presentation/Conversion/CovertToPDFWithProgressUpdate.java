@@ -13,31 +13,27 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class CovertToPDFWithProgressUpdate {
-    
-    public static void main(String[] args) {
-        
-    
-                    //ExStart:CovertToPDFWithProgressUpdate
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CovertToPDFWithProgressUpdate.class);
-                
-                Presentation presentation = new Presentation(dataDir + "ConvertToPDF.pptx");
-                try
-                {
-                    ISaveOptions saveOptions = new PdfOptions();
-                    saveOptions.setProgressCallback((IProgressCallback) new ExportProgressHandler());
-                    presentation.save(dataDir + "ConvertToPDF.pdf", SaveFormat.Pdf, saveOptions);
-                }finally {
-                    presentation.dispose();
-                }
-                //ExEnd:CovertToPDFWithProgressUpdate
-                
-}
+    public static void main(String[] args) {
+
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CovertToPDFWithProgressUpdate.class);
+
+        //ExStart:CovertToPDFWithProgressUpdate
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation presentation = new Presentation(dataDir + "ConvertToPDF.pptx");
+        try {
+            ISaveOptions saveOptions = new PdfOptions();
+            saveOptions.setProgressCallback(new ExportProgressHandler());
+            presentation.save(dataDir + "ConvertToPDF.pdf", SaveFormat.Pdf, saveOptions);
+        } finally {
+            presentation.dispose();
+        }
+        //ExEnd:CovertToPDFWithProgressUpdate
+    }
 }
 
 //ExStart:ExportProgressHandler

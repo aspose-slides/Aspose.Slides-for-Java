@@ -9,62 +9,62 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingLayoutSlidesToPresentation {
 
-	public static void main(String[] args) {
-//ExStart:AddingLayoutSlidesToPresentation
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingLayoutSlidesToPresentation.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingLayoutSlidesToPresentation.class);
 
-		String presName = "demo.pptx";
+        //ExStart:AddingLayoutSlidesToPresentation
+        // Instantiate Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Try to search by layout slide type
+            IMasterLayoutSlideCollection layoutSlides = pres.getMasters().get_Item(0).getLayoutSlides();
+            ILayoutSlide layoutSlide = null;
 
-		// Instantiate Presentation class that represents the presentation file
-		Presentation pres = new Presentation(dataDir + presName);
+            if (layoutSlides.getByType(SlideLayoutType.TitleAndObject) != null)
+                layoutSlide = layoutSlides.getByType(SlideLayoutType.TitleAndObject);
+            else
+                layoutSlide = layoutSlides.getByType(SlideLayoutType.Title);
 
-		// Try to search by layout slide type
-		IMasterLayoutSlideCollection layoutSlides = pres.getMasters().get_Item(0).getLayoutSlides();
-		ILayoutSlide layoutSlide = null;
+            if (layoutSlide == null) {
+                // The situation when a presentation doesn't contain some type of layouts.
+                // Technographics.pptx presentation only contains Blank and Custom layout types.
+                // But layout slides with Custom types has different slide names, like "Title", "Title and Content", etc.
+                // And it is possible to use these names for layout slide selection.
+                // Also it is possible to use the set of placeholder shape types. For example,
+                // Title slide should have only Title placeholder type, etc.
+                for (ILayoutSlide titleAndObjectLayoutSlide : layoutSlides) {
+                    if (titleAndObjectLayoutSlide.getName() == "Title and Object") {
+                        layoutSlide = titleAndObjectLayoutSlide;
+                        break;
+                    }
+                }
+                if (layoutSlide == null) {
+                    for (ILayoutSlide titleLayoutSlide : layoutSlides) {
+                        if (titleLayoutSlide.getName() == "Title") {
+                            layoutSlide = titleLayoutSlide;
+                            break;
+                        }
+                    }
+                    if (layoutSlide == null) {
+                        layoutSlide = layoutSlides.getByType(SlideLayoutType.Blank);
+                        if (layoutSlide == null) {
+                            layoutSlide = layoutSlides.add(SlideLayoutType.TitleAndObject, "Title and Object");
+                        }
+                    }
+                }
+            }
 
-		if (layoutSlides.getByType(SlideLayoutType.TitleAndObject) != null)
-			layoutSlide = layoutSlides.getByType(SlideLayoutType.TitleAndObject);
-		else
-			layoutSlide = layoutSlides.getByType(SlideLayoutType.Title);
+            // Adding empty slide with added layout slide
+            pres.getSlides().insertEmptySlide(0, layoutSlide);
 
-		if (layoutSlide == null) {
-			// The situation when a presentation doesn't contain some type of layouts.
-			// Technographics.pptx presentation only contains Blank and Custom layout types.
-			// But layout slides with Custom types has different slide names, like "Title", "Title and Content", etc. 
-			// And it is possible to use these names for layout slide selection.
-			// Also it is possible to use the set of placeholder shape types. For example,
-			// Title slide should have only Title placeholder type, etc.
-			for (ILayoutSlide titleAndObjectLayoutSlide : layoutSlides) {
-				if (titleAndObjectLayoutSlide.getName() == "Title and Object") {
-					layoutSlide = titleAndObjectLayoutSlide;
-					break;
-				}
-			}
-			if (layoutSlide == null) {
-				for (ILayoutSlide titleLayoutSlide : layoutSlides) {
-					if (titleLayoutSlide.getName() == "Title") {
-						layoutSlide = titleLayoutSlide;
-						break;
-					}
-				}
-				if (layoutSlide == null) {
-					layoutSlide = layoutSlides.getByType(SlideLayoutType.Blank);
-					if (layoutSlide == null) {
-						layoutSlide = layoutSlides.add(SlideLayoutType.TitleAndObject, "Title and Object");
-					}
-				}
-			}
-		}
-
-		// Adding empty slide with added layout slide
-		pres.getSlides().insertEmptySlide(0, layoutSlide);
-
-		// Save presentation
-		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
-//ExEnd:AddingLayoutSlidesToPresentation
-
-	}
+            // Save presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingLayoutSlidesToPresentation
+    }
 
 }

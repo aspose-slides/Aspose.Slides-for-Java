@@ -14,23 +14,25 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
-        public class MultiCategoryChart {
+public class MultiCategoryChart {
 
-	public static void main(String[] args) {
-            //ExStart:MultiCategoryChart
-             // The path to the documents directory.
-	     String dataDir = Utils.getDataDir(MultiCategoryChart.class);
+    public static void main(String[] args) {
 
-             Presentation pres = new Presentation(dataDir+"test.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(MultiCategoryChart.class);
 
-             // Access first slide
+        //ExStart:MultiCategoryChart
+        // Instantiate the Presentation class that represents the presentation
+        Presentation pres = new Presentation(dataDir + "test.pptx");
+        try {
+            // Access first slide
             ISlide sld = pres.getSlides().get_Item(0);
 
             // Add chart with default data
             IChart ch = sld.getShapes().addChart(ChartType.ClusteredColumn, 0, 0, 500, 500);
             ch.getChartData().getSeries().clear();
             ch.getChartData().getCategories().clear();
-            IChartDataWorkbook fact=ch.getChartData().getChartDataWorkbook();
+            IChartDataWorkbook fact = ch.getChartData().getChartDataWorkbook();
             fact.clear(0);
             int defaultWorksheetIndex = 0;
             IChartCategory category = ch.getChartData().getCategories().add(fact.getCell(0, "c2", "A"));
@@ -46,21 +48,23 @@ import com.aspose.slides.examples.Utils;
             category.getGroupingLevels().setGroupingItem(1, "Group4");
             category = ch.getChartData().getCategories().add(fact.getCell(0, "c8", "H"));
             IChartSeries series = ch.getChartData().getSeries().add(fact.getCell(0, "D1", "Series 1"),
-        ChartType.ClusteredColumn);
+                    ChartType.ClusteredColumn);
             series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D2", 10));
-           // AddDataPointForBarSeries(fact.getCell(defaultWorksheetIndex, "D2", 10));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D3", 20));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D4", 30));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D5", 40));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D6", 50));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D7", 60));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D8", 70));
-           series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D9", 80));
-           pres.save(dataDir+"AsposeChart.pptx", SaveFormat.Pptx);
-}
+            // AddDataPointForBarSeries(fact.getCell(defaultWorksheetIndex, "D2", 10));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D3", 20));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D4", 30));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D5", 40));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D6", 50));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D7", 60));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D8", 70));
+            series.getDataPoints().addDataPointForAreaSeries(fact.getCell(defaultWorksheetIndex, "D9", 80));
+            pres.save(dataDir + "AsposeChart.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:MultiCategoryChart
+    }
 
-          //ExEnd:MultiCategoryChart
- 
- }
+}
 
  

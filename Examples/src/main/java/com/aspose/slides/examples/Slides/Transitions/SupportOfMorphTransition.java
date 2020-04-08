@@ -13,19 +13,19 @@ import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class SupportOfMorphTransition {
-    public static void main(String[] args){
-    
+    public static void main(String[] args) {
+
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SimpleTransition.class);
+
         //ExStart:SupportOfMorphTransition
-	// The path to the documents directory.
-	String dataDir = Utils.getDataDir(SimpleTransition.class);
+        // Create an instance of Presentation class
         Presentation presentation = new Presentation();
-        try
-        {
-            AutoShape autoshape = (AutoShape)presentation.getSlides().get_Item(0).getShapes().addAutoShape(ShapeType.Rectangle, 100, 100, 400, 100);
+        try {
+            AutoShape autoshape = (AutoShape) presentation.getSlides().get_Item(0).getShapes().addAutoShape(ShapeType.Rectangle, 100, 100, 400, 100);
             autoshape.getTextFrame().setText("Test text");
 
             presentation.getSlides().addClone(presentation.getSlides().get_Item(0));
@@ -38,12 +38,11 @@ public class SupportOfMorphTransition {
 
             presentation.getSlides().get_Item(1).getSlideShowTransition().setType(com.aspose.slides.TransitionType.Morph);
 
-            presentation.save(dataDir+"presentation-out.pptx", SaveFormat.Pptx);
+            presentation.save(dataDir + "presentation-out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (presentation != null) presentation.dispose();
         }
-        finally {
-            presentation.dispose();
-        }
-    //ExEnd:SupportOfMorphTransition
+        //ExEnd:SupportOfMorphTransition
     }
-    
+
 }

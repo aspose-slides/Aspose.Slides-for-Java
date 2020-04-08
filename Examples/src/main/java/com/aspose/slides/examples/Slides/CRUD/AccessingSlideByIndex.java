@@ -6,20 +6,21 @@ import com.aspose.slides.examples.Utils;
 
 public class AccessingSlideByIndex {
 
-	public static void main(String[] args) {
-//ExStart:AccessingSlideByIndex
+    public static void main(String[] args) {
 
-		
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AccessingSlideByIndex.class);
-		
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AccessingSlideByIndex.class);
 
-		// Accessing a slide using its slide index
-		ISlide slide = pres.getSlides().get_Item(0);
-
-//ExEnd:AccessingSlideByIndex
-	}
+        //ExStart:AccessingSlideByIndex
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Accessing a slide using its slide index
+            ISlide slide = pres.getSlides().get_Item(0);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AccessingSlideByIndex
+    }
 
 }

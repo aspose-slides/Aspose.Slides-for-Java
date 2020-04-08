@@ -1,4 +1,3 @@
-
 package com.aspose.slides.examples.Presentation.Creation;
 
 import com.aspose.slides.IPresentation;
@@ -12,11 +11,13 @@ import com.aspose.slides.examples.Utils;
 public class CloneSlideIntoSpecifiedSection {
 
     public static final void main(String[] args) {
-        //ExStart:CloneSlideIntoSpecifiedSection
+
         String dataDir = Utils.getDataDir(CloneSlideIntoSpecifiedSection.class);
+
+        //ExStart:CloneSlideIntoSpecifiedSection
+        // Instantiate a Presentation object that represents a presentation file
         IPresentation presentation = new Presentation();
-        try
-        {
+        try {
             presentation.getSlides().get_Item(0).getShapes().addAutoShape(ShapeType.Rectangle, 200, 50, 300, 100);
             presentation.getSections().addSection("Section 1", presentation.getSlides().get_Item(0));
 
@@ -27,7 +28,6 @@ public class CloneSlideIntoSpecifiedSection {
         } finally {
             if (presentation != null) presentation.dispose();
         }
-                
-     //ExEnd:CloneSlideIntoSpecifiedSection           
+        //ExEnd:CloneSlideIntoSpecifiedSection
     }
 }

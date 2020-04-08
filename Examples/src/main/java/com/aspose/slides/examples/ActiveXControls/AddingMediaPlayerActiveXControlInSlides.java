@@ -7,24 +7,27 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingMediaPlayerActiveXControlInSlides {
 
-	public static void main(String[] args) {
-                //ExStart:AddingMediaPlayerActiveXControlInSlides
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingMediaPlayerActiveXControlInSlides.class);
+    public static void main(String[] args) {
 
-		// Create empty presentation instance
-		Presentation newPptx = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingMediaPlayerActiveXControlInSlides.class);
 
-		// Adding the Media Player ActiveX control
-		newPptx.getSlides().get_Item(0).getControls().addControl(ControlType.WindowsMediaPlayer, 100, 100, 400, 400);
+        //ExStart:AddingMediaPlayerActiveXControlInSlides
+        // Create empty presentation instance
+        Presentation newPptx = new Presentation();
+        try {
+            // Adding the Media Player ActiveX control
+            newPptx.getSlides().get_Item(0).getControls().addControl(ControlType.WindowsMediaPlayer, 100, 100, 400, 400);
 
-		// Access the Media Player ActiveX control and set the video path
-		newPptx.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", "Wildlife.wmv");
+            // Access the Media Player ActiveX control and set the video path
+            newPptx.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", "Wildlife.wmv");
 
-		// Save the Presentation
-		newPptx.save(dataDir + "Output.pptx", SaveFormat.Pptx);
-
-               //ExEnd:AddingMediaPlayerActiveXControlInSlides
-	}
+            // Save the Presentation
+            newPptx.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (newPptx != null) newPptx.dispose();
+        }
+        //ExEnd:AddingMediaPlayerActiveXControlInSlides
+    }
 
 }

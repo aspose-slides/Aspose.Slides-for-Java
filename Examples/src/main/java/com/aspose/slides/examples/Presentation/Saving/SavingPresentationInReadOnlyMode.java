@@ -5,26 +5,26 @@ import com.aspose.slides.examples.Utils;
 
 public class SavingPresentationInReadOnlyMode {
 
-	public static void main(String[] args) {
-             
-		// The path to the documents directory.
-		
-                String dataDir = Utils.getDataDir(SavingPresentationInReadOnlyMode.class);
+    public static void main(String[] args) {
 
- //ExStart:SavingPresentationInReadOnlyMode
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SavingPresentationInReadOnlyMode.class);
 
-		// Instantiate a Presentation object that represents a PPT file
-		Presentation pres = new Presentation();
+        //ExStart:SavingPresentationInReadOnlyMode
+        // Instantiate a Presentation object that represents a PPT file
+        Presentation pres = new Presentation();
+        try {
+            // ....do some work here.....
 
-		// ....do some work here.....
+            // Setting Write protection Password
+            pres.getProtectionManager().setWriteProtection("test");
 
-		// Setting Write protection Password
-		pres.getProtectionManager().setWriteProtection("test");
-
-		// Save your presentation to a file
-		pres.save(dataDir + "demoWriteProtected.pptx", com.aspose.slides.SaveFormat.Pptx);
-
-	//ExEnd:SavingPresentationInReadOnlyMode
-              }
+            // Save your presentation to a file
+            pres.save(dataDir + "demoWriteProtected.pptx", com.aspose.slides.SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SavingPresentationInReadOnlyMode
+    }
 
 }

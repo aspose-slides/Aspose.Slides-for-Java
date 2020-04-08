@@ -10,21 +10,21 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.VideoPlayModePreset;
 import com.aspose.slides.examples.Utils;
 
-public class InterLopShapeId{
+public class InterLopShapeId {
 
-	public static void main(String[] args) {
-                //ExStart:InterLopShapeId
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(InterLopShapeId.class);
-                Presentation presentation = new Presentation("Presentation.pptx");
-try{
-               // Getting unique shape identifier in slide scope
-               long officeInteropShapeId = presentation.getSlides().get_Item(0).getShapes().get_Item(0).getOfficeInteropShapeId();
-   }   
-   finally  {
-               presentation.dispose();
-          }
+    public static void main(String[] args) {
+        
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(InterLopShapeId.class);
 
-     //ExEnd:InterLopShapeId
-}
+        //ExStart:InterLopShapeId
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Getting unique shape identifier in slide scope
+            long officeInteropShapeId = pres.getSlides().get_Item(0).getShapes().get_Item(0).getOfficeInteropShapeId();
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:InterLopShapeId
+    }
 }

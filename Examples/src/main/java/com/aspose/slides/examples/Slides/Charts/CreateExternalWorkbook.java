@@ -9,25 +9,25 @@ import com.aspose.slides.ChartType;
 import com.aspose.slides.IChart;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.Utils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- *
  * @author mfazi
  */
 public class CreateExternalWorkbook {
-    
-    public static void main(String[] args){
-    
-    //ExStart:CreateExternalWorkbook 
-    String dataDir = Utils.getDataDir(CreateExternalWorkbook.class);
-    
+
+    public static void main(String[] args) {
+
+        String dataDir = Utils.getDataDir(CreateExternalWorkbook.class);
+
+        //ExStart:CreateExternalWorkbook
+        // Instantiate the Presentation class that represents the presentation
         Presentation pres = new Presentation(dataDir + "presentation.pptx");
-        try
-        {
+        try {
             String externalWbPath = dataDir + "externalWorkbook1.xlsx";
 
             IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Pie, 50, 50, 400, 600);
@@ -47,8 +47,8 @@ public class CreateExternalWorkbook {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            pres.dispose();
+            if (pres != null) pres.dispose();
         }
-    //ExEnd:CreateExternalWorkbook 
+        //ExEnd:CreateExternalWorkbook
     }
 }

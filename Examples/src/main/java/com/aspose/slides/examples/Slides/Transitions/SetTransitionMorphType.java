@@ -13,28 +13,26 @@ import com.aspose.slides.TransitionType;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class SetTransitionMorphType {
-    
-   public static void main(String[] args){
-    
+
+    public static void main(String[] args) {
+
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SimpleTransition.class);
+
         //ExStart:SetTransitionMorphType
-	// The path to the documents directory.
-	String dataDir = Utils.getDataDir(SimpleTransition.class);
-        Presentation presentation = new Presentation(dataDir+"presentation.pptx");
-        try
-        {
+        // Create an instance of Presentation class
+        Presentation presentation = new Presentation(dataDir + "presentation.pptx");
+        try {
             presentation.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Morph);
-            ((IMorphTransition)presentation.getSlides().get_Item(0).getSlideShowTransition().getValue()).setMorphType(TransitionMorphType.ByWord);
-            presentation.save(dataDir+"presentation-out.pptx", SaveFormat.Pptx);
+            ((IMorphTransition) presentation.getSlides().get_Item(0).getSlideShowTransition().getValue()).setMorphType(TransitionMorphType.ByWord);
+            presentation.save(dataDir + "presentation-out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (presentation != null) presentation.dispose();
         }
-        finally
-        {
-            presentation.dispose();
-        }
-    //ExEnd:SetTransitionMorphType
+        //ExEnd:SetTransitionMorphType
     }
-    
+
 }

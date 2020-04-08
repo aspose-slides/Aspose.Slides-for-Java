@@ -9,15 +9,16 @@ import com.aspose.slides.examples.Utils;
 
 public class CheckPresentationModified {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	//ExStart:CheckPresentationModified
-	// The path to the documents directory.
-          String dataDir = Utils.getDataDir(CheckPresentationModified.class);
-          IPresentationInfo info=PresentationFactory.getInstance().getPresentationInfo( dataDir+"props.pptx");
-          IDocumentProperties props = info.readDocumentProperties();
-            String app = props.getNameOfApplication();
-            String ver = props.getAppVersion();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CheckPresentationModified.class);
 
-          //ExEnd:CheckPresentationModified
-        }     }
+        //ExStart:CheckPresentationModified
+        IPresentationInfo info = PresentationFactory.getInstance().getPresentationInfo(dataDir + "props.pptx");
+        IDocumentProperties props = info.readDocumentProperties();
+        String app = props.getNameOfApplication();
+        String ver = props.getAppVersion();
+        //ExEnd:CheckPresentationModified
+    }
+}

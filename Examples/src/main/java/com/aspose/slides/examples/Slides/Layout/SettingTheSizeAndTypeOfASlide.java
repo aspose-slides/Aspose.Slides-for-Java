@@ -9,35 +9,34 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheSizeAndTypeOfASlide {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
- 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheSizeAndTypeOfASlide.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheSizeAndTypeOfASlide.class);
 
-           //ExStart:SettingTheSizeAndTypeOfASlide
-
-		// Instantiate Presentation objects that represent presentation files
-		Presentation presentation = new Presentation(dataDir + "demo.pptx");
-		Presentation auxPresentation = new Presentation();
-
-		ISlide slide = presentation.getSlides().get_Item(0);
-
-		// Set the slide size of generated presentations to that of source
-	
+        //ExStart:SettingTheSizeAndTypeOfASlide
+        // Instantiate Presentation objects that represent presentation files
+        Presentation presentation = new Presentation(dataDir + "demo.pptx");
+        try {
+            Presentation auxPresentation = new Presentation();
+            try {
+                // Set the slide size of generated presentations to that of source
                 auxPresentation.getSlideSize().setSize(540, 720, SlideSizeScaleType.EnsureFit);
-                //getType());
-		 auxPresentation.getSlideSize().setSize(SlideSizeType.A4Paper, SlideSizeScaleType.Maximize);
+                auxPresentation.getSlideSize().setSize(SlideSizeType.A4Paper, SlideSizeScaleType.Maximize);
 
-		// Clone required slide
-		auxPresentation.getSlides().addClone(presentation.getSlides().get_Item(0));
-		auxPresentation.getSlides().removeAt(0);
+                // Clone required slide
+                auxPresentation.getSlides().addClone(presentation.getSlides().get_Item(0));
+                auxPresentation.getSlides().removeAt(0);
 
-		// Save Presentation to disk
-		auxPresentation.save(dataDir + "size.pptx", SaveFormat.Pptx);
-            
-//ExEnd:SettingTheSizeAndTypeOfASlide
-
-	}
+                // Save Presentation to disk
+                auxPresentation.save(dataDir + "size.pptx", SaveFormat.Pptx);
+            } finally {
+                if (auxPresentation != null) auxPresentation.dispose();
+            }
+        } finally {
+            if (presentation != null) presentation.dispose();
+        }
+        //ExEnd:SettingTheSizeAndTypeOfASlide
+    }
 
 }

@@ -7,30 +7,30 @@ import com.aspose.slides.examples.Utils;
 
 public class ManagingSimpleSlideTransitions {
 
-	public static void main(String[] args) {
-		
-	//ExStart:ManagingSimpleSlideTransitions
-			// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(ManagingSimpleSlideTransitions.class);
-	    
-		// Instantiate Presentation class that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "SimpleSlideTransitions.pptx");
+    public static void main(String[] args) {
 
-		// Apply circle type transition on slide 1
-		pres.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Circle);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ManagingSimpleSlideTransitions.class);
 
-		// Apply comb type transition on slide 2
-		pres.getSlides().get_Item(1).getSlideShowTransition().setType(TransitionType.Comb);
+        //ExStart:ManagingSimpleSlideTransitions
+        // Instantiate Presentation class that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "SimpleSlideTransitions.pptx");
+        try {
+            // Apply circle type transition on slide 1
+            pres.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Circle);
 
-		// Apply zoom type transition on slide 3
-		pres.getSlides().get_Item(2).getSlideShowTransition().setType(TransitionType.Zoom);
+            // Apply comb type transition on slide 2
+            pres.getSlides().get_Item(1).getSlideShowTransition().setType(TransitionType.Comb);
 
-		// Write the presentation to disk
-		pres.save(dataDir + "SampleTransition.pptx", SaveFormat.Pptx);
-	//ExEnd:ManagingSimpleSlideTransitions
-	
+            // Apply zoom type transition on slide 3
+            pres.getSlides().get_Item(2).getSlideShowTransition().setType(TransitionType.Zoom);
 
-
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "SampleTransition.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ManagingSimpleSlideTransitions
+    }
 
 }

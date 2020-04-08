@@ -7,18 +7,24 @@ import com.aspose.slides.examples.Utils;
 
 public class ISectionCollection {
 
-	public static void main(String[] args) {
-              //ExStart:ISectionCollection
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ISectionCollection.class);
-		Presentation pres=new Presentation(dataDir+"Presentation1.pptx");
-               ISection section = (ISection) pres.getSections().get_Item(2);
-               //pres.getSections().reorderSectionWithSlides((section, 0);
-               pres.getSections().removeSectionWithSlides(pres.getSections().get_Item(0));
-               pres.getSections().appendEmptySection("Last empty section");
-               pres.getSections().addSection("First empty", pres.getSlides().get_Item(0));
-               pres.save(dataDir+"Result.pptx",SaveFormat.Pptx);
-            //ExEnd:ISectionCollection
-   }
-             }
+    public static void main(String[] args) {
+
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ISectionCollection.class);
+
+        //ExStart:ISectionCollection
+        // Instantiate Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation1.pptx");
+        try {
+            pres.getSections().removeSectionWithSlides(pres.getSections().get_Item(0));
+            pres.getSections().appendEmptySection("Last empty section");
+            pres.getSections().addSection("First empty", pres.getSlides().get_Item(0));
+
+            pres.save(dataDir + "Result.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ISectionCollection
+    }
+}
             

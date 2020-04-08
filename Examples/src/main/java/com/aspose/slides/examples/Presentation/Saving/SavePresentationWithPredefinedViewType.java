@@ -7,20 +7,24 @@ import com.aspose.slides.examples.Utils;
 
 public class SavePresentationWithPredefinedViewType {
 
-	public static void main(String[] args) {
-                //ExStart:SavePresentationWithPredefinedViewType 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SavePresentationWithPredefinedViewType.class);
+    public static void main(String[] args) {
 
-		// Opening the presentation file
-		Presentation pres = new Presentation();
-		// Setting view type
-		pres.getViewProperties().setLastView((byte) ViewType.SlideMasterView);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SavePresentationWithPredefinedViewType.class);
 
-		// Saving presentation
-		pres.save(dataDir + "newDemo.pptx", SaveFormat.Pptx);
+        //ExStart:SavePresentationWithPredefinedViewType
+        // Opening the presentation file
+        Presentation pres = new Presentation();
+        try {
+            // Setting view type
+            pres.getViewProperties().setLastView((byte) ViewType.SlideMasterView);
 
-           //ExEnd:SavePresentationWithPredefinedViewType 
-	}
+            // Saving presentation
+            pres.save(dataDir + "newDemo.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SavePresentationWithPredefinedViewType
+    }
 
 }

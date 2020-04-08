@@ -8,26 +8,30 @@ import com.aspose.slides.examples.Utils;
 
 public class ReplacingFontsExplicitlyInsidePresentation {
 
-	public static void main(String[] args) {
-                 //ExStart:ReplacingFontsExplicitlyInsidePresentation
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ReplacingFontsExplicitlyInsidePresentation.class);
+    public static void main(String[] args) {
 
-		// Load presentation
-		Presentation pres = new Presentation(dataDir + "PresContainsArialFont.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ReplacingFontsExplicitlyInsidePresentation.class);
 
-		// Load source font to be replaced
-		IFontData sourceFont = new FontData("Arial");
+        //ExStart:ReplacingFontsExplicitlyInsidePresentation
+        // Load presentation
+        Presentation pres = new Presentation(dataDir + "PresContainsArialFont.pptx");
+        try {
+            // Load source font to be replaced
+            IFontData sourceFont = new FontData("Arial");
 
-		// Load the replacing font
-		IFontData destFont = new FontData("Times New Roman");
+            // Load the replacing font
+            IFontData destFont = new FontData("Times New Roman");
 
-		// Replace the fonts
-		pres.getFontsManager().replaceFont(sourceFont, destFont);
+            // Replace the fonts
+            pres.getFontsManager().replaceFont(sourceFont, destFont);
 
-		// Save the presentation
-		pres.save(dataDir + "PresContainsTimesNoewRomanFont.pptx", SaveFormat.Pptx);
-               //ExEnd:ReplacingFontsExplicitlyInsidePresentation
-	}
+            // Save the presentation
+            pres.save(dataDir + "PresContainsTimesNoewRomanFont.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ReplacingFontsExplicitlyInsidePresentation
+    }
 
 }

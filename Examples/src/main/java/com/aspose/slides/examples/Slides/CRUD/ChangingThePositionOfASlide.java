@@ -7,27 +7,27 @@ import com.aspose.slides.examples.Utils;
 
 public class ChangingThePositionOfASlide {
 
-	public static void main(String[] args) {
-//ExStart:ChangingThePositionOfASlide
+    public static void main(String[] args) {
 
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ChangingThePositionOfASlide.class);
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangingThePositionOfASlide.class);
+        //ExStart:ChangingThePositionOfASlide
+        // Instantiate Presentation class to load the source presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Get the slide whose position is to be changed
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Instantiate Presentation class to load the source presentation file
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+            // Set the new position for the slide
+            sld.setSlideNumber(2);
 
-		// Get the slide whose position is to be changed
-		ISlide sld = pres.getSlides().get_Item(0);
-
-		// Set the new position for the slide
-		sld.setSlideNumber(2);
-
-		// Write the presentation to disk
-		pres.save(dataDir + "helloworld_Pos.pptx", SaveFormat.Pptx);
-//ExEnd:ChangingThePositionOfASlide
-
-
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "helloworld_Pos.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ChangingThePositionOfASlide
+    }
 
 }

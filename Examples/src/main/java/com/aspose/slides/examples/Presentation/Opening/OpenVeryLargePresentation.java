@@ -4,7 +4,9 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.PresentationLockingBehavior;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+
 import java.io.File;
+
 import com.aspose.slides.DocumentProperties;
 import com.aspose.slides.IDocumentProperties;
 import com.aspose.slides.IPresentationInfo;
@@ -18,43 +20,36 @@ import com.aspose.slides.PresentationLockingBehavior;
 
 public class OpenVeryLargePresentation {
 
-	public static final void main(String[] args) {
+    public static final void main(String[] args) {
 
-		// The path to the documents directory.
-                  String dataDir = Utils.getDataDir(OpenVeryLargePresentation.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(OpenVeryLargePresentation.class);
 
-		//ExStart:OpenVeryLargePresentation
-        
-                  final String pathToVeryLargePresentationFile = "veryLargePresentation.pptx";
+        //ExStart:OpenVeryLargePresentation
+        LoadOptions loadOptions = new LoadOptions();
+        loadOptions.getBlobManagementOptions().setPresentationLockingBehavior(PresentationLockingBehavior.KeepLocked);
 
-                  LoadOptions loadOptions = new LoadOptions();
-             
-                 loadOptions.getBlobManagementOptions().setPresentationLockingBehavior(PresentationLockingBehavior.KeepLocked);
-
-                 
-                 
-                  Presentation pres = new Presentation(pathToVeryLargePresentationFile);
-    try{
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "veryLargePresentation.pptx");
+        try {
             // the huge presentation is loaded and ready to use, but the memory consumption is still low.
 
-           // make any changes to the presentation.
-           pres.getSlides().get_Item(0).setName("Very large presentation");
+            // make any changes to the presentation.
+            pres.getSlides().get_Item(0).setName("Very large presentation");
 
-         // presentation will be saved to the other file, the memory consumptions still low during saving.
-        pres.save("veryLargePresentation-copy.pptx", SaveFormat.Pptx);
+            // presentation will be saved to the other file, the memory consumptions still low during saving.
+            pres.save(dataDir + "veryLargePresentation-copy.pptx", SaveFormat.Pptx);
 
-        // can't do that! IO exception will be thrown, because the file is locked while pres objects will
-        // not be disposed
-        // new File(pathToVeryLargePresentationFile).delete();
-    } finally
-       {
-        pres.dispose();
+            // can't do that! IO exception will be thrown, because the file is locked while pres objects will
+            // not be disposed
+            // new File(pathToVeryLargePresentationFile).delete();
+        } finally {
+            pres.dispose();
+        }
+
+        // it's ok to do it here, the source file is not locked by pres object
+        new File(dataDir + "veryLargePresentation.pptx").delete();
+        //ExEnd:OpenVeryLargePresentation
     }
 
-    // it's ok to do it here, the source file is not locked by pres object
-    new File(pathToVeryLargePresentationFile).delete();
 }
-
-//ExEnd:OpenVeryLargePresentation
-
-	}

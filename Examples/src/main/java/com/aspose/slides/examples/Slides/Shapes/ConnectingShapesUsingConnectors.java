@@ -10,36 +10,38 @@ import com.aspose.slides.examples.Utils;
 
 public class ConnectingShapesUsingConnectors {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConnectingShapesUsingConnectors.class);
 
-//ExStart:ConnectingShapesUsingConnectors
+        //ExStart:ConnectingShapesUsingConnectors
+        // Instantiate Presentation class that represents the PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Accessing shapes collection for selected slide
+            IShapeCollection shapes = pres.getSlides().get_Item(0).getShapes();
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConnectingShapesUsingConnectors.class);
+            // Add Autoshape Ellipse
+            IAutoShape ellipse = shapes.addAutoShape(ShapeType.Ellipse, 0, 100, 100, 100);
 
-		// Instantiate Presentation class that represents the PPTX file
-		Presentation input = new Presentation();
-		// Accessing shapes collection for selected slide
-		IShapeCollection shapes = input.getSlides().get_Item(0).getShapes();
+            // Add Autoshape Rectangle
+            IAutoShape rectangle = shapes.addAutoShape(ShapeType.Rectangle, 100, 300, 100, 100);
 
-		// Add Autoshape Ellipse
-		IAutoShape ellipse = shapes.addAutoShape(ShapeType.Ellipse, 0, 100, 100, 100);
+            // Adding connector shape to slide shape collection
+            IConnector connector = shapes.addConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
 
-		// Add Autoshape Rectangle
-		IAutoShape rectangle = shapes.addAutoShape(ShapeType.Rectangle, 100, 300, 100, 100);
+            // Joining Shapes to connectors
+            connector.setStartShapeConnectedTo(ellipse);
+            connector.setEndShapeConnectedTo(rectangle);
+            connector.reroute();
 
-		// Adding connector shape to slide shape collection
-		IConnector connector = shapes.addConnector(ShapeType.BentConnector2, 0, 0, 10, 10);
-
-		// Joining Shapes to connectors
-		connector.setStartShapeConnectedTo(ellipse);
-		connector.setEndShapeConnectedTo(rectangle);
-		connector.reroute();
-
-		// Saving Presentation
-		input.save(dataDir + "output.pptx", SaveFormat.Pptx);
-
-//ExEnd:ConnectingShapesUsingConnectors
-	}
+            // Saving Presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConnectingShapesUsingConnectors
+    }
 
 }

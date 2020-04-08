@@ -9,23 +9,25 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheBackgroundColorToAGradientToSlides {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//ExStart:SettingTheBackgroundColorToAGradientToSlides
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheBackgroundColorToAGradientToSlides.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheBackgroundColorToAGradientToSlides.class);
 
-		// Instantiate the Presentation class that represents the presentation file
-		Presentation pres = new Presentation(dataDir + "MasterBG.pptx");
+        //ExStart:SettingTheBackgroundColorToAGradientToSlides
+        // Instantiate the Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "MasterBG.pptx");
+        try {
+            // Apply Gradient effect to the Background
+            pres.getSlides().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
+            pres.getSlides().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Gradient);
+            pres.getSlides().get_Item(0).getBackground().getFillFormat().getGradientFormat().setTileFlip(TileFlip.FlipBoth);
 
-		// Apply Gradient effect to the Background
-		pres.getSlides().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
-		pres.getSlides().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Gradient);
-		pres.getSlides().get_Item(0).getBackground().getFillFormat().getGradientFormat().setTileFlip(TileFlip.FlipBoth);
-
-		// Write the presentation to disk
-		pres.save(dataDir + "ContentBG_Grad.pptx", SaveFormat.Pptx);
-//ExEnd:SettingTheBackgroundColorToAGradientToSlides
-
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "ContentBG_Grad.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheBackgroundColorToAGradientToSlides
+    }
 }

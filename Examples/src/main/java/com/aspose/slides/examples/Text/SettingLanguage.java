@@ -17,43 +17,45 @@ import com.aspose.slides.examples.Utils;
 
 
 public class SettingLanguage {
-    	public static void main(String[] args) {
-                  //ExStart:SettingLanguage
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CreatingATextBoxOnSlide.class);
+    public static void main(String[] args) {
 
-		// Instantiate Presentation class that represents PPTX
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CreatingATextBoxOnSlide.class);
 
-		// Access first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:SettingLanguage
+        // Instantiate Presentation class that represents PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Access first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Add an AutoShape of Rectangle type
-		IAutoShape ashp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
+            // Add an AutoShape of Rectangle type
+            IAutoShape ashp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
 
-		// Add TextFrame to the Rectangle
-		ashp.addTextFrame(" ");
+            // Add TextFrame to the Rectangle
+            ashp.addTextFrame(" ");
 
-		// Accessing the text frame
-		ITextFrame txtFrame = ashp.getTextFrame();
+            // Accessing the text frame
+            ITextFrame txtFrame = ashp.getTextFrame();
 
-		// Create the Paragraph object for text frame
-		IParagraph para = txtFrame.getParagraphs().get_Item(0);
+            // Create the Paragraph object for text frame
+            IParagraph para = txtFrame.getParagraphs().get_Item(0);
 
-		// Create Portion object for paragraph
-		IPortion portion = para.getPortions().get_Item(0);
+            // Create Portion object for paragraph
+            IPortion portion = para.getPortions().get_Item(0);
 
-		// Set Text
-		portion.setText("Aspose TextBox");
+            // Set Text
+            portion.setText("Aspose TextBox");
 
-                //Setting Language
-                portion.getPortionFormat().setLanguageId("en-EN");
-  
-                
-		// Save the PPTX to Disk
-		pres.save(dataDir + "SettingLanguage.pptx", SaveFormat.Pptx);
+            //Setting Language
+            portion.getPortionFormat().setLanguageId("en-EN");
 
-              //ExEnd:SettingLanguage
-	}
-    
+            // Save the PPTX to Disk
+            pres.save(dataDir + "SettingLanguage.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingLanguage
+    }
+
 }

@@ -7,25 +7,27 @@ import com.aspose.slides.examples.Utils;
 
 public class RemoveASlideUsingSlideReference {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-             //ExStart:RemoveASlideUsingSlideReference
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RemoveASlideUsingSlideReference.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(RemoveASlideUsingSlideReference.class);
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        //ExStart:RemoveASlideUsingSlideReference
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Accessing a slide using its index in the slides collection
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Accessing a slide using its index in the slides collection
-		ISlide slide = pres.getSlides().get_Item(0);
+            // Removing a slide using its reference
+            pres.getSlides().remove(slide);
 
-		// Removing a slide using its reference
-		pres.getSlides().remove(slide);
-
-		// Writing the presentation file
-		pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
-
-             //ExEnd:RemoveASlideUsingSlideReference
-	}
+            // Writing the presentation file
+            pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:RemoveASlideUsingSlideReference
+    }
 
 }

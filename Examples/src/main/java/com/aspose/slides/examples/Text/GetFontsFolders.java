@@ -7,15 +7,12 @@ import com.aspose.slides.examples.Utils;
 
 public class GetFontsFolders {
 
-	public static void main(String[] args) {
-            
-//ExStart:GetFontsFolders
-		// The path to the documents directory.
-		
-        String[] fontFolders = FontsLoader.getFontFolders();
+    public static void main(String[] args) {
 
-              //ExEnd:GetFontsFolders
-	
-}
+        //ExStart:GetFontsFolders
+        // The path to the documents directory.
+        String[] fontFolders = FontsLoader.getFontFolders();
+        //ExEnd:GetFontsFolders
+    }
 
 }

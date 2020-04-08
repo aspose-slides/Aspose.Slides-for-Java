@@ -15,26 +15,24 @@ import com.aspose.slides.examples.Utils;
 
 
 public class SetExternalWorkbookWithUpdateChartData {
-    
-    public static void main(String[] args){
-    
-    //ExStart:SetExternalWorkbookWithUpdateChartData 
-    String dataDir = Utils.getDataDir(SetExternalWorkbookWithUpdateChartData.class);
-    
+
+    public static void main(String[] args) {
+
+        String dataDir = Utils.getDataDir(SetExternalWorkbookWithUpdateChartData.class);
+
+        //ExStart:SetExternalWorkbookWithUpdateChartData
+        // Instantiate the Presentation class that represents the presentation
         Presentation pres = new Presentation();
-        try
-        {
-              IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Pie, 50, 50, 400, 600, true);
-              IChartData chartData = chart.getChartData();
+        try {
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Pie, 50, 50, 400, 600, true);
 
-              ((ChartData)chartData).setExternalWorkbook("http://path/doesnt/exists", false);
-              
-              pres.save(dataDir + "Presentation_with_externalWorkbookWithUpdateChartData.pptx", SaveFormat.Pptx);
+            IChartData chartData = chart.getChartData();
+            chartData.setExternalWorkbook("http://path/doesnt/exists", false);
 
+            pres.save(dataDir + "Presentation_with_externalWorkbookWithUpdateChartData.pptx", SaveFormat.Pptx);
         } finally {
-              if (pres != null) pres.dispose();
+            if (pres != null) pres.dispose();
         }
-    
-    //ExEnd:SetExternalWorkbookWithUpdateChartData
+        //ExEnd:SetExternalWorkbookWithUpdateChartData
     }
 }

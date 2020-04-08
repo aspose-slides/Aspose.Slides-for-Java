@@ -10,36 +10,38 @@ import com.aspose.slides.examples.Utils;
 
 public class AccessingSmartArtShapeWithParticularLayoutType {
 
-	public static void main(String[] args) {
-                   
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AccessingSmartArtShapeWithParticularLayoutType.class);
-//ExStart:AccessingSmartArtShapeWithParticularLayoutType
-		// Instantiate Presentation Class
-		Presentation pres = new Presentation(dataDir + "SmartArtNode.pptx");
+    public static void main(String[] args) {
 
-		// Get first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AccessingSmartArtShapeWithParticularLayoutType.class);
 
-		// Traverse through every shape inside first slide
-		for (IShape shape : slide.getShapes()) {
-			// Check if shape is of SmartArt type
-			if (shape instanceof ISmartArt) {
-				// Typecast shape to SmartArtEx
-				ISmartArt smart = (ISmartArt) shape;
+        //ExStart:AccessingSmartArtShapeWithParticularLayoutType
+        // Instantiate Presentation Class
+        Presentation pres = new Presentation(dataDir + "SmartArtNode.pptx");
+        try {
+            // Get first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-				// Checking SmartArt Layout
-				if (smart.getLayout() == SmartArtLayoutType.BasicBlockList) {
-					System.out.print("Do some thing here....");
-				}
+            // Traverse through every shape inside first slide
+            for (IShape shape : slide.getShapes()) {
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt) {
+                    // Typecast shape to SmartArtEx
+                    ISmartArt smart = (ISmartArt) shape;
 
-			}
-		}
+                    // Checking SmartArt Layout
+                    if (smart.getLayout() == SmartArtLayoutType.BasicBlockList) {
+                        System.out.print("Do some thing here....");
+                    }
+                }
+            }
 
-		// Saving presentation
-		pres.save(dataDir + "SimpleSmartArt.pptx", SaveFormat.Pptx);
-
-	//ExEnd:AccessingSmartArtShapeWithParticularLayoutType
-          }
+            // Saving presentation
+            pres.save(dataDir + "SimpleSmartArt.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AccessingSmartArtShapeWithParticularLayoutType
+    }
 
 }

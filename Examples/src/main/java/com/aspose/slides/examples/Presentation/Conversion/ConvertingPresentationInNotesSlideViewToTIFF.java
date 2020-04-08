@@ -9,21 +9,26 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationInNotesSlideViewToTIFF {
 
-	public static void main(String[] args) {
-                 //ExStart:ConvertingPresentationInNotesSlideViewToTIFF
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationInNotesSlideViewToTIFF.class);
+    public static void main(String[] args) {
 
-		//Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationInNotesSlideViewToTIFF.class);
 
-                TiffOptions opts = new TiffOptions();                
-                 INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
-                options.setNotesPosition(NotesPositions.BottomFull);
-                
-		//Saving the presentation to TIFF notes
-		pres.save(dataDir + "TestNotes.tiff", SaveFormat.Tiff,opts);
-               //ExEnd:ConvertingPresentationInNotesSlideViewToTIFF
-	}
+        //ExStart:ConvertingPresentationInNotesSlideViewToTIFF
+        //Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            TiffOptions opts = new TiffOptions();
+            INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
+
+            //Saving the presentation to TIFF notes
+            pres.save(dataDir + "TestNotes.tiff", SaveFormat.Tiff, opts);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationInNotesSlideViewToTIFF
+
+    }
 
 }

@@ -16,45 +16,46 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheAnchorOfTextFrame {
 
-	public static void main(String[] args) {
-              
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheAnchorOfTextFrame.class);
+    public static void main(String[] args) {
 
-//ExStart:SettingTheAnchorOfTextFrame
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheAnchorOfTextFrame.class);
 
-		// Create an instance of Presentation class
-		Presentation pres = new Presentation();
+        //ExStart:SettingTheAnchorOfTextFrame
+        // Create an instance of Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Access the first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Access the first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+            // Add an AutoShape of Rectangle type
+            IAutoShape ashp = slide.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 350, 350);
 
-		// Add an AutoShape of Rectangle type
-		IAutoShape ashp = slide.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 350, 350);
+            // Add TextFrame to the Rectangle
+            ashp.addTextFrame(" ");
+            ashp.getFillFormat().setFillType(FillType.NoFill);
 
-		// Add TextFrame to the Rectangle
-		ashp.addTextFrame(" ");
-		ashp.getFillFormat().setFillType(FillType.NoFill);
+            // Accessing the text frame
+            ITextFrame txtFrame = ashp.getTextFrame();
 
-		// Accessing the text frame
-		ITextFrame txtFrame = ashp.getTextFrame();
+            // Setting text anchoring to bottom
+            txtFrame.getTextFrameFormat().setAnchoringType(TextAnchorType.Bottom);
 
-		// Setting text anchoring to bottom
-		txtFrame.getTextFrameFormat().setAnchoringType(TextAnchorType.Bottom);
+            // Create the Paragraph object for text frame
+            IParagraph para = txtFrame.getParagraphs().get_Item(0);
 
-		// Create the Paragraph object for text frame
-		IParagraph para = txtFrame.getParagraphs().get_Item(0);
+            // Create Portion object for paragraph
+            IPortion portion = para.getPortions().get_Item(0);
+            portion.setText("A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog.");
+            portion.getPortionFormat().getFillFormat().setFillType(FillType.Solid);
+            portion.getPortionFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
 
-		// Create Portion object for paragraph
-		IPortion portion = para.getPortions().get_Item(0);
-		portion.setText("A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog.");
-		portion.getPortionFormat().getFillFormat().setFillType(FillType.Solid);
-		portion.getPortionFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
-
-		// Save Presentation
-		pres.save(dataDir + "AnchorText.pptx", SaveFormat.Pptx);
-
-              //ExEnd:SettingTheAnchorOfTextFrame
-	}
+            // Save Presentation
+            pres.save(dataDir + "AnchorText.pptx", SaveFormat.Pptx);
+        }  finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheAnchorOfTextFrame
+    }
 
 }

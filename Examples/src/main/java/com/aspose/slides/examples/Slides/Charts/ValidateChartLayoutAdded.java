@@ -8,7 +8,7 @@ import com.aspose.slides.IChart;
 import com.aspose.slides.IChartDataPointCollection;
 import com.aspose.slides.IChartSeries;
 import com.aspose.slides.IErrorBarsFormat;
-import  com.aspose.slides.Chart;
+import com.aspose.slides.Chart;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.Chart;
@@ -17,27 +17,23 @@ import com.aspose.slides.ms.System.IDisposable;
 
 public class ValidateChartLayoutAdded {
 
-	public static void main(String[] args) {
-            //ExStart:ValidateChartLayoutAdded
-             // The path to the documents directory.
-	     String dataDir = Utils.getDataDir(ValidateChartLayoutAdded.class);
+    public static void main(String[] args) {
 
-         final Presentation pres = new Presentation();
-      try {
-          Chart chart = (Chart) pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 500, 350);
-          chart.validateChartLayout();
+        //ExStart:ValidateChartLayoutAdded
+        // Instantiate the presentation
+        final Presentation pres = new Presentation();
+        try {
+            Chart chart = (Chart) pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 500, 350);
+            chart.validateChartLayout();
 
-          double x = chart.getPlotArea().getActualX();
-          double y = chart.getPlotArea().getActualY();
-          double w = chart.getPlotArea().getActualWidth();
-          double h = chart.getPlotArea().getActualHeight();
+            double x = chart.getPlotArea().getActualX();
+            double y = chart.getPlotArea().getActualY();
+            double w = chart.getPlotArea().getActualWidth();
+            double h = chart.getPlotArea().getActualHeight();
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ValidateChartLayoutAdded
+    }
+
 }
-          finally { ((IDisposable)pres).dispose(); }
-
-
-          //ExEnd:ValidateChartLayoutAdded
- 
- 
- }
-
- }

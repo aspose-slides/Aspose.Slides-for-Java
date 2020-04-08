@@ -13,25 +13,26 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class SupportOfBubbleSizeRepresentation {
-    
-    public static void main(String[] args){
-     
-//ExStart:SupportOfBubbleSizeRepresentation   
-    String dataDir = Utils.getDataDir(SupportOfBubbleSizeRepresentation.class);
-    Presentation pres = new Presentation();
-    try
-    {
-        IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 600, 400, true);
-        chart.getChartData().getSeriesGroups().get_Item(0).setBubbleSizeRepresentation(BubbleSizeRepresentationType.Width);
-        pres.save(dataDir +"Presentation.pptx", SaveFormat.Pptx);
-    }
-    finally {
-        pres.dispose();
-    }
-    //ExEnd:SupportOfBubbleSizeRepresentation   
+
+    public static void main(String[] args) {
+
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SupportOfBubbleSizeRepresentation.class);
+
+        //ExStart:SupportOfBubbleSizeRepresentation
+        // Instantiate the presentation
+        Presentation pres = new Presentation();
+        try {
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 600, 400, true);
+            chart.getChartData().getSeriesGroups().get_Item(0).setBubbleSizeRepresentation(BubbleSizeRepresentationType.Width);
+
+            pres.save(dataDir + "Presentation.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SupportOfBubbleSizeRepresentation
     }
 }

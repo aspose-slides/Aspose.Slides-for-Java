@@ -12,26 +12,27 @@ import com.aspose.slides.examples.Utils;
 
 public class GeneratingThumbnailFromSlide {
 
-	public static void main(String[] args) {
-//ExStart:GeneratingThumbnailFromSlide
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlide.class);
+    public static void main(String[] args) throws IOException {
 
-		// Instantiate a Presentation class that represents the presentation file
-		Presentation pres = new Presentation(dataDir + "Sample.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlide.class);
 
-		// Access the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:GeneratingThumbnailFromSlide
+        // Instantiate a Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "Sample.pptx");
+        try {
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Create a full scale image
-		BufferedImage image = sld.getThumbnail(1f, 1f);
+            // Create a full scale image
+            BufferedImage image = sld.getThumbnail(1f, 1f);
 
-		// Save the image to disk in JPEG format
-		try {
-			ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
-		} catch (IOException e) {
-		}
-//ExEnd:GeneratingThumbnailFromSlide
-	}
+            // Save the image to disk in JPEG format
+            ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:GeneratingThumbnailFromSlide
+    }
 
 }

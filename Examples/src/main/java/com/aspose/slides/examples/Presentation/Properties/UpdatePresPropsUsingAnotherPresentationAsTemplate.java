@@ -7,42 +7,40 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.Utils;
 
 public class UpdatePresPropsUsingAnotherPresentationAsTemplate {
-	
-//ExStart:UpdatePresPropsUsingAnotherPresentationAsTemplate
 
-	public static void main(String args[]) {
+    // The path to the documents directory.
+    static String dataDir = Utils.getDataDir(UpdatePresPropsUsingAnotherPresentationAsTemplate.class);
 
-	
-            updateByTemplate();
-	}
+    public static void main(String[] args) {
+        updateByTemplate();
+    }
 
-	private static void updateByTemplate() {
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(UpdatePresPropsUsingAnotherPresentationAsTemplate.class);
+    //ExStart:UpdatePresPropsUsingAnotherPresentationAsTemplate
+    private static void updateByTemplate() {
 
-		DocumentProperties template;
-		IPresentationInfo info = PresentationFactory.getInstance().getPresentationInfo(dataDir + "Presentation.pptx");
-		template = (DocumentProperties) info.readDocumentProperties();
+        DocumentProperties template;
+        IPresentationInfo info = PresentationFactory.getInstance().getPresentationInfo(dataDir + "Presentation.pptx");
+        template = (DocumentProperties) info.readDocumentProperties();
 
-		template.setAuthor("Template Author");
-		template.setTitle("Template Title");
-		template.setCategory("Template Category");
-		template.setKeywords("Keyword1, Keyword2, Keyword3");
-		template.setCompany("Our Company");
-		template.setComments("Created from template");
-		template.setContentType("Template Content");
-		template.setSubject("Template Subject");
+        template.setAuthor("Template Author");
+        template.setTitle("Template Title");
+        template.setCategory("Template Category");
+        template.setKeywords("Keyword1, Keyword2, Keyword3");
+        template.setCompany("Our Company");
+        template.setComments("Created from template");
+        template.setContentType("Template Content");
+        template.setSubject("Template Subject");
 
-		updateByTemplate(dataDir + "doc1.pptx", template);
-		updateByTemplate(dataDir + "doc2.odp", template);
-		updateByTemplate(dataDir + "doc3.ppt", template);
-	}
+        updateByTemplate(dataDir + "doc1.pptx", template);
+        updateByTemplate(dataDir + "doc2.odp", template);
+        updateByTemplate(dataDir + "doc3.ppt", template);
+    }
 
-	private static void updateByTemplate(String path, IDocumentProperties template) {
-		IPresentationInfo toUpdate = PresentationFactory.getInstance().getPresentationInfo(path);
-		toUpdate.updateDocumentProperties(template);
-		toUpdate.writeBindedPresentation(path);
-     }
-	//ExEnd:UpdatePresPropsUsingAnotherPresentationAsTemplate
+    private static void updateByTemplate(String path, IDocumentProperties template) {
+        IPresentationInfo toUpdate = PresentationFactory.getInstance().getPresentationInfo(path);
+        toUpdate.updateDocumentProperties(template);
+        toUpdate.writeBindedPresentation(path);
+    }
+    //ExEnd:UpdatePresPropsUsingAnotherPresentationAsTemplate
 
 }

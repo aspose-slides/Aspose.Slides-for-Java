@@ -9,33 +9,33 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingCustomLocationAndSizeForChartLegend {
 
-	public static void main(String[] args) {
-//ExStart:SettingCustomLocationAndSizeForChartLegend
+    public static void main(String[] args) {
 
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingCustomLocationAndSizeForChartLegend.class);
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingCustomLocationAndSizeForChartLegend.class);
+        //ExStart:SettingCustomLocationAndSizeForChartLegend
+        // Create an instance of Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Get reference of the slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Create an instance of Presentation class
-		Presentation pres = new Presentation();
+            // Add a clustered column chart on the slide
+            IChart chart = slide.getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 500, 500);
 
-		// Get reference of the slide
-		ISlide slide = pres.getSlides().get_Item(0);
+            // Set Legend Properties
+            chart.getLegend().setX(50 / chart.getWidth());
+            chart.getLegend().setY(50 / chart.getHeight());
+            chart.getLegend().setWidth(100 / chart.getWidth());
+            chart.getLegend().setHeight(100 / chart.getHeight());
 
-		// Add a clustered column chart on the slide
-		IChart chart = slide.getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 500, 500);
-
-		// Set Legend Properties
-		chart.getLegend().setX(50 / chart.getWidth());
-		chart.getLegend().setY(50 / chart.getHeight());
-		chart.getLegend().setWidth(100 / chart.getWidth());
-		chart.getLegend().setHeight(100 / chart.getHeight());
-
-		// Write presentation to disk
-		pres.save(dataDir + "Legend.pptx", SaveFormat.Pptx);
-
-//ExEnd:SettingCustomLocationAndSizeForChartLegend
-
-	}
+            // Write presentation to disk
+            pres.save(dataDir + "Legend.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingCustomLocationAndSizeForChartLegend
+    }
 
 }

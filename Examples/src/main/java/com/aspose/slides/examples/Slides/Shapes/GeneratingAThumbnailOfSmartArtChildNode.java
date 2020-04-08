@@ -2,6 +2,7 @@ package com.aspose.slides.examples.Slides.Shapes;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
@@ -13,32 +14,30 @@ import com.aspose.slides.examples.Utils;
 
 public class GeneratingAThumbnailOfSmartArtChildNode {
 
-	public static void main(String[] args) {
-//ExStart:GeneratingAThumbnailOfSmartArtChildNode
+    public static void main(String[] args) throws IOException {
 
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(GeneratingAThumbnailOfSmartArtChildNode.class);
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(GeneratingAThumbnailOfSmartArtChildNode.class);
+        //ExStart:GeneratingAThumbnailOfSmartArtChildNode
+        // Instantiate Presentation class that represents the PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Add SmartArt
+            ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
 
-		// Instantiate Presentation class that represents the PPTX file
-		Presentation pres = new Presentation();
+            // Obtain the reference of a node by using its Index
+            ISmartArtNode node = smart.getNodes().get_Item(1);
 
-		// Add SmartArt
-		ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
+            // Generating SmartArt node thumbnail
+            BufferedImage image = node.getShapes().get_Item(0).getThumbnail();
 
-		// Obtain the reference of a node by using its Index
-		ISmartArtNode node = smart.getNodes().get_Item(1);
-
-		// Generating SmartArt node thumbnail
-		BufferedImage image = node.getShapes().get_Item(0).getThumbnail();
-
-		try {
-			// Save the image to disk in PNG format
-			ImageIO.write(image, "png", new File(dataDir + "NodeImage.png"));
-		} catch (Exception e) {
-		}
-//ExEnd:GeneratingAThumbnailOfSmartArtChildNode
-
-	}
+            // Save the image to disk in PNG format
+            ImageIO.write(image, "png", new File(dataDir + "NodeImage.png"));
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:GeneratingAThumbnailOfSmartArtChildNode
+    }
 
 }

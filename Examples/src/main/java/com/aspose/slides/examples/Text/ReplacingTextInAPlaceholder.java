@@ -9,28 +9,31 @@ import com.aspose.slides.examples.Utils;
 
 public class ReplacingTextInAPlaceholder {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ReplacingTextInAPlaceholder.class);
-               //ExStart:ReplacingTextInAPlaceholder
-		// Instantiate Presentation class that represents PPTX
-		Presentation pres = new Presentation(dataDir + "welcome.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ReplacingTextInAPlaceholder.class);
 
-		// Access first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:ReplacingTextInAPlaceholder
+        // Instantiate Presentation class that represents PPTX
+        Presentation pres = new Presentation(dataDir + "welcome.pptx");
+        try {
+            // Access first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Iterate through shapes to find the placeholder
-		for (IShape shp : sld.getShapes())
-			if (shp.getPlaceholder() != null) {
-				// Change the text of each placeholder
-				((IAutoShape) shp).getTextFrame().setText("This is Placeholder");
-			}
+            // Iterate through shapes to find the placeholder
+            for (IShape shp : sld.getShapes())
+                if (shp.getPlaceholder() != null) {
+                    // Change the text of each placeholder
+                    ((IAutoShape) shp).getTextFrame().setText("This is Placeholder");
+                }
 
-		// Save the PPTX to Disk
-		pres.save(dataDir + "welcome_PH.pptx", SaveFormat.Pptx);
-
-               //ExEnd:ReplacingTextInAPlaceholder
-	}
+            // Save the PPTX to Disk
+            pres.save(dataDir + "welcome_PH.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ReplacingTextInAPlaceholder
+    }
 
 }

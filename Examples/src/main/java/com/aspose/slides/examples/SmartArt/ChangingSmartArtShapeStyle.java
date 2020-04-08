@@ -10,35 +10,39 @@ import com.aspose.slides.examples.Utils;
 
 public class ChangingSmartArtShapeStyle {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangingSmartArtShapeStyle.class);
-                   //ExStart:ChangingSmartArtShapeStyle
-		// Instantiate Presentation Class
-		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ChangingSmartArtShapeStyle.class);
 
-		// Get first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+        //ExStart:ChangingSmartArtShapeStyle
+        // Instantiate Presentation Class
+        Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
+        try {
+            // Get first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Traverse through every shape inside first slide
-		for (IShape shape : slide.getShapes()) {
-			// Check if shape is of SmartArt type
-			if (shape instanceof ISmartArt) {
-				// Typecast shape to SmartArtEx
-				ISmartArt smart = (ISmartArt) shape;
+            // Traverse through every shape inside first slide
+            for (IShape shape : slide.getShapes()) {
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt) {
+                    // Typecast shape to SmartArtEx
+                    ISmartArt smart = (ISmartArt) shape;
 
-				// Checking SmartArt style
-				if (smart.getQuickStyle() == SmartArtQuickStyleType.SimpleFill) {
-					// Changing SmartArt Style
-					smart.setQuickStyle(SmartArtQuickStyleType.Cartoon);
-				}
-			}
-		}
-		// Saving presentation
-		pres.save(dataDir + "ChangeSmartArtStyle.pptx", SaveFormat.Pptx);
+                    // Checking SmartArt style
+                    if (smart.getQuickStyle() == SmartArtQuickStyleType.SimpleFill) {
+                        // Changing SmartArt Style
+                        smart.setQuickStyle(SmartArtQuickStyleType.Cartoon);
+                    }
+                }
+            }
 
-              //ExEnd:ChangingSmartArtShapeStyle
-	}
+            // Saving presentation
+            pres.save(dataDir + "ChangeSmartArtStyle.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ChangingSmartArtShapeStyle
+    }
 
 }

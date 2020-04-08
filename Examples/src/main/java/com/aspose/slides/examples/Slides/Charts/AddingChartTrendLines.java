@@ -13,57 +13,57 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingChartTrendLines {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingChartTrendLines.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingChartTrendLines.class);
 
-//ExStart:AddingChartTrendLines
+        //ExStart:AddingChartTrendLines
+        // Creating empty presentation//Creating empty presentation
+        Presentation pres = new Presentation();
+        try {
+            // Creating a clustered column chart
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 20, 20, 500, 400);
 
-		// Creating empty presentation//Creating empty presentation
-		Presentation pres = new Presentation();
+            // Adding exponential trend line for chart series 1
+            ITrendline tredLinep = chart.getChartData().getSeries().get_Item(0).getTrendLines().add(TrendlineType.Exponential);
+            tredLinep.setDisplayEquation(false);
+            tredLinep.setDisplayRSquaredValue(false);
 
-		// Creating a clustered column chart
-		IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 20, 20, 500, 400);
+            // Adding Linear trend line for chart series 1
+            ITrendline tredLineLin = chart.getChartData().getSeries().get_Item(0).getTrendLines().add(TrendlineType.Linear);
+            tredLineLin.setTrendlineType(TrendlineType.Linear);
+            tredLineLin.getFormat().getLine().getFillFormat().setFillType(FillType.Solid);
+            tredLineLin.getFormat().getLine().getFillFormat().getSolidFillColor().setColor(Color.RED);
 
-		// Adding exponential trend line for chart series 1
-		ITrendline tredLinep = chart.getChartData().getSeries().get_Item(0).getTrendLines().add(TrendlineType.Exponential);
-		tredLinep.setDisplayEquation(false);
-		tredLinep.setDisplayRSquaredValue(false);
+            // Adding Logarithmic trend line for chart series 2
+            ITrendline tredLineLog = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.Logarithmic);
+            tredLineLog.setTrendlineType(TrendlineType.Logarithmic);
+            tredLineLog.addTextFrameForOverriding("New log trend line");
 
-		// Adding Linear trend line for chart series 1
-		ITrendline tredLineLin = chart.getChartData().getSeries().get_Item(0).getTrendLines().add(TrendlineType.Linear);
-		tredLineLin.setTrendlineType(TrendlineType.Linear);
-		tredLineLin.getFormat().getLine().getFillFormat().setFillType(FillType.Solid);
-		tredLineLin.getFormat().getLine().getFillFormat().getSolidFillColor().setColor(Color.RED);
+            // Adding MovingAverage trend line for chart series 2
+            ITrendline tredLineMovAvg = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.MovingAverage);
+            tredLineMovAvg.setTrendlineType(TrendlineType.MovingAverage);
+            tredLineMovAvg.setPeriod((byte) 3);
+            tredLineMovAvg.setTrendlineName("New TrendLine Name");
 
-		// Adding Logarithmic trend line for chart series 2
-		ITrendline tredLineLog = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.Logarithmic);
-		tredLineLog.setTrendlineType(TrendlineType.Logarithmic);
-		tredLineLog.addTextFrameForOverriding("New log trend line");
+            // Adding Polynomial trend line for chart series 3
+            ITrendline tredLinePol = chart.getChartData().getSeries().get_Item(2).getTrendLines().add(TrendlineType.Polynomial);
+            tredLinePol.setTrendlineType(TrendlineType.Polynomial);
+            tredLinePol.setForward(1);
+            tredLinePol.setOrder((byte) 3);
 
-		// Adding MovingAverage trend line for chart series 2
-		ITrendline tredLineMovAvg = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.MovingAverage);
-		tredLineMovAvg.setTrendlineType(TrendlineType.MovingAverage);
-		tredLineMovAvg.setPeriod((byte) 3);
-		tredLineMovAvg.setTrendlineName("New TrendLine Name");
+            // Adding Power trend line for chart series 3
+            ITrendline tredLinePower = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.Power);
+            tredLinePower.setTrendlineType(TrendlineType.Power);
+            tredLinePower.setBackward(1);
 
-		// Adding Polynomial trend line for chart series 3
-		ITrendline tredLinePol = chart.getChartData().getSeries().get_Item(2).getTrendLines().add(TrendlineType.Polynomial);
-		tredLinePol.setTrendlineType(TrendlineType.Polynomial);
-		tredLinePol.setForward(1);
-		tredLinePol.setOrder((byte) 3);
-
-		// Adding Power trend line for chart series 3
-		ITrendline tredLinePower = chart.getChartData().getSeries().get_Item(1).getTrendLines().add(TrendlineType.Power);
-		tredLinePower.setTrendlineType(TrendlineType.Power);
-		tredLinePower.setBackward(1);
-
-		// Saving presentation
-		pres.save(dataDir + "ChartTrendLines.pptx", SaveFormat.Pptx);
-
-//ExEnd:AddingChartTrendLines
-
-	}
+            // Saving presentation
+            pres.save(dataDir + "ChartTrendLines.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingChartTrendLines
+    }
 
 }

@@ -18,74 +18,77 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheChartMarkerOptionsOnDataPointsLevel {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//ExStart:SettingTheChartMarkerOptionsOnDataPointsLevel
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheChartMarkerOptionsOnDataPointsLevel.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheChartMarkerOptionsOnDataPointsLevel.class);
 
-		// Creating empty presentation
-		Presentation pres = new Presentation();
+        //ExStart:SettingTheChartMarkerOptionsOnDataPointsLevel
+        // Creating empty presentation
+        Presentation pres = new Presentation();
+        try {
+            // Access first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Access first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+            // Creating the default chart
+            IChart chart = slide.getShapes().addChart(ChartType.LineWithMarkers, 0, 0, 400, 400);
 
-		// Creating the default chart
-		IChart chart = slide.getShapes().addChart(ChartType.LineWithMarkers, 0, 0, 400, 400);
+            // Getting the default chart data WorkSheet index
+            int defaultWorksheetIndex = 0;
 
-		// Getting the default chart data WorkSheet index
-		int defaultWorksheetIndex = 0;
+            // Getting the chart data WorkSheet
+            IChartDataWorkbook fact = chart.getChartData().getChartDataWorkbook();
 
-		// Getting the chart data WorkSheet
-		IChartDataWorkbook fact = chart.getChartData().getChartDataWorkbook();
+            // Delete demo series
+            chart.getChartData().getSeries().clear();
 
-		// Delete demo series
-		chart.getChartData().getSeries().clear();
+            // Add new series
+            chart.getChartData().getSeries().add(fact.getCell(defaultWorksheetIndex, 1, 1, "Series 1"), chart.getType());
 
-		// Add new series
-		chart.getChartData().getSeries().add(fact.getCell(defaultWorksheetIndex, 1, 1, "Series 1"), chart.getType());
+            IPPImage imgx1 = null;
+            try {
+                imgx1 = pres.getImages().addImage(new FileInputStream(new File("Desert.jpg")));
 
-		IPPImage imgx1 = null;
-		try {
-			imgx1 = pres.getImages().addImage(new FileInputStream(new File("Desert.jpg")));
+            } catch (IOException e) {
+            }
 
-		} catch (IOException e) {
-		}
+            // Set the picture
+            IPPImage imgx2 = null;
+            try {
+                imgx2 = pres.getImages().addImage(new FileInputStream(new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\Tulips.jpg")));
 
-		// Set the picture
-		IPPImage imgx2 = null;
-		try {
-			imgx2 = pres.getImages().addImage(new FileInputStream(new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\Tulips.jpg")));
+            } catch (IOException e) {
+            }
 
-		} catch (IOException e) {
-		}
+            // Take first chart series
+            IChartSeries series = chart.getChartData().getSeries().get_Item(0);
 
-		// Take first chart series
-		IChartSeries series = chart.getChartData().getSeries().get_Item(0);
+            // Add new point (1:3) there.
+            IChartDataPoint point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 1, 1, 4.5));
+            point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
+            point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx1);
 
-		// Add new point (1:3) there.
-		IChartDataPoint point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 1, 1, (double) 4.5));
-		point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
-		point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx1);
+            point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 2, 1, 2.5));
+            point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
+            point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx2);
 
-		point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 2, 1, (double) 2.5));
-		point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
-		point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx2);
+            point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 3, 1, 3.5));
+            point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
+            point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx1);
 
-		point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 3, 1, (double) 3.5));
-		point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
-		point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx1);
+            point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 4, 1, 4.5));
+            point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
+            point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx2);
 
-		point = series.getDataPoints().addDataPointForLineSeries(fact.getCell(defaultWorksheetIndex, 4, 1, (double) 4.5));
-		point.getMarker().getFormat().getFill().setFillType(FillType.Picture);
-		point.getMarker().getFormat().getFill().getPictureFillFormat().getPicture().setImage(imgx2);
+            // Changing the chart series marker
+            series.getMarker().setSize(15);
 
-		// Changing the chart series marker
-		series.getMarker().setSize(15);
+            // Save presentation with chart
+            pres.save(dataDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheChartMarkerOptionsOnDataPointsLevel
 
-		// Save presentation with chart
-		pres.save(dataDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
-//ExEnd:SettingTheChartMarkerOptionsOnDataPointsLevel
-
-	}
+    }
 }

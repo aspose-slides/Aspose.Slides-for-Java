@@ -13,35 +13,35 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingFillFormatForSmartArtNode {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingFillFormatForSmartArtNode.class);
-               
-     //ExStart:SettingFillFormatForSmartArtNode
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingFillFormatForSmartArtNode.class);
 
-		// Instantiate the presentation
-		Presentation pres = new Presentation();
+        //ExStart:SettingFillFormatForSmartArtNode
+        // Instantiate the presentation
+        Presentation pres = new Presentation();
+        try {
+            // Accessing the slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Accessing the slide
-		ISlide slide = pres.getSlides().get_Item(0);
+            // Adding SmartArt shape and nodes
+            ISmartArt chevron = slide.getShapes().addSmartArt(10, 10, 800, 60, com.aspose.slides.SmartArtLayoutType.ClosedChevronProcess);
+            ISmartArtNode node = chevron.getAllNodes().addNode();
+            node.getTextFrame().setText("Some text");
 
-		// Adding SmartArt shape and nodes
-		ISmartArt chevron = slide.getShapes().addSmartArt(10, 10, 800, 60, com.aspose.slides.SmartArtLayoutType.ClosedChevronProcess);
-		ISmartArtNode node = chevron.getAllNodes().addNode();
-		node.getTextFrame().setText("Some text");
+            // Setting node fill color
+            for (IShape item : node.getShapes()) {
+                item.getFillFormat().setFillType(FillType.Solid);
+                item.getFillFormat().getSolidFillColor().setColor(Color.RED);
+            }
 
-		// Setting node fill color
-		for (IShape item : node.getShapes()) {
-			item.getFillFormat().setFillType(FillType.Solid);
-			item.getFillFormat().getSolidFillColor().setColor(Color.RED);
-		}
-
-		// Save the presentation
-		pres.save(dataDir + "TestSmart.pptx", SaveFormat.Pptx);
-           
- //ExEnd:SettingFillFormatForSmartArtNode
-	
-         }
+            // Save the presentation
+            pres.save(dataDir + "TestSmart.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingFillFormatForSmartArtNode
+    }
 
 }

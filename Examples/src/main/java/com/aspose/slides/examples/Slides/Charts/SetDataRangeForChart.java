@@ -8,23 +8,26 @@ import com.aspose.slides.examples.Utils;
 
 public class SetDataRangeForChart {
 
-	public static void main(String[] args) {
-//ExStart:SetDataRangeForChart
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(SetDataRangeForChart.class) + "Charts/";
-				
-		// Instantiate Presentation class that represents PPTX file
-		Presentation presentation = new Presentation(dataDir + "ExistingChart.pptx");
+    public static void main(String[] args) {
 
-		// Access first slideMarker
-		ISlide sld = presentation.getSlides().get_Item(0);
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir(SetDataRangeForChart.class) + "Charts/";
 
-		// Add chart with default data
-		IChart chart = (IChart)sld.getShapes().get_Item(0);
+        //ExStart:SetDataRangeForChart
+        // Instantiate Presentation class that represents PPTX file
+        Presentation presentation = new Presentation(dataDir + "ExistingChart.pptx");
+        try {
+            // Access first slideMarker
+            ISlide sld = presentation.getSlides().get_Item(0);
 
-		chart.getChartData().setRange("Sheet1!A1:B4");
+            // Add chart with default data
+            IChart chart = (IChart) sld.getShapes().get_Item(0);
+            chart.getChartData().setRange("Sheet1!A1:B4");
 
-		presentation.save(dataDir + "SetDataRangeForChart_Out.pptx", SaveFormat.Pptx);
-//ExEnd:SetDataRangeForChart
-	}
+            presentation.save(dataDir + "SetDataRangeForChart_Out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (presentation != null) presentation.dispose();
+        }
+        //ExEnd:SetDataRangeForChart
+    }
 }

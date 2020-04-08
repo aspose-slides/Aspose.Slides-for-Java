@@ -17,52 +17,56 @@ import com.aspose.slides.examples.Utils;
 
 public class ManagingFontFamilyOfText {
 
-	public static void main(String[] args) {
-                //ExStart:ManagingFontFamilyOfText
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ManagingFontFamilyOfText.class);
+    public static void main(String[] args) {
 
-		// Instantiate a Presentation object that represents a PPTX file
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ManagingFontFamilyOfText.class);
 
-		// Get first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:ManagingFontFamilyOfText
+        // Instantiate a Presentation object that represents a PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Get first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Add an AutoShape of Rectangle type
-		IAutoShape ashp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 50, 200, 50);
+            // Add an AutoShape of Rectangle type
+            IAutoShape ashp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 50, 200, 50);
 
-		// Remove any fill style associated with the AutoShape
-		ashp.getFillFormat().setFillType(FillType.NoFill);
+            // Remove any fill style associated with the AutoShape
+            ashp.getFillFormat().setFillType(FillType.NoFill);
 
-		// Access the TextFrame associated with the AutoShape
-		ITextFrame tf = ashp.getTextFrame();
-		tf.setText("Aspose TextBox");
+            // Access the TextFrame associated with the AutoShape
+            ITextFrame tf = ashp.getTextFrame();
+            tf.setText("Aspose TextBox");
 
-		// Access the Portion associated with the TextFrame
-		IPortion port = tf.getParagraphs().get_Item(0).getPortions().get_Item(0);
+            // Access the Portion associated with the TextFrame
+            IPortion port = tf.getParagraphs().get_Item(0).getPortions().get_Item(0);
 
-		// Set the Font for the Portion
-		port.getPortionFormat().setLatinFont(new FontData("Times New Roman"));
+            // Set the Font for the Portion
+            port.getPortionFormat().setLatinFont(new FontData("Times New Roman"));
 
-		// Set Bold property of the Font
-		port.getPortionFormat().setFontBold(NullableBool.True);
+            // Set Bold property of the Font
+            port.getPortionFormat().setFontBold(NullableBool.True);
 
-		// Set Italic property of the Font
-		port.getPortionFormat().setFontItalic(NullableBool.True);
+            // Set Italic property of the Font
+            port.getPortionFormat().setFontItalic(NullableBool.True);
 
-		// Set Underline property of the Font
-		port.getPortionFormat().setFontUnderline(TextUnderlineType.Single);
+            // Set Underline property of the Font
+            port.getPortionFormat().setFontUnderline(TextUnderlineType.Single);
 
-		// Set the Height of the Font
-		port.getPortionFormat().setFontHeight(25);
+            // Set the Height of the Font
+            port.getPortionFormat().setFontHeight(25);
 
-		// Set the color of the Font
-		port.getPortionFormat().getFillFormat().setFillType(FillType.Solid);
-		port.getPortionFormat().getFillFormat().getSolidFillColor().setColor(Color.BLUE);
+            // Set the color of the Font
+            port.getPortionFormat().getFillFormat().setFillType(FillType.Solid);
+            port.getPortionFormat().getFillFormat().getSolidFillColor().setColor(Color.BLUE);
 
-		// Save the presentation to disk
-		pres.save(dataDir + "pptxFont.pptx", SaveFormat.Pptx);
-                //ExEnd:ManagingFontFamilyOfText
-	}
+            // Save the presentation to disk
+            pres.save(dataDir + "pptxFont.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ManagingFontFamilyOfText
+    }
 
 }

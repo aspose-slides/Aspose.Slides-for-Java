@@ -7,28 +7,26 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToPDFIncludingHiddenSlides {
 
-	public static void main(String[] args) {
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationToPDFIncludingHiddenSlides.class);
-		
-//ExStart:ConvertingPresentationToPDFIncludingHiddenSlides
+    public static void main(String[] args) {
 
-                  Presentation pres = new Presentation(dataDir + "demo.pptx");
-		try {
-			// Instantiate the PdfOptions class
-			PdfOptions pdfOptions = new PdfOptions();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToPDFIncludingHiddenSlides.class);
 
-			// Specify that the generated document should include hidden slides
-			pdfOptions.setShowHiddenSlides(true);
+        //ExStart:ConvertingPresentationToPDFIncludingHiddenSlides
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Instantiate the PdfOptions class
+            PdfOptions pdfOptions = new PdfOptions();
 
-			// Save the presentation to PDF with specified options
-			pres.save(dataDir + "Presentation.pdf", SaveFormat.Pdf, pdfOptions);
-		} finally {
-			if (pres != null)
-				pres.dispose();
-               
-  //ExEnd:ConvertingPresentationToPDFIncludingHiddenSlides
+            // Specify that the generated document should include hidden slides
+            pdfOptions.setShowHiddenSlides(true);
 
-		}
-	}
+            // Save the presentation to PDF with specified options
+            pres.save(dataDir + "Presentation.pdf", SaveFormat.Pdf, pdfOptions);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToPDFIncludingHiddenSlides
+    }
 }

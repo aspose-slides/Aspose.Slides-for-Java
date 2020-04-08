@@ -13,37 +13,35 @@ import javax.imageio.ImageIO;
 
 public class GeneratingThumbnailFromSlideInNotesSlidesView {
 
-	public static void main(String[] args) {
-                //ExStart:GeneratingThumbnailFromSlideInNotesSlidesView
-		
-              // The path to the documents directory.
-		String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideInNotesSlidesView.class);
+    public static void main(String[] args) throws IOException {
 
-		// Instantiate a Presentation class that represents the presentation file
-		Presentation pres = new Presentation(dataDir + "ThumbnailFromSlideInNotes.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(GeneratingThumbnailFromSlideInNotesSlidesView.class);
 
-		// Access the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:GeneratingThumbnailFromSlideInNotesSlidesView
+        // Instantiate a Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "ThumbnailFromSlideInNotes.pptx");
+        try {
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// User defined dimension
-		int desiredX = 1200;
-		int desiredY = 800;
+            // User defined dimension
+            int desiredX = 1200;
+            int desiredY = 800;
 
-		// Getting scaled value of X and Y
-		float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth()) * desiredX;
-		float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
+            // Getting scaled value of X and Y
+            float ScaleX = (float) (1.0 / pres.getSlideSize().getSize().getWidth()) * desiredX;
+            float ScaleY = (float) (1.0 / pres.getSlideSize().getSize().getHeight()) * desiredY;
 
-		// Create a full scale image
-		BufferedImage image = sld.getThumbnail(ScaleY, ScaleY);
-                       // getThumbnail(ScaleX, ScaleY);
+            // Create a full scale image
+            BufferedImage image = sld.getThumbnail(ScaleY, ScaleY);
 
-		// Save the image to disk in JPEG format
-		try {
-			ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
-		} catch (IOException e) {
-		}
+            // Save the image to disk in JPEG format
+            ImageIO.write(image, "jpeg", new File(dataDir + "ContentBG_tnail.jpg"));
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:GeneratingThumbnailFromSlideInNotesSlidesView
 
-               //ExEnd:GeneratingThumbnailFromSlideInNotesSlidesView
-
-}
+    }
 }

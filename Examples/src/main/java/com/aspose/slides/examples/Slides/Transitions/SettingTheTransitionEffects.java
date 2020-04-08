@@ -8,23 +8,25 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheTransitionEffects {
 
-	public static void main(String[] args) {
-		 
-	//ExStart:SettingTheTransitionEffects
-		// The path to the documents directory.
-	    	String dataDir = Utils.getDataDir(SettingTheTransitionEffects.class);
-		
-	    	// Create an instance of Presentation class
-		Presentation pres = new Presentation();
+    public static void main(String[] args) {
 
-		// Set effect
-		pres.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Cut);
-		((OptionalBlackTransition) pres.getSlides().get_Item(0).getSlideShowTransition().getValue()).setFromBlack(true);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheTransitionEffects.class);
 
-		// Write the presentation to disk
-		pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
+        //ExStart:SettingTheTransitionEffects
+        // Create an instance of Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Set effect
+            pres.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Cut);
+            ((OptionalBlackTransition) pres.getSlides().get_Item(0).getSlideShowTransition().getValue()).setFromBlack(true);
 
-	//ExEnd:SettingTheTransitionEffects
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheTransitionEffects
+    }
 
 }

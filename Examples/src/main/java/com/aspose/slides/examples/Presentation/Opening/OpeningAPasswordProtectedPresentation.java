@@ -6,26 +6,27 @@ import com.aspose.slides.examples.Utils;
 
 public class OpeningAPasswordProtectedPresentation {
 
-	public static final void main(String[] args) {
-		
-		// The path to the documents directory.
-        	String dataDir = Utils.getDataDir(OpeningAPasswordProtectedPresentation.class);
-               
-  //ExStart:OpeningAPasswordProtectedPresentation
+    public static final void main(String[] args) {
 
-		// Creating instance of load options to set the presentation access password
-		LoadOptions loadOptions = new LoadOptions();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(OpeningAPasswordProtectedPresentation.class);
 
-		// Setting the access password
-		loadOptions.setPassword("pass");
+        //ExStart:OpeningAPasswordProtectedPresentation
+        // Creating instance of load options to set the presentation access password
+        LoadOptions loadOptions = new LoadOptions();
 
-		// Opening the presentation file by passing the file path and load
-		// options to the constructor of Presentation class
-		Presentation pres = new Presentation(dataDir + "demoPassDocument.pptx", loadOptions);
+        // Setting the access password
+        loadOptions.setPassword("pass");
 
-		// Printing the total number of slides present in the presentation
-		System.out.println(pres.getSlides().size());
-        
-       //ExEnd:OpeningAPasswordProtectedPresentation
-	}
+        // Opening the presentation file by passing the file path and load
+        // options to the constructor of Presentation class
+        Presentation pres = new Presentation(dataDir + "demoPassDocument.pptx", loadOptions);
+        try {
+            // Printing the total number of slides present in the presentation
+            System.out.println(pres.getSlides().size());
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:OpeningAPasswordProtectedPresentation
+    }
 }

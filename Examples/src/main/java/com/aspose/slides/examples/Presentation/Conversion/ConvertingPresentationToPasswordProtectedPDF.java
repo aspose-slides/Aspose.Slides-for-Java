@@ -7,24 +7,27 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToPasswordProtectedPDF {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationToPasswordProtectedPDF.class);
-                //ExStart: ConvertingPresentationToPasswordProtectedPDF
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToPasswordProtectedPDF.class);
 
-		// Instantiate the PdfOptions class
-		PdfOptions opts = new PdfOptions();
+        //ExStart: ConvertingPresentationToPasswordProtectedPDF
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Instantiate the PdfOptions class
+            PdfOptions opts = new PdfOptions();
 
-		// Setting PDF password
-		opts.setPassword("password");
+            // Setting PDF password
+            opts.setPassword("password");
 
-		// Save the presentation to password protected PDF
-		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
-               //ExEnd:ConvertingPresentationToPasswordProtectedPDF
-
-	}
+            // Save the presentation to password protected PDF
+            pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToPasswordProtectedPDF
+    }
 
 }

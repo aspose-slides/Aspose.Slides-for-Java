@@ -14,55 +14,53 @@ import com.aspose.slides.examples.Utils;
 
 public class AnimatingCategoriesElements {
 
-	public static void main(String[] args) {
-//ExStart:AnimatingCategoriesElements
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getSharedDataDir(AnimatingCategoriesElements.class) + "Charts/";
+        // The path to the documents directory.
+        String dataDir = Utils.getSharedDataDir(AnimatingCategoriesElements.class) + "Charts/";
 
-		// Load a presentation
-		Presentation pres = new Presentation(dataDir + "ExistingChart.pptx");
-		try {
-			ISlide slide = pres.getSlides().get_Item(0);
-			IShapeCollection shapes = slide.getShapes();
-			IChart chart = (IChart) shapes.get_Item(0);
+        //ExStart:AnimatingCategoriesElements
+        // Load a presentation
+        Presentation pres = new Presentation(dataDir + "ExistingChart.pptx");
+        try {
+            ISlide slide = pres.getSlides().get_Item(0);
+            IShapeCollection shapes = slide.getShapes();
+            IChart chart = (IChart) shapes.get_Item(0);
 
-			slide.getTimeline().getMainSequence().addEffect(chart, EffectType.Fade, EffectSubtype.None, EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectType.Fade, EffectSubtype.None, EffectTriggerType.AfterPrevious);
 
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 0, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 1, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 2, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 3, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 0, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 1, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 2, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 0, 3, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
 
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 0, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 1, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 2, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 3, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 0, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 1, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 2, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 1, 3, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
 
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 0, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 1, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 2, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
-			((Sequence) slide.getTimeline().getMainSequence()).addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 3, EffectType.Appear, EffectSubtype.None,
-					EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 0, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 1, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 2, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
+            slide.getTimeline().getMainSequence().addEffect(chart, EffectChartMinorGroupingType.ByElementInCategory, 2, 3, EffectType.Appear, EffectSubtype.None,
+                    EffectTriggerType.AfterPrevious);
 
-			pres.save(dataDir + "AnimatingCategoriesElements_out.pptx", SaveFormat.Pptx);
-		} finally {
-			if (pres != null)
-				pres.dispose();
-		}
-//ExEnd:AnimatingCategoriesElements
-
-	}
+            pres.save(dataDir + "AnimatingCategoriesElements_out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AnimatingCategoriesElements
+    }
 
 }

@@ -14,39 +14,40 @@ import com.aspose.slides.examples.Utils;
 
 public class FormattingTheLinesOfShapes {
 
-	public static void main(String[] args) {
-	//ExStart:FormattingTheLinesOfShapes
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(FormattingTheLinesOfShapes.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(FormattingTheLinesOfShapes.class);
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+        //ExStart:FormattingTheLinesOfShapes
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+            // Add AutoShape of rectangle type
+            IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 150, 75);
 
-		// Add AutoShape of rectangle type
-		IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 150, 75);
+            // Set the fill color of the rectangle shape
+            shp.getFillFormat().setFillType(FillType.Solid);
+            shp.getFillFormat().getSolidFillColor().setColor(Color.WHITE);
 
-		// Set the fill color of the rectangle shape
-		shp.getFillFormat().setFillType(FillType.Solid);
-		shp.getFillFormat().getSolidFillColor().setColor(Color.WHITE);
+            // Apply some formatting on the line of the rectangle
+            shp.getLineFormat().setStyle(LineStyle.ThickThin);
+            shp.getLineFormat().setWidth(7);
+            shp.getLineFormat().setDashStyle(LineDashStyle.Dash);
 
-		// Apply some formatting on the line of the rectangle
-		shp.getLineFormat().setStyle(LineStyle.ThickThin);
-		shp.getLineFormat().setWidth(7);
-		shp.getLineFormat().setDashStyle(LineDashStyle.Dash);
+            // set the color of the line of rectangle
+            shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
+            shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLUE);
 
-		// set the color of the line of rectangle
-		shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
-		shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLUE);
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "RectShpLn.pptx", SaveFormat.Pptx);
-//ExEnd:FormattingTheLinesOfShapes
-
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "RectShpLn.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:FormattingTheLinesOfShapes
+    }
 
 }

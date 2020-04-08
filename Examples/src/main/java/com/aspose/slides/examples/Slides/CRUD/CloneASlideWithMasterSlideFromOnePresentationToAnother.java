@@ -10,38 +10,39 @@ import com.aspose.slides.examples.Utils;
 
 public class CloneASlideWithMasterSlideFromOnePresentationToAnother {
 
-	public static void main(String[] args) {
-		
-		// The path to the documents directory.
+    public static void main(String[] args) {
 
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CloneASlideWithMasterSlideFromOnePresentationToAnother.class);
 
-             String dataDir = Utils.getDataDir(CloneASlideWithMasterSlideFromOnePresentationToAnother.class);
+        //ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
+        // Instantiate Presentation class to load the source presentation file
+        Presentation srcPres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Instantiate Presentation class for destination presentation (where slide is to be cloned)
+            Presentation destPres = new Presentation();
+            try {
+                // Instantiate ISlide from the collection of slides in source presentation along with master slide
+                ISlide sourceSlide = srcPres.getSlides().get_Item(0);
 
-	//ExStart:CloneASlideWithMasterSlideFromOnePresentationToAnother
-		
-		// Instantiate Presentation class to load the source presentation file
-		Presentation srcPres = new Presentation(dataDir + "Presentation.pptx");
+                // Clone the desired master slide from the source presentation to the collection of masters in the destination presentation
+                IMasterSlideCollection masters = destPres.getMasters();
+                IMasterSlide SourceMaster = sourceSlide.getLayoutSlide().getMasterSlide();
 
-		// Instantiate Presentation class for destination presentation (where slide is to be cloned)
-		Presentation destPres = new Presentation();
+                IMasterSlide iSlide = masters.addClone(SourceMaster);
 
-		// Instantiate ISlide from the collection of slides in source presentation along with master slide
-		ISlide sourceSlide = srcPres.getSlides().get_Item(0);
+                ISlideCollection slds = destPres.getSlides();
+                slds.addClone(sourceSlide, iSlide, true);
 
-		// Clone the desired master slide from the source presentation to the collection of masters in the destination presentation
-		IMasterSlideCollection masters = destPres.getMasters();
-		IMasterSlide SourceMaster = sourceSlide.getLayoutSlide().getMasterSlide();
-
-		IMasterSlide iSlide = masters.addClone(SourceMaster);
-
-		ISlideCollection slds = destPres.getSlides();
-		slds.addClone(sourceSlide, iSlide, true);
-
-		// Save the destination presentation to disk
-		destPres.save(dataDir + "helloworld_dest3.pptx", SaveFormat.Pptx);
-           
-          //ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
-	
-}
+                // Save the destination presentation to disk
+                destPres.save(dataDir + "helloworld_dest3.pptx", SaveFormat.Pptx);
+            } finally {
+                if (destPres != null) destPres.dispose();
+            }
+        } finally {
+            if (srcPres != null) srcPres.dispose();
+        }
+        //ExEnd:CloneASlideWithMasterSlideFromOnePresentationToAnother
+    }
 
 }

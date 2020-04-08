@@ -13,24 +13,23 @@ import com.aspose.slides.examples.Utils;
 
 public class SwitchChartRowColumns {
 
-	public static void main(String[] args) {
-            //ExStart:SwitchChartRowColumns
-             // The path to the documents directory.
-	     String dataDir = Utils.getDataDir(SwitchChartRowColumns.class);
+    public static void main(String[] args) {
 
-Presentation pres = new Presentation();
-try {
-IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 400, 300);
- 
-chart.getChartData().switchRowColumn();
-pres.save(dataDir +"SwitchChartRowColumns_out.pptx", SaveFormat.Pptx);
-}finally {
-pres.dispose();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SwitchChartRowColumns.class);
+
+        //ExStart:SwitchChartRowColumns
+        // Instantiate the presentation
+        Presentation pres = new Presentation();
+        try {
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 400, 300);
+            chart.getChartData().switchRowColumn();
+
+            pres.save(dataDir + "SwitchChartRowColumns_out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SwitchChartRowColumns
+    }
+
 }
-
-          //ExEnd:SwitchChartRowColumns
- 
- 
- }
-
- }

@@ -14,36 +14,38 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheImageAsBackgroundToSlides {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//ExStart:SettingTheImageAsBackgroundToSlides
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheImageAsBackgroundToSlides.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheImageAsBackgroundToSlides.class);
 
-		// Instantiate the Presentation class that represents the presentation file
-		Presentation pres = new Presentation();
+        //ExStart:SettingTheImageAsBackgroundToSlides
+        // Instantiate the Presentation class that represents the presentation file
+        Presentation pres = new Presentation();
+        try {
+            // Set the background with Image
+            pres.getSlides().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
+            pres.getSlides().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Picture);
+            pres.getSlides().get_Item(0).getBackground().getFillFormat().getPictureFillFormat()
+                    .setPictureFillMode(PictureFillMode.Stretch);
 
-		// Set the background with Image
-		pres.getSlides().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
-		pres.getSlides().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Picture);
-		pres.getSlides().get_Item(0).getBackground().getFillFormat().getPictureFillFormat()
-				.setPictureFillMode(PictureFillMode.Stretch);
+            // Set the picture
+            IPPImage imgx = null;
+            try {
+                imgx = pres.getImages().addImage(new FileInputStream(new File("Desert.jpg")));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-		// Set the picture
-		IPPImage imgx = null;
-		try {
-			imgx = pres.getImages().addImage(new FileInputStream(new File("Desert.jpg")));
+            // Add image to presentation's images collection
+            pres.getSlides().get_Item(0).getBackground().getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
 
-		} catch (IOException e) {
-		}
-
-		// Add image to presentation's images collection
-		pres.getSlides().get_Item(0).getBackground().getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
-
-		// Write the presentation to disk
-		pres.save(dataDir + "ContentBG_Img.pptx", SaveFormat.Pptx);
-//ExEnd:SettingTheImageAsBackgroundToSlides
-
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "ContentBG_Img.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheImageAsBackgroundToSlides
+    }
 
 }

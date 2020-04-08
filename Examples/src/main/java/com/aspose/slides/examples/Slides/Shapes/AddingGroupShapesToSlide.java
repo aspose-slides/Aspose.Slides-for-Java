@@ -12,37 +12,39 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingGroupShapesToSlide {
 
-	public static void main(String[] args) {
-	//ExStart:AddingGroupShapesToSlide
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingGroupShapesToSlide.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingGroupShapesToSlide.class);
 
-		// Instantiate Presentation class
-		Presentation pres = new Presentation();
+        //ExStart:AddingGroupShapesToSlide
+        // Instantiate Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+            // Accessing the shape collection of slides
+            IShapeCollection slideShapes = sld.getShapes();
 
-		// Accessing the shape collection of slides
-		IShapeCollection slideShapes = sld.getShapes();
+            // Adding a group shape to the slide
+            IGroupShape groupShape = slideShapes.addGroupShape();
 
-		// Adding a group shape to the slide
-		IGroupShape groupShape = slideShapes.addGroupShape();
+            // Adding shapes inside Added group shape
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 300, 100, 100, 100);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 500, 100, 100, 100);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 300, 300, 100, 100);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 500, 300, 100, 100);
 
-		// Adding shapes inside Added group shape
-		groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 300, 100, 100, 100);
-		groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 500, 100, 100, 100);
-		groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 300, 300, 100, 100);
-		groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 500, 300, 100, 100);
+            // Adding group shape frame
+            groupShape.setFrame(new ShapeFrame(100, 300, 500, 40, NullableBool.False, NullableBool.False, 0));
 
-		// Adding group shape frame
-		groupShape.setFrame(new ShapeFrame(100, 300, 500, 40, NullableBool.False, NullableBool.False, 0));
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "GroupShape.pptx", SaveFormat.Pptx);
-	//ExEnd:AddingGroupShapesToSlide
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "GroupShape.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingGroupShapesToSlide
+    }
 
 }

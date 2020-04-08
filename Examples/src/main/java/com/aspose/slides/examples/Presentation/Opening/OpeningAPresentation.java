@@ -5,17 +5,20 @@ import com.aspose.slides.examples.Utils;
 
 public class OpeningAPresentation {
 
-	public static final void main(String[] args) {
-		//ExStart: OpeningAPresentation
-		// The path to the documents directory.
-        	String dataDir = Utils.getDataDir(OpeningAPresentation.class);
-        
-		// Opening the presentation file by passing the file path to the constructor of Presentation class
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+    public static final void main(String[] args) {
 
-		// Printing the total number of slides present in the presentation
-		System.out.println(pres.getSlides().size());
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(OpeningAPresentation.class);
 
-             //ExEnd:OpeningAPresentation
-	}
+        //ExStart: OpeningAPresentation
+        // Opening the presentation file by passing the file path to the constructor of Presentation class
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Printing the total number of slides present in the presentation
+            System.out.println(pres.getSlides().size());
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:OpeningAPresentation
+    }
 }

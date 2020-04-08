@@ -11,34 +11,31 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToHTMLWithMediaFiles {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	//ExStart:ConvertingPresentationToHTMLWithMediaFiles	
         // The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationToHTMLWithMediaFiles.class);
+        String dataDir = Utils.getDataDir(ConvertingPresentationToHTMLWithMediaFiles.class);
+        String pptxDocumentFileName = dataDir + "presentationWith.pptx";
+        String htmlDocumentFileName = dataDir + "presentationWithVideo.html";
 
-		
-       final String htmlDocumentFileName = "presentationWithVideo.html";
-       Presentation pres = new Presentation("presentationWith.pptx");
- try
-{
-      VideoPlayerHtmlController controller = new VideoPlayerHtmlController(
-       "", htmlDocumentFileName, "http://www.example.com/");
+        //ExStart:ConvertingPresentationToHTMLWithMediaFiles
+        //Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(pptxDocumentFileName);
+        try {
+            VideoPlayerHtmlController controller = new VideoPlayerHtmlController(
+                    "", htmlDocumentFileName, "http://www.example.com/");
 
-      HtmlOptions htmlOptions = new HtmlOptions(controller);
-      SVGOptions svgOptions = new SVGOptions(controller);
+            HtmlOptions htmlOptions = new HtmlOptions(controller);
+            SVGOptions svgOptions = new SVGOptions(controller);
 
-      htmlOptions.setHtmlFormatter(HtmlFormatter.createCustomFormatter(controller));
-      htmlOptions.setSlideImageFormat(SlideImageFormat.svg(svgOptions));
+            htmlOptions.setHtmlFormatter(HtmlFormatter.createCustomFormatter(controller));
+            htmlOptions.setSlideImageFormat(SlideImageFormat.svg(svgOptions));
 
-      pres.save(htmlDocumentFileName, SaveFormat.Html, htmlOptions);
-} finally 
-{
-
- if (pres != null) pres.dispose();
- 
-}
-//ExEnd:ConvertingPresentationToHTMLWithMediaFiles	
-}
+            pres.save(htmlDocumentFileName, SaveFormat.Html, htmlOptions);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToHTMLWithMediaFiles
+    }
 
 }

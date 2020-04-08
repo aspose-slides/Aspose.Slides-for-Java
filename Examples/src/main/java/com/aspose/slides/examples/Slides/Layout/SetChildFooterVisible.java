@@ -8,27 +8,27 @@ import com.aspose.slides.examples.Utils;
 
 public class SetChildFooterVisible {
 
-	public static void main(String[] args) {
-   
-         //ExStart:SetChildFooterVisible
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SetChildFooterVisible.class);
-               Presentation presentation = new Presentation(dataDir + "presentation.ppt");
-try{
-    IMasterSlideHeaderFooterManager headerFooterManager = presentation.getMasters().get_Item(0).getHeaderFooterManager();
-    headerFooterManager.setFooterAndChildFootersVisibility(true); // Method setFooterAndChildFootersVisibility is used for making a master slide and all child footer placeholders visible.
-    headerFooterManager.setSlideNumberAndChildSlideNumbersVisibility(true); // Method setSlideNumberAndChildSlideNumbersVisibility is used for making a master slide and all child page number placeholders visible.
-    headerFooterManager.setDateTimeAndChildDateTimesVisibility(true); // Method setDateTimeAndChildDateTimesVisibility is used for making a master slide and all child date-time placeholders visible.
+    public static void main(String[] args) {
 
-    headerFooterManager.setFooterAndChildFootersText("Footer text"); // Method setFooterAndChildFootersText is used for setting text to master slide and all child footer placeholders.
-    headerFooterManager.setDateTimeAndChildDateTimesText("Date and time text"); // Method setDateTimeAndChildDateTimesText is used for setting text to master slide and all child date-time placeholders.
-}
-finally 
-  {
-    presentation.dispose();
-  }
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SetChildFooterVisible.class);
 
-                  //ExEnd:SetChildFooterVisible
-}
+        //ExStart:SetChildFooterVisible
+        // Instantiate Presentation class that represents the presentation file
+        Presentation presentation = new Presentation(dataDir + "presentation.ppt");
+        try {
+            IMasterSlideHeaderFooterManager headerFooterManager = presentation.getMasters().get_Item(0).getHeaderFooterManager();
+            headerFooterManager.setFooterAndChildFootersVisibility(true); // Method setFooterAndChildFootersVisibility is used for making a master slide and all child footer placeholders visible.
+            headerFooterManager.setSlideNumberAndChildSlideNumbersVisibility(true); // Method setSlideNumberAndChildSlideNumbersVisibility is used for making a master slide and all child page number placeholders visible.
+            headerFooterManager.setDateTimeAndChildDateTimesVisibility(true); // Method setDateTimeAndChildDateTimesVisibility is used for making a master slide and all child date-time placeholders visible.
+
+            headerFooterManager.setFooterAndChildFootersText("Footer text"); // Method setFooterAndChildFootersText is used for setting text to master slide and all child footer placeholders.
+            headerFooterManager.setDateTimeAndChildDateTimesText("Date and time text"); // Method setDateTimeAndChildDateTimesText is used for setting text to master slide and all child date-time placeholders.
+        } finally {
+            if (presentation != null) presentation.dispose();
+        }
+
+        //ExEnd:SetChildFooterVisible
+    }
 
 }

@@ -7,27 +7,28 @@ import com.aspose.slides.examples.Utils;
 
 public class CloningASlideFromOnePositionToAnotherWithinSamePresentation {
 
-	public static void main(String[] args) {
-	//ExStart:CloningASlideFromOnePositionToAnotherWithinSamePresentation
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CloningASlideFromOnePositionToAnotherWithinSamePresentation.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CloningASlideFromOnePositionToAnotherWithinSamePresentation.class);
 
-		// Instantiate Presentation class that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        //ExStart:CloningASlideFromOnePositionToAnotherWithinSamePresentation
+        // Instantiate Presentation class that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Clone the desired slide to the end of the collection of slides in the
+            // same presentation
+            ISlideCollection slds = pres.getSlides();
 
-		// Clone the desired slide to the end of the collection of slides in the
-		// same presentation
-		ISlideCollection slds = pres.getSlides();
+            // Clone the desired slide to the specified index in the same presentation
+            slds.insertClone(2, pres.getSlides().get_Item(1));
 
-		// Clone the desired slide to the specified index in the same presentation
-		slds.insertClone(2, pres.getSlides().get_Item(1));
-
-		// Write the modified presentation to disk
-		pres.save(dataDir + "helloworld_clonedPost.pptx", SaveFormat.Pptx);
-
-	//ExEnd:CloningASlideFromOnePositionToAnotherWithinSamePresentation
-
-	}
+            // Write the modified presentation to disk
+            pres.save(dataDir + "helloworld_clonedPost.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:CloningASlideFromOnePositionToAnotherWithinSamePresentation
+    }
 
 }

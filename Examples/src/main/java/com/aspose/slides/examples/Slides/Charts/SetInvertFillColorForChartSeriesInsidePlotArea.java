@@ -12,54 +12,49 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 public class SetInvertFillColorForChartSeriesInsidePlotArea {
-	
-	// The path to the documents directory.
-	private static final String dataDir = Utils.getSharedDataDir(SetDataRangeForChart.class) + "Charts/";
-			
-	public static void main(String[] args) {
-		
-//ExStart:SetInvertFillColorForChartSeriesInsidePlotArea
-		Color inverColor = Color.red;
-		Color seriesColor;
 
-		final Presentation pres = new Presentation();
-		try {
-			IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 400, 300);
+    // The path to the documents directory.
+    private static final String dataDir = Utils.getSharedDataDir(SetDataRangeForChart.class) + "Charts/";
 
-			IChartDataWorkbook workBook = chart.getChartData().getChartDataWorkbook();
+    public static void main(String[] args) {
 
-			chart.getChartData().getSeries().clear();
-			chart.getChartData().getCategories().clear();
+        //ExStart:SetInvertFillColorForChartSeriesInsidePlotArea
+        // Instantiate the Presentation class that represents the presentation
+        Presentation pres = new Presentation();
+        try {
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 400, 300);
 
-			// Adding new series
-			chart.getChartData().getSeries().add(workBook.getCell(0, 0, 1, "Series 1"), chart.getType());
+            IChartDataWorkbook workBook = chart.getChartData().getChartDataWorkbook();
 
-			// Adding new categories
-			chart.getChartData().getCategories().add(workBook.getCell(0, 1, 0, "Category 1"));
-			chart.getChartData().getCategories().add(workBook.getCell(0, 2, 0, "Category 2"));
-			chart.getChartData().getCategories().add(workBook.getCell(0, 3, 0, "Category 3"));
+            chart.getChartData().getSeries().clear();
+            chart.getChartData().getCategories().clear();
 
-			// Take first chart series
-			IChartSeries series = chart.getChartData().getSeries().get_Item(0);
+            // Adding new series
+            chart.getChartData().getSeries().add(workBook.getCell(0, 0, 1, "Series 1"), chart.getType());
 
-			// Now populating series data
-			series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 1, 1, -20));
-			series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 2, 1, 50));
-			series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 3, 1, -30));
+            // Adding new categories
+            chart.getChartData().getCategories().add(workBook.getCell(0, 1, 0, "Category 1"));
+            chart.getChartData().getCategories().add(workBook.getCell(0, 2, 0, "Category 2"));
+            chart.getChartData().getCategories().add(workBook.getCell(0, 3, 0, "Category 3"));
 
-			seriesColor = series.getAutomaticSeriesColor();
+            // Take first chart series
+            IChartSeries series = chart.getChartData().getSeries().get_Item(0);
 
-			series.setInvertIfNegative(true);
-			series.getFormat().getFill().setFillType(FillType.Solid);
-			series.getFormat().getFill().getSolidFillColor().setColor(seriesColor);
-			series.getInvertedSolidFillColor().setColor(inverColor);
-			pres.save(dataDir + "SetInvertFillColorForChartSeries_Out.pptx", SaveFormat.Pptx);
-		} finally {
-			if (pres != null) {
-				pres.dispose();
-			}
-		}
-//ExEnd:SetInvertFillColorForChartSeriesInsidePlotArea
+            // Now populating series data
+            series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 1, 1, -20));
+            series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 2, 1, 50));
+            series.getDataPoints().addDataPointForBarSeries(workBook.getCell(0, 3, 1, -30));
 
-	}
+            Color seriesColor = series.getAutomaticSeriesColor();
+
+            series.setInvertIfNegative(true);
+            series.getFormat().getFill().setFillType(FillType.Solid);
+            series.getFormat().getFill().getSolidFillColor().setColor(seriesColor);
+            series.getInvertedSolidFillColor().setColor(Color.red);
+            pres.save(dataDir + "SetInvertFillColorForChartSeries_Out.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SetInvertFillColorForChartSeriesInsidePlotArea
+    }
 }

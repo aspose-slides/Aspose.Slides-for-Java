@@ -11,19 +11,25 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class ExportToHTMLWithResponsiveLayout {
-    
+
     public static void main(String[] args) {
-    //ExStart:ExportToHTMLWithResponsiveLayout
-    // The path to the documents directory.
+
+        // The path to the documents directory.
         String dataDir = Utils.getDataDir(ExportToHTMLWithResponsiveLayout.class);
-        Presentation presentation = new Presentation(dataDir + "SomePresentation.pptx");
-        HtmlOptions saveOptions = new HtmlOptions();
-        saveOptions.setSvgResponsiveLayout(true);
-        presentation.save(dataDir +"SomePresentation-out.html", SaveFormat.Html, saveOptions);
-    //ExEnd:ExportToHTMLWithResponsiveLayout
+
+        //ExStart:ExportToHTMLWithResponsiveLayout
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "SomePresentation.pptx");
+        try {
+            HtmlOptions saveOptions = new HtmlOptions();
+            saveOptions.setSvgResponsiveLayout(true);
+            pres.save(dataDir + "SomePresentation-out.html", SaveFormat.Html, saveOptions);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ExportToHTMLWithResponsiveLayout
     }
 }

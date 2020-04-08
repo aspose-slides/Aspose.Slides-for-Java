@@ -11,34 +11,39 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToPDFUsingCustomOptions {
 
-	public static void main(String[] args) {
-             //ExStart:ConvertingPresentationToPDFUsingCustomOptions
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingPresentationToPDFUsingCustomOptions.class);
+    public static void main(String[] args) {
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToPDFUsingCustomOptions.class);
 
-		// Instantiate the PdfOptions class
-		PdfOptions opts = new PdfOptions();
-                 
-		// Set JPEG Quality
-		opts.setJpegQuality((byte) 90);
+        //ExStart:ConvertingPresentationToPDFUsingCustomOptions
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Instantiate the PdfOptions class
+            PdfOptions opts = new PdfOptions();
 
-		// Define behavior for Metafiles
-		opts.setSaveMetafilesAsPng(true);
+            // Set JPEG Quality
+            opts.setJpegQuality((byte) 90);
 
-		// Set Text Compression level
-		opts.setTextCompression(PdfTextCompression.Flate);
+            // Define behavior for Metafiles
+            opts.setSaveMetafilesAsPng(true);
 
-		// Define the PDF standard
-		opts.setCompliance(PdfCompliance.Pdf15);
-                
-                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
-                options.setNotesPosition(NotesPositions.BottomFull);
+            // Set Text Compression level
+            opts.setTextCompression(PdfTextCompression.Flate);
 
-		// Save the presentation to PDF with specified options
-       		pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
-	}
-                 //ExEnd:ConvertingPresentationToPDFUsingCustomOptions
+            // Define the PDF standard
+            opts.setCompliance(PdfCompliance.Pdf15);
+
+            INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
+
+            // Save the presentation to PDF with specified options
+            pres.save(dataDir + "demo.pdf", SaveFormat.Pdf, opts);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToPDFUsingCustomOptions
+    }
+
 }

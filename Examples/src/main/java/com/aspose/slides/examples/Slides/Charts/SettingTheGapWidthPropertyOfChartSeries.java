@@ -11,62 +11,62 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheGapWidthPropertyOfChartSeries {
 
-	public static void main(String[] args) {
-//ExStart:SettingTheGapWidthPropertyOfChartSeries
+    public static void main(String[] args) {
 
-		
-		// The path to the documents directory.
-	    	String dataDir = Utils.getDataDir(SettingTheGapWidthPropertyOfChartSeries.class);
-		
-	    	// Creating empty presentation
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheGapWidthPropertyOfChartSeries.class);
 
-		// Access first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:SettingTheGapWidthPropertyOfChartSeries
+        // Creating empty presentation
+        Presentation pres = new Presentation();
+        try {
+            // Access first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Add chart with default data
-		IChart chart = sld.getShapes().addChart(ChartType.StackedColumn3D, 0, 0, 500, 500);
+            // Add chart with default data
+            IChart chart = sld.getShapes().addChart(ChartType.StackedColumn3D, 0, 0, 500, 500);
 
-		// Getting the chart data WorkSheet
-		IChartDataWorkbook fact = chart.getChartData().getChartDataWorkbook();
+            // Getting the chart data WorkSheet
+            IChartDataWorkbook fact = chart.getChartData().getChartDataWorkbook();
 
-		// Delete default generated series and categories
-		chart.getChartData().getSeries().clear();
-		chart.getChartData().getCategories().clear();
+            // Delete default generated series and categories
+            chart.getChartData().getSeries().clear();
+            chart.getChartData().getCategories().clear();
 
-		// Adding new series
-		chart.getChartData().getSeries().add(fact.getCell(0, 0, 1, "Series 1"), chart.getType());
-		chart.getChartData().getSeries().add(fact.getCell(0, 0, 2, "Series 2"), chart.getType());
+            // Adding new series
+            chart.getChartData().getSeries().add(fact.getCell(0, 0, 1, "Series 1"), chart.getType());
+            chart.getChartData().getSeries().add(fact.getCell(0, 0, 2, "Series 2"), chart.getType());
 
-		// Adding new categories
-		chart.getChartData().getCategories().add(fact.getCell(0, 1, 0, "Caetegoty 1"));
-		chart.getChartData().getCategories().add(fact.getCell(0, 2, 0, "Caetegoty 2"));
-		chart.getChartData().getCategories().add(fact.getCell(0, 3, 0, "Caetegoty 3"));
+            // Adding new categories
+            chart.getChartData().getCategories().add(fact.getCell(0, 1, 0, "Caetegoty 1"));
+            chart.getChartData().getCategories().add(fact.getCell(0, 2, 0, "Caetegoty 2"));
+            chart.getChartData().getCategories().add(fact.getCell(0, 3, 0, "Caetegoty 3"));
 
-		// Take first chart series
-		IChartSeries series = chart.getChartData().getSeries().get_Item(0);
+            // Take first chart series
+            IChartSeries series = chart.getChartData().getSeries().get_Item(0);
 
-		// Populating series data
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 1, 1, 20));
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 2, 1, 50));
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 3, 1, 30));
+            // Populating series data
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 1, 1, 20));
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 2, 1, 50));
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 3, 1, 30));
 
-		// Take second chart series
-		series = chart.getChartData().getSeries().get_Item(1);
+            // Take second chart series
+            series = chart.getChartData().getSeries().get_Item(1);
 
-		// Populating series data
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 1, 2, 30));
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 2, 2, 10));
-		series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 3, 2, 60));
+            // Populating series data
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 1, 2, 30));
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 2, 2, 10));
+            series.getDataPoints().addDataPointForBarSeries(fact.getCell(0, 3, 2, 60));
 
-		// Set GapWidth value
-		series.getParentSeriesGroup().setGapWidth(75);
+            // Set GapWidth value
+            series.getParentSeriesGroup().setGapWidth(75);
 
-		// Save presentation with chart
-		pres.save(dataDir + "3Drotation.pptx", SaveFormat.Pptx);
-//ExEnd:SettingTheGapWidthPropertyOfChartSeries
-
-
-	}
+            // Save presentation with chart
+            pres.save(dataDir + "3Drotation.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheGapWidthPropertyOfChartSeries
+    }
 
 }

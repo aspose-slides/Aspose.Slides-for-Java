@@ -11,36 +11,40 @@ import com.aspose.slides.examples.Utils;
 
 public class ManagingParagraphsAlignment {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ManagingParagraphsAlignment.class);
-               //ExStart:ManagingParagraphsAlignment
-		// Instantiate a Presentation object that represents a PPTX file
-		Presentation pres = new Presentation(dataDir + "ParagraphsAlignment.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ManagingParagraphsAlignment.class);
 
-		// Accessing first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+        //ExStart:ManagingParagraphsAlignment
+        // Instantiate a Presentation object that represents a PPTX file
+        Presentation pres = new Presentation(dataDir + "ParagraphsAlignment.pptx");
+        try {
+            // Accessing first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Accessing the first and second placeholder in the slide and typecasting it as AutoShape
-		ITextFrame tf1 = ((IAutoShape) slide.getShapes().get_Item(0)).getTextFrame();
-		ITextFrame tf2 = ((IAutoShape) slide.getShapes().get_Item(1)).getTextFrame();
+            // Accessing the first and second placeholder in the slide and typecasting it as AutoShape
+            ITextFrame tf1 = ((IAutoShape) slide.getShapes().get_Item(0)).getTextFrame();
+            ITextFrame tf2 = ((IAutoShape) slide.getShapes().get_Item(1)).getTextFrame();
 
-		// Change the text in both Placeholders
-		tf1.setText("Center Align by Aspose");
-		tf2.setText("Center Align by Aspose");
+            // Change the text in both Placeholders
+            tf1.setText("Center Align by Aspose");
+            tf2.setText("Center Align by Aspose");
 
-		// Getting the first paragraph of the Placeholders
-		IParagraph para1 = tf1.getParagraphs().get_Item(0);
-		IParagraph para2 = tf2.getParagraphs().get_Item(0);
+            // Getting the first paragraph of the Placeholders
+            IParagraph para1 = tf1.getParagraphs().get_Item(0);
+            IParagraph para2 = tf2.getParagraphs().get_Item(0);
 
-		// Aligning the text paragraph to center
-		para1.getParagraphFormat().setAlignment(TextAlignment.Center);
-		para2.getParagraphFormat().setAlignment(TextAlignment.Center);
+            // Aligning the text paragraph to center
+            para1.getParagraphFormat().setAlignment(TextAlignment.Center);
+            para2.getParagraphFormat().setAlignment(TextAlignment.Center);
 
-		// Writing the presentation as a PPTX file
-		pres.save(dataDir + "Centeralign.pptx", SaveFormat.Pptx);
-              //ExEnd:ManagingParagraphsAlignment
-	}
+            // Writing the presentation as a PPTX file
+            pres.save(dataDir + "Centeralign.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ManagingParagraphsAlignment
+    }
 
 }

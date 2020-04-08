@@ -9,32 +9,31 @@ import com.aspose.slides.examples.Utils;
 
 public class GeneratingSVGImageFromSlide {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-//ExStart:GeneratingSVGImageFromSlide
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(GeneratingSVGImageFromSlide.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(GeneratingSVGImageFromSlide.class);
 
-		// Instantiate a Presentation object that represents a PPTX file
-		Presentation pres = new Presentation(dataDir + "ThumbnailFromSlide.pptx");
+        //ExStart:GeneratingSVGImageFromSlide
+        // Instantiate a Presentation object that represents a PPTX file
+        Presentation pres = new Presentation(dataDir + "ThumbnailFromSlide.pptx");
+        try {
+            // Getting last slide index
+            int lastSlidePosition = pres.getSlides().size();
+            ISlide slide = null;
 
-		// Getting last slide index
-		int lastSlidePosition = pres.getSlides().size();
-		ISlide slide = null;
+            // Iterating through every presentation slide and generating SVG image
+            for (int i = 0; i < lastSlidePosition; i++) {
+                // Accessing Slides
+                slide = pres.getSlides().get_Item(i);
 
-		// Iterating through every presentation slide and generating SVG image
-		for (int i = 0; i < lastSlidePosition; i++) {
-			// Accessing Slides
-			slide = pres.getSlides().get_Item(i);
-
-			// Getting and saving the slide SVG image
-			try {
-				slide.writeAsSvg(new FileOutputStream(dataDir + "SvgImage" + i + ".svg"));
-			} catch (IOException e) {
-			}
-
-		}
-//ExEnd:GeneratingSVGImageFromSlide
-	}
+                // Getting and saving the slide SVG image
+                slide.writeAsSvg(new FileOutputStream(dataDir + "SvgImage" + i + ".svg"));
+            }
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:GeneratingSVGImageFromSlide
+    }
 
 }

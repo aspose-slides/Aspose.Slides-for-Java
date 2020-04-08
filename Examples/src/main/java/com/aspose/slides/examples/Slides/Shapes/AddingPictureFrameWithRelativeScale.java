@@ -14,36 +14,34 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingPictureFrameWithRelativeScale {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-	//ExStart:AddingPictureFrameWithRelativeScale
-	// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingPictureFrameWithRelativeScale.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingPictureFrameWithRelativeScale.class);
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+        //ExStart:AddingPictureFrameWithRelativeScale
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+            // Instantiate the Image class
+            IPPImage imgx = pres.getImages().addImage(new FileInputStream(new File(dataDir + "asp1.jpg")));
 
-		// Instantiate the Image class
-		IPPImage imgx = null;
+            // Add Picture Frame with height and width equivalent of Picture
+            IPictureFrame pf = sld.getShapes().addPictureFrame(ShapeType.Rectangle, 50, 150, imgx.getWidth(), imgx.getHeight(), imgx);
 
-		try {
-			imgx = pres.getImages().addImage(new FileInputStream(new File(dataDir + "asp1.jpg")));
-		} catch (IOException e) {
-		}
+            // Setting relative scale width and height
+            pf.setRelativeScaleHeight(0.8f);
+            pf.setRelativeScaleWidth(1.35f);
 
-		// Add Picture Frame with height and width equivalent of Picture
-		IPictureFrame pf = sld.getShapes().addPictureFrame(ShapeType.Rectangle, 50, 150, imgx.getWidth(), imgx.getHeight(), imgx);
+            // Write the PPTX file to disk
+            pres.save(dataDir + "RectPicFrame.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingPictureFrameWithRelativeScale
+    }
 
-		// Setting relative scale width and height
-		pf.setRelativeScaleHeight(0.8f);
-		pf.setRelativeScaleWidth(1.35f);
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "RectPicFrame.pptx", SaveFormat.Pptx);
-//ExEnd:AddingPictureFrameWithRelativeScale
-	
-	}
 }

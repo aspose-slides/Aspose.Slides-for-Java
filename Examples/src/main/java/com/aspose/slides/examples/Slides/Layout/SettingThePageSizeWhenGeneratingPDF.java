@@ -9,27 +9,28 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingThePageSizeWhenGeneratingPDF {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		//ExStart:SettingThePageSizeWhenGeneratingPDF
-// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingThePageSizeWhenGeneratingPDF.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingThePageSizeWhenGeneratingPDF.class);
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation();
+        //ExStart:SettingThePageSizeWhenGeneratingPDF
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation();
+        try {
+            // Set SlideSize.Type Property
+            pres.getSlideSize().setSize(SlideSizeType.A4Paper, SlideSizeScaleType.DoNotScale);
 
-		// Set SlideSize.Type Property
-		pres.getSlideSize().setSize(SlideSizeType.A4Paper,SlideSizeScaleType.DoNotScale);
-                     
+            // Set different properties of PDF Options
+            PdfOptions opts = new PdfOptions();
+            opts.setSufficientResolution(600);
 
-		// Set different properties of PDF Options
-		PdfOptions opts = new PdfOptions();
-		opts.setSufficientResolution(600);
-
-		// Save presentation to disk
-		pres.save(dataDir + "Export.pdf", SaveFormat.Pdf, opts);
-//ExEnd:SettingThePageSizeWhenGeneratingPDF
-
-	}
+            // Save presentation to disk
+            pres.save(dataDir + "Export.pdf", SaveFormat.Pdf, opts);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingThePageSizeWhenGeneratingPDF
+    }
 
 }

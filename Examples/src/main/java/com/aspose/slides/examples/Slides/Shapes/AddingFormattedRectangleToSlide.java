@@ -13,37 +13,36 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingFormattedRectangleToSlide {
 
-	public static void main(String[] args) {
-	
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingFormattedRectangleToSlide.class);
+    public static void main(String[] args) {
 
-//ExStart:AddingFormattedRectangleToSlide
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingFormattedRectangleToSlide.class);
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+        //ExStart:AddingFormattedRectangleToSlide
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+            // Add AutoShape of ellipse type
+            IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 150, 50);
 
-		// Add AutoShape of ellipse type
-		IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 150, 50);
+            // Apply some formatting to ellipse shape
+            shp.getFillFormat().setFillType(FillType.Solid);
+            shp.getFillFormat().getSolidFillColor().setColor(new Color(PresetColor.Chocolate));
 
-		// Apply some formatting to ellipse shape
-		shp.getFillFormat().setFillType(FillType.Solid);
-		shp.getFillFormat().getSolidFillColor().setColor(new Color(PresetColor.Chocolate));
+            // Apply some formatting to the line of Ellipse
+            shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
+            shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
+            shp.getLineFormat().setWidth(5);
 
-		// Apply some formatting to the line of Ellipse
-		shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
-		shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
-		shp.getLineFormat().setWidth(5);
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "RecShp2.pptx", SaveFormat.Pptx);
-
-
-	//ExEnd:AddingFormattedRectangleToSlide
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "RecShp2.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingFormattedRectangleToSlide
+    }
 
 }

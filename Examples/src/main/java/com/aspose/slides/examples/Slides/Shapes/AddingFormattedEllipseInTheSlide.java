@@ -13,38 +13,36 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingFormattedEllipseInTheSlide {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingFormattedEllipseInTheSlide.class);
 
+        //ExStart:AddingFormattedEllipseInTheSlide
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingFormattedEllipseInTheSlide.class);
+            // Add AutoShape of ellipse type
+            IShape shp = sld.getShapes().addAutoShape(ShapeType.Ellipse, 50, 150, 150, 50);
 
-	//ExStart:AddingFormattedEllipseInTheSlide
+            // Apply some formatting to ellipse shape
+            shp.getFillFormat().setFillType(FillType.Solid);
+            shp.getFillFormat().getSolidFillColor().setColor(new Color(PresetColor.Chocolate));
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+            // Apply some formatting to the line of Ellipse
+            shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
+            shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
+            shp.getLineFormat().setWidth(5);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
-
-		// Add AutoShape of ellipse type
-		IShape shp = sld.getShapes().addAutoShape(ShapeType.Ellipse, 50, 150, 150, 50);
-
-		// Apply some formatting to ellipse shape
-		shp.getFillFormat().setFillType(FillType.Solid);
-		shp.getFillFormat().getSolidFillColor().setColor(new Color(PresetColor.Chocolate));
-
-		// Apply some formatting to the line of Ellipse
-		shp.getLineFormat().getFillFormat().setFillType(FillType.Solid);
-		shp.getLineFormat().getFillFormat().getSolidFillColor().setColor(Color.BLACK);
-		shp.getLineFormat().setWidth(5);
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "EllipseShp1.pptx", SaveFormat.Pptx);
-
-	//ExEnd:AddingFormattedEllipseInTheSlide
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "EllipseShp1.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingFormattedEllipseInTheSlide
+    }
 
 }

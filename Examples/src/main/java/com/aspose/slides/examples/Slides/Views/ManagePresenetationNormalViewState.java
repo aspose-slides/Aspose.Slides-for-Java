@@ -11,20 +11,19 @@ import com.aspose.slides.SplitterBarStateType;
 import com.aspose.slides.examples.Utils;
 
 /**
- *
  * @author mfazi
  */
 public class ManagePresenetationNormalViewState {
-    
+
     public static void main(String[] args) {
-    
-        //ExStart:ManagePresenetationNormalViewState
 
         // The path to the documents directory.
         String dataDir = Utils.getDataDir(ManagePresenetationNormalViewState.class);
+
+        //ExStart:ManagePresenetationNormalViewState
+        // Create an instance of Presentation class
         Presentation pres = new Presentation();
-        try
-        {
+        try {
             pres.getViewProperties().getNormalViewProperties().setHorizontalBarState(SplitterBarStateType.Restored);
             pres.getViewProperties().getNormalViewProperties().setVerticalBarState(SplitterBarStateType.Maximized);
 
@@ -32,12 +31,10 @@ public class ManagePresenetationNormalViewState {
             pres.getViewProperties().getNormalViewProperties().getRestoredTop().setDimensionSize(80);
             pres.getViewProperties().getNormalViewProperties().setShowOutlineIcons(true);
 
-            pres.save(dataDir+ "presentation_normal_view_state.pptx", SaveFormat.Pptx);
+            pres.save(dataDir + "presentation_normal_view_state.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
         }
-        finally {
-            pres.dispose();
-        }
-        
         //ExEnd:ManagePresenetationNormalViewState
     }
 }

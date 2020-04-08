@@ -14,39 +14,43 @@ import com.aspose.slides.examples.Utils;
 
 public class ApplyingOuterShadowEffects {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ApplyingOuterShadowEffects.class);
-               //ExStart:ApplyingOuterShadowEffects
-		// Create an instance of Presentation class
-		Presentation Pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ApplyingOuterShadowEffects.class);
 
-		// Get first slide
-		ISlide Slide = Pres.getSlides().get_Item(0);
+        //ExStart:ApplyingOuterShadowEffects
+        // Create an instance of Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Get first slide
+            ISlide Slide = pres.getSlides().get_Item(0);
 
-		// Add an AutoShape of Rectangle type
-		IAutoShape aShp = Slide.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
+            // Add an AutoShape of Rectangle type
+            IAutoShape aShp = Slide.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
 
-		// Add TextFrame to the Rectangle
-		aShp.addTextFrame("Aspose TextBox");
+            // Add TextFrame to the Rectangle
+            aShp.addTextFrame("Aspose TextBox");
 
-		// Disable shape fill in case we want to get shadow of text
-		aShp.getFillFormat().setFillType(FillType.NoFill);
+            // Disable shape fill in case we want to get shadow of text
+            aShp.getFillFormat().setFillType(FillType.NoFill);
 
-		// Add outer shadow and set all necessary parameters
-		aShp.getEffectFormat().enableOuterShadowEffect();
-		IOuterShadow Shadow = aShp.getEffectFormat().getOuterShadowEffect();
-		Shadow.setBlurRadius(4.0);
-		Shadow.setDirection(45);
-		Shadow.setDistance(3);
-		Shadow.setRectangleAlign(RectangleAlignment.TopLeft);
-		Shadow.getShadowColor().setColor(Color.black);
+            // Add outer shadow and set all necessary parameters
+            aShp.getEffectFormat().enableOuterShadowEffect();
+            IOuterShadow shadow = aShp.getEffectFormat().getOuterShadowEffect();
+            shadow.setBlurRadius(4.0);
+            shadow.setDirection(45);
+            shadow.setDistance(3);
+            shadow.setRectangleAlign(RectangleAlignment.TopLeft);
+            shadow.getShadowColor().setColor(Color.black);
 
-		// Write the presentation to disk
-		Pres.save(dataDir + "OutShadow.pptx", SaveFormat.Pptx);
-               //ExEnd:ApplyingOuterShadowEffects
+            // Write the presentation to disk
+            pres.save(dataDir + "OutShadow.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ApplyingOuterShadowEffects
 
-	}
+    }
 
 }

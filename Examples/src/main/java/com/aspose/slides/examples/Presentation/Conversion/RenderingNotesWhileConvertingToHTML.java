@@ -11,25 +11,23 @@ import com.aspose.slides.examples.Utils;
 
 public class RenderingNotesWhileConvertingToHTML {
 
-	private static final String dataDir = Utils.getSharedDataDir(RenderingNotesWhileConvertingToHTML.class) + "Conversion/";
+    public static void main(String[] args) {
 
-       
-	public static void main(String[] args) {
-        
-  //ExStart:RenderingNotesWhileConvertingToHTML
+        String dataDir = Utils.getSharedDataDir(RenderingNotesWhileConvertingToHTML.class) + "Conversion/";
 
-Presentation pres = new Presentation(dataDir + "Presentation.pptx");
-     try {
-         HtmlOptions opts = new HtmlOptions();
-         INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
-                        options.setNotesPosition(NotesPositions.BottomFull);
-          // Saving notes pages
-        pres.save(dataDir + "Output.html", SaveFormat.Html,opts);
-        } 
-        finally {
-        pres.dispose();
+        //ExStart:RenderingNotesWhileConvertingToHTML
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            HtmlOptions opts = new HtmlOptions();
+            INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
+
+            // Saving notes pages
+            pres.save(dataDir + "output.html", SaveFormat.Html, opts);
+        } finally {
+            pres.dispose();
         }
-
-         //ExEnd:RenderingNotesWhileConvertingToHTML
-
-        }}
+        //ExEnd:RenderingNotesWhileConvertingToHTML
+    }
+}

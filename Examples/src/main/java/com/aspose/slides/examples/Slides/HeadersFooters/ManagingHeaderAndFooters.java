@@ -9,49 +9,50 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
-public class ManagingHeaderAndFooters{
-
-         
-//ExStart:ManagingHeaderAndFooters
-
-	public static void main(String[] args) {
+public class ManagingHeaderAndFooters {
 
 
-		
-		// The path to the documents directory.
-	    	String dataDir = Utils.getDataDir(ManagingHeaderAndFooters.class);
-		
-	    	// Load Presentation
-		Presentation pres = new Presentation(dataDir + "headerTest.pptx");
 
-		// Setting Footer
-		pres.getHeaderFooterManager().setAllFootersText("My Footer text");
-		pres.getHeaderFooterManager().setAllFootersVisibility(true);
+    public static void main(String[] args) {
 
-		// Access and Update Header
-		IMasterNotesSlide masterNotesSlide = pres.getMasterNotesSlideManager().getMasterNotesSlide();
-		if (null != masterNotesSlide) {
-			updateHeaderFooterText(masterNotesSlide);
-		}
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ManagingHeaderAndFooters.class);
 
-		// Save presentation
-		pres.save(dataDir + "HeaderFooterJava.pptx", SaveFormat.Pptx);
+        managingHeaderAndFooters(dataDir);
+    }
 
-	}
+    //ExStart:ManagingHeaderAndFooters
+    public static void managingHeaderAndFooters(String dataDir) {
+        // Load Presentation
+        Presentation pres = new Presentation(dataDir + "headerTest.pptx");
+        try {
+            // Setting Footer
+            pres.getHeaderFooterManager().setAllFootersText("My Footer text");
+            pres.getHeaderFooterManager().setAllFootersVisibility(true);
 
-	// Method to set Header/Footer Text
-	public static void updateHeaderFooterText(IBaseSlide master) {
-		for (IShape shape : master.getShapes()) {
-			if (shape.getPlaceholder() != null) {
-				if (shape.getPlaceholder().getType() == PlaceholderType.Header) {
-					((IAutoShape) shape).getTextFrame().setText("HI there new header");
-				}
-			}
-		}
-	}
+            // Access and Update Header
+            IMasterNotesSlide masterNotesSlide = pres.getMasterNotesSlideManager().getMasterNotesSlide();
+            if (null != masterNotesSlide) {
+                updateHeaderFooterText(masterNotesSlide);
+            }
 
-//ExEnd:ManagingHeaderAndFooters
+            // Save presentation
+            pres.save(dataDir + "HeaderFooterJava.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+    }
 
-
+    // Method to set Header/Footer Text
+    public static void updateHeaderFooterText(IBaseSlide master) {
+        for (IShape shape : master.getShapes()) {
+            if (shape.getPlaceholder() != null) {
+                if (shape.getPlaceholder().getType() == PlaceholderType.Header) {
+                    ((IAutoShape) shape).getTextFrame().setText("HI there new header");
+                }
+            }
+        }
+    }
+    //ExEnd:ManagingHeaderAndFooters
 
 }

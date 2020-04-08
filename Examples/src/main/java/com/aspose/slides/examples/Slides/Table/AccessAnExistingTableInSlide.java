@@ -9,35 +9,37 @@ import com.aspose.slides.examples.Utils;
 
 public class AccessAnExistingTableInSlide {
 
-	public static void main(String[] args) {
-	//ExStart:AccessAnExistingTableInSlide
-		
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AccessAnExistingTableInSlide.class);
-		
-		// Instantiate Presentation class that represents PPTX
-		Presentation pres = new Presentation(dataDir + "table.pptx");
+    public static void main(String[] args) {
 
-		// Access the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AccessAnExistingTableInSlide.class);
 
-		// Initialize null Table
-		ITable tbl = null;
+        //ExStart:AccessAnExistingTableInSlide
+        // Instantiate Presentation class that represents PPTX
+        Presentation pres = new Presentation(dataDir + "table.pptx");
+        try {
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Iterate through the shapes and set a reference to the table found
-		for (IShape shp : sld.getShapes()) {
-			if (shp instanceof ITable) {
-				tbl = (ITable) shp;
-			}
-		}
+            // Initialize null Table
+            ITable tbl = null;
 
-		// Set the text of the first column of second row
-		tbl.getRows().get_Item(0).get_Item(1).getTextFrame().setText("New");
+            // Iterate through the shapes and set a reference to the table found
+            for (IShape shp : sld.getShapes()) {
+                if (shp instanceof ITable) {
+                    tbl = (ITable) shp;
+                }
+            }
 
-		// Save the PPTX to Disk
-		pres.save(dataDir + "table1.pptx", SaveFormat.Pptx);
+            // Set the text of the first column of second row
+            tbl.getRows().get_Item(0).get_Item(1).getTextFrame().setText("New");
 
-	//ExEnd:AccessAnExistingTableInSlide
-	}
+            // Save the PPTX to Disk
+            pres.save(dataDir + "table1.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AccessAnExistingTableInSlide
+    }
 
 }

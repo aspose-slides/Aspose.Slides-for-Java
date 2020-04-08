@@ -19,73 +19,77 @@ import com.aspose.slides.examples.Utils;
 
 public class ImportingHTMLTextInParagraphs {
 
-	public static void main(String[] args) throws Exception {
-                 //ExStart:ImportingHTMLTextInParagraphs
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ImportingHTMLTextInParagraphs.class);
+    public static void main(String[] args) throws Exception {
 
-		// Create Empty presentation instance
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ImportingHTMLTextInParagraphs.class);
 
-		// Access the default first slide of presentation
-		ISlide slide = pres.getSlides().get_Item(0);
+        importingHTMLTextInParagraphs(dataDir);
+    }
 
-		// Adding the AutoShape to accommodate the HTML content
-		IAutoShape ashape = slide.getShapes().addAutoShape(ShapeType.Rectangle, 10, 10, (float) pres.getSlideSize().getSize().getWidth(), (float) pres.getSlideSize().getSize().getHeight());
+    //ExStart:ImportingHTMLTextInParagraphs
+    public static void importingHTMLTextInParagraphs(String dataDir) throws IOException {
 
-		ashape.getFillFormat().setFillType(FillType.NoFill);
+        // Create Empty presentation instance
+        Presentation pres = new Presentation();
+        try {
+            // Access the default first slide of presentation
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Adding text frame to the shape
-		ashape.addTextFrame("");
+            // Adding the AutoShape to accommodate the HTML content
+            IAutoShape ashape = slide.getShapes().addAutoShape(ShapeType.Rectangle, 10, 10, (float) pres.getSlideSize().getSize().getWidth(), (float) pres.getSlideSize().getSize().getHeight());
 
-		// Clearing all paragraphs in added text frame
-		ashape.getTextFrame().getParagraphs().clear();
+            ashape.getFillFormat().setFillType(FillType.NoFill);
 
-		// Loading the HTML file using InputStream
-		InputStream inputStream = new FileInputStream(dataDir + "file.html");
-		Reader reader = new InputStreamReader(inputStream);
+            // Adding text frame to the shape
+            ashape.addTextFrame("");
 
-		int data = reader.read();
-		String content = ReadFile(dataDir + "file.html");
+            // Clearing all paragraphs in added text frame
+            ashape.getTextFrame().getParagraphs().clear();
 
-		// Adding text from HTML stream reader in text frame
-		ashape.getTextFrame().getParagraphs().addFromHtml(content);
+            // Loading the HTML file using InputStream
+            InputStream inputStream = new FileInputStream(dataDir + "file.html");
+            Reader reader = new InputStreamReader(inputStream);
 
-		// Saving Presentation
-		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+            int data = reader.read();
+            String content = readFile(dataDir + "file.html");
 
-	}
+            // Adding text from HTML stream reader in text frame
+            ashape.getTextFrame().getParagraphs().addFromHtml(content);
 
-	public static String ReadFile(String FileName) throws Exception {
+            // Saving Presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+    }
 
-		File file = new File(FileName);
-		StringBuilder contents = new StringBuilder();
-		BufferedReader reader = null;
+    public static String readFile(String FileName) throws IOException {
 
-		try {
-			reader = new BufferedReader(new FileReader(file));
-			String text = null;
+        File file = new File(FileName);
+        StringBuilder contents = new StringBuilder();
+        BufferedReader reader = null;
 
-			// repeat until all lines is read
-			while ((text = reader.readLine()) != null) {
-				contents.append(text).append(System.getProperty("line.separator"));
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (reader != null) {
-					reader.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-				return null;
-			}
-		}
+        try {
+            reader = new BufferedReader(new FileReader(file));
+            String text = null;
 
-		return contents.toString();
-
-	}
-      //ExEnd:ImportingHTMLTextInParagraphs
+            // repeat until all lines is read
+            while ((text = reader.readLine()) != null) {
+                contents.append(text).append(System.getProperty("line.separator"));
+            }
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return contents.toString();
+    }
+    //ExEnd:ImportingHTMLTextInParagraphs
 
 }

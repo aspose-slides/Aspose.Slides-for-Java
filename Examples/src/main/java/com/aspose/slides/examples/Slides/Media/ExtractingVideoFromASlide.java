@@ -13,36 +13,37 @@ import com.aspose.slides.examples.Utils;
 
 public class ExtractingVideoFromASlide {
 
-	public static void main(String[] args) throws IOException {
-		
-			            //ExStart:ExtractingVideoFromASlide
+    public static void main(String[] args) throws IOException {
 
-	// The path to the documents directory.
-	    String dataDir = Utils.getDataDir(ExtractingVideoFromASlide.class);
-	    
-		Presentation template = new Presentation(dataDir + "VideoSample.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ExtractingVideoFromASlide.class);
 
-		for (ISlide slide : template.getSlides()) {
-			for (IShape shape : template.getSlides().get_Item(0).getShapes()) {
-				if (shape instanceof VideoFrame) {
-					IVideoFrame vf = (IVideoFrame) shape;
-					String type = vf.getEmbeddedVideo().getContentType();
-					int ss = type.lastIndexOf('-');
-					byte[] buffer = vf.getEmbeddedVideo().getBinaryData();
-					
-					//Get File Extension
-					int charIndex = type.indexOf("/");
-					type = type.substring(charIndex + 1);
-					
-					FileOutputStream fop = new FileOutputStream(dataDir + "testing2." + type);
-					fop.write(buffer);
-					fop.flush();
-					fop.close();
-				}
-			}
-		}
-		            //ExEnd:ExtractingVideoFromASlide
-	
-}
+        //ExStart:ExtractingVideoFromASlide
+        // Instantiate Presentation class that represents the presentation file
+        Presentation template = new Presentation(dataDir + "VideoSample.pptx");
+        try {
+            for (ISlide slide : template.getSlides()) {
+                for (IShape shape : slide.getShapes()) {
+                    if (shape instanceof VideoFrame) {
+                        IVideoFrame vf = (IVideoFrame) shape;
+                        String type = vf.getEmbeddedVideo().getContentType();
+                        byte[] buffer = vf.getEmbeddedVideo().getBinaryData();
+
+                        //Get File Extension
+                        int charIndex = type.indexOf("/");
+                        type = type.substring(charIndex + 1);
+
+                        FileOutputStream fop = new FileOutputStream(dataDir + "testing2." + type);
+                        fop.write(buffer);
+                        fop.flush();
+                        fop.close();
+                    }
+                }
+            }
+        } finally {
+            if (template != null) template.dispose();
+        }
+        //ExEnd:ExtractingVideoFromASlide
+    }
 
 }

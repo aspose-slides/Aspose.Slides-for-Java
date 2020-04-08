@@ -6,22 +6,24 @@ import com.aspose.slides.examples.Utils;
 
 public class RemoveASlideUsingSlideIndex {
 
-	public static void main(String[] args) {
-		
-              //ExStart:RemoveASlideUsingSlideIndex
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RemoveASlideUsingSlideIndex.class);
-		
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+    public static void main(String[] args) {
 
-		// Removing a slide using its slide index
-		pres.getSlides().removeAt(0);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(RemoveASlideUsingSlideIndex.class);
 
-		// Writing the presentation file
-		pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
-              //ExEnd:RemoveASlideUsingSlideIndex
+        //ExStart:RemoveASlideUsingSlideIndex
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Removing a slide using its slide index
+            pres.getSlides().removeAt(0);
 
-	}
+            // Writing the presentation file
+            pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:RemoveASlideUsingSlideIndex
+    }
 
 }

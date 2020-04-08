@@ -16,20 +16,22 @@ import com.aspose.slides.MarkerStyleType;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+
 import java.awt.Color;
 
 
 public class HideInformationFromChart {
-    
+
     public static void main(String[] args) {
 
-    //ExStart:HideInformationFromChart    
+
         // The path to the documents directory.
-	String dataDir = Utils.getDataDir(HideInformationFromChart.class);
-        
+        String dataDir = Utils.getDataDir(HideInformationFromChart.class);
+
+        //ExStart:HideInformationFromChart
+        // Instantiate the Presentation class that represents the presentation
         Presentation pres = new Presentation();
-        try
-        {
+        try {
             ISlide slide = pres.getSlides().get_Item(0);
             IChart chart = slide.getShapes().addChart(ChartType.LineWithMarkers, 140, 118, 320, 370);
 
@@ -48,8 +50,7 @@ public class HideInformationFromChart {
             //Hiding MajorGridLines
             chart.getAxes().getHorizontalAxis().getMajorGridLinesFormat().getLine().getFillFormat().setFillType(FillType.NoFill);
 
-            for (int i = 0; i < chart.getChartData().getSeries().size(); i++)
-            {
+            for (int i = 0; i < chart.getChartData().getSeries().size(); i++) {
                 chart.getChartData().getSeries().removeAt(i);
             }
 

@@ -7,34 +7,35 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingCustomDocumentProperties {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-                //ExStart:AddingCustomDocumentProperties
-                     
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingCustomDocumentProperties.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingCustomDocumentProperties.class);
 
-		Presentation presPPTX = new Presentation();
+        //ExStart:AddingCustomDocumentProperties
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation();
+        try {
+            // Getting Document Properties
+            IDocumentProperties dProps = pres.getDocumentProperties();
 
-		// Getting Document Properties
-		IDocumentProperties dProps = presPPTX.getDocumentProperties();
+            // Adding Custom properties
+            dProps.set_Item("New Custom", 12);
+            dProps.set_Item("My Name", "Mudassir");
+            dProps.set_Item("Custom", 124);
 
-		// Adding Custom properties
-		dProps.set_Item("New Custom", 12);
-		dProps.set_Item("My Name", "Mudassir");
-		dProps.set_Item("Custom", 124);
+            // Getting property name at particular index
+            String getPropertyName = dProps.getCustomPropertyName(2);
 
-		// Getting property name at particular index
-		String getPropertyName = dProps.getCustomPropertyName(2);
+            // Removing selected property
+            dProps.removeCustomProperty(getPropertyName);
 
-		// Removing selected property
-		dProps.removeCustomProperty(getPropertyName);
-
-		// Saving presentation
-		presPPTX.save(dataDir + "CustomDemo.pptx", SaveFormat.Pptx);
-              
-                //ExEnd:AddingCustomDocumentProperties
-	
-}
+            // Saving presentation
+            pres.save(dataDir + "CustomDemo.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingCustomDocumentProperties
+    }
 
 }

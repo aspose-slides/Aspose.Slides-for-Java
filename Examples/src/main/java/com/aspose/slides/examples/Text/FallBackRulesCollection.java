@@ -1,4 +1,3 @@
-
 package com.aspose.slides.examples.Text;
 
 import com.aspose.slides.FontFallBackRule;
@@ -12,8 +11,8 @@ public class FallBackRulesCollection {
 
     public static void main(String[] args) {
 
-        //ExStart:FallBackRulesCollection 
-        
+        //ExStart:FallBackRulesCollection
+        // Create an instance of Presentation class
         Presentation presentation = new Presentation();
         try {
             IFontFallBackRulesCollection userRulesList = new FontFallBackRulesCollection();
@@ -25,8 +24,6 @@ public class FallBackRulesCollection {
         } finally {
             if (presentation != null) presentation.dispose();
         }
-       
-        
         //ExEnd:FallBackRulesCollection
     }
 }

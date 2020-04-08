@@ -9,24 +9,26 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationInNotesSlideViewToPDF {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		//ExStart:ConvertingPresentationInNotesSlideViewToPDF
-              String dataDir = Utils.getDataDir(ConvertingPresentationInNotesSlideViewToPDF.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationInNotesSlideViewToPDF.class);
 
-		//Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
+        //ExStart:ConvertingPresentationInNotesSlideViewToPDF
+        //Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            PdfOptions opts = new PdfOptions();
+            INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
 
-                
-                PdfOptions opts = new PdfOptions();
-                
-                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
-                options.setNotesPosition(NotesPositions.BottomFull);
-                
-		//Saving the presentation to PDF notes
-		pres.save(dataDir + "TestNotes.pdf", SaveFormat.Pdf,opts);
-               //ExEnd:ConvertingPresentationInNotesSlideViewToPDF
-	}
+            //Saving the presentation to PDF notes
+            pres.save(dataDir + "TestNotes.pdf", SaveFormat.Pdf, opts);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationInNotesSlideViewToPDF
+
+    }
 
 }

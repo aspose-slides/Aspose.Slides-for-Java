@@ -8,26 +8,29 @@ import com.aspose.slides.examples.Utils;
 
 public class RemoveARowOrColumnInATable {
 
-	public static void main(String[] args) {
-	//ExStart:RemoveARowOrColumnInATable
-	
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RemoveARowOrColumnInATable.class);
+    public static void main(String[] args) {
 
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(RemoveARowOrColumnInATable.class);
 
-		ISlide slide = pres.getSlides().get_Item(0);
-		double[] colWidth = { 100, 50, 30 };
-		double[] rowHeight = { 30, 50, 30 };
+        //ExStart:RemoveARowOrColumnInATable
+        //Instantiate Presentation class object
+        Presentation pres = new Presentation();
+        try {
+            ISlide slide = pres.getSlides().get_Item(0);
+            double[] colWidth = {100, 50, 30};
+            double[] rowHeight = {30, 50, 30};
 
-		ITable table = slide.getShapes().addTable(100, 100, colWidth, rowHeight);
+            ITable table = slide.getShapes().addTable(100, 100, colWidth, rowHeight);
 
-		table.getRows().removeAt(1, false);
-		table.getColumns().removeAt(1, false);
+            table.getRows().removeAt(1, false);
+            table.getColumns().removeAt(1, false);
 
-		pres.save(dataDir + "TestTable.pptx", SaveFormat.Pptx);
-
-	//ExEnd:RemoveARowOrColumnInATable
-		}
+            pres.save(dataDir + "TestTable.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:RemoveARowOrColumnInATable
+    }
 
 }

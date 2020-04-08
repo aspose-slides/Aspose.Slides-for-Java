@@ -10,35 +10,38 @@ import com.aspose.slides.examples.Utils;
 
 public class ChangingSmartArtShapeColorStyle {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangingSmartArtShapeColorStyle.class);
-                  //ExStart:ChangingSmartArtShapeColorStyle
-		// Instantiate Presentation Class
-		Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ChangingSmartArtShapeColorStyle.class);
 
-		// Get first slide
-		ISlide slide = pres.getSlides().get_Item(0);
+        //ExStart:ChangingSmartArtShapeColorStyle
+        // Instantiate Presentation Class
+        Presentation pres = new Presentation(dataDir + "SimpleSmartArt.pptx");
+        try {
+            // Get first slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Traverse through every shape inside first slide
-		for (IShape shape : slide.getShapes()) {
-			// Check if shape is of SmartArt type
-			if (shape instanceof ISmartArt) {
-				// Typecast shape to SmartArtEx
-				ISmartArt smart = (ISmartArt) shape;
+            // Traverse through every shape inside first slide
+            for (IShape shape : slide.getShapes()) {
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt) {
+                    // Typecast shape to SmartArtEx
+                    ISmartArt smart = (ISmartArt) shape;
 
-				// Checking SmartArt color type
-				if (smart.getColorStyle() == SmartArtColorType.ColoredFillAccent1) {
-					// Changing SmartArt color type
-					smart.setColorStyle(SmartArtColorType.ColorfulAccentColors);
-				}
-			}
-		}
-		// Saving presentation
-		pres.save(dataDir + "ChangeSmartArtColorStyle.pptx", SaveFormat.Pptx);
-
-	//ExEnd:ChangingSmartArtShapeColorStyle
-         }
+                    // Checking SmartArt color type
+                    if (smart.getColorStyle() == SmartArtColorType.ColoredFillAccent1) {
+                        // Changing SmartArt color type
+                        smart.setColorStyle(SmartArtColorType.ColorfulAccentColors);
+                    }
+                }
+            }
+            // Saving presentation
+            pres.save(dataDir + "ChangeSmartArtColorStyle.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ChangingSmartArtShapeColorStyle
+    }
 
 }

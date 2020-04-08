@@ -7,30 +7,29 @@ import com.aspose.slides.examples.Utils;
 
 public class UsingCustomFonts {
 
-	public static void main(String[] args) {
-               
- 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(UsingCustomFonts.class);
+    public static void main(String[] args) {
 
-//ExStart:UsingCustomFonts
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(UsingCustomFonts.class);
 
-		String[] _fontDir = new String[] { "Sample Fonts" };
+        //ExStart:UsingCustomFonts
+        String[] _fontDir = new String[]{"Sample Fonts"};
 
-		// Load the custom font directory fonts
-		FontsLoader.loadExternalFonts(_fontDir);
+        // Load the custom font directory fonts
+        FontsLoader.loadExternalFonts(_fontDir);
 
-		// Do Some work and perform presentation/slides rendering
-		Presentation presentation = new Presentation(dataDir + "DemoFile.pptx");
+        // Do Some work and perform presentation/slides rendering
+        Presentation presentation = new Presentation(dataDir + "DemoFile.pptx");
+        try {
+            // Save the presentation
+            presentation.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (presentation != null) presentation.dispose();
 
-		// Save the presentation
-		presentation.save(dataDir + "output.pptx", SaveFormat.Pptx);
-
-		// Clear Font Cache
-		FontsLoader.clearCache();
-          
-     //ExEnd:UsingCustomFonts
-
-	}
+            // Clear Font Cache
+            FontsLoader.clearCache();
+        }
+        //ExEnd:UsingCustomFonts
+    }
 
 }

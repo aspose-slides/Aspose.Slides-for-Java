@@ -9,38 +9,40 @@ import com.aspose.slides.examples.Utils;
 
 public class RemoveSmartArtShapeNode {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RemoveSmartArtShapeNode.class);
-                //ExStart:RemoveSmartArtShapeNode
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(RemoveSmartArtShapeNode.class);
 
-		// Load the desired the presentation
-		Presentation pres = new Presentation(dataDir + "AddSmartArtNode.pptx");
+        //ExStart:RemoveSmartArtShapeNode
+        // Load the desired the presentation
+        Presentation pres = new Presentation(dataDir + "AddSmartArtNode.pptx");
+        try {
+            // Traverse through every shape inside first slide
+            for (IShape shape : pres.getSlides().get_Item(0).getShapes()) {
 
-		// Traverse through every shape inside first slide
-		for (IShape shape : pres.getSlides().get_Item(0).getShapes()) {
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt) {
+                    // Typecast shape to SmartArtEx
+                    ISmartArt smart = (ISmartArt) shape;
 
-			// Check if shape is of SmartArt type
-			if (shape instanceof ISmartArt) {
-				// Typecast shape to SmartArtEx
-				ISmartArt smart = (ISmartArt) shape;
+                    if (smart.getAllNodes().size() > 0) {
+                        // Accessing SmartArt node at index 0
+                        ISmartArtNode node = smart.getAllNodes().get_Item(0);
 
-				if (smart.getAllNodes().size() > 0) {
-					// Accessing SmartArt node at index 0
-					ISmartArtNode node = smart.getAllNodes().get_Item(0);
+                        // Removing the selected node
+                        smart.getAllNodes().removeNode(node);
+                    }
+                }
+            }
 
-					// Removing the selected node
-					smart.getAllNodes().removeNode(node);
+            // Save Presentation
+            pres.save(dataDir + "RemoveSmartArtNode.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:RemoveSmartArtShapeNode
 
-				}
-			}
-		}
-
-		// Save Presentation
-		pres.save(dataDir + "RemoveSmartArtNode.pptx", SaveFormat.Pptx);
-                //ExEnd:RemoveSmartArtShapeNode
-
-	}
+    }
 
 }

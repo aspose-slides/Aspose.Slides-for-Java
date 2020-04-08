@@ -7,26 +7,28 @@ import com.aspose.slides.examples.Utils;
 
 public class ExtractingAudioUsedInSlideShowTransitions {
 
-	public static void main(String[] args) {
-		            //ExStart:ExtractingAudioUsedInSlideShowTransitions
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-	    	String dataDir = Utils.getDataDir(ExtractingAudioUsedInSlideShowTransitions.class);
-	    
-		String presName = "AudioSlide.pptx";
-		// Instantiate Presentation class that represents the presentation file
-		Presentation pres = new Presentation(dataDir + presName);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ExtractingAudioUsedInSlideShowTransitions.class);
 
-		// Access the desired slide
-		ISlide slide = pres.getSlides().get_Item(0);
+        //ExStart:ExtractingAudioUsedInSlideShowTransitions
+        // Instantiate Presentation class that represents the presentation file
+        Presentation pres = new Presentation(dataDir + "AudioSlide.pptx");
+        try {
+            // Access the desired slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-		// Get the slideshow transition effects for slide
-		ISlideShowTransition transition = slide.getSlideShowTransition();
+            // Get the slideshow transition effects for slide
+            ISlideShowTransition transition = slide.getSlideShowTransition();
 
-		//Extract sound in byte array
-		byte[] audio = transition.getSound().getBinaryData();
-		System.out.println("Length: " + audio.length);
-	            //ExEnd:ExtractingAudioUsedInSlideShowTransitions
-}
+            //Extract sound in byte array
+            byte[] audio = transition.getSound().getBinaryData();
+            System.out.println("Length: " + audio.length);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ExtractingAudioUsedInSlideShowTransitions
+    }
 
 }

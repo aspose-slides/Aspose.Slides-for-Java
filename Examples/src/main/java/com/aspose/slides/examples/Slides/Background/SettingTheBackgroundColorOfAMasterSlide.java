@@ -10,25 +10,26 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingTheBackgroundColorOfAMasterSlide {
 
-	public static void main(String[] args) {
-		
-//ExStart:SettingTheBackgroundColorOfAMasterSlide
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingTheBackgroundColorOfAMasterSlide.class);
-		
-		// Instantiate the Presentation class that represents the presentation file
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingTheBackgroundColorOfAMasterSlide.class);
 
-		// Set the background color of the Master ISlide to Forest Green
-		pres.getMasters().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
-		pres.getMasters().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Solid);
-		pres.getMasters().get_Item(0).getBackground().getFillFormat().getSolidFillColor().setColor(Color.GREEN);
+        //ExStart:SettingTheBackgroundColorOfAMasterSlide
+        // Instantiate the Presentation class that represents the presentation file
+        Presentation pres = new Presentation();
+        try {
+            // Set the background color of the Master ISlide to Forest Green
+            pres.getMasters().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
+            pres.getMasters().get_Item(0).getBackground().getFillFormat().setFillType(FillType.Solid);
+            pres.getMasters().get_Item(0).getBackground().getFillFormat().getSolidFillColor().setColor(Color.GREEN);
 
-		// Write the presentation to disk
-		pres.save(dataDir + "MasterBG.pptx", SaveFormat.Pptx);
-
-//ExEnd:SettingTheBackgroundColorOfAMasterSlide
-	}
+            // Write the presentation to disk
+            pres.save(dataDir + "MasterBG.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingTheBackgroundColorOfAMasterSlide
+    }
 
 }

@@ -6,19 +6,21 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToPDFUsingDefaultOptions {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		//ExStart:ConvertingPresentationToPDFUsingDefaultOptions
-              String dataDir = Utils.getDataDir(ConvertingPresentationToPDFUsingDefaultOptions.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToPDFUsingDefaultOptions.class);
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
-
-		// Save the presentation to PDF with default options
-		pres.save(dataDir + "demoDefault.pdf", SaveFormat.Pdf);
-
-              //ExEnd:ConvertingPresentationToPDFUsingDefaultOptions
-	}
+        //ExStart:ConvertingPresentationToPDFUsingDefaultOptions
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Save the presentation to PDF with default options
+            pres.save(dataDir + "demoDefault.pdf", SaveFormat.Pdf);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToPDFUsingDefaultOptions
+    }
 
 }

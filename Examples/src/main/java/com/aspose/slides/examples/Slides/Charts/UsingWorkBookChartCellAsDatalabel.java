@@ -15,40 +15,38 @@ import com.aspose.slides.examples.Utils;
 
 public class UsingWorkBookChartCellAsDatalabel {
 
-	public static void main(String[] args) {
-                 //ExStart:UsingWorkBookChartCellAsDatalabel
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(UsingWorkBookChartCellAsDatalabel.class);
+    public static void main(String[] args) {
 
-		
-                 String lbl0 = "Label 0 cell value";
-                 String lbl1 = "Label 1 cell value";
-                 String lbl2 = "Label 2 cell value";
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(UsingWorkBookChartCellAsDatalabel.class);
 
-                Presentation pres = new Presentation(dataDir+"Test.pptx");
-               try {
+        //ExStart:UsingWorkBookChartCellAsDatalabel
+        String lbl0 = "Label 0 cell value";
+        String lbl1 = "Label 1 cell value";
+        String lbl2 = "Label 2 cell value";
 
-               IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 600, 400, true);
+        // Instantiate the presentation
+        Presentation pres = new Presentation(dataDir + "Test.pptx");
+        try {
 
-               IChartSeriesCollection series = chart.getChartData().getSeries();
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 600, 400, true);
 
-               series.get_Item(0).getLabels().getDefaultDataLabelFormat().setShowLabelValueFromCell(true);
+            IChartSeriesCollection series = chart.getChartData().getSeries();
 
-               IChartDataWorkbook wb = chart.getChartData().getChartDataWorkbook();
+            series.get_Item(0).getLabels().getDefaultDataLabelFormat().setShowLabelValueFromCell(true);
 
-               series.get_Item(0).getLabels().get_Item(0).setValueFromCell(wb.getCell(0, "A10", lbl0));
-               series.get_Item(0).getLabels().get_Item(1).setValueFromCell(wb.getCell(0, "A11", lbl1));
-               series.get_Item(0).getLabels().get_Item(2).setValueFromCell(wb.getCell(0, "A12", lbl2));
-} finally {
-    pres.dispose();
-}
-	
+            IChartDataWorkbook wb = chart.getChartData().getChartDataWorkbook();
 
-		// Saving presentation
-		pres.save(dataDir + "TestResult.pptx", SaveFormat.Pptx);
+            series.get_Item(0).getLabels().get_Item(0).setValueFromCell(wb.getCell(0, "A10", lbl0));
+            series.get_Item(0).getLabels().get_Item(1).setValueFromCell(wb.getCell(0, "A11", lbl1));
+            series.get_Item(0).getLabels().get_Item(2).setValueFromCell(wb.getCell(0, "A12", lbl2));
 
-                //ExEnd:UsingWorkBookChartCellAsDatalabel
- 
- }
+            // Saving presentation
+            pres.save(dataDir + "TestResult.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:UsingWorkBookChartCellAsDatalabel
+    }
 
 }

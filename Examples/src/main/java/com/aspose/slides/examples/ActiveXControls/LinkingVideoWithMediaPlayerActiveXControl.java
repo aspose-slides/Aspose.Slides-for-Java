@@ -6,34 +6,36 @@ import com.aspose.slides.examples.Utils;
 
 public class LinkingVideoWithMediaPlayerActiveXControl {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		
-//ExStart:LinkingVideoWithMediaPlayerActiveXControl
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(LinkingVideoWithMediaPlayerActiveXControl.class);
 
-                String dataDir = Utils.getDataDir(LinkingVideoWithMediaPlayerActiveXControl.class);
+        //ExStart:LinkingVideoWithMediaPlayerActiveXControl
+        // Accessing the presentation with ActiveX controls
+        Presentation pres = new Presentation(dataDir + "template.pptx");
+        try {
+            // Create empty presentation instance
+            Presentation newPptx = new Presentation();
+            try {
+                // Remove default slide
+                newPptx.getSlides().removeAt(0);
 
-		// Accessing the presentation with ActiveX controls
-		Presentation pres = new Presentation(dataDir + "template.pptx");
+                // Clone slide with Media Player ActiveX Control
+                newPptx.getSlides().insertClone(0, pres.getSlides().get_Item(0));
 
-		// Create empty presentation instance
-		Presentation newPptx = new Presentation();
+                // Access the Media Player ActiveX control and set the video path
+                newPptx.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", "Wildlife.wmv");
 
-		// Remove default slide
-		newPptx.getSlides().removeAt(0);
-
-		// Clone slide with Media Player ActiveX Control
-		newPptx.getSlides().insertClone(0, pres.getSlides().get_Item(0));
-
-		// Access the Media Player ActiveX control and set the video path
-		newPptx.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", "Wildlife.wmv");
-
-		// Save the Presentation
-		newPptx.save(dataDir + "Output.pptx", SaveFormat.Pptx);
-
-              //ExEnd:LinkingVideoWithMediaPlayerActiveXControl
-
-}
+                // Save the Presentation
+                newPptx.save(dataDir + "output.pptx", SaveFormat.Pptx);
+            } finally {
+                if (newPptx != null) newPptx.dispose();
+            }
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:LinkingVideoWithMediaPlayerActiveXControl
+    }
 
 }

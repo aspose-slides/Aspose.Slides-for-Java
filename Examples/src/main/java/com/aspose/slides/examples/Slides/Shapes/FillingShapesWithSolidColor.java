@@ -12,31 +12,33 @@ import com.aspose.slides.examples.Utils;
 
 public class FillingShapesWithSolidColor {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		//ExStart:FillingShapesWithSolidColor
-	// The path to the documents directory.
-		String dataDir = Utils.getDataDir(FillingShapesWithSolidColor.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(FillingShapesWithSolidColor.class);
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+        //ExStart:FillingShapesWithSolidColor
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+            // Add AutoShape of rectangle type
+            IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 75, 150);
 
-		// Add AutoShape of rectangle type
-		IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 75, 150);
+            // Set the fill type to Solid
+            shp.getFillFormat().setFillType(FillType.Solid);
 
-		// Set the fill type to Solid
-		shp.getFillFormat().setFillType(FillType.Solid);
+            // Set the color of the rectangle
+            shp.getFillFormat().getSolidFillColor().setColor(Color.YELLOW);
 
-		// Set the color of the rectangle
-		shp.getFillFormat().getSolidFillColor().setColor(Color.YELLOW);
-
-		// Write the PPTX file to disk
-		pres.save(dataDir + "RectShpSolid.pptx", SaveFormat.Pptx);
-		//ExEnd:FillingShapesWithSolidColor
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "RectShpSolid.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:FillingShapesWithSolidColor
+    }
 
 }

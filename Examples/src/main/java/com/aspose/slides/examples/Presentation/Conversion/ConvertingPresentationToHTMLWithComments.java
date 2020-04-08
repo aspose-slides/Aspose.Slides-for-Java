@@ -10,24 +10,27 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToHTMLWithComments {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		//ExStart:ConvertingPresentationToHTMLWithComments
-               String dataDir = Utils.getDataDir(ConvertingPresentationToHTMLWithComments.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToHTMLWithComments.class);
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        //ExStart:ConvertingPresentationToHTMLWithComments
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            HtmlOptions htmlOpt = new HtmlOptions();
+            htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
 
-		HtmlOptions htmlOpt = new HtmlOptions();
-		
-                htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
+            INotesCommentsLayoutingOptions options = htmlOpt.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
 
-                INotesCommentsLayoutingOptions options = htmlOpt.getNotesCommentsLayouting();
-                options.setNotesPosition(NotesPositions.BottomFull);
-		// Saving the presentation to HTML
-       		pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
-                  //ExEnd:ConvertingPresentationToHTMLWithComments
-	}
+            // Saving the presentation to HTML
+            pres.save(dataDir + "demo.html", SaveFormat.Html, htmlOpt);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToHTMLWithComments
+    }
 
 }

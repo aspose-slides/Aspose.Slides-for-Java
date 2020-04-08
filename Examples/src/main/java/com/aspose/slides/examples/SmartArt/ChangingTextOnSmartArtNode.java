@@ -9,28 +9,31 @@ import com.aspose.slides.examples.Utils;
 
 public class ChangingTextOnSmartArtNode {
 
-	public static void main(String[] args) {
-                //ExStart:ChangingTextOnSmartArtNode 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangingTextOnSmartArtNode.class);
+    public static void main(String[] args) {
 
-		// Instantiate Presentation class that represents the PPTX file
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ChangingTextOnSmartArtNode.class);
 
-		// Add SmartArt BasicCycle
-		ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
+        //ExStart:ChangingTextOnSmartArtNode
+        // Instantiate Presentation class that represents the PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Add SmartArt BasicCycle
+            ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicCycle);
 
-		// Obtain the reference of a node by using its Index
-		// Select second root node
-		ISmartArtNode node = smart.getNodes().get_Item(1); 
+            // Obtain the reference of a node by using its Index
+            // Select second root node
+            ISmartArtNode node = smart.getNodes().get_Item(1);
 
-		// Setting the text of the TextFrame
-		node.getTextFrame().setText("Second root node");
+            // Setting the text of the TextFrame
+            node.getTextFrame().setText("Second root node");
 
-		// Saving Presentation
-		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
-
-	//ExEnd:ChangingTextOnSmartArtNode 
-          }
+            // Saving Presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ChangingTextOnSmartArtNode
+    }
 
 }

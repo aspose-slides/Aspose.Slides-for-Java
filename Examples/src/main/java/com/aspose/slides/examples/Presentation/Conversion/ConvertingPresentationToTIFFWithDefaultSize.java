@@ -6,19 +6,21 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToTIFFWithDefaultSize {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		//ExStart:ConvertingPresentationToTIFFWithDefaultSize
-                String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithDefaultSize.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ConvertingPresentationToTIFFWithDefaultSize.class);
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "demo.pptx");
-
-		// Saving the presentation to TIFF document
-		pres.save(dataDir + "demo.tiff", SaveFormat.Tiff);
-
-               //ExEnd:ConvertingPresentationToTIFFWithDefaultSize
-	}
+        //ExStart:ConvertingPresentationToTIFFWithDefaultSize
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            // Saving the presentation to TIFF document
+            pres.save(dataDir + "demo.tiff", SaveFormat.Tiff);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToTIFFWithDefaultSize
+    }
 
 }

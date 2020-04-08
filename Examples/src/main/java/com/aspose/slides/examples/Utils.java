@@ -19,18 +19,15 @@ public class Utils {
         System.out.println("Using data directory: " + dir.toString());
         return dir.toString() + File.separator;
     }
-    
+
     public static String getSharedDataDir(Class c) {
-    	
+
         File dir = new File(System.getProperty("user.dir"));
         dir = new File(dir, "src");
         dir = new File(dir, "main");
         dir = new File(dir, "resources");
-        
+
         return dir.toString() + File.separator;
     }
 
-    public static String getDataDir_Conversion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

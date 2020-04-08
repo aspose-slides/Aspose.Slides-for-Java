@@ -8,24 +8,27 @@ import com.aspose.slides.examples.Utils;
 
 public class ChangingLayoutTypeOfAnySmartArt {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ChangingLayoutTypeOfAnySmartArt.class);
-                 //ExStart:ChangingLayoutTypeOfAnySmartArt {
-		// Instantiate Presentation class that represents the PPTX file
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ChangingLayoutTypeOfAnySmartArt.class);
 
-		// Add SmartArt BasicBlockList
-		ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicBlockList);
+        //ExStart:ChangingLayoutTypeOfAnySmartArt {
+        // Instantiate Presentation class that represents the PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Add SmartArt BasicBlockList
+            ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.BasicBlockList);
 
-		// Change LayoutType to BasicProcess
-		smart.setLayout(SmartArtLayoutType.BasicProcess);
+            // Change LayoutType to BasicProcess
+            smart.setLayout(SmartArtLayoutType.BasicProcess);
 
-		// Saving Presentation
-		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
-
-              //ExEnd:ChangingLayoutTypeOfAnySmartArt {
-	}
+            // Saving Presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ChangingLayoutTypeOfAnySmartArt {
+    }
 
 }

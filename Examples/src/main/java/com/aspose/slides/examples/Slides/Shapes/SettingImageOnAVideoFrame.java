@@ -13,28 +13,32 @@ import com.aspose.slides.examples.Utils;
 
 public class SettingImageOnAVideoFrame {
 
-	public static void main(String[] args) throws FileNotFoundException {
-//ExStart:SettingImageOnAVideoFrame
+    public static void main(String[] args) throws FileNotFoundException {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(SettingImageOnAVideoFrame.class);
-		// Create an instance of Presentation class
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(SettingImageOnAVideoFrame.class);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:SettingImageOnAVideoFrame
+        // Create an instance of Presentation class
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Add Video Frame
-		IVideoFrame vf = sld.getShapes().addVideoFrame(50, 150, 300, 150, dataDir + "Wildlife.mp4");
+            // Add Video Frame
+            IVideoFrame vf = sld.getShapes().addVideoFrame(50, 150, 300, 150, dataDir + "Wildlife.mp4");
 
-		// Set Image
-		IPPImage img = null;
-		img = pres.getImages().addImage(new FileInputStream(new File(dataDir + "Sample.jpg")));
-		vf.getPictureFormat().getPicture().setImage(img);
+            // Set Image
+            IPPImage img = null;
+            img = pres.getImages().addImage(new FileInputStream(new File(dataDir + "Sample.jpg")));
+            vf.getPictureFormat().getPicture().setImage(img);
 
-		// Write the PPTX file to disk
-		pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
-//ExEnd:SettingImageOnAVideoFrame
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "Test.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:SettingImageOnAVideoFrame
+    }
 
 }

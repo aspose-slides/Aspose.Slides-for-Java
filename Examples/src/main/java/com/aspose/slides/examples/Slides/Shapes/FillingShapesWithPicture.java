@@ -16,39 +16,42 @@ import com.aspose.slides.examples.Utils;
 
 public class FillingShapesWithPicture {
 
-	public static void main(String[] args) {
-	//ExStart:FillingShapesWithPicture
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(FillingShapesWithPicture.class);
+    public static void main(String[] args) {
 
-		// Instantiate Presentation class that represents the PPTX
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(FillingShapesWithPicture.class);
 
-		// Get the first slide
-		ISlide sld = pres.getSlides().get_Item(0);
+        //ExStart:FillingShapesWithPicture
+        // Instantiate Presentation class that represents the PPTX
+        Presentation pres = new Presentation();
+        try {
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-		// Add AutoShape of rectangle type
-		IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 75, 150);
+            // Add AutoShape of rectangle type
+            IShape shp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 150, 75, 150);
 
-		// Set the fill type to Picture
-		shp.getFillFormat().setFillType(FillType.Picture);
+            // Set the fill type to Picture
+            shp.getFillFormat().setFillType(FillType.Picture);
 
-		// Set the picture fill mode
-		shp.getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Tile);
+            // Set the picture fill mode
+            shp.getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Tile);
 
-		// Set the picture
-		IPPImage imgx = null;
-		try {
-			imgx = pres.getImages().addImage(new FileInputStream(new File("aspose1.jpg")));
-		} catch (IOException e) {
-		}
+            // Set the picture
+            IPPImage imgx = null;
+            try {
+                imgx = pres.getImages().addImage(new FileInputStream(new File("aspose1.jpg")));
+            } catch (IOException e) {
+            }
 
-		shp.getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
+            shp.getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
 
-		// Write the PPTX file to disk
-		pres.save(dataDir + "RectShpPic.pptx", SaveFormat.Pptx);
-	//ExEnd:FillingShapesWithPicture
-
-	}
+            // Write the PPTX file to disk
+            pres.save(dataDir + "RectShpPic.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:FillingShapesWithPicture
+    }
 
 }

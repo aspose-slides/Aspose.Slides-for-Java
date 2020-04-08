@@ -14,57 +14,62 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
 
 public class ConvertingAnIndividualSlideToHTML {
+    // The path to the documents directory.
+    static String dataDir = Utils.getDataDir(ConvertingAnIndividualSlideToHTML.class);
 
-	public static void main(String[] args) {
-		CustomHtmlExport();
-	}
+    public static void main(String[] args) {
+        CustomHtmlExport();
+    }
 
-	public static void CustomHtmlExport() {
-		//ExStart:ConvertingAnIndividualSlideToHTML
-             // The path to the documents directory.
-		String dataDir = Utils.getDataDir(ConvertingAnIndividualSlideToHTML.class);
+    //ExStart:ConvertingAnIndividualSlideToHTML
+    public static void CustomHtmlExport() {
 
-		// Instantiate a Presentation object that represents a presentation file
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Setting HTML Options
+            HtmlOptions opts = new HtmlOptions();
+            opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
 
-		// Setting HTML Options
-		HtmlOptions opts = new HtmlOptions();
-		
-                opts.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
+            INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
+            options.setNotesPosition(NotesPositions.BottomFull);
 
-                INotesCommentsLayoutingOptions options = opts.getNotesCommentsLayouting();
-                        options.setNotesPosition(NotesPositions.BottomFull);
-		// Saving to individual files
-		for (int i = 0; i < pres.getSlides().size(); i++)
-			pres.save(dataDir + "slide" + (i + 1) + ".html", new int[] { i + 1 }, SaveFormat.Html, opts);
-	}
+            // Saving to individual files
+            for (int i = 0; i < pres.getSlides().size(); i++) {
+                pres.save(dataDir + "slide" + (i + 1) + ".html", new int[]{i + 1}, SaveFormat.Html, opts);
+            }
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+    }
 
-	private static class CustomFormattingController implements IHtmlFormattingController {
-		private String SlideHeader = "<div class=\"slide\" name=\"slide\" id=\"slide{0}\">";
-		private String SlideFooter = "</div>";
+    private static class CustomFormattingController implements IHtmlFormattingController {
 
-		public CustomFormattingController() {
-		}
+        private String SlideHeader = "<div class=\"slide\" name=\"slide\" id=\"slide{0}\">";
+        private String SlideFooter = "</div>";
 
-		public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation) {
-		}
+        public CustomFormattingController() {
+        }
 
-		public void writeDocumentEnd(IHtmlGenerator generator, IPresentation presentation) {
-		}
+        public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation) {
+        }
 
-		public void writeSlideStart(IHtmlGenerator generator, ISlide slide) {
-			generator.addHtml(String.format(SlideHeader, generator.getSlideIndex() + 1));
-		}
+        public void writeDocumentEnd(IHtmlGenerator generator, IPresentation presentation) {
+        }
 
-		public void writeSlideEnd(IHtmlGenerator generator, ISlide slide) {
-			generator.addHtml(SlideFooter);
-		}
+        public void writeSlideStart(IHtmlGenerator generator, ISlide slide) {
+            generator.addHtml(String.format(SlideHeader, generator.getSlideIndex() + 1));
+        }
 
-		public void writeShapeStart(IHtmlGenerator generator, IShape shape) {
-		}
+        public void writeSlideEnd(IHtmlGenerator generator, ISlide slide) {
+            generator.addHtml(SlideFooter);
+        }
 
-		public void writeShapeEnd(IHtmlGenerator generator, IShape shape) {
-		}
-	}
-                   //ExEnd:ConvertingAnIndividualSlideToHTML
+        public void writeShapeStart(IHtmlGenerator generator, IShape shape) {
+        }
+
+        public void writeShapeEnd(IHtmlGenerator generator, IShape shape) {
+        }
+    }
+    //ExEnd:ConvertingAnIndividualSlideToHTML
 }

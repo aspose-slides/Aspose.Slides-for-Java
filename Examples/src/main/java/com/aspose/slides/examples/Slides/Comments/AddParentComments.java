@@ -6,30 +6,31 @@
 package com.aspose.slides.examples.Slides.Comments;
 
 import static com.aspose.slides.CategoryAxisType.Date;
+
 import com.aspose.slides.IComment;
 import com.aspose.slides.ICommentAuthor;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.Utils;
+
 import java.awt.geom.Point2D;
 import java.util.Date;
 
 /**
- *
  * @author mfazi
  */
 public class AddParentComments {
-    
+
     public static void main(String[] args) {
-    
-        //ExStart:AddParentComments
 
         // The path to the documents directory.
         String dataDir = Utils.getDataDir(AddParentComments.class);
+
+        //ExStart:AddParentComments
+        // Instantiate the presentation
         Presentation pres = new Presentation();
-        try
-        {
+        try {
             // Add comment
             ICommentAuthor author1 = pres.getCommentAuthors().addAuthor("Author_1", "A.A.");
             IComment comment1 = author1.getComments().addComment("comment1", pres.getSlides().get_Item(0), new Point2D.Float(10, 10), new Date());
@@ -40,11 +41,11 @@ public class AddParentComments {
             reply1.setParentComment(comment1);
 
             // Add reply for comment1
-            IComment reply2 = author2.getComments().addComment("reply 2 for comment 1", pres.getSlides().get_Item(0),  new Point2D.Float(10, 10), new Date());
+            IComment reply2 = author2.getComments().addComment("reply 2 for comment 1", pres.getSlides().get_Item(0), new Point2D.Float(10, 10), new Date());
             reply2.setParentComment(comment1);
 
             // Add reply to reply
-            IComment subReply = author1.getComments().addComment("subreply 3 for reply 2", pres.getSlides().get_Item(0),  new Point2D.Float(10, 10), new Date());
+            IComment subReply = author1.getComments().addComment("subreply 3 for reply 2", pres.getSlides().get_Item(0), new Point2D.Float(10, 10), new Date());
             subReply.setParentComment(reply2);
 
             IComment comment2 = author2.getComments().addComment("comment 2", pres.getSlides().get_Item(0), new Point2D.Float(10, 10), new Date());
@@ -56,28 +57,24 @@ public class AddParentComments {
             // Display hierarchy on console
             ISlide slide = pres.getSlides().get_Item(0);
             IComment[] comments = slide.getSlideComments(null);
-            for (int i = 0; i < comments.length; i++)
-            {
+            for (int i = 0; i < comments.length; i++) {
                 IComment comment = comments[i];
-                while (comment.getParentComment() != null)
-                {
+                while (comment.getParentComment() != null) {
                     System.out.print("\t");
                     comment = comment.getParentComment();
                 }
 
-                System.out.println(comments[i].getAuthor().getName() +  " : " + comments[i].getText());
+                System.out.println(comments[i].getAuthor().getName() + " : " + comments[i].getText());
                 System.out.println();
             }
-            pres.save(dataDir + "parent_comment.pptx",SaveFormat.Pptx);
+            pres.save(dataDir + "parent_comment.pptx", SaveFormat.Pptx);
             // Remove comment1 and all its replies
             comment1.remove();
-            
-            pres.save(dataDir + "remove_comment.pptx",SaveFormat.Pptx);
+
+            pres.save(dataDir + "remove_comment.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
         }
-        finally {
-            pres.dispose();
-        }
-        
         //ExEnd:AddParentComments
     }
 }

@@ -13,57 +13,57 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.Utils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
 public class AddImageInTableCell {
 
-	public static void main(String[] args) {
-                
-              //ExStart:AddImageInTableCell
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
- String dataDir = Utils.getDataDir(AddImageInTableCell.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddImageInTableCell.class);
 
-  //Instantiate Presentation class object
-   Presentation pres = new Presentation();
+        //ExStart:AddImageInTableCell
+        //Instantiate Presentation class object
+        Presentation pres = new Presentation();
+        try {
+            //Access first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-   //Access first slide
-   ISlide sld = pres.getSlides().get_Item(0);
+            //Define columns with widths and rows with heights
+            double[] dblCols = {150, 150, 150, 150};
+            double[] dblRows = {100, 100, 100, 100, 90};
 
-   //Define columns with widths and rows with heights
-   double[] dblCols = { 150, 150, 150, 150 };
-   double[] dblRows = { 100, 100, 100, 100, 90 };
+            //Add table shape to slide
+            ITable tbl = sld.getShapes().addTable(50, 50, dblCols, dblRows);
 
-   //Add table shape to slide
-   ITable tbl = sld.getShapes().addTable(50, 50, dblCols, dblRows);
+            //Creating an Image object to hold the image file
+            IPPImage imgx = null;
+            try {
+                imgx = pres.getImages().addImage(new FileInputStream(new File("aspose1.jpg")));
+            } catch (IOException e) {
+            }
 
-   //Creating an Image object to hold the image file
-   IPPImage imgx = null;
-   try {
-           imgx = pres.getImages().addImage(new FileInputStream(new File("aspose1.jpg")));
-   } catch (IOException e) {
-   }
+            //Create an IPPImage object using the bitmap object
+            IPPImage imgx1 = pres.getImages().addImage(imgx);
 
-   //Create an IPPImage object using the bitmap object
-   IPPImage imgx1 = pres.getImages().addImage(imgx);
+            //Add image to first table cell
+            tbl.get_Item(0, 0).getFillFormat().setFillType(FillType.Picture);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Stretch);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropRight(-30f);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropLeft(-30f);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropBottom(-30f);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropTop(-30f);
+            tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
 
-   //Add image to first table cell
-   tbl.get_Item(0, 0).getFillFormat().setFillType(FillType.Picture);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Stretch);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropRight(-30f);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropLeft(-30f);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropBottom(-30f);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().setCropTop(-30f);
-   tbl.get_Item(0, 0).getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
-
-   //Save PPTX to Disk
-   pres.save("D:\\Data\\table.pptx", SaveFormat.Pptx);
-//ExEnd:AddImageInTableCell
-
-
-                
-	}
+            //Save PPTX to Disk
+            pres.save(dataDir + "table.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddImageInTableCell
+    }
 
 }

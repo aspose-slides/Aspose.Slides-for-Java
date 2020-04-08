@@ -9,11 +9,8 @@ import com.aspose.slides.XpsOptions;
 import com.aspose.slides.examples.Utils;
 
 //ExStart:CustomHeaderAndFontsController
-public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController
-{
-    private final int m_basePath=0;
+public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController {
 
-    
     // Custom header template
     final static String Header = "<!DOCTYPE html>\n" +
             "<html>\n" +
@@ -23,25 +20,21 @@ public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController
             "<link rel=\"stylesheet\" type=\"text/css\" href=\"%s\">\n" +
             "</head>";
 
-
     private final String m_cssFileName;
 
-    public CustomHeaderAndFontsController(String cssFileName) 
-    {
+    public CustomHeaderAndFontsController(String cssFileName) {
         m_cssFileName = cssFileName;
     }
 
-    
     public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation) {
         generator.addHtml(String.format(Header, m_cssFileName));
         writeAllFonts(generator, presentation);
     }
 
-    
     public void writeAllFonts(IHtmlGenerator generator, IPresentation presentation) {
         generator.addHtml("<!-- Embedded fonts -->");
         super.writeAllFonts(generator, presentation);
     }
-  //ExEnd:CustomHeaderAndFontsController
 }
+//ExEnd:CustomHeaderAndFontsController
 

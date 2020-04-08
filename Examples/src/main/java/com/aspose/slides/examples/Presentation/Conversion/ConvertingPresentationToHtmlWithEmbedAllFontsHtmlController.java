@@ -12,33 +12,28 @@ import com.aspose.slides.examples.Utils;
 
 public class ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	//ExStart:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController	
+        // The path to the documents directory.
         String dataDir = Utils.getSharedDataDir(ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController.class) + "Conversion/";
-     Presentation pres = new Presentation(dataDir+"presentation.pptx");
-  try
-     {
-         //Exclude default presentation fonts
-         String[] fontNameExcludeList = { "Calibri", "Arial" };
 
+        //ExStart:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
+        //Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "presentation.pptx");
+        try {
+            //Exclude default presentation fonts
+            String[] fontNameExcludeList = {"Calibri", "Arial"};
 
-         Paragraph para = new Paragraph();
-         ITextFrame txt;
+            LinkAllFontsHtmlController linkcont = new LinkAllFontsHtmlController(fontNameExcludeList, "C:/Windows/Fonts/");
 
-         EmbedAllFontsHtmlController embedFontsController = new EmbedAllFontsHtmlController(fontNameExcludeList);
+            HtmlOptions htmlOptionsEmbed = new HtmlOptions();
+            htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter(linkcont));
 
-         LinkAllFontsHtmlController linkcont = new LinkAllFontsHtmlController(fontNameExcludeList,"C:/Windows/Fonts/");
-
-         HtmlOptions htmlOptionsEmbed = new HtmlOptions();
-         htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter((IHtmlFormattingController) linkcont));
-
-         pres.save("pres.html", SaveFormat.Html, htmlOptionsEmbed);
-     }
-  finally {
-   if (pres != null) pres.dispose();
-  }
-//ExEnd:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
-}
+            pres.save("pres.html", SaveFormat.Html, htmlOptionsEmbed);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
+    }
 
 }

@@ -18,16 +18,15 @@ import com.aspose.slides.examples.Utils;
 public class AddingCustomLines {
     public static void main(String[] args) {
 
-
-    //ExStart:AddingCustomLines    
         // The path to the documents directory.
-	String dataDir = Utils.getDataDir(AddingCustomLines.class);
-        
+        String dataDir = Utils.getDataDir(AddingCustomLines.class);
+
+        //ExStart:AddingCustomLines
+        // Instantiate the Presentation class that represents the presentation
         Presentation pres = new Presentation();
-        try
-        {
+        try {
             IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 100, 100, 500, 400);
-            IAutoShape shape = chart.getUserShapes().getShapes().addAutoShape(ShapeType.Line, 0, chart.getHeight()/2, chart.getWidth(), 0);
+            IAutoShape shape = chart.getUserShapes().getShapes().addAutoShape(ShapeType.Line, 0, chart.getHeight() / 2, chart.getWidth(), 0);
             shape.getLineFormat().getFillFormat().setFillType(FillType.Solid);
             shape.getLineFormat().getFillFormat().getSolidFillColor().setColor(java.awt.Color.RED);
             pres.save(dataDir + "Presentation.pptx", SaveFormat.Pptx);
@@ -35,6 +34,6 @@ public class AddingCustomLines {
             if (pres != null) pres.dispose();
         }
         //ExEnd:AddingCustomLines   
-                
+
     }
 }

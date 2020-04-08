@@ -6,21 +6,24 @@ import com.aspose.slides.examples.Utils;
 
 public class RemovingVBAMacrosInPresentation {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(RemovingVBAMacrosInPresentation.class);
-               //ExStart:RemovingVBAMacrosInPresentation
-		// Load Presentation
-		Presentation pres = new Presentation(dataDir + "VBA.pptm");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(RemovingVBAMacrosInPresentation.class);
 
-		// Access the Vba module and remove
-		pres.getVbaProject().getModules().remove(pres.getVbaProject().getModules().get_Item(0));
+        //ExStart:RemovingVBAMacrosInPresentation
+        // Load Presentation
+        Presentation pres = new Presentation(dataDir + "VBA.pptm");
+        try {
+            // Access the Vba module and remove
+            pres.getVbaProject().getModules().remove(pres.getVbaProject().getModules().get_Item(0));
 
-		// Save Presentation
-		pres.save(dataDir + "test.pptm", SaveFormat.Pptm);
-
-              //ExEnd:RemovingVBAMacrosInPresentation
-	}
+            // Save Presentation
+            pres.save(dataDir + "test.pptm", SaveFormat.Pptm);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:RemovingVBAMacrosInPresentation
+    }
 
 }

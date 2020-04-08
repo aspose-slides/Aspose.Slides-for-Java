@@ -9,31 +9,34 @@ import com.aspose.slides.examples.Utils;
 
 public class CheckingHiddenPropertyOfSmartArt {
 
-	public static void main(String[] args) {
-                //ExStart:CheckingHiddenPropertyOfSmartArt
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(CheckingHiddenPropertyOfSmartArt.class);
+    public static void main(String[] args) {
 
-		// Instantiate Presentation class that represents the PPTX file
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(CheckingHiddenPropertyOfSmartArt.class);
 
-		// Add SmartArt RadialCycle
-		ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.RadialCycle);
+        //ExStart:CheckingHiddenPropertyOfSmartArt
+        // Instantiate Presentation class that represents the PPTX file
+        Presentation pres = new Presentation();
+        try {
+            // Add SmartArt RadialCycle
+            ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(10, 10, 400, 300, SmartArtLayoutType.RadialCycle);
 
-		// Add node on SmartArt
-		ISmartArtNode node = smart.getAllNodes().addNode();
+            // Add node on SmartArt
+            ISmartArtNode node = smart.getAllNodes().addNode();
 
-		// Check isHidden property
-		boolean hidden = node.isHidden(); // returns true
+            // Check isHidden property
+            boolean hidden = node.isHidden(); // returns true
 
-		if (hidden) {
-			// do some actions or notifications
-		}
+            if (hidden) {
+                // do some actions or notifications
+            }
 
-		// Saving Presentation
-		pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
-
-	//ExEnd:CheckingHiddenPropertyOfSmartArt
+            // Saving Presentation
+            pres.save(dataDir + "output.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
         }
+        //ExEnd:CheckingHiddenPropertyOfSmartArt
+    }
 
 }

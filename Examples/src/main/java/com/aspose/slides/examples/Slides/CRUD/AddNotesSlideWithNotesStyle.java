@@ -11,33 +11,29 @@ import com.aspose.slides.examples.Utils;
 
 public class AddNotesSlideWithNotesStyle {
 
-	public static void main(String[] args) {
-//ExStart:AddNotesSlideWithNotesStyle
+    public static void main(String[] args) {
 
-		
-	// The path to the documents directory.
-	String dataDir = Utils.getDataDir(AddNotesSlideWithNotesStyle.class);
-		
-		
-	// Instantiate a Presentation object that represents a presentation file
-	Presentation pres = new Presentation(dataDir + "demo.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddNotesSlideWithNotesStyle.class);
 
+        //ExStart:AddNotesSlideWithNotesStyle
+        // Instantiate a Presentation object that represents a presentation file
+        Presentation pres = new Presentation(dataDir + "demo.pptx");
+        try {
+            IMasterNotesSlide notesMaster = pres.getMasterNotesSlideManager().getMasterNotesSlide();
+            if (notesMaster != null) {
+                // Get MasterNotesSlide text style
+                ITextStyle notesStyle = notesMaster.getNotesStyle();
 
-	IMasterNotesSlide notesMaster = pres.getMasterNotesSlideManager().getMasterNotesSlide();
- 
-	if (notesMaster != null) 
-	{
-		// Get MasterNotesSlide text style
-		ITextStyle notesStyle = notesMaster.getNotesStyle();
- 
-		//Set symbol bullet for the first level paragraphs
-		IParagraphFormat paragraphFormat = notesStyle.getLevel(0);
-		paragraphFormat.getBullet().setType(BulletType.Symbol);
-	}
- 	pres.save(dataDir + "NotesSlideWithNotesStyle.pptx", SaveFormat.Pptx);
-		
-
-	//ExEnd:AddNotesSlideWithNotesStyle
-	}
+                //Set symbol bullet for the first level paragraphs
+                IParagraphFormat paragraphFormat = notesStyle.getLevel(0);
+                paragraphFormat.getBullet().setType(BulletType.Symbol);
+            }
+            pres.save(dataDir + "NotesSlideWithNotesStyle.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddNotesSlideWithNotesStyle
+    }
 
 }

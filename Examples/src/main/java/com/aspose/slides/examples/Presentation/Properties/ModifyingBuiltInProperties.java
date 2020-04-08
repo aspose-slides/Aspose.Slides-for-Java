@@ -7,27 +7,31 @@ import com.aspose.slides.examples.Utils;
 
 public class ModifyingBuiltInProperties {
 
-	public static void main(String[] args) {
-                   //ExStart:ModifyingBuiltInProperties
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(ModifyingBuiltInProperties.class);
+    public static void main(String[] args) {
 
-		Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(ModifyingBuiltInProperties.class);
 
-		// Create a reference to IDocumentProperties object associated with Presentation
-		IDocumentProperties dp = pres.getDocumentProperties();
+        //ExStart:ModifyingBuiltInProperties
+        // Instantiate the Presentation class that represents the presentation
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try {
+            // Create a reference to IDocumentProperties object associated with Presentation
+            IDocumentProperties dp = pres.getDocumentProperties();
 
-		// Set the built-in properties
-		dp.setAuthor("Aspose.Slides for Java");
-		dp.setTitle("Modifying Presentation Properties");
-		dp.setSubject("Aspose Subject");
-		dp.setComments("Aspose Description");
-		dp.setManager("Aspose Manager");
+            // Set the built-in properties
+            dp.setAuthor("Aspose.Slides for Java");
+            dp.setTitle("Modifying Presentation Properties");
+            dp.setSubject("Aspose Subject");
+            dp.setComments("Aspose Description");
+            dp.setManager("Aspose Manager");
 
-		// Save your presentation to a file
-		pres.save(dataDir + "DocProps.pptx", SaveFormat.Pptx);
-
-              //ExEnd:ModifyingBuiltInProperties
-	}
+            // Save your presentation to a file
+            pres.save(dataDir + "DocProps.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:ModifyingBuiltInProperties
+    }
 
 }

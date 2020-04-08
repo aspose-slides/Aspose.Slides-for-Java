@@ -13,47 +13,50 @@ import com.aspose.slides.examples.Utils;
 
 public class AddingCustomErrorBarValueForChart {
 
-	public static void main(String[] args) {
-//ExStart:AddingCustomErrorBarValueForChart
+    public static void main(String[] args) {
 
-		// The path to the documents directory.
-		String dataDir = Utils.getDataDir(AddingCustomErrorBarValueForChart.class);
 
-		// Creating empty presentation
-		Presentation pres = new Presentation();
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(AddingCustomErrorBarValueForChart.class);
 
-		// Creating a bubble chart
-		IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 400, 300, true);
+        //ExStart:AddingCustomErrorBarValueForChart
+        // Creating empty presentation
+        Presentation pres = new Presentation();
+        try {
+            // Creating a bubble chart
+            IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Bubble, 50, 50, 400, 300, true);
 
-		// Adding custom Error bars and setting its format
-		IChartSeries series = chart.getChartData().getSeries().get_Item(0);
-		IErrorBarsFormat errBarX = series.getErrorBarsXFormat();
-		IErrorBarsFormat errBarY = series.getErrorBarsYFormat();
-		errBarX.isVisible();
-		errBarY.isVisible();
-		errBarX.setValueType((byte) ErrorBarValueType.Custom);
-		errBarY.setValueType((byte) ErrorBarValueType.Custom);
+            // Adding custom Error bars and setting its format
+            IChartSeries series = chart.getChartData().getSeries().get_Item(0);
+            IErrorBarsFormat errBarX = series.getErrorBarsXFormat();
+            IErrorBarsFormat errBarY = series.getErrorBarsYFormat();
+            errBarX.isVisible();
+            errBarY.isVisible();
+            errBarX.setValueType((byte) ErrorBarValueType.Custom);
+            errBarY.setValueType((byte) ErrorBarValueType.Custom);
 
-		// Accessing chart series data point and setting error bars values for
-		// individual point
-		IChartDataPointCollection points = series.getDataPoints();
-		points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForXPlusValues((byte) DataSourceType.DoubleLiterals);
-		points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForXMinusValues((byte) DataSourceType.DoubleLiterals);
-		points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForYPlusValues((byte) DataSourceType.DoubleLiterals);
-		points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForYMinusValues((byte) DataSourceType.DoubleLiterals);
+            // Accessing chart series data point and setting error bars values for
+            // individual point
+            IChartDataPointCollection points = series.getDataPoints();
+            points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForXPlusValues((byte) DataSourceType.DoubleLiterals);
+            points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForXMinusValues((byte) DataSourceType.DoubleLiterals);
+            points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForYPlusValues((byte) DataSourceType.DoubleLiterals);
+            points.getDataSourceTypeForErrorBarsCustomValues().setDataSourceTypeForYMinusValues((byte) DataSourceType.DoubleLiterals);
 
-		// Setting error bars for chart series points
-		for (int i = 0; i < points.size(); i++) {
-			points.get_Item(i).getErrorBarsCustomValues().getXMinus().setAsLiteralDouble(i + 1);
-			points.get_Item(i).getErrorBarsCustomValues().getXPlus().setAsLiteralDouble(i + 1);
-			points.get_Item(i).getErrorBarsCustomValues().getYMinus().setAsLiteralDouble(i + 1);
-			points.get_Item(i).getErrorBarsCustomValues().getYPlus().setAsLiteralDouble(i + 1);
-		}
+            // Setting error bars for chart series points
+            for (int i = 0; i < points.size(); i++) {
+                points.get_Item(i).getErrorBarsCustomValues().getXMinus().setAsLiteralDouble(i + 1);
+                points.get_Item(i).getErrorBarsCustomValues().getXPlus().setAsLiteralDouble(i + 1);
+                points.get_Item(i).getErrorBarsCustomValues().getYMinus().setAsLiteralDouble(i + 1);
+                points.get_Item(i).getErrorBarsCustomValues().getYPlus().setAsLiteralDouble(i + 1);
+            }
 
-		// Saving presentation
-		pres.save(dataDir + "ErrorBarsCustomValues.pptx", SaveFormat.Pptx);
-//ExEnd:AddingCustomErrorBarValueForChart
-
-	}
+            // Saving presentation
+            pres.save(dataDir + "ErrorBarsCustomValues.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:AddingCustomErrorBarValueForChart
+    }
 
 }

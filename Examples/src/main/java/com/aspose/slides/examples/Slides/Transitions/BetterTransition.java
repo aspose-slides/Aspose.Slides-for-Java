@@ -9,35 +9,36 @@ import com.aspose.slides.examples.Utils;
 
 public class BetterTransition {
 
-	public static void main(String[] args) {
-		
-		//ExStart:BetterTransition 
+    public static void main(String[] args) {
 
-	 // The path to the documents directory.
-	    	String dataDir = Utils.getDataDir(BetterTransition.class);
+        // The path to the documents directory.
+        String dataDir = Utils.getDataDir(BetterTransition.class);
 
-		// Instantiate a Presentation object that represents a PPTX file
-		Presentation pres = new Presentation(dataDir + "BetterSlideTransitions.pptx");
+        //ExStart:BetterTransition
+        // Instantiate a Presentation object that represents a PPTX file
+        Presentation pres = new Presentation(dataDir + "BetterSlideTransitions.pptx");
+        try {
+            // Accessing a slide using its slide position
+            ISlide slide = pres.getSlides().get_Item(1);
 
-		// Accessing a slide using its slide position
-		ISlide slide = pres.getSlides().get_Item(1);
+            // Setting the slide transition effect to fade
+            slide.getSlideShowTransition().setType(TransitionType.Fade);
 
-		// Setting the slide transition effect to fade
-		slide.getSlideShowTransition().setType(TransitionType.Fade);
+            // Setting the speed of slide transition to slow
+            slide.getSlideShowTransition().setSpeed(TransitionSpeed.Slow);
 
-		// Setting the speed of slide transition to slow
-		slide.getSlideShowTransition().setSpeed(TransitionSpeed.Slow);
+            // Setting the transition to advance on click
+            slide.getSlideShowTransition().setAdvanceOnClick(true);
 
-		// Setting the transition to advance on click
-		slide.getSlideShowTransition().setAdvanceOnClick(true);
+            // Setting the transition to advance after a specific time period
+            slide.getSlideShowTransition().setAdvanceAfterTime(5);
 
-		// Setting the transition to advance after a specific time period
-		slide.getSlideShowTransition().setAdvanceAfterTime(5);
-
-		// Writing the presentation as a PPTX file
-		pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
-
-//ExEnd:BetterTransition
-	}
+            // Writing the presentation as a PPTX file
+            pres.save(dataDir + "modified.pptx", SaveFormat.Pptx);
+        } finally {
+            if (pres != null) pres.dispose();
+        }
+        //ExEnd:BetterTransition
+    }
 
 }
