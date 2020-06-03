@@ -4,13 +4,7 @@ import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 
-/*
-This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Slides for .NET API reference 
-when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
-If you do not wish to use NuGet, you can manually download Aspose.Slides for .NET API from http://www.aspose.com/downloads, 
-install it and then add its reference to this project. For any issues, questions or suggestions 
-please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
-*/
+
 
 
 public class ConvertIndividualSlide
@@ -41,29 +35,29 @@ public class ConvertIndividualSlide
 
     public static class CustomFormattingController implements IHtmlFormattingController
     {
-        public void /*IHtmlFormattingController.*/writeDocumentStart(IHtmlGenerator generator, IPresentation presentation)
+        public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation)
         {
         }
 
-        public void /*IHtmlFormattingController.*/writeDocumentEnd(IHtmlGenerator generator, IPresentation presentation)
+        public void writeDocumentEnd(IHtmlGenerator generator, IPresentation presentation)
         {
         }
 
-        public void /*IHtmlFormattingController.*/writeSlideStart(IHtmlGenerator generator, ISlide slide)
+        public void writeSlideStart(IHtmlGenerator generator, ISlide slide)
         {
             generator.addHtml(String.format(SlideHeader, generator.getSlideIndex() + 1));
         }
 
-        public void /*IHtmlFormattingController.*/writeSlideEnd(IHtmlGenerator generator, ISlide slide)
+        public void writeSlideEnd(IHtmlGenerator generator, ISlide slide)
         {
             generator.addHtml(SlideFooter);
         }
 
-        public void /*IHtmlFormattingController.*/writeShapeStart(IHtmlGenerator generator, IShape shape)
+        public void writeShapeStart(IHtmlGenerator generator, IShape shape)
         {
         }
 
-        public void /*IHtmlFormattingController.*/writeShapeEnd(IHtmlGenerator generator, IShape shape)
+        public void writeShapeEnd(IHtmlGenerator generator, IShape shape)
         {
         }
 

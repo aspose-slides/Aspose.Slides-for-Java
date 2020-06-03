@@ -3,9 +3,7 @@ package com.aspose.slides.examples.shapes;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-/*
-This example demonstrates of using API for creation a mathematical expression for Pythagorean theorem.
-*/
+
 
 
 public class MathematicalShape

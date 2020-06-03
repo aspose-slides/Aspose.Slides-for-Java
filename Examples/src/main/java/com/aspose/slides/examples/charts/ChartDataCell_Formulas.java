@@ -5,9 +5,7 @@ import com.aspose.slides.examples.RunExamples;
 
 import java.io.File;
 
-/*
-This example demonstrates a way to set a formula value for a chart data cell.
-*/
+
 
 
 public class ChartDataCell_Formulas

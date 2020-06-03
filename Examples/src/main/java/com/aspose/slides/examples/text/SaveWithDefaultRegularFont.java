@@ -9,11 +9,7 @@ import com.aspose.slides.examples.RunExamples;
 
 public class SaveWithDefaultRegularFont
 {
-    /**
-     * <p>
-     * The code below demonstrates saving presentation to Html and Pdf with different default regular font.
-     * </p>
-     */
+
     public static void main(String[] args)
     {
         String dataDir = RunExamples.getDataDir_Text();

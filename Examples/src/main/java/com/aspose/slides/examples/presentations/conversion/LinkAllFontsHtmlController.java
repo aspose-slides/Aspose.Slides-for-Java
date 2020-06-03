@@ -24,7 +24,7 @@ public class LinkAllFontsHtmlController extends EmbedAllFontsHtmlController
     }
 
     @Override
-    public /*override*/ void writeFont(
+    public  void writeFont(
             IHtmlGenerator generator,
             IFontData originalFont,
             IFontData substitutedFont,

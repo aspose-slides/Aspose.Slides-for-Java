@@ -11,9 +11,9 @@ public class SetFontFallBack
 
         //ExStart:SetFontFallBack
 
-        /*UInt32*/
+
         long startUnicodeIndex = 0x0B80;
-        /*UInt32*/
+
         long endUnicodeIndex = 0x0BFF;
 
         IFontFallBackRule firstRule = new FontFallBackRule(startUnicodeIndex, endUnicodeIndex, "Vijaya");

@@ -4,9 +4,7 @@ import com.aspose.slides.*;
 
 import java.util.Locale;
 
-/*
-This example demonstrates how to use the spreadsheet options for a chart formulas.
-*/
+
 
 
 public class SpreadsheetFormulasOptions

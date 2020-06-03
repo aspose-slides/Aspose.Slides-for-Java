@@ -5,9 +5,7 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.RunExamples;
 
 
-/*
-The example demonstrates loading and saving presentation in Fodp format.
-*/
+
 
 
 public class FodpFormatConvertion

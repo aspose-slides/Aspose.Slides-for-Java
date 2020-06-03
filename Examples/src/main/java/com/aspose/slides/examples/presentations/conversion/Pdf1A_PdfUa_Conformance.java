@@ -6,9 +6,7 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.RunExamples;
 
-/*
-This example demonstrates saving presentation to PDF/A-1a and PDF/UA compliant document.
-*/
+
 
 
 public class Pdf1A_PdfUa_Conformance
