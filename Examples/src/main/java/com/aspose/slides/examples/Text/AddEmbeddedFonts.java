@@ -1,37 +1,50 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import com.aspose.slides.EmbedFontCharacters;
-import com.aspose.slides.FontsLoader;
-import com.aspose.slides.IFontData;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-public class AddEmbeddedFonts {
 
-    public static void main(String[] args) {
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Slides for .NET API reference 
+when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Slides for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
 
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(AddEmbeddedFonts.class);
 
+public class AddEmbeddedFonts
+{
+    public static void main(String[] args)
+    {
         //ExStart:AddEmbeddedFonts
-        // Create an instance of Presentation class
-        Presentation pres = new Presentation(dataDir + "");
-        try {
-            IFontData[] allFonts = pres.getFontsManager().getFonts();
-            IFontData[] embeddedFonts = pres.getFontsManager().getEmbeddedFonts();
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
 
-            for (IFontData font : except(allFonts, embeddedFonts)) {
-                pres.getFontsManager().addEmbeddedFont(font, EmbedFontCharacters.All);
+        // Load presentation
+        Presentation presentation = new Presentation(dataDir + "Fonts.pptx");
+
+        // Load source font to be replaced
+        IFontData sourceFont = new FontData("Arial");
+
+
+        IFontData[] allFonts = presentation.getFontsManager().getFonts();
+        IFontData[] embeddedFonts = presentation.getFontsManager().getEmbeddedFonts();
+        for (IFontData font : allFonts)
+        {
+            boolean embeddedFontsContainsFont = false;
+            for (int i = 0; i < embeddedFonts.length; i++)
+            {
+                if (embeddedFonts.equals(font)) embeddedFontsContainsFont = true;
             }
-        } finally {
-            if (pres != null) pres.dispose();
+            if (!embeddedFontsContainsFont)
+            {
+                presentation.getFontsManager().addEmbeddedFont(font, EmbedFontCharacters.All);
+            }
         }
+
+        // Save the presentation
+        presentation.save(dataDir + "AddEmbeddedFont_out.pptx", SaveFormat.Pptx);
         //ExEnd:AddEmbeddedFonts
     }
-
-    private static Iterable<IFontData> except(IFontData[] allFonts, IFontData[] embeddedFonts) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

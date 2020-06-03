@@ -1,29 +1,34 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
 import com.aspose.slides.FontFallBackRule;
 import com.aspose.slides.FontFallBackRulesCollection;
-import com.aspose.slides.IFontFallBackRule;
 import com.aspose.slides.IFontFallBackRulesCollection;
 import com.aspose.slides.Presentation;
 
 
-public class FallBackRulesCollection {
-
-    public static void main(String[] args) {
+public class FallBackRulesCollection
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:FallBackRulesCollection
-        // Create an instance of Presentation class
+
         Presentation presentation = new Presentation();
-        try {
+        try
+        {
             IFontFallBackRulesCollection userRulesList = new FontFallBackRulesCollection();
 
             userRulesList.add(new FontFallBackRule(0x0B80, 0x0BFF, "Vijaya"));
             userRulesList.add(new FontFallBackRule(0x3040, 0x309F, "MS Mincho, MS Gothic"));
 
             presentation.getFontsManager().setFontFallBackRulesCollection(userRulesList);
-        } finally {
+        }
+        finally
+        {
             if (presentation != null) presentation.dispose();
         }
         //ExEnd:FallBackRulesCollection
+
     }
 }
+

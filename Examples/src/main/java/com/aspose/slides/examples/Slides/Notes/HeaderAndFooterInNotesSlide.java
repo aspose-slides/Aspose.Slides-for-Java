@@ -1,27 +1,22 @@
-package com.aspose.slides.examples.Slides.Notes;
+package com.aspose.slides.examples.slides.notes;
 
-import com.aspose.slides.IMasterNotesSlide;
-import com.aspose.slides.IMasterNotesSlideHeaderFooterManager;
-import com.aspose.slides.INotesSlide;
-import com.aspose.slides.INotesSlideHeaderFooterManager;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
 
-public class HeaderAndFooterInNotesSlide {
-
-    public static void main(String[] args) {
-
-        String dataDir = Utils.getDataDir(HeaderAndFooterInNotesSlide.class);
-
+public class HeaderAndFooterInNotesSlide
+{
+    public static void main(String[] args)
+    {
         //ExStart:HeaderAndFooterInNotesSlide
-        // Instantiate Presentation class that represents the presentation file
+        String dataDir = RunExamples.getDataDir_Slides_Presentations_Notes();
         Presentation presentation = new Presentation(dataDir + "presentation.pptx");
-        try {
+        try
+        {
             // Change Header and Footer settings for notes master and all notes slides
             IMasterNotesSlide masterNotesSlide = presentation.getMasterNotesSlideManager().getMasterNotesSlide();
-            if (masterNotesSlide != null) {
+            if (masterNotesSlide != null)
+            {
                 IMasterNotesSlideHeaderFooterManager headerFooterManager = masterNotesSlide.getHeaderFooterManager();
 
                 headerFooterManager.setHeaderAndChildHeadersVisibility(true); // make the master notes slide and all child Footer placeholders visible
@@ -36,7 +31,8 @@ public class HeaderAndFooterInNotesSlide {
 
             // Change Header and Footer settings for first notes slide only
             INotesSlide notesSlide = presentation.getSlides().get_Item(0).getNotesSlideManager().getNotesSlide();
-            if (notesSlide != null) {
+            if (notesSlide != null)
+            {
                 INotesSlideHeaderFooterManager headerFooterManager = notesSlide.getHeaderFooterManager();
                 if (!headerFooterManager.isHeaderVisible())
                     headerFooterManager.setHeaderVisibility(true); // make this notes slide Header placeholder visible
@@ -54,11 +50,14 @@ public class HeaderAndFooterInNotesSlide {
                 headerFooterManager.setFooterText("New footer text"); // set text to notes slide Footer placeholder
                 headerFooterManager.setDateTimeText("New date and time text"); // set text to notes slide Date-time placeholder
             }
-
-            presentation.save(dataDir + "result.ppt", SaveFormat.Ppt);
-        } finally {
+            presentation.save(dataDir + "testresult.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
             if (presentation != null) presentation.dispose();
         }
-        //ExEnd:HeaderAndFooterInNotesSlide
+
     }
+
+    //ExEnd:HeaderAndFooterInNotesSlide
 }

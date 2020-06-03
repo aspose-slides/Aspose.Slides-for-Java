@@ -1,29 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.aspose.slides.examples.Slides.Views;
+package com.aspose.slides.examples.slides.views;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.SplitterBarStateType;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.examples.RunExamples;
 
-/**
- * @author mfazi
- */
-public class ManagePresenetationNormalViewState {
 
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ManagePresenetationNormalViewState.class);
+public class ManagePresenetationNormalViewState
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:ManagePresenetationNormalViewState
-        // Create an instance of Presentation class
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Slides_Views();
+
         Presentation pres = new Presentation();
-        try {
+        try
+        {
             pres.getViewProperties().getNormalViewProperties().setHorizontalBarState(SplitterBarStateType.Restored);
             pres.getViewProperties().getNormalViewProperties().setVerticalBarState(SplitterBarStateType.Maximized);
 
@@ -32,9 +26,13 @@ public class ManagePresenetationNormalViewState {
             pres.getViewProperties().getNormalViewProperties().setShowOutlineIcons(true);
 
             pres.save(dataDir + "presentation_normal_view_state.pptx", SaveFormat.Pptx);
-        } finally {
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
+
         //ExEnd:ManagePresenetationNormalViewState
     }
 }
+

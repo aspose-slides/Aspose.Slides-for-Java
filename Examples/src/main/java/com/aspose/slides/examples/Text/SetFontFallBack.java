@@ -1,16 +1,19 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
+
 
 import com.aspose.slides.FontFallBackRule;
 import com.aspose.slides.IFontFallBackRule;
-import com.aspose.slides.examples.Utils;
 
-
-public class SetFontFallBack {
-
-    public static void main(String[] args) {
+public class SetFontFallBack
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:SetFontFallBack
+
+        /*UInt32*/
         long startUnicodeIndex = 0x0B80;
+        /*UInt32*/
         long endUnicodeIndex = 0x0BFF;
 
         IFontFallBackRule firstRule = new FontFallBackRule(startUnicodeIndex, endUnicodeIndex, "Vijaya");
@@ -20,6 +23,9 @@ public class SetFontFallBack {
         String[] fontNames = new String[]{"Segoe UI Emoji, Segoe UI Symbol", "Arial"};
 
         IFontFallBackRule thirdRule = new FontFallBackRule(0x1F300, 0x1F64F, fontNames);
+
         //ExEnd:SetFontFallBack
+
     }
 }
+

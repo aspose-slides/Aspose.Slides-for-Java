@@ -1,33 +1,36 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import java.awt.Color;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-import com.aspose.slides.FillType;
-import com.aspose.slides.IAutoShape;
-import com.aspose.slides.IOuterShadow;
-import com.aspose.slides.ISlide;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.RectangleAlignment;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.ShapeType;
-import com.aspose.slides.examples.Utils;
+import java.awt.*;
+import java.io.File;
 
-public class ApplyingOuterShadowEffects {
 
-    public static void main(String[] args) {
-
+public class ApplyingOuterShadowEffects
+{
+    public static void main(String[] args)
+    {
+        //ExStart:ShadowEffects
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ApplyingOuterShadowEffects.class);
+        String dataDir = RunExamples.getDataDir_Text();
 
-        //ExStart:ApplyingOuterShadowEffects
-        // Create an instance of Presentation class
+        // Create directory if it is not already present.
+        boolean IsExists = new File(dataDir).exists();
+        if (!IsExists)
+            new File(dataDir).mkdirs();
+
+        // Instantiate a PPTX class
         Presentation pres = new Presentation();
-        try {
-            // Get first slide
-            ISlide Slide = pres.getSlides().get_Item(0);
+        try
+        {
+
+            // Get reference of the slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
             // Add an AutoShape of Rectangle type
-            IAutoShape aShp = Slide.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
+            IAutoShape aShp = sld.getShapes().addAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
+
 
             // Add TextFrame to the Rectangle
             aShp.addTextFrame("Aspose TextBox");
@@ -42,15 +45,15 @@ public class ApplyingOuterShadowEffects {
             shadow.setDirection(45);
             shadow.setDistance(3);
             shadow.setRectangleAlign(RectangleAlignment.TopLeft);
-            shadow.getShadowColor().setColor(Color.black);
+            shadow.getShadowColor().setColor(Color.BLACK);
 
-            // Write the presentation to disk
-            pres.save(dataDir + "OutShadow.pptx", SaveFormat.Pptx);
-        } finally {
+            //Write the presentation to disk
+            pres.save(dataDir + "pres_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
-        //ExEnd:ApplyingOuterShadowEffects
-
+        //ExEnd:ShadowEffects
     }
-
 }

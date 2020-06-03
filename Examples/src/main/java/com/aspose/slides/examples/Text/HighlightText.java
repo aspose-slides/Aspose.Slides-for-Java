@@ -1,39 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import com.aspose.slides.AutoShape;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.TextHighlightingOptions;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-/**
- * @author mfazi
- */
-public class HighlightText {
+import java.awt.*;
 
 
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(HighlightText.class);
+public class HighlightText
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:HighlightText
-        // Create an instance of Presentation class
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
         Presentation presentation = new Presentation(dataDir + "SomePresentation.pptx");
-        try {
-            ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("title", java.awt.Color.LIGHT_GRAY); // highlighting all words 'important'
-            TextHighlightingOptions options = new TextHighlightingOptions();
-            options.setWholeWordsOnly(true);
-            ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("to", java.awt.Color.DARK_GRAY, options); // highlighting all separate 'the' occurrences
-            presentation.save(dataDir + "SomePresentation-out.pptx", SaveFormat.Pptx);
-        } finally {
-            if (presentation != null) presentation.dispose();
-        }
+        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("title", new Color(PresetColor.LightBlue));
+        TextHighlightingOptions tmp0 = new TextHighlightingOptions();
+        tmp0.setWholeWordsOnly(true); // highlighting all words 'important'
+        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("to", new Color(PresetColor.Violet), tmp0); // highlighting all separate 'the' occurrences
+        presentation.save(dataDir + "SomePresentation-out2.pptx", SaveFormat.Pptx);
+
         //ExEnd:HighlightText
     }
 }
+

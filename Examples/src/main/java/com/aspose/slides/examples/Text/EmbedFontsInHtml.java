@@ -1,41 +1,45 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import com.aspose.slides.IPresentation;
-import com.aspose.slides.LoadOptions;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.examples.Utils;
-
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.Path;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
 
-import java.io.IOException;
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Slides for .NET API reference 
+when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Slides for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
 
-public class EmbedFontsInHtml {
 
-    public static void main(String[] args) throws IOException {
-
+public class EmbedFontsInHtml
+{
+    public static void main(String[] args)
+    {
+        // ExStart:EmbedFontsInHtml
         // The path to the documents directory.
-        String dataDir = Utils.getDataDir(EmbedFontsInHtml.class);
+        String dataDir = RunExamples.getDataDir_Text();
+        String outPath = RunExamples.OutPath;
 
-        //ExStart:EmbedFontsInHtml
-        Path path = Paths.get("path/to/font");
-        byte[] memoryFont1 = Files.readAllBytes(path);
+        Presentation pres = new Presentation(dataDir + "Presentation.pptx");
+        try
+        {
+            // exclude default presentation fonts
+            String[] fontNameExcludeList = {"Calibri", "Arial"};
 
-        LoadOptions loadOptions = new LoadOptions();
-        loadOptions.getDocumentLevelFontSources().setFontFolders(new String[]{"assets\\fonts", "global\\fonts"});
-        loadOptions.getDocumentLevelFontSources().setMemoryFonts(new byte[][]{memoryFont1});
+            EmbedAllFontsHtmlController embedFontsController = new EmbedAllFontsHtmlController(fontNameExcludeList);
 
-        // Create an instance of Presentation class
-        IPresentation presentation = new Presentation(dataDir + "MyPresentation.pptx", loadOptions);
-        try {
-            //work with the presentation
-            //CustomFont1, CustomFont2 as well as fonts from assets\fonts & global\fonts folders and their subfolders are available to the presentation
-        } finally {
-            if (presentation != null) presentation.dispose();
+            HtmlOptions htmlOptionsEmbed = new HtmlOptions();
+            htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter(embedFontsController));
+
+            pres.save(outPath + "pres.html", SaveFormat.Html, htmlOptionsEmbed);
         }
-        //ExEnd:EmbedFontsInHtml
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
+        // ExEnd:EmbedFontsInHtml
     }
-
 }
+

@@ -1,38 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.aspose.slides.examples.Slides.Transitions;
+package com.aspose.slides.examples.slides.transitions;
 
-import com.aspose.slides.IMorphTransition;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.TransitionMorphType;
-import com.aspose.slides.TransitionType;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-/**
- * @author mfazi
- */
-public class SetTransitionMorphType {
 
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(SimpleTransition.class);
+public class SetTransitionMorphType
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:SetTransitionMorphType
-        // Create an instance of Presentation class
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Slides_Presentations_Transitions();
+
         Presentation presentation = new Presentation(dataDir + "presentation.pptx");
-        try {
+        try
+        {
             presentation.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Morph);
             ((IMorphTransition) presentation.getSlides().get_Item(0).getSlideShowTransition().getValue()).setMorphType(TransitionMorphType.ByWord);
             presentation.save(dataDir + "presentation-out.pptx", SaveFormat.Pptx);
-        } finally {
+        }
+        finally
+        {
             if (presentation != null) presentation.dispose();
         }
         //ExEnd:SetTransitionMorphType
     }
-
 }
+

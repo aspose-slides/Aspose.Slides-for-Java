@@ -1,37 +1,50 @@
-package com.aspose.slides.examples.Slides.Layout;
+package com.aspose.slides.examples.slides.layout;
 
-import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.examples.RunExamples;
 
-public class CheckSlidesComparison {
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Slides for .NET API reference 
+when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Slides for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
 
-    public static void main(String[] args) {
 
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(CheckSlidesComparison.class);
-
+public class CheckSlidesComparison
+{
+    public static void main(String[] args)
+    {
         //ExStart:CheckSlidesComparison
-        // Instantiate Presentation class that represents the presentation file
-        Presentation presentation1 = new Presentation(dataDir + "SomePresentation1.pptx");
-        try {
-            // Instantiate Presentation class that represents the presentation file
-            Presentation presentation2 = new Presentation(dataDir + "SomePresentation2.pptx");
-            try {
-                for (int i = 0; i < presentation1.getMasters().size(); i++) {
-                    for (int j = 0; j < presentation2.getMasters().size(); j++) {
-                        if (presentation1.getMasters().get_Item(i).equals(presentation2.getMasters().get_Item(j)))
-                            System.out.println("SomePresentation1 MasterSlide#" + i + " is equal to SomePresentation2 MasterSlide#" + j);
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Slides_Presentations_Layout();
+        Presentation presentation1 = new Presentation(dataDir + "AccessSlides.pptx");
+        try
+        {
+            Presentation presentation2 = new Presentation(dataDir + "HelloWorld.pptx");
+            try
+            {
+                for (int i = 0; i < presentation1.getMasters().size(); i++)
+                {
+                    for (int j = 0; j < presentation2.getMasters().size(); j++)
+                    {
+                        if (presentation1.getMasters().get_Item(i).equals(presentation2.getMasters().get_Item(j))) ;
+                        System.out.println(String.format("SomePresentation1 MasterSlide#{0} is equal to SomePresentation2 MasterSlide#{1}", i, j));
                     }
+
+
                 }
-            } finally {
+            }
+            finally
+            {
                 if (presentation2 != null) presentation2.dispose();
             }
-        } finally {
+        }
+        finally
+        {
             if (presentation1 != null) presentation1.dispose();
         }
         //ExEnd:CheckSlidesComparison
     }
-
 }

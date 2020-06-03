@@ -1,46 +1,44 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import java.awt.Color;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-import com.aspose.slides.BulletType;
-import com.aspose.slides.ColorType;
-import com.aspose.slides.IAutoShape;
-import com.aspose.slides.ISlide;
-import com.aspose.slides.ITextFrame;
-import com.aspose.slides.NumberedBulletStyle;
-import com.aspose.slides.Paragraph;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.ShapeType;
-import com.aspose.slides.FillType;
-import com.aspose.slides.examples.Utils;
+import java.awt.*;
+import java.io.File;
 
-public class MutilevelBullets {
 
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(MutilevelBullets.class);
-
+public class MutilevelBullets
+{
+    public static void main(String[] args)
+    {
         //ExStart:MutilevelBullets
-        // Instantiate a Presentation class that represents a PPTX file
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
+
+        // Create directory if it is not already present.
+        boolean IsExists = new File(dataDir).exists();
+        if (!IsExists)
+            new File(dataDir).mkdirs();
+
+        // Creating a presenation instance
         Presentation pres = new Presentation();
-        try {
-            // Accessing first slide
+        try
+        {
+
+            // Accessing the first slide
             ISlide slide = pres.getSlides().get_Item(0);
 
             // Adding and accessing Autoshape
             IAutoShape aShp = slide.getShapes().addAutoShape(ShapeType.Rectangle, 200, 200, 400, 200);
 
             // Accessing the text frame of created autoshape
-            ITextFrame txtFrm = aShp.addTextFrame("");
+            ITextFrame text = aShp.addTextFrame("");
 
-            // Removing the default exisiting paragraph
-            txtFrm.getParagraphs().clear();
+            //clearing default paragraph
+            text.getParagraphs().clear();
 
-            // Creating first paragraph
-            Paragraph para1 = new Paragraph();
-            // Setting paragraph bullet style and symbol
+            //Adding first paragraph
+            IParagraph para1 = new Paragraph();
             para1.setText("Content");
             para1.getParagraphFormat().getBullet().setType(BulletType.Symbol);
             para1.getParagraphFormat().getBullet().setChar((char) 8226);
@@ -49,10 +47,9 @@ public class MutilevelBullets {
             //Setting bullet level
             para1.getParagraphFormat().setDepth((short) 0);
 
-            // Creating second paragraph
-            Paragraph para2 = new Paragraph();
-            // Setting paragraph bullet style and symbol
-            para2.setText("Second level");
+            //Adding second paragraph
+            IParagraph para2 = new Paragraph();
+            para2.setText("Second Level");
             para2.getParagraphFormat().getBullet().setType(BulletType.Symbol);
             para2.getParagraphFormat().getBullet().setChar('-');
             para2.getParagraphFormat().getDefaultPortionFormat().getFillFormat().setFillType(FillType.Solid);
@@ -60,10 +57,9 @@ public class MutilevelBullets {
             //Setting bullet level
             para2.getParagraphFormat().setDepth((short) 1);
 
-            // Creating third paragraph
-            Paragraph para3 = new Paragraph();
-            // Setting paragraph bullet style and symbol
-            para3.setText("Third level");
+            //Adding third paragraph
+            IParagraph para3 = new Paragraph();
+            para3.setText("Third Level");
             para3.getParagraphFormat().getBullet().setType(BulletType.Symbol);
             para3.getParagraphFormat().getBullet().setChar((char) 8226);
             para3.getParagraphFormat().getDefaultPortionFormat().getFillFormat().setFillType(FillType.Solid);
@@ -71,9 +67,8 @@ public class MutilevelBullets {
             //Setting bullet level
             para3.getParagraphFormat().setDepth((short) 2);
 
-            // Creating fourth paragraph
-            Paragraph para4 = new Paragraph();
-            // Setting paragraph bullet style and symbol
+            //Adding fourth paragraph
+            IParagraph para4 = new Paragraph();
             para4.setText("Fourth Level");
             para4.getParagraphFormat().getBullet().setType(BulletType.Symbol);
             para4.getParagraphFormat().getBullet().setChar('-');
@@ -82,18 +77,21 @@ public class MutilevelBullets {
             //Setting bullet level
             para4.getParagraphFormat().setDepth((short) 3);
 
-            // Adding Paragraph to text frame
-            txtFrm.getParagraphs().add(para1);
-            txtFrm.getParagraphs().add(para2);
-            txtFrm.getParagraphs().add(para3);
-            txtFrm.getParagraphs().add(para4);
+            //Adding paragraphs to collection
+            text.getParagraphs().add(para1);
+            text.getParagraphs().add(para2);
+            text.getParagraphs().add(para3);
+            text.getParagraphs().add(para4);
 
-            // saving the presentation as a PPTX file
+            //Writing the presentation as a PPTX file
             pres.save(dataDir + "MultilevelBullet.pptx", SaveFormat.Pptx);
-        } finally {
+
+
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
         //ExEnd:MutilevelBullets
     }
-
 }

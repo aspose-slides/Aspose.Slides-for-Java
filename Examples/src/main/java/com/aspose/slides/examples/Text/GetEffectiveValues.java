@@ -1,25 +1,21 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import com.aspose.slides.IAutoShape;
-import com.aspose.slides.IPortionFormat;
-import com.aspose.slides.IPortionFormatEffectiveData;
-import com.aspose.slides.ITextFrameFormat;
-import com.aspose.slides.ITextFrameFormatEffectiveData;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
 
-public class GetEffectiveValues {
-    public static void main(String[] args) {
-
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(GetEffectiveValues.class);
+public class GetEffectiveValues
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:GetEffectiveValues
-        // Create an instance of Presentation class
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
+
         Presentation pres = new Presentation(dataDir + "Presentation1.pptx");
-        try {
+        try
+        {
             IAutoShape shape = (IAutoShape) pres.getSlides().get_Item(0).getShapes().get_Item(0);
 
             ITextFrameFormat localTextFrameFormat = shape.getTextFrame().getTextFrameFormat();
@@ -27,10 +23,15 @@ public class GetEffectiveValues {
 
             IPortionFormat localPortionFormat = shape.getTextFrame().getParagraphs().get_Item(0).getPortions().get_Item(0).getPortionFormat();
             IPortionFormatEffectiveData effectivePortionFormat = localPortionFormat.getEffective();
-        } finally {
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
-        //ExEnd:GetEffectiveValues
-    }
 
+        //ExEnd:GetEffectiveValues
+
+
+    }
 }
+

@@ -1,31 +1,33 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
-import com.aspose.slides.FontFallBackRule;
-import com.aspose.slides.FontFallBackRulesCollection;
-import com.aspose.slides.IFontFallBackRule;
-import com.aspose.slides.IFontFallBackRulesCollection;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
-import java.io.IOException;
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 
-public class RenderingWithFallBackFont {
-
-    public static void main(String[] args) throws IOException {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(RenderingWithFallBackFont.class);
+public class RenderingWithFallBackFont
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:RenderingWithFallBackFont
+
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
+
         // Create new instance of a rules collection
         IFontFallBackRulesCollection rulesList = new FontFallBackRulesCollection();
 
         // create a number of rules
         rulesList.add(new FontFallBackRule(0x400, 0x4FF, "Times New Roman"));
+        //rulesList.add(new FontFallBackRule(...));
 
-        for (IFontFallBackRule fallBackRule : rulesList) {
+        for (IFontFallBackRule fallBackRule : (Iterable<IFontFallBackRule>) rulesList)
+        {
             //Trying to remove FallBack font "Tahoma" from loaded rules
             fallBackRule.remove("Tahoma");
 
@@ -38,17 +40,26 @@ public class RenderingWithFallBackFont {
         if (rulesList.size() > 0)
             rulesList.remove(rulesList.get_Item(0));
 
-        // Create an instance of Presentation class
         Presentation pres = new Presentation(dataDir + "input.pptx");
-        try {
+        try
+        {
             //Assigning a prepared rules list for using
             pres.getFontsManager().setFontFallBackRulesCollection(rulesList);
 
             // Rendering of thumbnail with using of initialized rules collection and saving to PNG
-            ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(1f, 1f), "PNG", new java.io.File(dataDir + "Slide_0.png"));
-        } finally {
+            BufferedImage image = pres.getSlides().get_Item(0).getThumbnail(1f, 1f);
+            ImageIO.write(image, ".png", new File(dataDir + "Slide_0.png"));
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
         //ExEnd:RenderingWithFallBackFont
+
     }
 }
+

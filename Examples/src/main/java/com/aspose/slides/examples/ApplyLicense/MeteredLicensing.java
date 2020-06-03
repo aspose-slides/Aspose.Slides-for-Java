@@ -1,45 +1,43 @@
-package com.aspose.slides.examples.ApplyLicense;
+package com.aspose.slides.examples.applylicense;
 
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.Metered;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+public class MeteredLicensing
+{
 
-public class MeteredLicensing {
-
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(MeteredLicensing.class);
-
+    public static void main(String[] args)
+    {
         //ExStart:MeteredLicensing
-        com.aspose.slides.Metered metered = new com.aspose.slides.Metered();
-        try {
+
+        // Create an instance of CAD Metered class
+        Metered metered = new Metered();
+
+        try
+        {
             // Access the setMeteredKey property and pass public and private keys as parameters
-            metered.setMeteredKey("<valid pablic key>", "<valid private key>");
+            metered.setMeteredKey("*****", "*****");
 
-            // Get consumed qantity value before accessing API
-            double quantityOld = com.aspose.slides.Metered.getConsumptionQuantity();
-            System.out.println("Consumption quantity" + quantityOld);
+            // Get metered data amount before calling API
+            double amountbefore = Metered.getConsumptionQuantity();
 
-            Presentation pres = new Presentation(dataDir + "test.pptx");
-            try {
-                // Save the presentation to PDF
-                pres.save(dataDir + "output.pdf", SaveFormat.Pdf);
-            } finally {
-                if (pres != null) pres.dispose();
-            }
+            // Display information
+            System.out.println("Amount Consumed Before: " + amountbefore);
+            // Get metered data amount After calling API
+            double amountafter = Metered.getConsumptionQuantity();
 
-            // Get consumed qantity value after accessing API
-            double quantity = com.aspose.slides.Metered.getConsumptionQuantity();
-            System.out.println("Consumption quantity" + quantity);
-        } catch (Exception ex) {
+            // Display information
+            System.out.println("Amount Consumed After: " + amountafter);
+
+        }
+        catch (Exception ex)
+        {
             Logger.getLogger(MeteredLicensing.class.getName()).log(Level.SEVERE, null, ex);
         }
         //ExEnd:MeteredLicensing
     }
 
 }
+

@@ -1,49 +1,56 @@
-package com.aspose.slides.examples.Slides.Transitions;
+package com.aspose.slides.examples.slides.transitions;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.SaveFormat;
 import com.aspose.slides.TransitionType;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.examples.RunExamples;
 
-public class ManagingBetterSlideTransitions {
 
-    public static void main(String[] args) {
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Slides for .NET API reference 
+when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Slides for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
 
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(ManagingBetterSlideTransitions.class);
 
+public class ManagingBetterSlideTransitions
+{
+    public static void main(String[] args)
+    {
         //ExStart:ManagingBetterSlideTransitions
-        // Instantiate Presentation class that represents a presentation file
-        Presentation pres = new Presentation(dataDir + "BetterSlideTransitions.pptx");
-        try {
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Slides_Presentations_Transitions();
+
+        // Instantiate Presentation class to load the source presentation file
+        Presentation presentation = new Presentation(dataDir + "AccessSlides.pptx");
+        try
+        {
             // Apply circle type transition on slide 1
-            pres.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Circle);
+            presentation.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Circle);
 
             // Set the transition time of 3 seconds
-            // Set the transition time of 5 seconds
-            pres.getSlides().get_Item(0).getSlideShowTransition().setAdvanceOnClick(true);
-            pres.getSlides().get_Item(0).getSlideShowTransition().setAdvanceAfterTime(3000);
+            presentation.getSlides().get_Item(0).getSlideShowTransition().setAdvanceOnClick(true);
+            presentation.getSlides().get_Item(0).getSlideShowTransition().setAdvanceAfterTime(3000);
 
             // Apply comb type transition on slide 2
-            pres.getSlides().get_Item(1).getSlideShowTransition().setType(TransitionType.Comb);
+            presentation.getSlides().get_Item(1).getSlideShowTransition().setType(TransitionType.Comb);
 
             // Set the transition time of 5 seconds
-            pres.getSlides().get_Item(1).getSlideShowTransition().setAdvanceOnClick(true);
-            pres.getSlides().get_Item(1).getSlideShowTransition().setAdvanceAfterTime(5000);
-
-            // Apply zoom type transition on slide 3
-            pres.getSlides().get_Item(2).getSlideShowTransition().setType(TransitionType.Zoom);
-
-            // Set the transition time of 7 seconds
-            pres.getSlides().get_Item(2).getSlideShowTransition().setAdvanceOnClick(true);
-            pres.getSlides().get_Item(2).getSlideShowTransition().setAdvanceAfterTime(7000);
+            presentation.getSlides().get_Item(1).getSlideShowTransition().setAdvanceOnClick(true);
+            presentation.getSlides().get_Item(1).getSlideShowTransition().setAdvanceAfterTime(5000);
 
             // Write the presentation to disk
-            pres.save(dataDir + "SampleTransition.pptx", SaveFormat.Pptx);
-        } finally {
-            if (pres != null) pres.dispose();
+            presentation.save("SampleTransition_out.pptx", SaveFormat.Pptx);
+
+            // Write the presentation to disk
+            presentation.save(dataDir + "BetterTransitions_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
         }
         //ExEnd:ManagingBetterSlideTransitions
     }
-
 }

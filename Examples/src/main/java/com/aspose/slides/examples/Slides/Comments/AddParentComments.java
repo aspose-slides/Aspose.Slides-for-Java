@@ -1,36 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.aspose.slides.examples.Slides.Comments;
+package com.aspose.slides.examples.slides.comments;
 
-import static com.aspose.slides.CategoryAxisType.Date;
-
-import com.aspose.slides.IComment;
-import com.aspose.slides.ICommentAuthor;
-import com.aspose.slides.ISlide;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.*;
+import com.aspose.slides.examples.RunExamples;
 
 import java.awt.geom.Point2D;
 import java.util.Date;
 
-/**
- * @author mfazi
- */
-public class AddParentComments {
 
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(AddParentComments.class);
+public class AddParentComments
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:AddParentComments
-        // Instantiate the presentation
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Slides_Presentations_Comments();
+
         Presentation pres = new Presentation();
-        try {
+        try
+        {
             // Add comment
             ICommentAuthor author1 = pres.getCommentAuthors().addAuthor("Author_1", "A.A.");
             IComment comment1 = author1.getComments().addComment("comment1", pres.getSlides().get_Item(0), new Point2D.Float(10, 10), new Date());
@@ -57,24 +45,31 @@ public class AddParentComments {
             // Display hierarchy on console
             ISlide slide = pres.getSlides().get_Item(0);
             IComment[] comments = slide.getSlideComments(null);
-            for (int i = 0; i < comments.length; i++) {
+            for (int i = 0; i < comments.length; i++)
+            {
                 IComment comment = comments[i];
-                while (comment.getParentComment() != null) {
+                while (comment.getParentComment() != null)
+                {
                     System.out.print("\t");
                     comment = comment.getParentComment();
                 }
 
-                System.out.println(comments[i].getAuthor().getName() + " : " + comments[i].getText());
+                System.out.print(String.format("{0} : {1}", comments[i].getAuthor().getName(), comments[i].getText()));
                 System.out.println();
             }
+
             pres.save(dataDir + "parent_comment.pptx", SaveFormat.Pptx);
+
             // Remove comment1 and all its replies
             comment1.remove();
 
             pres.save(dataDir + "remove_comment.pptx", SaveFormat.Pptx);
-        } finally {
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
         //ExEnd:AddParentComments
     }
 }
+

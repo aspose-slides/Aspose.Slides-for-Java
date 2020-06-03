@@ -1,24 +1,29 @@
-package com.aspose.slides.examples.Text;
+package com.aspose.slides.examples.text;
 
 import com.aspose.slides.IAutoShape;
+import com.aspose.slides.ITextFrameFormat;
 import com.aspose.slides.ITextFrameFormatEffectiveData;
 import com.aspose.slides.Presentation;
-import com.aspose.slides.examples.Utils;
+import com.aspose.slides.examples.RunExamples;
 
 
-public class GetTextFrameFormatEffectiveData {
-
-    public static void main(String[] args) {
-
-        // The path to the documents directory.
-        String dataDir = Utils.getDataDir(GetTextFrameFormatEffectiveData.class);
+public class GetTextFrameFormatEffectiveData
+{
+    public static void main(String[] args)
+    {
 
         //ExStart:GetTextFrameFormatEffectiveData
-        // Create an instance of Presentation class
+
+        // The path to the documents directory.
+        String dataDir = RunExamples.getDataDir_Text();
         Presentation pres = new Presentation(dataDir + "Presentation1.pptx");
-        try {
+        try
+        {
             IAutoShape shape = (IAutoShape) pres.getSlides().get_Item(0).getShapes().get_Item(0);
-            ITextFrameFormatEffectiveData effectiveTextFrameFormat = shape.getTextFrame().getTextFrameFormat().getEffective();
+
+            ITextFrameFormat textFrameFormat = shape.getTextFrame().getTextFrameFormat();
+            ITextFrameFormatEffectiveData effectiveTextFrameFormat = textFrameFormat.getEffective();
+
 
             System.out.println("Anchoring type: " + effectiveTextFrameFormat.getAnchoringType());
             System.out.println("Autofit type: " + effectiveTextFrameFormat.getAutofitType());
@@ -28,9 +33,14 @@ public class GetTextFrameFormatEffectiveData {
             System.out.println("   Top: " + effectiveTextFrameFormat.getMarginTop());
             System.out.println("   Right: " + effectiveTextFrameFormat.getMarginRight());
             System.out.println("   Bottom: " + effectiveTextFrameFormat.getMarginBottom());
-        } finally {
+
+        }
+        finally
+        {
             if (pres != null) pres.dispose();
         }
         //ExEnd:GetTextFrameFormatEffectiveData
+
     }
 }
+
