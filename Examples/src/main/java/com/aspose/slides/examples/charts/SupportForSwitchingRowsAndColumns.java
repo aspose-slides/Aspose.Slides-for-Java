@@ -31,7 +31,7 @@ public class SupportForSwitchingRowsAndColumns
 
             chart.getChartData().switchRowColumn();
 
-            pres.save(RunExamples.OutPath + "Test_out.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "Test_out.pptx", SaveFormat.Pptx);
             //ExEnd:SupportForSwitchingRowsAndColumns
         }
         finally

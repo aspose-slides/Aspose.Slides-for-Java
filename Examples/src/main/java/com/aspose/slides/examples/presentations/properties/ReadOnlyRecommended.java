@@ -11,7 +11,7 @@ public class ReadOnlyRecommended
 {
     public static void main(String[] args)
     {
-        String outPptxPath = RunExamples.OutPath + "ReadOnlyRecommended.pptx";
+        String outPptxPath = RunExamples.getOutPath() + "ReadOnlyRecommended.pptx";
 
         Presentation pres = new Presentation();
         try

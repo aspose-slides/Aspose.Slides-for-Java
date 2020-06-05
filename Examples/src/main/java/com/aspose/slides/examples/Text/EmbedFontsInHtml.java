@@ -10,7 +10,7 @@ public class EmbedFontsInHtml
         // ExStart:EmbedFontsInHtml
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Text();
-        String outPath = RunExamples.OutPath;
+        String outPath = RunExamples.getOutPath();
 
         Presentation pres = new Presentation(dataDir + "Presentation.pptx");
         try

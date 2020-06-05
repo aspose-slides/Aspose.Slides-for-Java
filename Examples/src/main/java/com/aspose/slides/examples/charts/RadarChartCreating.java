@@ -11,7 +11,7 @@ public class RadarChartCreating
 {
     public static void main(String[] args)
     {
-        String outPath = RunExamples.OutPath + File.separator + "RadarChart_Out.pptx";
+        String outPath = RunExamples.getOutPath() + File.separator + "RadarChart_Out.pptx";
 
         Presentation pres = new Presentation();
         try

@@ -11,7 +11,7 @@ public class MathematicalShape
     public static void main(String[] args)
     {
         //Path for output presentation
-        String outpptxFile = RunExamples.OutPath + "MathematicalShape_out.pptx";
+        String outpptxFile = RunExamples.getOutPath() + "MathematicalShape_out.pptx";
 
         Presentation pres = new Presentation();
         try

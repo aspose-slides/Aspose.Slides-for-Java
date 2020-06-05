@@ -39,7 +39,7 @@ public class SwitchChartRowColumns
             chart.getChartData().switchRowColumn();
 
             // Saving presentation
-            pres.save(RunExamples.OutPath + "SwitchChartRowColumns_out.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "SwitchChartRowColumns_out.pptx", SaveFormat.Pptx);
             //ExEnd:SwitchChartRowColumns
         }
         finally

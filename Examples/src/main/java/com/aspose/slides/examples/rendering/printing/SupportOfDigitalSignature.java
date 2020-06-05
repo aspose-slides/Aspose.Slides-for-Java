@@ -15,7 +15,7 @@ public class SupportOfDigitalSignature
         //ExStart:SupportOfDigitalSignature
 
         String dataDir = RunExamples.getDataDir_Rendering();
-        String outPath = RunExamples.OutPath;
+        String outPath = RunExamples.getOutPath();
 
         Presentation pres = new Presentation();
         try

@@ -22,7 +22,7 @@ public class ExtractAudio
         Presentation pres = new Presentation(presName);
 
         // Access the desired slide
-        ISlide slide = pres.getSlides().get_Item(0);
+        ISlide slide = pres.getSlides().get_Item(2);
 
         // Get the slideshow transition effects for slide
         ISlideShowTransition transition = slide.getSlideShowTransition();

@@ -26,7 +26,7 @@ public class EditChartDatainExternalWorkbook
 
 
             chartData.getSeries().get_Item(0).getDataPoints().get_Item(0).getValue().getAsCell().setValue(100);
-            pres.save(RunExamples.OutPath + "presentation_out.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "presentation_out.pptx", SaveFormat.Pptx);
         }
         finally
         {

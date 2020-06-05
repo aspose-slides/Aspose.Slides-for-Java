@@ -331,7 +331,7 @@ public class RunExamples
         //// =====================================================
 
         //ExtractVideo.main(null);
-        //ExtractAudio.main(null); //!! No source presentation
+        //ExtractAudio.main(null);
 
         //// =====================================================
         ////            Rendering - Printing a Slide
@@ -339,7 +339,7 @@ public class RunExamples
 
         //SetZoom.main(null);
         //SetSlideNumber.main(null);
-        //DefaultPrinterPrinting.main(null); //
+        //DefaultPrinterPrinting.main(null); 
         //SpecificPrinterPrinting.main(null);
         //RenderComments.main(null);
         //RenderingEmoji.main(null);
@@ -363,7 +363,7 @@ public class RunExamples
         //AccessSmartArtParticularLayout.main(null);
         //ChangSmartArtShapeStyle.main(null);
         //ChangeSmartArtShapeColorStyle.main(null);
-        //.getFillFormat().martArtShapeNode.main(null);
+        //FillFormatSmartArtShapeNode.main(null);
         //ChangeTextOnSmartArtNode.main(null);
         //ChangeSmartArtLayout.main(null);
         //CheckSmartArtHiddenProperty.main(null);
@@ -385,9 +385,9 @@ public class RunExamples
         //MergeCells.main(null);
         //MergeCell.main(null);
         //CellSplit.main(null);
-        //.getTextFormat().ingInsideTableColumn.main(null);
-        //.getTextFormat().ingInsideTableRow.main(null);
-        //Se.getTextFormat().ingInsideTable.main(null);
+        //TextFormattingInsideTableColumn.main(null);
+        //TextFormattingInsideTableRow.main(null);
+        //SetTextFormattingInsideTable.main(null);
         //IdentifyingTheMergedCellsinTable.main(null);
         //AddImageinsideTableCells.main(null);
         //LockAspectRatio.main(null);
@@ -472,7 +472,18 @@ public class RunExamples
         return getDataDir_Data() + "ActiveX" + File.separator;
     }
 
-    public static String OutPath = getDataDir_Data() + "Out" + File.separator;
+    public static String getOutPath() {
+        if (OutPath == null)
+        {
+            File f = new File(getDataDir_Data() + "Out");
+            if (!f.exists())
+                f.mkdir();
+            OutPath = f.getAbsolutePath() + File.separator;
+        }
+        return OutPath;
+    }
+
+    public static String OutPath = null;
 
     public static String getDataDir_Charts()
     {
@@ -597,7 +608,7 @@ public class RunExamples
 
     private static String getDataDir_Data()
     {
-        return new File("Examples").getAbsolutePath() + File.separator + "Data" + File.separator;
+        return new File(".").getAbsolutePath() + File.separator + "Data" + File.separator;
     }
 }
 

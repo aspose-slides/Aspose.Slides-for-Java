@@ -19,7 +19,7 @@ public class TextBoxOnSlideProgram
         if (!IsExists)
             new File(dataDir).mkdirs();
 
-        // Instantiate PresentationEx// Instantiate PresentationEx
+        // Instantiate PresentationEx
         Presentation pres = new Presentation();
         try
         {

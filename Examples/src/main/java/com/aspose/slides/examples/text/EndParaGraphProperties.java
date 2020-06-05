@@ -32,7 +32,7 @@ public class EndParaGraphProperties
             shape.getTextFrame().getParagraphs().add(para1);
             shape.getTextFrame().getParagraphs().add(para2);
 
-            pres.save(RunExamples.OutPath + "pres.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "pres.pptx", SaveFormat.Pptx);
         }
         finally
         {

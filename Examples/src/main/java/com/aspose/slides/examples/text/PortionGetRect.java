@@ -11,7 +11,7 @@ public class PortionGetRect
 {
     public static void main(String[] args)
     {
-        String outPath = RunExamples.OutPath;
+        String outPath = RunExamples.getOutPath();
 
         Presentation pres = new Presentation();
         try

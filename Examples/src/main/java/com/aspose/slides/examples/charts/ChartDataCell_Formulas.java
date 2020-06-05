@@ -12,7 +12,7 @@ public class ChartDataCell_Formulas
 {
     public static void main(String[] args)
     {
-        String outpptxFile = RunExamples.OutPath + File.pathSeparator + "ChartDataCell_Formulas_out.pptx";
+        String outpptxFile = RunExamples.getOutPath() + File.pathSeparator + "ChartDataCell_Formulas_out.pptx";
 
         Presentation presentation = new Presentation();
         try

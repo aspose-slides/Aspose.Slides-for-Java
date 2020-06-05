@@ -13,7 +13,7 @@ public class SaveWithDefaultRegularFont
     public static void main(String[] args)
     {
         String dataDir = RunExamples.getDataDir_Text();
-        String outPath = RunExamples.OutPath;
+        String outPath = RunExamples.getOutPath();
 
         Presentation pres = new Presentation(dataDir + "SaveOptionsDefaultRegularFont.pptx");
         try

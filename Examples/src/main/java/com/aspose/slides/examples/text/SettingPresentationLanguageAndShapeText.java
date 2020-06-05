@@ -19,7 +19,7 @@ public class SettingPresentationLanguageAndShapeText
             shape.addTextFrame("Text to apply spellcheck language");
             shape.getTextFrame().getParagraphs().get_Item(0).getPortions().get_Item(0).getPortionFormat().setLanguageId("en-EN");
 
-            pres.save(RunExamples.OutPath + "test1.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "test1.pptx", SaveFormat.Pptx);
         }
         finally
         {

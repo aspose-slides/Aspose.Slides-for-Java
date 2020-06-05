@@ -13,8 +13,8 @@ public class FodpFormatConvertion
     public static void main(String[] args)
     {
         String dataDir = RunExamples.getDataDir_Conversion();
-        String outFodpPath = RunExamples.OutPath + "FodpFormatConvertion.fodp";
-        String outPptxPath = RunExamples.OutPath + "FodpFormatConvertion.pptx";
+        String outFodpPath = RunExamples.getOutPath() + "FodpFormatConvertion.fodp";
+        String outPptxPath = RunExamples.getOutPath() + "FodpFormatConvertion.pptx";
 
         Presentation presentation = new Presentation(dataDir + "Example.fodp");
         try

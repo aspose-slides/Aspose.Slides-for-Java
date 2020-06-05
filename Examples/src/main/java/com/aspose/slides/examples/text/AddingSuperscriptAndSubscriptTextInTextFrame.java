@@ -58,7 +58,7 @@ public class AddingSuperscriptAndSubscriptTextInTextFrame
             textFrame.getParagraphs().add(superPar);
             textFrame.getParagraphs().add(paragraph2);
 
-            presentation.save(RunExamples.OutPath + "TestOut.pptx", SaveFormat.Pptx);
+            presentation.save(RunExamples.getOutPath() + "TestOut.pptx", SaveFormat.Pptx);
         }
         finally
         {
