@@ -16,21 +16,34 @@ public class LinkingVideoActiveXControl
 
         // Instantiate Presentation class that represents PPTX file
         Presentation presentation = new Presentation(dataDir + "template.pptx");
+        try
+        {
+            // Create empty presentation instance
+            Presentation newPresentation = new Presentation();
+            try
+            {
 
-        // Create empty presentation instance
-        Presentation newPresentation = new Presentation();
+                // Remove default slide
+                newPresentation.getSlides().removeAt(0);
 
-        // Remove default slide
-        newPresentation.getSlides().removeAt(0);
+                // Clone slide with Media Player ActiveX Control
+                newPresentation.getSlides().insertClone(0, presentation.getSlides().get_Item(0));
 
-        // Clone slide with Media Player ActiveX Control
-        newPresentation.getSlides().insertClone(0, presentation.getSlides().get_Item(0));
+                // Access the Media Player ActiveX control and set the video path
+                newPresentation.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", dataVideo + "Wildlife.mp4");
 
-        // Access the Media Player ActiveX control and set the video path
-        newPresentation.getSlides().get_Item(0).getControls().get_Item(0).getProperties().set_Item("URL", dataVideo + "Wildlife.mp4");
-
-        // Save the Presentation
-        newPresentation.save(dataDir + "LinkingVideoActiveXControl_out.pptx", SaveFormat.Pptx);
+                // Save the Presentation
+                newPresentation.save(dataDir + "LinkingVideoActiveXControl_out.pptx", SaveFormat.Pptx);
+            }
+            finally
+            {
+                if (newPresentation != null) newPresentation.dispose();
+            }
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:LinkingVideoActiveXControl
     }
 }
