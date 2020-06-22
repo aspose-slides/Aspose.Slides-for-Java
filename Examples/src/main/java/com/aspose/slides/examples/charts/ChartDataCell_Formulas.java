@@ -6,8 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.io.File;
 
 
-
-
 public class ChartDataCell_Formulas
 {
     public static void main(String[] args)

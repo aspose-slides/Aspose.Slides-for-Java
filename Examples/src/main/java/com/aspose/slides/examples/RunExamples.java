@@ -472,7 +472,8 @@ public class RunExamples
         return getDataDir_Data() + "ActiveX" + File.separator;
     }
 
-    public static String getOutPath() {
+    public static String getOutPath()
+    {
         if (OutPath == null)
         {
             File f = new File(getDataDir_Data() + "Out");

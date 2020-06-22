@@ -7,9 +7,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.io.File;
 
 
-
-
-
 public class SaveWithPassword
 {
     public static void main(String[] args)

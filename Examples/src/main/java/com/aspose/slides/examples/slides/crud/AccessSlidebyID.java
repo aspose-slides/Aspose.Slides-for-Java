@@ -5,9 +5,6 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class AccessSlidebyID
 {
     public static void main(String[] args)

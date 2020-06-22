@@ -7,8 +7,6 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
 public class Pdf1A_PdfUa_Conformance
 {
     public static void main(String[] args)

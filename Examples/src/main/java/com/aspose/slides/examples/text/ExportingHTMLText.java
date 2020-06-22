@@ -9,8 +9,6 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 
-
-
 public class ExportingHTMLText
 {
     public static void main(String[] args) throws IOException

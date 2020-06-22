@@ -6,9 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.*;
 
 
-
-
-
 public class MergeCells
 {
     public static void main(String[] args)

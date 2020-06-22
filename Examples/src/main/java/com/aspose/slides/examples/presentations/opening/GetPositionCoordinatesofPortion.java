@@ -6,8 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.geom.Point2D;
 
 
-
-
 public class GetPositionCoordinatesofPortion
 {
     public static void main(String[] args)

@@ -6,9 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.*;
 
 
-
-
-
 public class StandardTables
 {
     public static void main(String[] args)

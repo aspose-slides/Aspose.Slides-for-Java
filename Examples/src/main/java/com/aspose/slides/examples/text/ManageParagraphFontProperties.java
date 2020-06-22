@@ -6,8 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.*;
 
 
-
-
 public class ManageParagraphFontProperties
 {
     public static void main(String[] args)

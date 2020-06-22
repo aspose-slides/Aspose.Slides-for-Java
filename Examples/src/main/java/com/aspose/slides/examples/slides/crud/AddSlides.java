@@ -8,9 +8,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.io.File;
 
 
-
-
-
 public class AddSlides
 {
     public static void main(String[] args)

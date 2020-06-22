@@ -6,9 +6,6 @@ import com.aspose.slides.ViewType;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class SaveAsPredefinedViewType
 {
     public static void main(String[] args)

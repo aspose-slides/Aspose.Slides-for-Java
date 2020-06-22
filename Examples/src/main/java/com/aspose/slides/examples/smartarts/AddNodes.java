@@ -46,7 +46,8 @@ public class AddNodes
             pres.save(dataDir + "AddSmartArtNode_out.pptx", SaveFormat.Pptx);
         }
         finally
-        {if (pres!= null) pres.dispose();
+        {
+            if (pres != null) pres.dispose();
 
         }
         //ExEnd:AddNodes

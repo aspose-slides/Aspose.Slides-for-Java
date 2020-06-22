@@ -10,9 +10,6 @@ import java.awt.*;
 import java.io.File;
 
 
-
-
-
 public class SetSlideBackgroundMaster
 {
     public static void main(String[] args)

@@ -6,9 +6,6 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class GetFileFormat
 {
     public static void main(String[] args)

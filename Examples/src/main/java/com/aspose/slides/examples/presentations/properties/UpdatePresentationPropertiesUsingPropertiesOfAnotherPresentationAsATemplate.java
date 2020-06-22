@@ -7,9 +7,6 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class UpdatePresentationPropertiesUsingPropertiesOfAnotherPresentationAsATemplate
 {
     //ExStart:UpdatePresPropsUsingPropsOfOtherPresAsATemplate

@@ -6,8 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.*;
 
 
-
-
 public class ConvertWithCustomSize
 {
     public static void main(String[] args)

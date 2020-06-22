@@ -1,10 +1,6 @@
 package com.aspose.slides.examples.presentations.conversion;
 
 
-
-
-
-
 import com.aspose.slides.IShape;
 import com.aspose.slides.ISvgShape;
 import com.aspose.slides.ISvgShapeFormattingController;

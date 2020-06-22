@@ -6,9 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.io.File;
 
 
-
-
-
 public class ApplyInnerShadow
 {
     public static void main(String[] args)

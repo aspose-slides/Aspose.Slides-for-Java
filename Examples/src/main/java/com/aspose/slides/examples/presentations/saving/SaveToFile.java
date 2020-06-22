@@ -7,9 +7,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.io.File;
 
 
-
-
-
 public class SaveToFile
 {
     public static void main(String[] args)

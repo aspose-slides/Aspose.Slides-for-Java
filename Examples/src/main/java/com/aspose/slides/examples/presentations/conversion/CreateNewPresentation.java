@@ -7,9 +7,6 @@ import com.aspose.slides.ShapeType;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class CreateNewPresentation
 {
     public static void main(String[] args)

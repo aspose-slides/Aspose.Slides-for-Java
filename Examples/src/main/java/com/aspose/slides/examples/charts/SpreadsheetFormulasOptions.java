@@ -5,8 +5,6 @@ import com.aspose.slides.*;
 import java.util.Locale;
 
 
-
-
 public class SpreadsheetFormulasOptions
 {
     public static void main(String[] args)

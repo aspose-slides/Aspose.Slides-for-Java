@@ -8,8 +8,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.geom.Rectangle2D;
 
 
-
-
 public class GetRectangularCoordinatesofParagraph
 {
     public static void main(String[] args)

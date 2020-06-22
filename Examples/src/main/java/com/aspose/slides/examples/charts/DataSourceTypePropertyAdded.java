@@ -4,9 +4,6 @@ import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class DataSourceTypePropertyAdded
 {
     public static void main(String[] args)

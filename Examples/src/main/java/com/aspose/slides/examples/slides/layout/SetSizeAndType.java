@@ -7,9 +7,6 @@ import com.aspose.slides.SlideSizeScaleType;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class SetSizeAndType
 {
     public static void main(String[] args)

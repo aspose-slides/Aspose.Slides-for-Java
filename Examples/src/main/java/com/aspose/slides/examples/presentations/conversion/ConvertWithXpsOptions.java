@@ -6,9 +6,6 @@ import com.aspose.slides.XpsOptions;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class ConvertWithXpsOptions
 {
     public static void main(String[] args)

@@ -5,9 +5,6 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class LoadFormatEnumeration
 {
     public static void main(String[] args)

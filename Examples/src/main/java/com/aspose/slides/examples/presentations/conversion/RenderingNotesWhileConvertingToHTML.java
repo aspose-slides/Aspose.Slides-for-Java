@@ -4,10 +4,6 @@ import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
-
 public class RenderingNotesWhileConvertingToHTML
 {
     public static void main(String[] args)

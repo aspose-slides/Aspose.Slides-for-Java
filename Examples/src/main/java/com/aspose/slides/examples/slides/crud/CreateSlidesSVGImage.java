@@ -9,8 +9,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-
-
 public class CreateSlidesSVGImage
 {
     public static void main(String[] args) throws IOException

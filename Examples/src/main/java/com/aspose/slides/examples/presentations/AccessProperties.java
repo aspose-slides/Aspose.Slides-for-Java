@@ -6,9 +6,6 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class AccessProperties
 {
     public static void main(String[] args)

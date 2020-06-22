@@ -10,9 +10,6 @@ import java.awt.*;
 import java.io.File;
 
 
-
-
-
 public class SetSlideBackgroundNormal
 {
     public static void main(String[] args)

@@ -4,8 +4,6 @@ import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
 public class AccessingAltTextinGroupshapes
 {
     public static void main(String[] args)

@@ -7,9 +7,6 @@ import com.aspose.slides.SaveFormat;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class ReplaceFontsExplicitly
 {
     public static void main(String[] args)

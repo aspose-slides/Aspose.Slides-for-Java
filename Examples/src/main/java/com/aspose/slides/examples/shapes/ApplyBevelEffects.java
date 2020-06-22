@@ -6,9 +6,6 @@ import com.aspose.slides.examples.RunExamples;
 import java.awt.*;
 
 
-
-
-
 public class ApplyBevelEffects
 {
     public static void main(String[] args)

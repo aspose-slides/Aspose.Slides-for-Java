@@ -7,8 +7,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-
-
 public class ExtractVideo
 {
     public static void main(String[] args) throws IOException

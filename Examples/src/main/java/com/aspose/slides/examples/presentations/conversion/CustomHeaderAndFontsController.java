@@ -1,10 +1,6 @@
 package com.aspose.slides.examples.presentations.conversion;
 
 
-
-
-
-
 import com.aspose.slides.EmbedAllFontsHtmlController;
 import com.aspose.slides.IHtmlGenerator;
 import com.aspose.slides.IPresentation;
@@ -30,14 +26,14 @@ public class CustomHeaderAndFontsController extends EmbedAllFontsHtmlController
     }
 
     @Override
-    public  void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation)
+    public void writeDocumentStart(IHtmlGenerator generator, IPresentation presentation)
     {
         generator.addHtml(String.format(Header, m_cssFileName));
         writeAllFonts(generator, presentation);
     }
 
     @Override
-    public  void writeAllFonts(IHtmlGenerator generator, IPresentation presentation)
+    public void writeAllFonts(IHtmlGenerator generator, IPresentation presentation)
     {
         generator.addHtml("<!-- Embedded fonts -->");
         super.writeAllFonts(generator, presentation);

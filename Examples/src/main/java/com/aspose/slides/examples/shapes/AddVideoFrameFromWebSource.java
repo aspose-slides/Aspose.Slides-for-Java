@@ -13,8 +13,6 @@ import java.net.URL;
 import java.net.URLConnection;
 
 
-
-
 public class AddVideoFrameFromWebSource
 {
     //ExStart:AddVideoFrameFromWebSource

@@ -4,9 +4,6 @@ import com.aspose.slides.PresentationFactory;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class VerifyingPresentationWithoutloading
 {
     public static void main(String[] args)
