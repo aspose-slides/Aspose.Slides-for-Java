@@ -17,9 +17,15 @@ public class OpenPresentation
 
         // Opening the presentation file by passing the file path to the constructor of Presentation class
         Presentation pres = new Presentation(dataDir + "OpenPresentation.pptx");
-
-        // Printing the total number of slides present in the presentation
-        System.out.println(pres.getSlides().size());
+        try
+        {
+            // Printing the total number of slides present in the presentation
+            System.out.println(pres.getSlides().size());
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:OpenPresentation
     }
 }

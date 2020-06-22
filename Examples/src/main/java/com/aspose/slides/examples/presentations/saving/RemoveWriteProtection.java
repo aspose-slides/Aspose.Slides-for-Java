@@ -18,14 +18,20 @@ public class RemoveWriteProtection
 
         // Opening the presentation file
         Presentation presentation = new Presentation(dataDir + "RemoveWriteProtection.pptx");
+        try
+        {
+            // Checking if presentation is write protected
+            if (presentation.getProtectionManager().isWriteProtected())
+                // Removing Write protection
+                presentation.getProtectionManager().removeWriteProtection();
 
-        // Checking if presentation is write protected
-        if (presentation.getProtectionManager().isWriteProtected())
-            // Removing Write protection                
-            presentation.getProtectionManager().removeWriteProtection();
-
-        // Saving presentation
-        presentation.save(dataDir + "File_Without_WriteProtection_out.pptx", SaveFormat.Pptx);
+            // Saving presentation
+            presentation.save(dataDir + "File_Without_WriteProtection_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:RemoveWriteProtection
     }
 }

@@ -17,13 +17,19 @@ public class GetBackgroundEffectiveValues
 
         // Instantiate the Presentation class that represents the presentation file
         Presentation pres = new Presentation(dataDir + "SamplePresentation.pptx");
+        try
+        {
+            IBackgroundEffectiveData effBackground = pres.getSlides().get_Item(0).getBackground().getEffective();
 
-        IBackgroundEffectiveData effBackground = pres.getSlides().get_Item(0).getBackground().getEffective();
-
-        if (effBackground.getFillFormat().getFillType() == FillType.Solid)
-            System.out.println("Fill color: " + effBackground.getFillFormat().getSolidFillColor());
-        else
-            System.out.println("Fill type: " + effBackground.getFillFormat().getFillType());
+            if (effBackground.getFillFormat().getFillType() == FillType.Solid)
+                System.out.println("Fill color: " + effBackground.getFillFormat().getSolidFillColor());
+            else
+                System.out.println("Fill type: " + effBackground.getFillFormat().getFillType());
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
 
         //ExEnd:GetBackgroundEffectiveValues
     }

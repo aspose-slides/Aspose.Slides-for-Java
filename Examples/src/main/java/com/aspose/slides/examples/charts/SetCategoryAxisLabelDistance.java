@@ -16,18 +16,24 @@ public class SetCategoryAxisLabelDistance
         String dataDir = RunExamples.getDataDir_Charts();
 
         Presentation presentation = new Presentation();
+        try
+        {
+            // Get reference of the slide
+            ISlide sld = presentation.getSlides().get_Item(0);
 
-        // Get reference of the slide
-        ISlide sld = presentation.getSlides().get_Item(0);
+            // Adding a chart on slide
+            IChart ch = sld.getShapes().addChart(ChartType.ClusteredColumn, 20, 20, 500, 300);
 
-        // Adding a chart on slide
-        IChart ch = sld.getShapes().addChart(ChartType.ClusteredColumn, 20, 20, 500, 300);
+            // Setting the position of label from axis
+            ch.getAxes().getHorizontalAxis().setLabelOffset(500);
 
-        // Setting the position of label from axis
-        ch.getAxes().getHorizontalAxis().setLabelOffset(500);
-
-        // Write the presentation file to disk
-        presentation.save(dataDir + "SetCategoryAxisLabelDistance_out.pptx", SaveFormat.Pptx);
+            // Write the presentation file to disk
+            presentation.save(dataDir + "SetCategoryAxisLabelDistance_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SetCategoryAxisLabelDistance
     }
 }

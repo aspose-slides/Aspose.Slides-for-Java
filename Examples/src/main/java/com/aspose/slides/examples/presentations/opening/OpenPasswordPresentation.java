@@ -5,9 +5,6 @@ import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
 
 
-
-
-
 public class OpenPasswordPresentation
 {
     public static void main(String[] args)
@@ -23,10 +20,17 @@ public class OpenPasswordPresentation
         loadOptions.setPassword("pass");
 
         // Opening the presentation file by passing the file path and load options to the constructor of Presentation class
-        Presentation pres = new Presentation(dataDir + "OpenPasswordPresentation.pptx", loadOptions);
 
-        // Printing the total number of slides present in the presentation
-        System.out.println(pres.getSlides().size());
+        Presentation pres = new Presentation(dataDir + "OpenPasswordPresentation.pptx", loadOptions);
+        try
+        {
+            // Printing the total number of slides present in the presentation
+            System.out.println(pres.getSlides().size());
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:OpenPasswordPresentation
     }
 }

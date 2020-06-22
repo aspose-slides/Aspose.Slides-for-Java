@@ -18,17 +18,23 @@ public class SaveProperties
 
         // Instantiate a Presentation object that represents a PPT file
         Presentation presentation = new Presentation();
+        try
+        {
+            //....do some work here.....
 
-        //....do some work here.....
+            // Setting access to document properties in password protected mode
+            presentation.getProtectionManager().setEncryptDocumentProperties(false);
 
-        // Setting access to document properties in password protected mode
-        presentation.getProtectionManager().setEncryptDocumentProperties(false);
+            // Setting Password
+            presentation.getProtectionManager().encrypt("pass");
 
-        // Setting Password
-        presentation.getProtectionManager().encrypt("pass");
-
-        // Save your presentation to a file
-        presentation.save(dataDir + "Password Protected Presentation_out.pptx", SaveFormat.Pptx);
+            // Save your presentation to a file
+            presentation.save(dataDir + "Password Protected Presentation_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SaveProperties
     }
 }

@@ -20,13 +20,19 @@ public class SetTransitionEffects
 
         // Create an instance of Presentation class
         Presentation presentation = new Presentation(dataDir + "AccessSlides.pptx");
+        try
+        {
+            // Set effect
+            presentation.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Cut);
+            ((OptionalBlackTransition) presentation.getSlides().get_Item(0).getSlideShowTransition().getValue()).setFromBlack(true);
 
-        // Set effect
-        presentation.getSlides().get_Item(0).getSlideShowTransition().setType(TransitionType.Cut);
-        ((OptionalBlackTransition) presentation.getSlides().get_Item(0).getSlideShowTransition().getValue()).setFromBlack(true);
-
-        // Write the presentation to disk
-        presentation.save(dataDir + "SetTransitionEffects_out.pptx", SaveFormat.Pptx);
+            // Write the presentation to disk
+            presentation.save(dataDir + "SetTransitionEffects_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SetTransitionEffects
     }
 }

@@ -16,9 +16,16 @@ public class ExportToHTMLWithResponsiveLayout
         String dataDir = RunExamples.getDataDir_Conversion();
 
         Presentation presentation = new Presentation(dataDir + "SomePresentation.pptx");
-        HtmlOptions saveOptions = new HtmlOptions();
-        saveOptions.setSvgResponsiveLayout(true);
-        presentation.save(dataDir + "SomePresentation-out.html", SaveFormat.Html, saveOptions);
+        try
+        {
+            HtmlOptions saveOptions = new HtmlOptions();
+            saveOptions.setSvgResponsiveLayout(true);
+            presentation.save(dataDir + "SomePresentation-out.html", SaveFormat.Html, saveOptions);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:ExportToHTMLWithResponsiveLayout
     }
 }

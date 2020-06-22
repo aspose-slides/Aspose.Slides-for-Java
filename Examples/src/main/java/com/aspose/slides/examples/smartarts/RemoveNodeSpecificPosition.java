@@ -14,33 +14,39 @@ public class RemoveNodeSpecificPosition
 
         // Load the desired the presentation             
         Presentation pres = new Presentation(dataDir + "RemoveNodeSpecificPosition.pptx");
-
-        // Traverse through every shape inside first slide
-        for (IShape shape : pres.getSlides().get_Item(0).getShapes())
+        try
         {
-            // Check if shape is of SmartArt type
-            if (shape instanceof ISmartArt)
+            // Traverse through every shape inside first slide
+            for (IShape shape : pres.getSlides().get_Item(0).getShapes())
             {
-                // Typecast shape to SmartArt
-                ISmartArt smart = (ISmartArt) shape;
-
-                if (smart.getAllNodes().size() > 0)
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt)
                 {
-                    // Accessing SmartArt node at index 0
-                    ISmartArtNode node = smart.getAllNodes().get_Item(0);
+                    // Typecast shape to SmartArt
+                    ISmartArt smart = (ISmartArt) shape;
 
-                    if (node.getChildNodes().size() >= 2)
+                    if (smart.getAllNodes().size() > 0)
                     {
-                        // Removing the child node at position 1
-                        ((ISmartArtNodeCollection) node.getChildNodes()).removeNode(1);
-                    }
+                        // Accessing SmartArt node at index 0
+                        ISmartArtNode node = smart.getAllNodes().get_Item(0);
 
+                        if (node.getChildNodes().size() >= 2)
+                        {
+                            // Removing the child node at position 1
+                            ((ISmartArtNodeCollection) node.getChildNodes()).removeNode(1);
+                        }
+
+                    }
                 }
             }
-        }
 
-        // Save Presentation
-        pres.save(dataDir + "RemoveSmartArtNodeByPosition_out.pptx", SaveFormat.Pptx);
+            // Save Presentation
+            pres.save(dataDir + "RemoveSmartArtNodeByPosition_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:RemoveNodeSpecificPosition
     }
 }

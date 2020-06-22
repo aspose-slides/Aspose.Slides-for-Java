@@ -22,30 +22,36 @@ public class AddImageinsideTableCell
 
         // Instantiate Presentation class object
         Presentation presentation = new Presentation();
+        try
+        {
+            // Access first slide
+            ISlide islide = presentation.getSlides().get_Item(0);
 
-        // Access first slide
-        ISlide islide = presentation.getSlides().get_Item(0);
+            // Define columns with widths and rows with heights
+            double[] dblCols = {150, 150, 150, 150};
+            double[] dblRows = {100, 100, 100, 100, 90};
 
-        // Define columns with widths and rows with heights
-        double[] dblCols = {150, 150, 150, 150};
-        double[] dblRows = {100, 100, 100, 100, 90};
+            // Add table shape to slide
+            ITable tbl = islide.getShapes().addTable(50, 50, dblCols, dblRows);
 
-        // Add table shape to slide
-        ITable tbl = islide.getShapes().addTable(50, 50, dblCols, dblRows);
+            // Creating a BufferedImage Image object to hold the image file
+            BufferedImage image = ImageIO.read(new File(dataDir + "aspose-logo.jpg"));
 
-        // Creating a BufferedImage Image object to hold the image file
-        BufferedImage image = ImageIO.read(new File(dataDir + "aspose-logo.jpg"));
+            // Create an IPPImage object using the bitmap object
+            IPPImage imgx1 = presentation.getImages().addImage(image);
 
-        // Create an IPPImage object using the bitmap object
-        IPPImage imgx1 = presentation.getImages().addImage(image);
+            // Add image to first table cell
+            tbl.get_Item(0, 0).getCellFormat().getFillFormat().setFillType(FillType.Picture);
+            tbl.get_Item(0, 0).getCellFormat().getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Stretch);
+            tbl.get_Item(0, 0).getCellFormat().getFillFormat().getPictureFillFormat().getPicture().setImage(imgx1);
 
-        // Add image to first table cell
-        tbl.get_Item(0, 0).getCellFormat().getFillFormat().setFillType(FillType.Picture);
-        tbl.get_Item(0, 0).getCellFormat().getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Stretch);
-        tbl.get_Item(0, 0).getCellFormat().getFillFormat().getPictureFillFormat().getPicture().setImage(imgx1);
-
-        // Save PPTX to Disk
-        presentation.save(dataDir + "Image_In_TableCell_out.pptx", SaveFormat.Pptx);
+            // Save PPTX to Disk
+            presentation.save(dataDir + "Image_In_TableCell_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:AddImageinsideTableCell
     }
 }

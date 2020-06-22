@@ -20,27 +20,31 @@ public class SetFirstRowAsHeader
 
         // Instantiate Presentation class that represents PPTX
         Presentation pres = new Presentation(dataDir + "table.pptx");
-
-        // Access the first slide
-        ISlide sld = pres.getSlides().get_Item(0);
-
-        // Initialize null TableEx
-        ITable tbl = null;
-
-        // Iterate through the shapes and set a reference to the table found
-        for (IShape shp : sld.getShapes())
+        try
         {
-            if (shp instanceof ITable)
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
+
+            // Initialize null TableEx
+            ITable tbl = null;
+
+            // Iterate through the shapes and set a reference to the table found
+            for (IShape shp : sld.getShapes())
             {
-                tbl = (ITable) shp;
+                if (shp instanceof ITable)
+                {
+                    tbl = (ITable) shp;
+                }
             }
+
+
+            //Set the first row of a table as header with a special formatting.
+            tbl.setFirstRow(true);
         }
-
-
-        //Set the first row of a table as header with a special formatting.
-        tbl.setFirstRow(true);
-
-
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:SetFirstRowAsHeader
 
     }

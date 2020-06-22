@@ -18,12 +18,18 @@ public class RemoveHyperlinks
 
         // Instantiate Presentation class
         Presentation presentation = new Presentation(dataDir + "Hyperlink.pptx");
+        try
+        {
+            // Removing the hyperlinks from presentation
+            presentation.getHyperlinkQueries().removeAllHyperlinks();
 
-        // Removing the hyperlinks from presentation
-        presentation.getHyperlinkQueries().removeAllHyperlinks();
-
-        //Writing the presentation as a PPTX file
-        presentation.save(dataDir + "RemovedHyperlink_out.pptx", SaveFormat.Pptx);
+            //Writing the presentation as a PPTX file
+            presentation.save(dataDir + "RemovedHyperlink_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:RemoveHyperlinks
     }
 }

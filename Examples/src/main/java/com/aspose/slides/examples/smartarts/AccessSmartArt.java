@@ -17,28 +17,34 @@ public class AccessSmartArt
 
         // Load the desired the presentation
         Presentation pres = new Presentation(dataDir + "AccessSmartArt.pptx");
-
-        // Traverse through every shape inside first slide
-        for (IShape shape : pres.getSlides().get_Item(0).getShapes())
+        try
         {
-            // Check if shape is of SmartArt type
-            if (shape instanceof ISmartArt)
+            // Traverse through every shape inside first slide
+            for (IShape shape : pres.getSlides().get_Item(0).getShapes())
             {
-
-                // Typecast shape to SmartArt
-                ISmartArt smart = (ISmartArt) shape;
-
-                // Traverse through all nodes inside SmartArt
-                for (int i = 0; i < smart.getAllNodes().size(); i++)
+                // Check if shape is of SmartArt type
+                if (shape instanceof ISmartArt)
                 {
-                    // Accessing SmartArt node at index i
-                    ISmartArtNode node = (ISmartArtNode) smart.getAllNodes().get_Item(i);
 
-                    // Printing the SmartArt node parameters
-                    String outString = String.format("i = {0},.Text{1},  Level = {2}, Position = {3}", i, node.getTextFrame().getText(), node.getLevel(), node.getPosition());
-                    System.out.println(outString);
+                    // Typecast shape to SmartArt
+                    ISmartArt smart = (ISmartArt) shape;
+
+                    // Traverse through all nodes inside SmartArt
+                    for (int i = 0; i < smart.getAllNodes().size(); i++)
+                    {
+                        // Accessing SmartArt node at index i
+                        ISmartArtNode node = (ISmartArtNode) smart.getAllNodes().get_Item(i);
+
+                        // Printing the SmartArt node parameters
+                        String outString = String.format("i = {0},.Text{1},  Level = {2}, Position = {3}", i, node.getTextFrame().getText(), node.getLevel(), node.getPosition());
+                        System.out.println(outString);
+                    }
                 }
             }
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
         }
         //ExEnd:AccessSmartArt
     }

@@ -21,24 +21,30 @@ public class AddNodesSpecificPosition
 
         // Creating a presentation instance
         Presentation pres = new Presentation();
+        try
+        {
+            // Access the presentation slide
+            ISlide slide = pres.getSlides().get_Item(0);
 
-        // Access the presentation slide
-        ISlide slide = pres.getSlides().get_Item(0);
+            // Add Smart Art IShape
+            ISmartArt smart = slide.getShapes().addSmartArt(0, 0, 400, 400, SmartArtLayoutType.StackedList);
 
-        // Add Smart Art IShape
-        ISmartArt smart = slide.getShapes().addSmartArt(0, 0, 400, 400, SmartArtLayoutType.StackedList);
+            // Accessing the SmartArt node at index 0
+            ISmartArtNode node = smart.getAllNodes().get_Item(0);
 
-        // Accessing the SmartArt node at index 0
-        ISmartArtNode node = smart.getAllNodes().get_Item(0);
+            // Adding new child node at position 2 in parent node
+            SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).addNodeByPosition(2);
 
-        // Adding new child node at position 2 in parent node
-        SmartArtNode chNode = (SmartArtNode) ((SmartArtNodeCollection) node.getChildNodes()).addNodeByPosition(2);
+            // Add Text
+            chNode.getTextFrame().setText("Sample Text Added");
 
-        // Add Text
-        chNode.getTextFrame().setText("Sample Text Added");
-
-        // Save Presentation
-        pres.save(dataDir + "AddSmartArtNodeByPosition_out.pptx", SaveFormat.Pptx);
+            // Save Presentation
+            pres.save(dataDir + "AddSmartArtNodeByPosition_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:AddNodesSpecificPosition
     }
 }

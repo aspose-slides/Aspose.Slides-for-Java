@@ -17,26 +17,32 @@ public class RemoveShape
 
         // Create Presentation object
         Presentation pres = new Presentation();
-
-        // Get the first slide
-        ISlide sld = pres.getSlides().get_Item(0);
-
-        // Add autoshape of rectangle type
-        IShape shp1 = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 40, 150, 50);
-        IShape shp2 = sld.getShapes().addAutoShape(ShapeType.Moon, 160, 40, 150, 50);
-        String alttext = "User Defined";
-        int iCount = sld.getShapes().size();
-        for (int i = 0; i < iCount; i++)
+        try
         {
-            AutoShape ashp = (AutoShape) sld.getShapes().get_Item(0);
-            if (ashp.getAlternativeText().equals(alttext))
-            {
-                sld.getShapes().remove(ashp);
-            }
-        }
+            // Get the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
 
-        // Save presentation to disk
-        pres.save(dataDir + "RemoveShape_out.pptx", SaveFormat.Pptx);
+            // Add autoshape of rectangle type
+            IShape shp1 = sld.getShapes().addAutoShape(ShapeType.Rectangle, 50, 40, 150, 50);
+            IShape shp2 = sld.getShapes().addAutoShape(ShapeType.Moon, 160, 40, 150, 50);
+            String alttext = "User Defined";
+            int iCount = sld.getShapes().size();
+            for (int i = 0; i < iCount; i++)
+            {
+                AutoShape ashp = (AutoShape) sld.getShapes().get_Item(0);
+                if (ashp.getAlternativeText().equals(alttext))
+                {
+                    sld.getShapes().remove(ashp);
+                }
+            }
+
+            // Save presentation to disk
+            pres.save(dataDir + "RemoveShape_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:RemoveShape
     }
 }

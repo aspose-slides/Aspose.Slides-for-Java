@@ -25,11 +25,17 @@ public class SaveToFile
 
         // Instantiate a Presentation object that represents a PPT file
         Presentation presentation = new Presentation();
+        try
+        {
+            //...do some work here...
 
-        //...do some work here...
-
-        // Save your presentation to a file
-        presentation.save(dataDir + "Saved_out.pptx", SaveFormat.Pptx);
+            // Save your presentation to a file
+            presentation.save(dataDir + "Saved_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SaveToFile
     }
 }

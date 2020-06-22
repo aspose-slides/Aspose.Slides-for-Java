@@ -17,21 +17,27 @@ public class SetlegendCustomOptions
 
         // Create an instance of Presentation class
         Presentation presentation = new Presentation();
+        try
+        {
+            // Get reference of the slide
+            ISlide slide = presentation.getSlides().get_Item(0);
 
-        // Get reference of the slide
-        ISlide slide = presentation.getSlides().get_Item(0);
+            // Add a clustered column chart on the slide
+            IChart chart = slide.getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 500, 500);
 
-        // Add a clustered column chart on the slide
-        IChart chart = slide.getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 500, 500);
+            // Set Legend Properties
+            chart.getLegend().setX(50 / chart.getWidth());
+            chart.getLegend().setY(50 / chart.getHeight());
+            chart.getLegend().setWidth(100 / chart.getWidth());
+            chart.getLegend().setHeight(100 / chart.getHeight());
 
-        // Set Legend Properties
-        chart.getLegend().setX(50 / chart.getWidth());
-        chart.getLegend().setY(50 / chart.getHeight());
-        chart.getLegend().setWidth(100 / chart.getWidth());
-        chart.getLegend().setHeight(100 / chart.getHeight());
-
-        // Write presentation to disk
-        presentation.save(dataDir + "Legend_out.pptx", SaveFormat.Pptx);
+            // Write presentation to disk
+            presentation.save(dataDir + "Legend_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SetlegendCustomOptions
     }
 }

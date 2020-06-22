@@ -18,9 +18,15 @@ public class PPTtoPPTX
 
         // Instantiate a Presentation object that represents a PPTX file
         Presentation pres = new Presentation(dataDir + "PPTtoPPTX.ppt");
-
-        // Saving the PPTX presentation to PPTX format
-        pres.save(dataDir + "PPTtoPPTX_out.pptx", SaveFormat.Pptx);
+        try
+        {
+            // Saving the PPTX presentation to PPTX format
+            pres.save(dataDir + "PPTtoPPTX_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
         //ExEnd:PPTtoPPTX
     }
 }

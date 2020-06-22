@@ -19,12 +19,18 @@ public class SaveAsPredefinedViewType
 
         // Opening the presentation file
         Presentation presentation = new Presentation();
+        try
+        {
+            // Setting view type
+            presentation.getViewProperties().setLastView(ViewType.SlideMasterView);
 
-        // Setting view type 
-        presentation.getViewProperties().setLastView(ViewType.SlideMasterView);
-
-        // Saving presentation
-        presentation.save(dataDir + "SetViewType_out.pptx", SaveFormat.Pptx);
+            // Saving presentation
+            presentation.save(dataDir + "SetViewType_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:SaveAsPredefinedViewType
     }
 }

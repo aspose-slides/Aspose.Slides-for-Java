@@ -18,9 +18,15 @@ public class ConvertToPDF
 
         // Instantiate a Presentation object that represents a presentation file
         Presentation presentation = new Presentation(dataDir + "ConvertToPDF.pptx");
-
-        // Save the presentation to PDF with default options
-        presentation.save(dataDir + "output_out.pdf", SaveFormat.Pdf);
+        try
+        {
+            // Save the presentation to PDF with default options
+            presentation.save(dataDir + "output_out.pdf", SaveFormat.Pdf);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:ConvertToPDF            
     }
 }

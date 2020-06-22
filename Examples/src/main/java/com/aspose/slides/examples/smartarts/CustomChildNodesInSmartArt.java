@@ -13,7 +13,7 @@ public class CustomChildNodesInSmartArt
 
         // Load the desired the presentation
         Presentation pres = new Presentation(dataDir + "AccessChildNodes.pptx");
-
+        try
         {
             ISmartArt smart = pres.getSlides().get_Item(0).getShapes().addSmartArt(20, 20, 600, 500, SmartArtLayoutType.OrganizationChart);
 
@@ -39,6 +39,10 @@ public class CustomChildNodesInSmartArt
             shape.setRotation(90);
 
             pres.save(dataDir + "SmartArt.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
         }
         //ExEnd:CustomChildNodesInSmartArt
     }

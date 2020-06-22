@@ -19,19 +19,25 @@ public class ModifyBuiltinProperties
 
         // Instantiate the Presentation class that represents the Presentation
         Presentation presentation = new Presentation(dataDir + "ModifyBuiltinProperties.pptx");
+        try
+        {
+            // Create a reference to IDocumentProperties object associated with Presentation
+            IDocumentProperties documentProperties = presentation.getDocumentProperties();
 
-        // Create a reference to IDocumentProperties object associated with Presentation
-        IDocumentProperties documentProperties = presentation.getDocumentProperties();
+            // Set the builtin properties
+            documentProperties.setAuthor("Aspose.Slides for .NET");
+            documentProperties.setTitle("Modifying Presentation Properties");
+            documentProperties.setSubject("Aspose Subject");
+            documentProperties.setComments("Aspose Description");
+            documentProperties.setManager("Aspose Manager");
 
-        // Set the builtin properties
-        documentProperties.setAuthor("Aspose.Slides for .NET");
-        documentProperties.setTitle("Modifying Presentation Properties");
-        documentProperties.setSubject("Aspose Subject");
-        documentProperties.setComments("Aspose Description");
-        documentProperties.setManager("Aspose Manager");
-
-        // Save your presentation to a file
-        presentation.save(dataDir + "DocumentProperties_out.pptx", SaveFormat.Pptx);
+            // Save your presentation to a file
+            presentation.save(dataDir + "DocumentProperties_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
         //ExEnd:ModifyBuiltinProperties
     }
 }

@@ -25,14 +25,20 @@ public class SaveAsReadOnly
 
         // Instantiate a Presentation object that represents a PPT file
         Presentation presentation = new Presentation();
+        try
+        {
+            //....do some work here.....
 
-        //....do some work here.....
+            // Setting Write protection Password
+            presentation.getProtectionManager().setWriteProtection("test");
 
-        // Setting Write protection Password
-        presentation.getProtectionManager().setWriteProtection("test");
-
-        // Save your presentation to a file
-        presentation.save(dataDir + "WriteProtected_out.pptx", SaveFormat.Pptx);
-        //ExEnd:SaveAsReadOnly
+            // Save your presentation to a file
+            presentation.save(dataDir + "WriteProtected_out.pptx", SaveFormat.Pptx);
+            //ExEnd:SaveAsReadOnly
+        }
+        finally
+        {
+            if (presentation != null) presentation.dispose();
+        }
     }
 }
