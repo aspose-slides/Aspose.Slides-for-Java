@@ -95,6 +95,7 @@ public class RunExamples
         //RadarChartCreation.main(null);
         //ChartDataCell_Formulas.main(null);
         //SpreadsheetFormulasOptions.main(null);
+        //Chart_RecoverWorkbook.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -134,6 +135,7 @@ public class RunExamples
         //ODPToPPTX.main(null);
         //FodpFormatConvertion.main(null);
         //Pdf1A_PdfUa_Conformance.main(null);
+        //ExportMathParagraphToMathML.main(null);
 
         // =====================================================
         //// =====================================================

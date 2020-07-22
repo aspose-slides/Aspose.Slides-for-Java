@@ -9,29 +9,10 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose-cells</artifactId>
-            <version>20.6</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose-slides</artifactId>
-            <version>20.6</version>
-            <classifier>jdk16</classifier>
-        </dependency>
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose-slides</artifactId>
-            <version>20.6</version>
-        <classifier>javadoc</classifier>
-    </dependency>
-    </dependencies>
     <repositories>
         <repository>
             <id>aspose-maven-repository</id>
+            <name>Aspose maven repository</name>
             <!--url>http://maven-qa.aspose.com/repository/ext-release-local/</url!-->
             <url>http://repository.aspose.com/repo/</url>
         </repository>
@@ -40,7 +21,25 @@
             <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
-  
-  
     </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-cells</artifactId>
+            <version>20.7</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-slides</artifactId>
+            <version>20.7</version>
+            <classifier>jdk16</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-slides</artifactId>
+            <version>20.7</version>
+        <classifier>javadoc</classifier>
+    </dependency>
+    </dependencies>
 </project>
