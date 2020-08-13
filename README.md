@@ -19,7 +19,7 @@ Directory | Description
 
 After you have downloaded the ZIP file from the [Download ZIP](https://github.com/aspose-slides/Aspose.Slides-for-Java/archive/master.zip) link above, please check the following link with detailed instructions on how to run these Source Code Examples.
 
-[How to Run the Examples](https://docs.aspose.com/display/slidesjava/How+to+Run+the+Examples)
+[How to Run the Examples](https://docs.aspose.com/slides/java/how-to-run-the-examples/)
 
 
 
@@ -28,6 +28,6 @@ After you have downloaded the ZIP file from the [Download ZIP](https://github.co
 + **Website:** [www.aspose.com](https://www.aspose.com)
 + **Product Home:** [Aspose.Slides for Java](https://products.aspose.com/slides/java)
 + **Download:** [Download Aspose.Slides for Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-slides/)
-+ **Documentation:** [Aspose.Slides for Java Documentation](https://docs.aspose.com/display/slidesjava/Home)
++ **Documentation:** [Aspose.Slides for Java Documentation](https://docs.aspose.com/slides/java/)
 + **Forum:** [Aspose.Slides for Java Forum](https://forum.aspose.com/c/slides)
 + **Blog:** [Aspose.Slides for Java Blog](https://blog.aspose.com/category/aspose-products/aspose-slides-product-family/)
