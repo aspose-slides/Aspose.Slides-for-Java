@@ -12,7 +12,7 @@
 Directory | Description
 --------- | -----------
 [Examples](https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Examples)  | A collection of Java examples that help you learn how to use product features.
-[Plugins](plugins)  | Plugins to help integrate Aspose.Slides for Java in different environments.
+[Plugins](https://github.com/aspose-slides/Aspose.Slides-for-Java/tree/master/Plugins)  | Plugins to help integrate Aspose.Slides for Java in different environments.
 
 
 ## PowerPoint File Manipulation via Java
