@@ -11,7 +11,7 @@
 
 Directory | Description
 --------- | -----------
-[Examples](https://github.com/asposeslides/Aspose_Slides_Java/tree/master/Examples)  | A collection of Java examples that help you learn how to use product features.
+[Examples](https://github.com/aspose-slides/Aspose.Slides-for-Java/tree/master/Examples)  | A collection of Java examples that help you learn how to use product features.
 [Plugins](https://github.com/aspose-slides/Aspose.Slides-for-Java/tree/master/Plugins)  | Plugins to help integrate Aspose.Slides for Java in different environments.
 
 
@@ -88,4 +88,4 @@ ashp.getFillFormat().setFillType(FillType.NoFill);
 pres.save(dir + "output.pptx", SaveFormat.Pptx);
 ```
 
-[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/slides/java) | [Docs](https://docs.aspose.com/slides/java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://apireference.aspose.com/java/slides) | [Examples](https://github.com/aspose-slides/Aspose.Slides-for-Java) | [Blog](https://blog.aspose.com/category/slides/) | [Free Support](https://forum.aspose.com/c/slides) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/slides/java) | [Docs](https://docs.aspose.com/slides/java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://apireference.aspose.com/slides/java) | [Examples](https://github.com/aspose-slides/Aspose.Slides-for-Java) | [Blog](https://blog.aspose.com/category/slides/) | [Free Support](https://forum.aspose.com/c/slides) | [Temporary License](https://purchase.aspose.com/temporary-license)
