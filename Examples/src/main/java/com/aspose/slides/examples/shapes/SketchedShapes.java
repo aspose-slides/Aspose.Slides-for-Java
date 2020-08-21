@@ -11,11 +11,8 @@ public class SketchedShapes {
 
     public static void main(String[] args)
     {
-        //ExStart:Chart_GetRange
+        //ExStart:SketchedShapes
         //Path for output presentation
-        String outPptxFile = RunExamples.OutPath + "SketchedShapes_out.pptx";
-        String outPngFile = RunExamples.OutPath + "SketchedShapes_out.png";
-
         String outPptxFile = RunExamples.OutPath + "SketchedShapes_out.pptx";
         String outPngFile = RunExamples.OutPath + "SketchedShapes_out.png";
 
@@ -41,7 +38,7 @@ public class SketchedShapes {
         {
             if (pres != null) pres.dispose();
         }
-        //ExEnd:Chart_GetRange
+        //ExEnd:SketchedShapes
     }
 
 }
