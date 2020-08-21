@@ -96,6 +96,7 @@ public class RunExamples
         //ChartDataCell_Formulas.main(null);
         //SpreadsheetFormulasOptions.main(null);
         //Chart_RecoverWorkbook.main(null);
+        //Chart_GetRange.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -238,6 +239,7 @@ public class RunExamples
         //ExtractEmbeddedFileDataFromOLEObject.main(null);
         //MathematicalShape.main(null);
         //ShapesAlignment.main(null);
+        //SketchedShapes.main(null);
 
         //// =====================================================
         ////                        Slides 
