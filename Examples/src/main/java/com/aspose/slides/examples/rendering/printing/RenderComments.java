@@ -41,7 +41,7 @@ public class RenderComments
             {
                 if (graphics != null) graphics.dispose();
             }
-            ImageIO.write(image, "png", new File(dataDir + "OutPresBitmap123.png"));
+            ImageIO.write(image, "png", new File(RunExamples.getOutPath() + "OutPresBitmap.png"));
         }
         finally
         {

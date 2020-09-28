@@ -5,7 +5,7 @@ import java.io.File;
 
 public class RunExamples
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         System.out.println("Open RunExamples.cs. \nIn Main() method uncomment the example that you want to run.");
         System.out.println("=====================================================");
@@ -137,6 +137,7 @@ public class RunExamples
         //FodpFormatConvertion.main(null);
         //Pdf1A_PdfUa_Conformance.main(null);
         //ExportMathParagraphToMathML.main(null);
+        //SvgFormattingController.main(null);
 
         // =====================================================
         //// =====================================================
@@ -348,6 +349,7 @@ public class RunExamples
         //RenderComments.main(null);
         //RenderingEmoji.main(null);
         //SupportOfDigitalSignature.main(null);
+        //Rendering3D.main(null);
 
         //// =====================================================
         ////                    Smart Arts
@@ -451,6 +453,7 @@ public class RunExamples
         //AddCustomPromptText.main(null);
         //SaveWithDefaaultRegularFont.main(null);
         //PortionGetRect.main(null);
+        //BulletFillFormatEffective.main(null);
 
         //// =====================================================
         ////                    VBA Macros
