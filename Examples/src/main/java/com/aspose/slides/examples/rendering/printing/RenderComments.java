@@ -1,9 +1,6 @@
 package com.aspose.slides.examples.rendering.printing;
 
-import com.aspose.slides.CommentsPositions;
-import com.aspose.slides.NotesCommentsLayoutingOptions;
-import com.aspose.slides.NotesPositions;
-import com.aspose.slides.Presentation;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 import javax.imageio.ImageIO;
@@ -20,14 +17,15 @@ public class RenderComments
         //ExStart:RenderComments
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Rendering();
+        String resultPath = RunExamples.getOutPath() + "OutPresBitmap.png";
+
         Presentation pres = new Presentation(dataDir + "presentation.pptx");
 
-        NotesCommentsLayoutingOptions opts = new NotesCommentsLayoutingOptions();
-        opts.setCommentsAreaColor(Color.RED);
-
-        opts.setCommentsAreaWidth(200);
-        opts.setCommentsPosition(CommentsPositions.Right);
-        opts.setNotesPosition(NotesPositions.BottomTruncated);
+        IRenderingOptions renderOptions = new RenderingOptions();
+        renderOptions.getNotesCommentsLayouting().setCommentsAreaColor(Color.RED);
+        renderOptions.getNotesCommentsLayouting().setCommentsAreaWidth(200);
+        renderOptions.getNotesCommentsLayouting().setCommentsPosition(CommentsPositions.Right);
+        renderOptions.getNotesCommentsLayouting().setNotesPosition(NotesPositions.BottomTruncated);
 
         try
         {
@@ -35,20 +33,20 @@ public class RenderComments
             java.awt.Graphics graphics = image.createGraphics();
             try
             {
-                pres.getSlides().get_Item(0).renderToGraphics(opts, (Graphics2D) graphics);
+                pres.getSlides().get_Item(0).renderToGraphics(renderOptions, (Graphics2D) graphics);
             }
             finally
             {
                 if (graphics != null) graphics.dispose();
             }
-            ImageIO.write(image, "png", new File(RunExamples.getOutPath() + "OutPresBitmap.png"));
+            ImageIO.write(image, "png", new File(resultPath));
         }
         finally
         {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:RenderComments
     }
-    //ExEnd:RenderComments
 }
     
 

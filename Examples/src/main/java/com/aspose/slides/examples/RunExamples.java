@@ -350,6 +350,7 @@ public class RunExamples
         //RenderingEmoji.main(null);
         //SupportOfDigitalSignature.main(null);
         //Rendering3D.main(null);
+        //RenderOptions.main(null);
 
         //// =====================================================
         ////                    Smart Arts
@@ -454,6 +455,7 @@ public class RunExamples
         //SaveWithDefaaultRegularFont.main(null);
         //PortionGetRect.main(null);
         //BulletFillFormatEffective.main(null);
+        //WordArt.main(null);
 
         //// =====================================================
         ////                    VBA Macros
