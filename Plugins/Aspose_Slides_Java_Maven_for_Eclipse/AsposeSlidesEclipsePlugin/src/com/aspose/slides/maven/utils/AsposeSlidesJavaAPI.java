@@ -24,8 +24,8 @@ package com.aspose.slides.maven.utils;
 public class AsposeSlidesJavaAPI extends AsposeJavaAPI {
 
     private final String _name = AsposeConstants.API_NAME;
-    private final String _mavenRepositoryURL = "http://maven.aspose.com/repository/ext-release-local/com/aspose/aspose-slides/";
-    private final String _remoteExamplesRepository = "https://github.com/asposeslides/Aspose_Slides_Java";
+    private final String _mavenRepositoryURL = "https://repository.aspose.com/repo/com/aspose/aspose-slides/";
+    private final String _remoteExamplesRepository = "https://github.com/aspose-slides/Aspose.Slides-for-Java";
 
     /**
      * @return the _name

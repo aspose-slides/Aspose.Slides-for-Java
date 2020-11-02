@@ -38,3 +38,4 @@ Out*/
 *.lic
 Data/*Out*
 /dist/
+/.vs

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Aspose.Slides Java (Maven) for Eclipse - Eclipse Update Site" url="http://cdn.aspose.com/marketplace/eclipse/java/maven/asposeslides/">
+   <description name="Aspose.Slides Java (Maven) for Eclipse - Eclipse Update Site" url="https://repository.aspose.com/plugins/aspose-slides/eclipse/slides-maven/20.10/site.xml">
       Aspose.Slides Maven Project wizard creates Maven Project for using Aspose.Slides for Java API within Eclipse IDE.
 Aspose.Slides for Java is a unique PowerPoint management component that enables Java applications to read, write and manipulate PowerPoint documents (PPT, PPTX, POS, PPS, POTX, PPSX) PDF, HTML and image file formats without using Microsoft PowerPoint.
 Aspose.Slides for Java is the first and only Java component that provides functionality to manage PowerPoint documents within your own applications. 
 Aspose.Slides Maven Project wizard fetch and configures the latest Maven dependency reference of Aspose.Slides for Java from the Aspose Cloud Maven Repository.
 The wizard also gives you option to download the Code Examples to use Aspose.Slides for Java API.
    </description>
-   <feature url="features/com.aspose.slides.java.maven_1.0.0.jar" id="com.aspose.slides.java.maven" version="1.0">
+   <feature url="features/com.aspose.slides.java.maven_20.10.0.jar" id="com.aspose.slides.java.maven" version="20.10">
       <category name="com.aspose.slides.java.maven.category"/>
    </feature>
    <category-def name="com.aspose.slides.java.maven.category" label="Aspose.Slides Java (Maven) for Eclipse"/>

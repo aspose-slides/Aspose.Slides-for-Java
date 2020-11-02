@@ -64,7 +64,11 @@ public class AsposeExampleSupport implements IRunnableWithProgress {
 		File destExampleCategoryPath = new File(destProjectExamplePath + File.separator + exampleCategory);
 
 		Path srcUtil = new File(srcExamplePath + File.separator + "Utils.java").toPath();
-		Path destUtil = new File(destProjectExamplePath + File.separator + "Utils.java").toPath();
+		Path destUtil = new File(destProjectExamplePath + File.separator + "Utils.java").toPath();		
+		if(!srcUtil.toFile().exists()) {
+			srcUtil = new File(srcExamplePath + File.separator + "RunExamples.java").toPath();
+			destUtil = new File(destProjectExamplePath + File.separator + "RunExamples.java").toPath();	
+		}			
 
 		File srcExampleResourceCategoryPath = new File(srcExampleResourcePath + File.separator + exampleCategory);
 		File destExampleResourceCategoryPath = new File(
@@ -73,10 +77,17 @@ public class AsposeExampleSupport implements IRunnableWithProgress {
 		String repositoryPOM_XML = System.getProperty("user.home") + File.separator + localExampleFolder
 				+ File.separator + AsposeConstants.MAVEN_POM_XML;
 
-		try {						
-			FileUtils.copyDirectory(srcExampleCategoryPath, destExampleCategoryPath);
-			Files.copy(srcUtil, destUtil, StandardCopyOption.REPLACE_EXISTING);
-			FileUtils.copyDirectory(srcExampleResourceCategoryPath, destExampleResourceCategoryPath);
+		try {			
+			
+			if(srcExampleCategoryPath.exists()) {
+				FileUtils.copyDirectory(srcExampleCategoryPath, destExampleCategoryPath);	
+			}					
+			if(srcUtil.toFile().exists()) {
+				Files.copy(srcUtil, destUtil, StandardCopyOption.REPLACE_EXISTING);	
+			}			
+			if(srcExampleResourceCategoryPath.exists()) {
+				FileUtils.copyDirectory(srcExampleResourceCategoryPath, destExampleResourceCategoryPath);				
+			}		
 
 			NodeList examplesNoneAsposeDependencies = AsposeMavenProjectManager.getInstance()
 					.getDependenciesFromPOM(repositoryPOM_XML, AsposeConstants.ASPOSE_GROUP_ID);
