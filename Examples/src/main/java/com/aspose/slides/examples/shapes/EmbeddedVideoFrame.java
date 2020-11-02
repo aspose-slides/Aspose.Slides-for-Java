@@ -16,6 +16,7 @@ public class EmbeddedVideoFrame
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Shapes();
         String videoDir = RunExamples.getDataDir_Video();
+        String resultPath = RunExamples.getOutPath() + "VideoFrame_out.pptx";
 
         // Create directory if it is not already present.
         boolean IsExists = new File(dataDir).exists();
@@ -30,7 +31,7 @@ public class EmbeddedVideoFrame
             ISlide sld = pres.getSlides().get_Item(0);
 
             // Embedd vide inside presentation
-            IVideo vid = pres.getVideos().addVideo(new FileInputStream(videoDir + "Wildlife.mp4"));
+            IVideo vid = pres.getVideos().addVideo(new FileInputStream(videoDir + "Wildlife.mp4"), LoadingStreamBehavior.ReadStreamAndRelease);
 
             // Add Video Frame
             IVideoFrame vf = sld.getShapes().addVideoFrame(50, 150, 300, 350, vid);
@@ -43,7 +44,7 @@ public class EmbeddedVideoFrame
             vf.setVolume(AudioVolumeMode.Loud);
 
             // Write the PPTX file to disk
-            pres.save(dataDir + "VideoFrame_out.pptx", SaveFormat.Pptx);
+            pres.save(resultPath, SaveFormat.Pptx);
         }
         finally
         {
