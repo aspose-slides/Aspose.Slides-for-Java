@@ -97,6 +97,7 @@ public class RunExamples
         //SpreadsheetFormulasOptions.main(null);
         //Chart_RecoverWorkbook.main(null);
         //Chart_GetRange.main(null);
+        //MapChart.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -171,6 +172,7 @@ public class RunExamples
         //AccessLayoutFormats.main(null);
         //ReadOnlyRecommended.main(null);
         //CheckPresentationProtection.main(null);
+        //CheckPasswordExample.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
@@ -456,6 +458,7 @@ public class RunExamples
         //PortionGetRect.main(null);
         //BulletFillFormatEffective.main(null);
         //WordArt.main(null);
+        //KeepTextFlat.main(null);
 
         //// =====================================================
         ////                    VBA Macros
