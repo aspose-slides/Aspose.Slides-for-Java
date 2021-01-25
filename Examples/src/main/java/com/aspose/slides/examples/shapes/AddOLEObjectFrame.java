@@ -25,29 +25,38 @@ public class AddOLEObjectFrame
 
         // Instantiate Prseetation class that represents the PPTX
         Presentation pres = new Presentation();
-
-        // Access the first slide
-        ISlide sld = pres.getSlides().get_Item(0);
-
-        // Load an cel file to stream
-        FileInputStream fs = new FileInputStream(dataDir + "book1.xlsx");
-        ByteArrayOutputStream mstream = new ByteArrayOutputStream();
-        byte[] buf = new byte[4096];
-
-        while (true)
+        try
         {
-            int bytesRead = fs.read(buf, 0, buf.length);
-            if (bytesRead <= 0)
-                break;
-            mstream.write(buf, 0, bytesRead);
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
+
+            // Load an cel file to stream
+            FileInputStream fs = new FileInputStream(dataDir + "book1.xlsx");
+            ByteArrayOutputStream mstream = new ByteArrayOutputStream();
+            byte[] buf = new byte[4096];
+
+            while (true)
+            {
+                int bytesRead = fs.read(buf, 0, buf.length);
+                if (bytesRead <= 0)
+                    break;
+                mstream.write(buf, 0, bytesRead);
+            }
+            // Create data object for embedding
+            IOleEmbeddedDataInfo dataInfo = new OleEmbeddedDataInfo(mstream.toByteArray(), "xlsx");
+
+            // Add an Ole Object Frame shape
+            IOleObjectFrame oleObjectFrame = sld.getShapes().addOleObjectFrame(0, 0, (float)pres.getSlideSize().getSize().getWidth(),
+                    (float)pres.getSlideSize().getSize().getHeight(), dataInfo);
+
+            //Write the PPTX to disk
+            pres.save(dataDir + "OleEmbed_out.pptx", SaveFormat.Pptx);
+        }
+        finally
+        {
+            if (pres != null) pres.dispose();
         }
 
-        // Add an Ole Object Frame shape
-        IOleEmbeddedDataInfo dataInfo = new OleEmbeddedDataInfo(mstream.toByteArray(), "xlsx");
-        IOleObjectFrame oof = sld.getShapes().addOleObjectFrame(0, 0, (float) pres.getSlideSize().getSize().getWidth(), (float) pres.getSlideSize().getSize().getHeight(), dataInfo);
-
-        //Write the PPTX to disk
-        pres.save(dataDir + "OleEmbed_out.pptx", SaveFormat.Pptx);
         //ExEnd:AddOLEObjectFrame
     }
 }

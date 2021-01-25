@@ -15,27 +15,46 @@ public class AccessOLEObjectFrame
     public static void main(String[] args) throws IOException
     {
         //ExStart:AccessOLEObjectFrame
+
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Shapes();
 
         // Load the PPTX to Presentation object
         Presentation pres = new Presentation(dataDir + "AccessingOLEObjectFrame.pptx");
-
-        // Access the first slide
-        ISlide sld = pres.getSlides().get_Item(0);
-
-        // Cast the shape to OleObjectFrame
-        OleObjectFrame oof = (OleObjectFrame) sld.getShapes().get_Item(0);
-
-        // Read the OLE Object and write it to disk
-        if (oof != null)
+        try
         {
-            FileOutputStream fstr = new FileOutputStream(new File(dataDir + "excelFromOLE_out.xlsx"));
-            byte[] buf = oof.getObjectData();
-            fstr.write(buf, 0, buf.length);
-            fstr.flush();
-            fstr.close();
+            // Access the first slide
+            ISlide sld = pres.getSlides().get_Item(0);
+
+            // Cast the shape to OleObjectFrame
+            OleObjectFrame oleObjectFrame = (OleObjectFrame) sld.getShapes().get_Item(0);
+
+            // Read the OLE Object and write it to disk
+            if (oleObjectFrame != null)
+            {
+                // Get embedded file data
+                byte[] data = oleObjectFrame.getEmbeddedFileData();
+
+                // Get embedded file extention
+                String fileExtention = oleObjectFrame.getEmbeddedFileExtension();
+
+                // Create path for saving the extracted file
+                String extractedPath = dataDir + "excelFromOLE_out" + fileExtention;
+
+                // Save extracted data
+                FileOutputStream fstr = new FileOutputStream(extractedPath);
+                try {
+                    fstr.write(data, 0, data.length);
+                } finally {
+                    fstr.close();
+                }
+            }
         }
+        finally
+        {
+            if (pres != null) pres.dispose();
+        }
+
         //ExEnd:AccessOLEObjectFrame
     }
 }

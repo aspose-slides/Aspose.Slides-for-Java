@@ -244,6 +244,11 @@ public class RunExamples
         //MathematicalShape.main(null);
         //ShapesAlignment.main(null);
         //SketchedShapes.main(null);
+        //GeometryShapeAddSegment.main(null);
+        //GeometryShapeRemoveSegment.main(null);
+        //GeometryShapeCreatesCustomGeometry.main(null);
+        //GeometryShapeCompositeObjects.main(null);
+        //GeometryShapeUsingShapeUtil.main(null);
 
         //// =====================================================
         ////                        Slides 
