@@ -1,9 +1,6 @@
 package com.aspose.slides.examples.shapes;
 
-import com.aspose.slides.GeometryShape;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
-import com.aspose.slides.ShapeType;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
