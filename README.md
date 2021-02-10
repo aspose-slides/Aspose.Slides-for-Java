@@ -1,3 +1,4 @@
+![GitHub all releases](https://img.shields.io/github/downloads/aspose-slides/Aspose.slides-for-Java/total) ![GitHub](https://img.shields.io/github/license/aspose-slides/Aspose.slides-for-java)
 # Java PowerPoint API
 
 [Aspose.Slides](https://products.aspose.com/slides/java) a Java PowerPoint API for presentation manipulation and management. It allows developers to read, write, convert and manipulate PowerPoint presentations in Java applications with the ability to manipulate all document elements such as slides, tables, text, charts, shapes, images and SmartArt diagrams and more.
