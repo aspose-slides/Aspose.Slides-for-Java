@@ -26,19 +26,19 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cells</artifactId>
-            <version>20.12</version>
+            <version>21.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-slides</artifactId>
-            <version>21.1</version>
+            <version>21.2</version>
             <classifier>jdk16</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-slides</artifactId>
-            <version>21.1</version>
+            <version>21.2</version>
         <classifier>javadoc</classifier>
     </dependency>
     </dependencies>
