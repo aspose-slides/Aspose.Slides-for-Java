@@ -33,11 +33,17 @@ public class AddAudioFrame
             FileInputStream fstr = new FileInputStream(dataDir + "sampleaudio.wav");
 
             // Add Audio Frame
-            IAudioFrame af = sld.getShapes().addAudioFrameEmbedded(50, 150, 100, 100, fstr);
+            IAudioFrame audioFrame = sld.getShapes().addAudioFrameEmbedded(50, 150, 100, 100, fstr);
+
+            // Set Audio to play across the slides
+            audioFrame.setPlayAcrossSlides(true);
+
+            // Set Audio to automatically rewind to start after playing
+            audioFrame.setRewindAudio(true);
 
             // Set Play Mode and Volume of the Audio
-            af.setPlayMode(AudioPlayModePreset.Auto);
-            af.setVolume(AudioVolumeMode.Loud);
+            audioFrame.setPlayMode(AudioPlayModePreset.Auto);
+            audioFrame.setVolume(AudioVolumeMode.Loud);
 
             //Write the PPTX file to disk
             pres.save(dataDir + "AudioFrameEmbed_out.pptx", SaveFormat.Pptx);

@@ -33,10 +33,10 @@ public class AccessOLEObjectFrame
             if (oleObjectFrame != null)
             {
                 // Get embedded file data
-                byte[] data = oleObjectFrame.getEmbeddedFileData();
+                byte[] data = oleObjectFrame.getEmbeddedData().getEmbeddedFileData();
 
                 // Get embedded file extention
-                String fileExtention = oleObjectFrame.getEmbeddedFileExtension();
+                String fileExtention = oleObjectFrame.getEmbeddedData().getEmbeddedFileExtension();
 
                 // Create path for saving the extracted file
                 String extractedPath = dataDir + "excelFromOLE_out" + fileExtention;

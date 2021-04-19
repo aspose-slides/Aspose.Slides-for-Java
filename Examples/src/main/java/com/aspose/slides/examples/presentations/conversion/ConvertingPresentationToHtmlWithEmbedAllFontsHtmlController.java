@@ -16,22 +16,17 @@ public class ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
             // exclude default presentation fonts
             String[] fontNameExcludeList = {"Calibri", "Arial"};
 
-
-            Paragraph para = new Paragraph();
-
-            EmbedAllFontsHtmlController embedFontsController = new EmbedAllFontsHtmlController(fontNameExcludeList);
-
             LinkAllFontsHtmlController linkcont = new LinkAllFontsHtmlController(fontNameExcludeList, "C:\\Windows\\Fonts\\");
 
             HtmlOptions htmlOptionsEmbed = new HtmlOptions();
             htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter(linkcont));
 
             pres.save("pres.html", SaveFormat.Html, htmlOptionsEmbed);
-            //ExEnd:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
         }
         finally
         {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
     }
 }

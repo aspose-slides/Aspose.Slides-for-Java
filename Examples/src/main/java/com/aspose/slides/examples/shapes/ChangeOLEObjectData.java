@@ -35,13 +35,11 @@ public class ChangeOLEObjectData
 
             if (ole != null)
             {
-                // Reading object data in Workbook
-                Workbook Wb;
-
-                ByteArrayInputStream msln = new ByteArrayInputStream(ole.getObjectData());
+                ByteArrayInputStream msln = new ByteArrayInputStream(ole.getEmbeddedData().getEmbeddedFileData());
                 try
                 {
-                    Wb = new Workbook(msln);
+                    // Reading object data in Workbook
+                    Workbook Wb = new Workbook(msln);
 
                     ByteArrayOutputStream msout = new ByteArrayOutputStream();
                     try
@@ -58,7 +56,9 @@ public class ChangeOLEObjectData
                         Wb.save(msout, so1);
 
                         // Changing Ole frame object data
-                        ole.setObjectData(msout.toByteArray());
+                        IOleEmbeddedDataInfo newData = new OleEmbeddedDataInfo(msout.toByteArray(),
+                                ole.getEmbeddedData().getEmbeddedFileExtension());
+                        ole.setEmbeddedData(newData);
                     }
                     finally
                     {

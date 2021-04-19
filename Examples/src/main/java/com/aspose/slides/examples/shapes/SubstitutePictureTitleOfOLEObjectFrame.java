@@ -1,9 +1,6 @@
 package com.aspose.slides.examples.shapes;
 
-import com.aspose.slides.IOleObjectFrame;
-import com.aspose.slides.IPPImage;
-import com.aspose.slides.ISlide;
-import com.aspose.slides.Presentation;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 import java.io.IOException;
@@ -29,7 +26,8 @@ public class SubstitutePictureTitleOfOLEObjectFrame
 
             // Add Ole objects
             byte[] allbytes = Files.readAllBytes(Paths.get(dataDir + "book1.xlsx"));
-            IOleObjectFrame oof = slide.getShapes().addOleObjectFrame(20, 20, 50, 50, "Excel.Sheet.12", allbytes);
+            IOleEmbeddedDataInfo dataInfo = new OleEmbeddedDataInfo(allbytes, "xlsx");
+            IOleObjectFrame oof = slide.getShapes().addOleObjectFrame(20, 20, 50, 50, dataInfo);
             oof.setObjectIcon(true);
 
             // Add image object

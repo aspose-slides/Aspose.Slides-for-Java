@@ -5,7 +5,9 @@ import com.aspose.slides.examples.RunExamples;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 
@@ -22,15 +24,14 @@ public class SettingDateFormatForCategoryAxis
             IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.Area, 50, 50, 450, 300);
 
             IChartDataWorkbook wb = chart.getChartData().getChartDataWorkbook();
-
             wb.clear(0);
 
             chart.getChartData().getCategories().clear();
             chart.getChartData().getSeries().clear();
-            chart.getChartData().getCategories().add(wb.getCell(0, "A2", convertToOADate(new Date(2015, 1, 1))));
-            chart.getChartData().getCategories().add(wb.getCell(0, "A3", convertToOADate(new Date(2016, 1, 1))));
-            chart.getChartData().getCategories().add(wb.getCell(0, "A4", convertToOADate(new Date(2017, 1, 1))));
-            chart.getChartData().getCategories().add(wb.getCell(0, "A5", convertToOADate(new Date(2018, 1, 1))));
+            chart.getChartData().getCategories().add(wb.getCell(0, "A2", convertToOADate(new GregorianCalendar(2015, 1, 1))));
+            chart.getChartData().getCategories().add(wb.getCell(0, "A3", convertToOADate(new GregorianCalendar(2016, 1, 1))));
+            chart.getChartData().getCategories().add(wb.getCell(0, "A4", convertToOADate(new GregorianCalendar(2017, 1, 1))));
+            chart.getChartData().getCategories().add(wb.getCell(0, "A5", convertToOADate(new GregorianCalendar(2018, 1, 1))));
 
             IChartSeries series = chart.getChartData().getSeries().add(ChartType.Line);
             series.getDataPoints().addDataPointForLineSeries(wb.getCell(0, "B2", 1));
@@ -40,7 +41,7 @@ public class SettingDateFormatForCategoryAxis
             chart.getAxes().getHorizontalAxis().setCategoryAxisType(CategoryAxisType.Date);
             chart.getAxes().getHorizontalAxis().setNumberFormatLinkedToSource(false);
             chart.getAxes().getHorizontalAxis().setNumberFormat("yyyy");
-            pres.save(dataDir + "test.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "test.pptx", SaveFormat.Pptx);
         }
         finally
         {
@@ -49,14 +50,14 @@ public class SettingDateFormatForCategoryAxis
         //ExEnd:SettingDateFormatForCategoryAxis
     }
 
-    public static String convertToOADate(Date date) throws ParseException
+    public static String convertToOADate(GregorianCalendar date) throws ParseException
     {
         double oaDate;
         SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
         java.util.Date baseDate = myFormat.parse("30 12 1899");
-        Long days = TimeUnit.DAYS.convert(date.getTime() - baseDate.getTime(), TimeUnit.MILLISECONDS);
+        Long days = TimeUnit.DAYS.convert(date.getTimeInMillis() - baseDate.getTime(), TimeUnit.MILLISECONDS);
 
-        oaDate = (double) days + ((double) date.getHours() / 24) + ((double) date.getMinutes() / (60 * 24)) + ((double) date.getSeconds() / (60 * 24 * 60));
+        oaDate = (double) days + ((double) date.get(Calendar.HOUR_OF_DAY) / 24) + ((double) date.get(Calendar.MINUTE) / (60 * 24)) + ((double) date.get(Calendar.SECOND) / (60 * 24 * 60));
         return String.valueOf(oaDate);
     }
 }

@@ -33,8 +33,8 @@ public class ExtractEmbeddedFileDataFromOLEObject
                     {
                         objectnum++;
                         OleObjectFrame oleFrame = (OleObjectFrame) shape;
-                        byte[] data = oleFrame.getEmbeddedFileData();
-                        String fileExtention = oleFrame.getEmbeddedFileExtension();
+                        byte[] data = oleFrame.getEmbeddedData().getEmbeddedFileData();
+                        String fileExtention = oleFrame.getEmbeddedData().getEmbeddedFileExtension();
                         String extractedPath = dataDir + "ExtractedObject_out" + objectnum + fileExtention;
                         FileOutputStream fs = new FileOutputStream(extractedPath);
                         fs.write(data, 0, data.length);

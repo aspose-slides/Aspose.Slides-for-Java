@@ -13,22 +13,37 @@ class ShapesAlignment
         Presentation pres = new Presentation();
         try
         {
-            // Create some shapes
             ISlide slide = pres.getSlides().get_Item(0);
-            IAutoShape shape1 = slide.getShapes().addAutoShape(ShapeType.Rectangle, 100, 100, 100, 100);
-            IAutoShape shape2 = slide.getShapes().addAutoShape(ShapeType.Rectangle, 250, 200, 100, 100);
-            IAutoShape shape3 = slide.getShapes().addAutoShape(ShapeType.Rectangle, 400, 300, 100, 100);
+            // Create some shapes
+            slide.getShapes().addAutoShape(ShapeType.Rectangle, 100, 100, 100, 100);
+            slide.getShapes().addAutoShape(ShapeType.Rectangle, 200, 200, 100, 100);
+            slide.getShapes().addAutoShape(ShapeType.Rectangle, 300, 300, 100, 100);
+            // Aligning all shapes within IBaseSlide.
+            SlideUtil.alignShapes(ShapesAlignmentType.AlignBottom, true, pres.getSlides().get_Item(0));
 
-            // Here we align two shapes using their indexes
-            SlideUtil.alignShapes(ShapesAlignmentType.AlignMiddle, true, slide, new int[]
-                    {
-                            slide.getShapes().indexOf(shape1),
-                            slide.getShapes().indexOf(shape2)
-                    });
+            slide = pres.getSlides().addEmptySlide(slide.getLayoutSlide());
+            // Add group shape
+            IGroupShape groupShape = slide.getShapes().addGroupShape();
+            // Create some shapes to the group shape
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 350, 50, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 450, 150, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 550, 250, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 650, 350, 50, 50);
+            // Aligning all shapes within IGroupShape.
+            SlideUtil.alignShapes(ShapesAlignmentType.AlignLeft, false, groupShape);
 
-            // Here we aling all shapes int the slide
-            SlideUtil.alignShapes(ShapesAlignmentType.AlignMiddle, true, pres.getSlides().get_Item(0).getShapes());
+            slide = pres.getSlides().addEmptySlide(slide.getLayoutSlide());
+            // Add group shape
+            groupShape = slide.getShapes().addGroupShape();
+            // Create some shapes to the group shape
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 350, 50, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 450, 150, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 550, 250, 50, 50);
+            groupShape.getShapes().addAutoShape(ShapeType.Rectangle, 650, 350, 50, 50);
+            // Aligning shapes with specified indexes within IGroupShape.
+            SlideUtil.alignShapes(ShapesAlignmentType.AlignLeft, false, groupShape, new int[] { 0, 2 });
 
+            // Save presentation
             pres.save(outpptxFile, SaveFormat.Pptx);
         }
         finally
