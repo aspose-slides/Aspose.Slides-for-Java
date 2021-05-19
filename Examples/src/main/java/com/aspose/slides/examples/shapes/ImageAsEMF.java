@@ -22,7 +22,7 @@ public class ImageAsEMF
         options.setVerticalResolution(200);
         options.setImageType(ImageType.EMF);
 
-//Save the workbook to stream
+        //Save the workbook to stream
         SheetRender sr = new SheetRender(sheet, options);
         Presentation pres = new Presentation();
         pres.getSlides().removeAt(0);

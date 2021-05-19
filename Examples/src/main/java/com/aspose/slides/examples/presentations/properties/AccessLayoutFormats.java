@@ -8,7 +8,6 @@ public class AccessLayoutFormats
 {
     public static void main(String[] args)
     {
-
         //ExStart:AccessLayoutFormats
 
         // The path to the documents directory.

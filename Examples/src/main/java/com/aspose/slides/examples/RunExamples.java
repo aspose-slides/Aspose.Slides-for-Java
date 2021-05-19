@@ -174,6 +174,7 @@ public class RunExamples
         //ReadOnlyRecommended.main(null);
         //CheckPresentationProtection.main(null);
         //CheckPasswordExample.main(null);
+        //RootDirectoryClsId.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
@@ -249,6 +250,8 @@ public class RunExamples
         //GeometryShapeCreatesCustomGeometry.main(null);
         //GeometryShapeCompositeObjects.main(null);
         //GeometryShapeUsingShapeUtil.main(null);
+        //CreateZoomFrame.main(null);
+        //CreateSummaryZoom.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -338,6 +341,7 @@ public class RunExamples
         //// =====================================================
 
         //RemoveHyperlinks.main(null);
+        //MacroHyperlink.main(null);
 
         //// =====================================================
         ////                    Slides - Media
