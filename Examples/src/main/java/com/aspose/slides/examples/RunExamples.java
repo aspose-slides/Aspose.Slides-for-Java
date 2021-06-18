@@ -140,6 +140,7 @@ public class RunExamples
         //ExportMathParagraphToMathML.main(null);
         //SvgFormattingController.main(null);
         //PdfImportExample.main(null);
+        //ConvertToXaml.main(null);
 
         // =====================================================
         //// =====================================================
@@ -252,6 +253,7 @@ public class RunExamples
         //GeometryShapeUsingShapeUtil.main(null);
         //CreateZoomFrame.main(null);
         //CreateSummaryZoom.main(null);
+        //AnimationTargetShapes.main(null);
 
         //// =====================================================
         ////                        Slides 
