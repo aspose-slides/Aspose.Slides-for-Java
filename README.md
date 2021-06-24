@@ -89,4 +89,4 @@ ashp.getFillFormat().setFillType(FillType.NoFill);
 pres.save(dir + "output.pptx", SaveFormat.Pptx);
 ```
 
-[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/slides/java) | [Docs](https://docs.aspose.com/slides/java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://apireference.aspose.com/slides/java) | [Examples](https://github.com/aspose-slides/Aspose.Slides-for-Java) | [Blog](https://blog.aspose.com/category/slides/) | [Free Support](https://forum.aspose.com/c/slides) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/slides/java) | [Docs](https://docs.aspose.com/slides/java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://apireference.aspose.com/slides/java) | [Examples](https://github.com/aspose-slides/Aspose.Slides-for-Java) | [Blog](https://blog.aspose.com/category/slides/) | [Search](https://search.aspose.com/) | [Free Support](https://forum.aspose.com/c/slides) | [Temporary License](https://purchase.aspose.com/temporary-license)
