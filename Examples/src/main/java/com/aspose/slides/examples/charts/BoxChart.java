@@ -51,8 +51,6 @@ public class BoxChart
         {
             if (pres != null) pres.dispose();
         }
-
-
     }
     //ExEnd:BoxChart
 }

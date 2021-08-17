@@ -98,6 +98,7 @@ public class RunExamples
         //Chart_RecoverWorkbook.main(null);
         //Chart_GetRange.main(null);
         //MapChart.main(null);
+        //CalculateFormulas.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -141,6 +142,7 @@ public class RunExamples
         //SvgFormattingController.main(null);
         //PdfImportExample.main(null);
         //ConvertToXaml.main(null);
+        //ConvertToGif.main(null);
 
         // =====================================================
         //// =====================================================
