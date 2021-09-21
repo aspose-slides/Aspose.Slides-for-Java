@@ -99,6 +99,7 @@ public class RunExamples
         //Chart_GetRange.main(null);
         //MapChart.main(null);
         //CalculateFormulas.main(null);
+        //WorksheetsExample.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -143,6 +144,7 @@ public class RunExamples
         //PdfImportExample.main(null);
         //ConvertToXaml.main(null);
         //ConvertToGif.main(null);
+        //ConvertToHtml5.main(null);
 
         // =====================================================
         //// =====================================================
@@ -256,6 +258,7 @@ public class RunExamples
         //CreateZoomFrame.main(null);
         //CreateSummaryZoom.main(null);
         //AnimationTargetShapes.main(null);
+        //DuotoneEffectsPVI.main(null);
 
         //// =====================================================
         ////                        Slides 
