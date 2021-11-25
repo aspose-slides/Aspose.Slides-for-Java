@@ -9,8 +9,9 @@ public class MathematicalShape
     public static void main(String[] args)
     {
         //Path for output presentation
-        String outpptxFile = RunExamples.getOutPath() + "MathematicalShape_out.pptx";
+        String outPptxFile = RunExamples.getOutPath() + "MathematicalShape_out.pptx";
 
+        //ExStart:MathematicalShape
         Presentation pres = new Presentation();
         try
         {
@@ -33,12 +34,13 @@ public class MathematicalShape
             // Add mathematical expression to the mathematical paragraph.
             mathParagraph.add(mathBlock);
 
-            pres.save(outpptxFile, SaveFormat.Pptx);
+            pres.save(outPptxFile, SaveFormat.Pptx);
         }
         finally
         {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:MathematicalShape
     }
 }
 

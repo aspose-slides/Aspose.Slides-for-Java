@@ -248,6 +248,7 @@ public class RunExamples
         //SetFileTypeForAnEmbeddingObject.main(null);
         //ExtractEmbeddedFileDataFromOLEObject.main(null);
         //MathematicalShape.main(null);
+        //MathShape_GetChildren.main(null);
         //ShapesAlignment.main(null);
         //SketchedShapes.main(null);
         //GeometryShapeAddSegment.main(null);
@@ -330,6 +331,7 @@ public class RunExamples
         //AddSlideComments.main(null);
         //AccessSlideComments.main(null);
         //AddParentComments.main(null);
+        //ModernComments.main(null);
 
         //// =====================================================
         ////                    Slides - Layout

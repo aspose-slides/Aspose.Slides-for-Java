@@ -25,6 +25,7 @@ public class SpreadsheetFormulasOptions
 
             // Use the Formula property of the IChartDataCell interface to write a formula in a cell.
             cell.setFormula("FINDB(\"ス\", \"テキスト\")");
+            workbook.calculateFormulas();
 
             //Check calculation.
             if (Integer.parseInt(cell.getValue().toString()) == 5)

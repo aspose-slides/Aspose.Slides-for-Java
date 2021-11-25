@@ -18,12 +18,13 @@ public class InterlopShapeID
             // Getting unique shape identifier in slide scope
             long officeInteropShapeId = presentation.getSlides().get_Item(0).getShapes().get_Item(0).getOfficeInteropShapeId();
 
-            //ExEnd:InterlopShapeID
+
         }
         finally
         {
             if (presentation != null) presentation.dispose();
         }
     }
+    //ExEnd:InterlopShapeID
 }
 

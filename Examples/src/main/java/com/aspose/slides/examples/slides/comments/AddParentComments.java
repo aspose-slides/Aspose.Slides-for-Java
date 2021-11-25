@@ -13,8 +13,8 @@ public class AddParentComments
     {
 
         //ExStart:AddParentComments
-        // The path to the documents directory.
-        String dataDir = RunExamples.getDataDir_Slides_Presentations_Comments();
+        // The path to the output directory.
+        String outPptxFile = RunExamples.getOutPath();
 
         Presentation pres = new Presentation();
         try
@@ -58,12 +58,12 @@ public class AddParentComments
                 System.out.println();
             }
 
-            pres.save(dataDir + "parent_comment.pptx", SaveFormat.Pptx);
+            pres.save(outPptxFile + "parent_comment.pptx", SaveFormat.Pptx);
 
             // Remove comment1 and all its replies
             comment1.remove();
 
-            pres.save(dataDir + "remove_comment.pptx", SaveFormat.Pptx);
+            pres.save(outPptxFile + "remove_comment.pptx", SaveFormat.Pptx);
         }
         finally
         {

@@ -23,6 +23,7 @@ public class ChartDataCell_Formulas
 
             IChartDataCell cell2 = workbook.getCell(0, "C2");
             cell2.setR1C1Formula("MAX(R2C6:R5C8) / 3");
+            workbook.calculateFormulas();
 
             presentation.save(outpptxFile, SaveFormat.Pptx);
         }

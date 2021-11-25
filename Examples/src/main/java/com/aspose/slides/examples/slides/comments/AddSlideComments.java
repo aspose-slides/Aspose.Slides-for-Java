@@ -12,8 +12,8 @@ public class AddSlideComments
     public static void main(String[] args)
     {
         //ExStart:AddSlideComments
-        // The path to the documents directory.
-        String dataDir = RunExamples.getDataDir_Slides_Presentations_Comments();
+        // The path to the output file.
+        String outPptxFile = RunExamples.getOutPath() + "Comments_out.pptx";
 
         // Instantiate Presentation class
         Presentation presentation = new Presentation();
@@ -45,7 +45,7 @@ public class AddSlideComments
             // Accessin the comment at index 0 for slide 1
             String str = Comments[0].getText();
 
-            presentation.save(dataDir + "Comments_out.pptx", SaveFormat.Pptx);
+            presentation.save(outPptxFile + "Comments_out.pptx", SaveFormat.Pptx);
 
             if (Comments.length > 0)
             {
