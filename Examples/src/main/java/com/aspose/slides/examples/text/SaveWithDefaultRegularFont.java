@@ -15,7 +15,8 @@ public class SaveWithDefaultRegularFont
         String dataDir = RunExamples.getDataDir_Text();
         String outPath = RunExamples.getOutPath();
 
-        Presentation pres = new Presentation(dataDir + "SaveOptionsDefaultRegularFont.pptx");
+        //ExStart:SaveWithDefaultRegularFont
+        Presentation pres = new Presentation(dataDir + "DefaultFonts.pptx");
         try
         {
             HtmlOptions htmlOpts = new HtmlOptions();
@@ -32,5 +33,6 @@ public class SaveWithDefaultRegularFont
         {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:SaveWithDefaultRegularFont
     }
 }

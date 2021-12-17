@@ -258,6 +258,7 @@ public class RunExamples
         //GeometryShapeUsingShapeUtil.main(null);
         //CreateZoomFrame.main(null);
         //CreateSummaryZoom.main(null);
+        //CreateSectionZoom.main(null);
         //AnimationTargetShapes.main(null);
         //DuotoneEffectsPVI.main(null);
 
@@ -430,7 +431,7 @@ public class RunExamples
         //DefaultFonts.main(null);
         //ExportingHTMLText.main(null);
         //EmbedFontsInHtml.main(null);
-        //FontFamily.main(null);
+        //FontFamilyExample.main(null);
         //EndParaGraphProperties.main(null);
         //FontProperties.main(null);
         //ImportingHTMLText.main(null);

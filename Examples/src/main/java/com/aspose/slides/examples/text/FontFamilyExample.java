@@ -7,11 +7,10 @@ import java.awt.*;
 import java.io.File;
 
 
-public class FontFamily
+public class FontFamilyExample
 {
     public static void main(String[] args)
     {
-        //ExStart:FontFamily
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Text();
 
@@ -20,6 +19,7 @@ public class FontFamily
         if (!IsExists)
             new File(dataDir).mkdirs();
 
+        //ExStart:FontFamily
         // Instantiate Presentation Class
         Presentation pres = new Presentation();
         try

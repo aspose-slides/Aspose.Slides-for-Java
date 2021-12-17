@@ -8,20 +8,21 @@ public class ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
 {
     public static void main(String[] args)
     {
-        //ExStart:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
         String dataDir = RunExamples.getDataDir_Conversion();
+
+        //ExStart:ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController
         Presentation pres = new Presentation(dataDir + "presentation.pptx");
         try
         {
             // exclude default presentation fonts
-            String[] fontNameExcludeList = {"Calibri", "Arial"};
+            String[] fontNameExcludeList = {  };
 
             LinkAllFontsHtmlController linkcont = new LinkAllFontsHtmlController(fontNameExcludeList, "C:\\Windows\\Fonts\\");
 
             HtmlOptions htmlOptionsEmbed = new HtmlOptions();
             htmlOptionsEmbed.setHtmlFormatter(HtmlFormatter.createCustomFormatter(linkcont));
 
-            pres.save("pres.html", SaveFormat.Html, htmlOptionsEmbed);
+            pres.save(RunExamples.getOutPath() + "pres.html", SaveFormat.Html, htmlOptionsEmbed);
         }
         finally
         {
