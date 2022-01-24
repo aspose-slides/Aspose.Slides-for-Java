@@ -26,11 +26,17 @@ public class AddEmbeddedFonts
             boolean embeddedFontsContainsFont = false;
             for (int i = 0; i < embeddedFonts.length; i++)
             {
-                if (embeddedFonts.equals(font)) embeddedFontsContainsFont = true;
+                if (embeddedFonts[i].equals(font))
+                {
+                    embeddedFontsContainsFont = true;
+                    break;
+                }
             }
             if (!embeddedFontsContainsFont)
             {
                 presentation.getFontsManager().addEmbeddedFont(font, EmbedFontCharacters.All);
+
+                embeddedFonts = presentation.getFontsManager().getEmbeddedFonts();
             }
         }
 

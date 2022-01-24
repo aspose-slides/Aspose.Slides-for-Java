@@ -37,12 +37,12 @@ public class SwitchChartRowColumns
 
             // Saving presentation
             pres.save(RunExamples.getOutPath() + "SwitchChartRowColumns_out.pptx", SaveFormat.Pptx);
-            //ExEnd:SwitchChartRowColumns
         }
         finally
         {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:SwitchChartRowColumns
     }
 }
 

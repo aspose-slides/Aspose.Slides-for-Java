@@ -14,7 +14,7 @@
             <id>aspose-maven-repository</id>
             <name>Aspose maven repository</name>
             <!--url>http://maven-qa.aspose.com/repository/ext-release-local/</url!-->
-            <url>http://repository.aspose.com/repo/</url>
+            <url>https://repository.aspose.com/repo</url>
         </repository>
         <repository>
             <id>com.springsource.repository.bundles.external</id>
@@ -26,19 +26,19 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cells</artifactId>
-            <version>21.11</version>
+            <version>21.12</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-slides</artifactId>
-            <version>21.12</version>
+            <version>22.1</version>
             <classifier>jdk16</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-slides</artifactId>
-            <version>21.12</version>
+            <version>22.1</version>
             <classifier>javadoc</classifier>
         </dependency>
     </dependencies>
