@@ -262,6 +262,7 @@ public class RunExamples
         //CreateSectionZoom.main(null);
         //AnimationTargetShapes.main(null);
         //DuotoneEffectsPVI.main(null);
+        //IsTextShape.main(null);
 
         //// =====================================================
         ////                        Slides 
