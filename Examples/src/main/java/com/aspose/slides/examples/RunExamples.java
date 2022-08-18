@@ -181,6 +181,7 @@ public class RunExamples
         //CheckPresentationProtection.main(null);
         //CheckPasswordExample.main(null);
         //RootDirectoryClsId.main(null);
+        //PresentationSlideShowSetup.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
@@ -362,6 +363,7 @@ public class RunExamples
 
         //ExtractVideo.main(null);
         //ExtractAudio.main(null);
+        //ExtractAudioFromTimeline.main(null);
 
         //// =====================================================
         ////            Rendering - Printing a Slide

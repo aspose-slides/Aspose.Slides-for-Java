@@ -46,6 +46,7 @@ public class DuotoneEffectsPVI
             System.out.println("Duotone effective color1: " + duotoneEffective.getColor1());
             System.out.println("Duotone effective color2: " + duotoneEffective.getColor2());
         } catch(IOException e) {
+            e.printStackTrace();
         } finally {
             if (presentation != null) presentation.dispose();
         }

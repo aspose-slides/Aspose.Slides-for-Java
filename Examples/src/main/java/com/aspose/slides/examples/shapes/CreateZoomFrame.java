@@ -65,6 +65,7 @@ public class CreateZoomFrame
             // Save the presentation
             pres.save(resultPath, SaveFormat.Pptx);
         } catch (IOException e) {
+            e.printStackTrace();
         } finally {
             if (pres != null) pres.dispose();
         }

@@ -30,7 +30,7 @@ public class KeepTextFlat
             ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(4 / 3f, 4 / 3f), "PNG",
                     new File(resultPath));
         } catch (IOException e) {
-            //IOException
+            e.printStackTrace();
         } finally {
             if (pres != null) pres.dispose();
         }
