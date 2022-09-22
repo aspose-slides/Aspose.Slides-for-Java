@@ -319,6 +319,7 @@ public class RunExamples
         //ManagingBetterSlideTransitions.main(null);
         //SetTransitionEffects.main(null);
         //SupportOfMorphTransition.main(null);
+        //AnimationRepeatOnSlide.main(null);
 
         //// =====================================================
         ////                    Slides - Thumbnail
@@ -430,7 +431,7 @@ public class RunExamples
         //SetFirstRowAsHeader.main(null);
 
         //// =====================================================
-        //// Text
+        ////                     Text
         //// =====================================================
 
         //DefaultFonts.main(null);
@@ -484,6 +485,7 @@ public class RunExamples
         //BulletFillFormatEffective.main(null);
         //WordArt.main(null);
         //KeepTextFlat.main(null);
+        //GetFontsSubstitution.main(null);
 
         //// =====================================================
         ////                    VBA Macros
