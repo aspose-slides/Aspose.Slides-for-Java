@@ -101,6 +101,7 @@ public class RunExamples
         //CalculateFormulas.main(null);
         //WorksheetsExample.main(null);
         //TimeUnitTypeEnum.main(null);
+        //LeaderLineColor.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -146,6 +147,7 @@ public class RunExamples
         //ConvertToXaml.main(null);
         //ConvertToGif.main(null);
         //ConvertToHtml5.main(null);
+        //SvgConvertionOptions.main(null);
 
         // =====================================================
         //// =====================================================
@@ -486,6 +488,7 @@ public class RunExamples
         //WordArt.main(null);
         //KeepTextFlat.main(null);
         //GetFontsSubstitution.main(null);
+        //EmbeddedFontCompression.main(null);
 
         //// =====================================================
         ////                    VBA Macros

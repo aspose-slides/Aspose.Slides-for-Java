@@ -8,8 +8,9 @@ public class InvertIfNegativeForIndividualSeries
 {
     public static void main(String[] args)
     {
-        //ExStart:InvertIfNegativeForIndividualSeries
         String dataDir = RunExamples.getDataDir_Charts();
+
+        //ExStart:InvertIfNegativeForIndividualSeries
         Presentation pres = new Presentation();
         try
         {
@@ -33,8 +34,7 @@ public class InvertIfNegativeForIndividualSeries
         {
             if (pres != null) pres.dispose();
         }
-
+        //ExEnd:InvertIfNegativeForIndividualSeries
     }
 
-    //ExEnd:InvertIfNegativeForIndividualSeries
 }
