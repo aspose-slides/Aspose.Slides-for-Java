@@ -113,6 +113,7 @@ public class RunExamples
 
         //ConvertingPresentationToHtmlWithEmbedAllFontsHtmlController.main(null);
         //ConvertToPDF.main(null);
+        //ConvertToPdfCompliance.main(null);
         //ConvertToPDFWithHiddenSlides.main(null);
         //CustomOptionsPDFConversion.main(null);
         //ConvertPresentationToPasswordProtectedPDF.main(null);
@@ -148,6 +149,7 @@ public class RunExamples
         //ConvertToGif.main(null);
         //ConvertToHtml5.main(null);
         //SvgConvertionOptions.main(null);
+        //ConvertToAnimation.main(null);
 
         // =====================================================
         //// =====================================================
@@ -352,6 +354,7 @@ public class RunExamples
         //HeaderFooterManager.main(null);
         //CheckSlidesComparison.main(null);
         //RemoveUnusedLayoutMaster.main(null);
+        //GetBasePlacehorderExample.main(null);
 
         //// =====================================================
         ////                    Slides - HyperLink
@@ -367,6 +370,9 @@ public class RunExamples
         //ExtractVideo.main(null);
         //ExtractAudio.main(null);
         //ExtractAudioFromTimeline.main(null);
+        //ExtractAudioFromHyperLink.main(null);
+        //StopPreviousSoundExample.main(null);
+
 
         //// =====================================================
         ////            Rendering - Printing a Slide
@@ -610,7 +616,7 @@ public class RunExamples
 
     public static String getDataDir_Slides_Presentations_Layout()
     {
-        return getDataDir_Data() + "com/aspose/slides/examples/Layout" + File.separator;
+        return getDataDir_Data() + "Slides" + File.separator + "Layout" + File.separator;
     }
 
     public static String getDataDir_Slides_Presentations_Hyperlink()
