@@ -15,6 +15,7 @@ public class CreateATableFromScratchInASlide
 
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Tables();
+        final String outPath = RunExamples.getOutPath();
 
         // Instantiate Presentation class that represents PPTX file
         Presentation pres = new Presentation();
@@ -35,21 +36,21 @@ public class CreateATableFromScratchInASlide
             {
                 for (int cell = 0; cell < tbl.getRows().get_Item(row).size(); cell++)
                 {
-                    tbl.get_Item(row, cell).getCellFormat().getBorderTop().getFillFormat().setFillType(FillType.Solid);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderTop().getFillFormat().getSolidFillColor().setColor(Color.RED);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderTop().setWidth(5);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderTop().getFillFormat().setFillType(FillType.Solid);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderTop().getFillFormat().getSolidFillColor().setColor(Color.RED);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderTop().setWidth(5);
 
-                    tbl.get_Item(row, cell).getCellFormat().getBorderBottom().getFillFormat().setFillType((FillType.Solid));
-                    tbl.get_Item(row, cell).getCellFormat().getBorderBottom().getFillFormat().getSolidFillColor().setColor(Color.RED);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderBottom().setWidth(5);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderBottom().getFillFormat().setFillType((FillType.Solid));
+                    tbl.get_Item(cell, row).getCellFormat().getBorderBottom().getFillFormat().getSolidFillColor().setColor(Color.RED);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderBottom().setWidth(5);
 
-                    tbl.get_Item(row, cell).getCellFormat().getBorderLeft().getFillFormat().setFillType(FillType.Solid);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderLeft().getFillFormat().getSolidFillColor().setColor(Color.RED);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderLeft().setWidth(5);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderLeft().getFillFormat().setFillType(FillType.Solid);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderLeft().getFillFormat().getSolidFillColor().setColor(Color.RED);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderLeft().setWidth(5);
 
-                    tbl.get_Item(row, cell).getCellFormat().getBorderRight().getFillFormat().setFillType(FillType.Solid);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderRight().getFillFormat().getSolidFillColor().setColor(Color.RED);
-                    tbl.get_Item(row, cell).getCellFormat().getBorderRight().setWidth(5);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderRight().getFillFormat().setFillType(FillType.Solid);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderRight().getFillFormat().getSolidFillColor().setColor(Color.RED);
+                    tbl.get_Item(cell, row).getCellFormat().getBorderRight().setWidth(5);
                 }
             }
             // Merge cells 1 & 2 of row 1
@@ -59,7 +60,7 @@ public class CreateATableFromScratchInASlide
             tbl.get_Item(0, 0).getTextFrame().setText("Merged Cells");
 
             // Save PPTX to Disk
-            pres.save(dataDir + "table.pptx", SaveFormat.Pptx);
+            pres.save(outPath + "table.pptx", SaveFormat.Pptx);
         }
         finally
         {

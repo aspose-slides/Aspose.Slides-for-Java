@@ -17,13 +17,14 @@ public class AddOLEObjectFrame
 
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Shapes();
+        String outPath = RunExamples.getOutPath();
 
         // Create directory if it is not already present.
         boolean IsExists = new File(dataDir).exists();
         if (!IsExists)
             new File(dataDir).mkdirs();
 
-        // Instantiate Prseetation class that represents the PPTX
+        // Instantiate Presentation class that represents the PPTX
         Presentation pres = new Presentation();
         try
         {
@@ -50,7 +51,7 @@ public class AddOLEObjectFrame
                     (float)pres.getSlideSize().getSize().getHeight(), dataInfo);
 
             //Write the PPTX to disk
-            pres.save(dataDir + "OleEmbed_out.pptx", SaveFormat.Pptx);
+            pres.save(outPath + "OleEmbed_out.pptx", SaveFormat.Pptx);
         }
         finally
         {

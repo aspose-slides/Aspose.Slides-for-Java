@@ -16,6 +16,7 @@ public class CreateSlidesSVGImage
         //ExStart:CreateSlidesSVGImage
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Slides_Presentations_CRUD();
+        String outPath = RunExamples.getOutPath();
 
         // Instantiate a Presentation class that represents the presentation file
 
@@ -33,7 +34,7 @@ public class CreateSlidesSVGImage
             sld.writeAsSvg(svgStream);
 
             // Save memory stream to file
-            FileOutputStream fileStream = new FileOutputStream(dataDir + "Aspose_out.svg");
+            FileOutputStream fileStream = new FileOutputStream(outPath + "Aspose_out.svg");
             try
             {
                 svgStream.writeTo(fileStream);

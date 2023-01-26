@@ -13,6 +13,7 @@ public class ManageSimpleSlideTransitions
         //ExStart:ManageSimpleSlideTransitions
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Slides_Presentations_Transitions();
+        final String outPath = RunExamples.getOutPath();
 
         // Instantiate Presentation class to load the source presentation file
         Presentation presentation = new Presentation(dataDir + "AccessSlides.pptx");
@@ -25,7 +26,7 @@ public class ManageSimpleSlideTransitions
             presentation.getSlides().get_Item(1).getSlideShowTransition().setType(TransitionType.Comb);
 
             // Write the presentation to disk
-            presentation.save(dataDir + "SampleTransition_out.pptx", SaveFormat.Pptx);
+            presentation.save(outPath + "SampleTransition_out.pptx", SaveFormat.Pptx);
         }
         finally
         {
