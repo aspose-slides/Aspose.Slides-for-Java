@@ -10,6 +10,7 @@ public class RenderingEmoji
     //ExStart:RenderingEmoji
     public static void main(String[] args)
     {
+        
         String dataDir = RunExamples.getDataDir_Rendering();
 
         Presentation pres = new Presentation(dataDir + "input.pptx");

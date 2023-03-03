@@ -28,7 +28,7 @@ public class SpreadsheetFormulasOptions
             workbook.calculateFormulas();
 
             //Check calculation.
-            if (Integer.parseInt(cell.getValue().toString()) == 5)
+            if (Double.parseDouble(cell.getValue().toString()) == 5)
             {
                 System.out.println("Calculated value = 5.");
             } else

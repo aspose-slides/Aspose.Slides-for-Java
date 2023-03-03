@@ -44,7 +44,7 @@ public class DisplayPercentageAsLabels
                     dataPontPercent = (double) (series.getDataPoints().get_Item(j).getValue().getData()) / total_for_Cat[j] * 100;
 
                     IPortion port = new Portion();
-                    port.setText(String.format("{0:F2} %", dataPontPercent));
+                    port.setText(String.format("{0:F2} %f", dataPontPercent));
                     port.getPortionFormat().setFontHeight(8f);
                     lbl.getTextFrameForOverriding().setText("");
                     IParagraph para = lbl.getTextFrameForOverriding().getParagraphs().get_Item(0);

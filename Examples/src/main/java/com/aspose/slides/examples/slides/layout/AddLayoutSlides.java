@@ -6,7 +6,7 @@ import com.aspose.slides.examples.RunExamples;
 
 public class AddLayoutSlides
 {
-    public static void Run()
+    public static void main(String[] args)
     {
         //ExStart:AddLayoutSlides
         // The path to the documents directory.
