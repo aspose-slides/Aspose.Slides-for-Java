@@ -102,6 +102,7 @@ public class RunExamples
         //WorksheetsExample.main(null);
         //TimeUnitTypeEnum.main(null);
         //LeaderLineColor.main(null);
+        //ChartDataPointIndex.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -268,6 +269,7 @@ public class RunExamples
         //AnimationTargetShapes.main(null);
         //DuotoneEffectsPVI.main(null);
         //IsTextShape.main(null);
+        //SetVideoTrimFromEnd.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -324,6 +326,7 @@ public class RunExamples
         //SetTransitionEffects.main(null);
         //SupportOfMorphTransition.main(null);
         //AnimationRepeatOnSlide.main(null);
+        //AnimationRewind.main(null);
 
         //// =====================================================
         ////                    Slides - Thumbnail
