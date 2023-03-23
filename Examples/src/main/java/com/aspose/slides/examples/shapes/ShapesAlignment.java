@@ -3,7 +3,7 @@ package com.aspose.slides.examples.shapes;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-class ShapesAlignment
+public class ShapesAlignment
 {
     public static void main(String[] args)
     {

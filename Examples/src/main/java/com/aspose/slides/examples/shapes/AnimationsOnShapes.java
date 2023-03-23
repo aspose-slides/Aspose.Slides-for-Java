@@ -48,7 +48,7 @@ public class AnimationsOnShapes
             // Created path is empty so we should add commands for moving.
             IMotionEffect motionBhv = ((IMotionEffect) fxUserPath.getBehaviors().get_Item(0));
 
-            Point2D.Float[] pts = (Point2D.Float[]) Array.newInstance(Point2D.Float[].class, 1);
+            Point2D.Float[] pts = (Point2D.Float[]) Array.newInstance(Point2D.Float.class, 1);
             pts[0] = new Point2D.Float(0.076f, 0.59f);
             motionBhv.getPath().add(MotionCommandPathType.LineTo, pts, MotionPathPointsType.Auto, true);
             pts[0] = new Point2D.Float(-0.076f, -0.59f);

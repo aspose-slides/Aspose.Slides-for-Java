@@ -20,9 +20,9 @@ public class ExtractVideo
         // Instantiate a Presentation object that represents a presentation file 
         Presentation presentation = new Presentation(dataDir + "Video.pptx");
         try {
-            for (ISlide slide : presentation.getSlides())
+            for (ISlide slide : presentation.getSlides().toArray())
             {
-                for (IShape shape : presentation.getSlides().get_Item(0).getShapes())
+                for (IShape shape : slide.getShapes().toArray())
                 {
                     if (shape instanceof VideoFrame)
                     {

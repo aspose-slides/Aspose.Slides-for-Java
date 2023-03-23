@@ -24,7 +24,7 @@ public class AddVideoFrameFromWebSource
         Presentation pres = new Presentation();
         try
         {
-            addVideoFromYouTube(pres, "Tj75Arhq5ho");
+            addVideoFromYouTube(pres, "jfTqRWoYIe8");
             pres.save(dataDir + "AddVideoFrameFromWebSource_out.pptx", SaveFormat.Pptx);
         }
         finally
@@ -38,9 +38,9 @@ public class AddVideoFrameFromWebSource
         //add videoFrame
         IVideoFrame videoFrame = pres.getSlides().get_Item(0).getShapes().addVideoFrame(10, 10, 427, 240, "https://www.youtube.com/embed/" + videoId);
         videoFrame.setPlayMode(VideoPlayModePreset.Auto);
-
+        // https://www.youtube.com/watch?v=jfTqRWoYIe8
         //load thumbnail
-        String thumbnailUri = "http://img.youtube.com/vi/" + videoId + "/hqdefault.jpg";
+        String thumbnailUri = "https://www.youtube.com/watch?v=" + videoId;
         URL url = new URL(thumbnailUri);
         URLConnection connection = url.openConnection();
         connection.setConnectTimeout(5000);
