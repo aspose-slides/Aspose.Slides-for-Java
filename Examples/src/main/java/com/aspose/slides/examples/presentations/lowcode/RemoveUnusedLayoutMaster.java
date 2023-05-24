@@ -1,5 +1,5 @@
 
-package com.aspose.slides.examples.slides.layout;
+package com.aspose.slides.examples.presentations.lowcode;
 
 import com.aspose.slides.Presentation;
 import com.aspose.slides.Compress;
@@ -12,7 +12,7 @@ public class RemoveUnusedLayoutMaster
     {
         //ExStart:RemoveUnusedLayoutMaster
 
-        String pptxFileName = RunExamples.getDataDir_Slides_Presentations_Layout() + "MultipleMaster.pptx";
+        String pptxFileName = RunExamples.getDataDir_Slides_Presentations_LowCode() + "MultipleMaster.pptx";
 
         Presentation pres = new Presentation(pptxFileName);
         try {

@@ -24,7 +24,7 @@ public class LeaderLineColor
             IDataLabelCollection labels = series.get_Item(0).getLabels();
 
             // Change color of all leader lines in the collection
-            labels.setLeaderLinesColor(Color.RED);
+            labels.getLeaderLinesFormat().getLine().getFillFormat().getSolidFillColor().setColor(Color.RED);
 
             // Save result
             pres.save(outPath, SaveFormat.Pptx);

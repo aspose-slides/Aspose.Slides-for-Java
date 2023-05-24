@@ -204,6 +204,13 @@ public class RunExamples
         //AddBlobImageToPresentation.main(null);
 
         //// =====================================================
+        ////            Presentations -   LowCode
+        //// =====================================================
+
+        //RemoveUnusedLayoutMaster.main(null);
+        //ForEachPortion.main(null);
+
+        //// =====================================================
         ////                    Shapes
         //// =====================================================
 
@@ -327,6 +334,7 @@ public class RunExamples
         //SupportOfMorphTransition.main(null);
         //AnimationRepeatOnSlide.main(null);
         //AnimationRewind.main(null);
+        //AfterAnimationTypeExample.main(null);
 
         //// =====================================================
         ////                    Slides - Thumbnail
@@ -571,6 +579,11 @@ public class RunExamples
     public static String getDataDir_PresentationOpening()
     {
         return getDataDir_Data() + "Presentations" + File.separator + "Opening" + File.separator;
+    }
+
+    public static String getDataDir_Slides_Presentations_LowCode()
+    {
+        return getDataDir_Data() + "Presentations"+ File.separator + " LowCode" + File.separator;
     }
 
     public static String getDataDir_Rendering()
