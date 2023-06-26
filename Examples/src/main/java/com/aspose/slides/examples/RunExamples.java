@@ -507,6 +507,7 @@ public class RunExamples
         //GetFontsSubstitution.main(null);
         //EmbeddedFontCompression.main(null);
         //FindAndReplaceText.main(null);
+        //SpecifyDefaultTextLanguage.main(null);
 
         //// =====================================================
         ////                    VBA Macros
