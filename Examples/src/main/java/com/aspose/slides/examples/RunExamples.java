@@ -151,6 +151,8 @@ public class RunExamples
         //ConvertToHtml5.main(null);
         //SvgConvertionOptions.main(null);
         //ConvertToAnimation.main(null);
+        //ConvertToMarkdown.main(null);
+        //ConvertHTMLEmbeddingImages.main(null);
 
         // =====================================================
         //// =====================================================
