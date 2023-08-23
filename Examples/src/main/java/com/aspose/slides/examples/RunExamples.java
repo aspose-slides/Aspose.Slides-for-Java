@@ -189,6 +189,7 @@ public class RunExamples
         //CheckPasswordExample.main(null);
         //RootDirectoryClsId.main(null);
         //PresentationSlideShowSetup.main(null);
+        //SlideShowMediaControls.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving

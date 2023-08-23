@@ -16,6 +16,7 @@ public class RootDirectoryClsId
         // Output file name
         String resultPath = RunExamples.getOutPath() + "pres.ppt";
 
+        //ExStart:RootDirectoryClsId
         Presentation pres = new Presentation();
         try {
             PptOptions pptOptions = new PptOptions();
@@ -28,5 +29,6 @@ public class RootDirectoryClsId
         } finally {
             if (pres != null) pres.dispose();
         }
+        //ExEnd:RootDirectoryClsId
     }
 }
