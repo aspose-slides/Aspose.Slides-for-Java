@@ -511,6 +511,7 @@ public class RunExamples
         //EmbeddedFontCompression.main(null);
         //FindAndReplaceText.main(null);
         //SpecifyDefaultTextLanguage.main(null);
+        //AnimateTextTypeExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros
