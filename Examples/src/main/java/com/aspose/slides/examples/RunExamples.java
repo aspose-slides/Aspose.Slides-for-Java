@@ -153,6 +153,7 @@ public class RunExamples
         //ConvertToAnimation.main(null);
         //ConvertToMarkdown.main(null);
         //ConvertHTMLEmbeddingImages.main(null);
+        //ConvertToBlackWiteTiff.main(null);
 
         // =====================================================
         //// =====================================================
@@ -280,6 +281,7 @@ public class RunExamples
         //DuotoneEffectsPVI.main(null);
         //IsTextShape.main(null);
         //SetVideoTrimFromEnd.main(null);
+        //InkManagementExample.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -512,6 +514,7 @@ public class RunExamples
         //FindAndReplaceText.main(null);
         //SpecifyDefaultTextLanguage.main(null);
         //AnimateTextTypeExample.main(null);
+        //NumberlinesInParagraph.main(null);
 
         //// =====================================================
         ////                    VBA Macros
