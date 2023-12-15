@@ -1,9 +1,6 @@
 package com.aspose.slides.examples.rendering.printing;
 
-import com.aspose.slides.IRenderingOptions;
-import com.aspose.slides.NotesPositions;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.RenderingOptions;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 import javax.imageio.ImageIO;
@@ -23,12 +20,14 @@ public class RenderOptions {
         Presentation pres = new Presentation(presPath);
         try {
             IRenderingOptions renderingOpts = new RenderingOptions();
-            renderingOpts.getNotesCommentsLayouting().setNotesPosition(NotesPositions.BottomTruncated);
+            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            notesOptions.setNotesPosition(NotesPositions.BottomTruncated);
+            renderingOpts.setSlidesLayoutOptions(notesOptions);
 
             ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(renderingOpts, 4 / 3f, 4 / 3f),
                     "PNG", new File(RunExamples.getOutPath() + "RenderingOptions-Slide1-Original.png"));
 
-            renderingOpts.getNotesCommentsLayouting().setNotesPosition(NotesPositions.None);
+            renderingOpts.setSlidesLayoutOptions(null);
             renderingOpts.setDefaultRegularFont("Arial Black");
             ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(renderingOpts, 4 / 3f, 4 / 3f),
                     "PNG", new File(RunExamples.getOutPath() + "RenderingOptions-Slide1-ArialBlackDefault.png"));

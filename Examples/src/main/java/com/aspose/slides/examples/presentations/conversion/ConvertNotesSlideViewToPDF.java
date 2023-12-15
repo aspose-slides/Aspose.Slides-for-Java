@@ -17,9 +17,9 @@ public class ConvertNotesSlideViewToPDF
         try
         {
             PdfOptions pdfOptions = new PdfOptions();
-            INotesCommentsLayoutingOptions options = pdfOptions.getNotesCommentsLayouting();
+            INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
             options.setNotesPosition(NotesPositions.BottomFull);
-
+            pdfOptions.setSlidesLayoutOptions(options);
 
             // Saving the presentation to PDF notes
             presentation.save(dataDir + "Pdf_Notes_out.pdf", SaveFormat.Pdf, pdfOptions);

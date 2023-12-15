@@ -19,8 +19,9 @@ public class ConvertWholePresentationToHTML
             HtmlOptions htmlOpt = new HtmlOptions();
             htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
 
-            INotesCommentsLayoutingOptions notesOptions = htmlOpt.getNotesCommentsLayouting();
+            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
+            htmlOpt.setSlidesLayoutOptions(notesOptions);
 
             // Saving the presentation to HTML
             presentation.save(dataDir + "ConvertWholePresentationToHTML_out.html", SaveFormat.Html, htmlOpt);

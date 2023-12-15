@@ -17,8 +17,9 @@ public class RenderingNotesWhileConvertingToHTML
         {
             HtmlOptions opt = new HtmlOptions();
 
-            INotesCommentsLayoutingOptions options = opt.getNotesCommentsLayouting();
+            INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
             options.setNotesPosition(NotesPositions.BottomFull);
+            opt.setSlidesLayoutOptions(options);
 
             // Saving notes pages
             pres.save(dataDir + "Output.html", SaveFormat.Html, opt);

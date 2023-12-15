@@ -19,9 +19,9 @@ public class PresentationToTIFFWithCustomImagePixelFormat
             TiffOptions options = new TiffOptions();
 
             options.setPixelFormat(ImagePixelFormat.Format8bppIndexed);
-            INotesCommentsLayoutingOptions notesOptions = options.getNotesCommentsLayouting();
+            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
-
+            options.setSlidesLayoutOptions(notesOptions);
 
             // Save the presentation to TIFF with specified image size
             presentation.save(dataDir + "Tiff_With_Custom_Image_Pixel_Format_out.tiff", SaveFormat.Tiff, options);

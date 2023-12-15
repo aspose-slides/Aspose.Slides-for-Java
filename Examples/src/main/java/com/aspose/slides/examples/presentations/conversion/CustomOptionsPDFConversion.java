@@ -31,9 +31,9 @@ public class CustomOptionsPDFConversion
             // Define the PDF standard
             pdfOptions.setCompliance(PdfCompliance.Pdf15);
 
-
-            INotesCommentsLayoutingOptions options = pdfOptions.getNotesCommentsLayouting();
+            INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
             options.setNotesPosition(NotesPositions.BottomFull);
+            pdfOptions.setSlidesLayoutOptions(options);
 
             // Save the presentation to PDF with specified options
             pres.save(dataDir + "Custom_Option_Pdf_Conversion_out.pdf", SaveFormat.Pdf, pdfOptions);

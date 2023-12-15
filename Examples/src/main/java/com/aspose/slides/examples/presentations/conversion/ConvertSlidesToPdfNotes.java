@@ -29,8 +29,9 @@ public class ConvertSlidesToPdfNotes
 
 
                 PdfOptions pdfOptions = new PdfOptions();
-                INotesCommentsLayoutingOptions options = pdfOptions.getNotesCommentsLayouting();
+                INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
                 options.setNotesPosition(NotesPositions.BottomFull);
+                pdfOptions.setSlidesLayoutOptions(options);
 
 
                 auxPresentation.save(dataDir + "PDFnotes_out.pdf", SaveFormat.Pdf, pdfOptions);

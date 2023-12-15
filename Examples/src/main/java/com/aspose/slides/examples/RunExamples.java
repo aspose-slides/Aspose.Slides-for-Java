@@ -154,6 +154,8 @@ public class RunExamples
         //ConvertToMarkdown.main(null);
         //ConvertHTMLEmbeddingImages.main(null);
         //ConvertToBlackWiteTiff.main(null);
+        //ConvertToHandout.main(null);
+        //ExportInkExample.main(null);
 
         // =====================================================
         //// =====================================================
@@ -282,6 +284,8 @@ public class RunExamples
         //IsTextShape.main(null);
         //SetVideoTrimFromEnd.main(null);
         //InkManagementExample.main(null);
+        //DeletePictureCroppedAreasExample.main(null);
+        //ShapeIsDecorativePropertyExample.main(null);
 
         //// =====================================================
         ////                        Slides 

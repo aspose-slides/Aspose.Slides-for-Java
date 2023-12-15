@@ -22,10 +22,12 @@ public class RenderComments
         Presentation pres = new Presentation(dataDir + "presentation.pptx");
 
         IRenderingOptions renderOptions = new RenderingOptions();
-        renderOptions.getNotesCommentsLayouting().setCommentsAreaColor(Color.RED);
-        renderOptions.getNotesCommentsLayouting().setCommentsAreaWidth(200);
-        renderOptions.getNotesCommentsLayouting().setCommentsPosition(CommentsPositions.Right);
-        renderOptions.getNotesCommentsLayouting().setNotesPosition(NotesPositions.BottomTruncated);
+        NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+        notesOptions.setCommentsAreaColor(Color.RED);
+        notesOptions.setCommentsAreaWidth(200);
+        notesOptions.setCommentsPosition(CommentsPositions.Right);
+        notesOptions.setNotesPosition(NotesPositions.BottomTruncated);
+        renderOptions.setSlidesLayoutOptions(notesOptions);
 
         try
         {
