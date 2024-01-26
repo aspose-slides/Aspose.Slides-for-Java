@@ -156,6 +156,7 @@ public class RunExamples
         //ConvertToBlackWiteTiff.main(null);
         //ConvertToHandout.main(null);
         //ExportInkExample.main(null);
+        //PdfImportTableExample.main(null);
 
         // =====================================================
         //// =====================================================
