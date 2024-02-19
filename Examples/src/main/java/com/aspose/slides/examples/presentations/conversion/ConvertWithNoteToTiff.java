@@ -13,7 +13,7 @@ public class ConvertWithNoteToTiff
         String dataDir = RunExamples.getDataDir_Conversion();
 
         // Instantiate a Presentation object that represents a presentation file
-        Presentation pres = new Presentation(dataDir + "ConvertWithNoteToTiff.pptx");
+        Presentation pres = new Presentation(dataDir + "ConvertWithNote.pptx");
         try
         {
             TiffOptions opts = new TiffOptions();

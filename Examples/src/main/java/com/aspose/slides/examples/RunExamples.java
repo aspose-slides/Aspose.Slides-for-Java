@@ -157,6 +157,8 @@ public class RunExamples
         //ConvertToHandout.main(null);
         //ExportInkExample.main(null);
         //PdfImportTableExample.main(null);
+        //ExportMathParagraphToLatex.main(null);
+        //ConvertToHtml5NotesComments.main(null);
 
         // =====================================================
         //// =====================================================
