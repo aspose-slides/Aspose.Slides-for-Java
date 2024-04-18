@@ -3,15 +3,10 @@ package com.aspose.slides.examples.text;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class RuleBasedFontsReplacement
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:RuleBasedFontsReplacement
         // The path to the documents directory.
@@ -37,10 +32,10 @@ public class RuleBasedFontsReplacement
         presentation.getFontsManager().setFontSubstRuleList(fontSubstRuleCollection);
 
         // Arial font will be used instead of SomeRareFont when inaccessible
-        BufferedImage bmp = presentation.getSlides().get_Item(0).getThumbnail(1f, 1f);
+        IImage bmp = presentation.getSlides().get_Item(0).getImage(1f, 1f);
 
         // Save the image to disk in JPEG format
-        ImageIO.write(bmp, "jpeg", new File(dataDir + "Thumbnail_out.jpg"));
+        bmp.save(dataDir + "Thumbnail_out.jpg", ImageFormat.Jpeg);
         //ExEnd:RuleBasedFontsReplacement
     }
 }

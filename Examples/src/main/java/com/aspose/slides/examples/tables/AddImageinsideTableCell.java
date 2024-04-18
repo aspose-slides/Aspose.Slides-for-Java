@@ -3,19 +3,15 @@ package com.aspose.slides.examples.tables;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class AddImageinsideTableCell
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:AddImageinsideTableCell
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Tables();
+        String outputDir = RunExamples.getOutPath();
 
         // Instantiate Presentation class object
         Presentation presentation = new Presentation();
@@ -32,7 +28,7 @@ public class AddImageinsideTableCell
             ITable tbl = islide.getShapes().addTable(50, 50, dblCols, dblRows);
 
             // Creating a BufferedImage Image object to hold the image file
-            BufferedImage image = ImageIO.read(new File(dataDir + "aspose-logo.jpg"));
+            IImage image = Images.fromFile(dataDir + "aspose-logo.jpg");
 
             // Create an IPPImage object using the bitmap object
             IPPImage imgx1 = presentation.getImages().addImage(image);
@@ -43,7 +39,7 @@ public class AddImageinsideTableCell
             tbl.get_Item(0, 0).getCellFormat().getFillFormat().getPictureFillFormat().getPicture().setImage(imgx1);
 
             // Save PPTX to Disk
-            presentation.save(dataDir + "Image_In_TableCell_out.pptx", SaveFormat.Pptx);
+            presentation.save(outputDir + "Image_In_TableCell_out.pptx", SaveFormat.Pptx);
         }
         finally
         {

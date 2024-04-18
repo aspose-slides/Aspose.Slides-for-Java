@@ -1,22 +1,19 @@
 package com.aspose.slides.examples.slides.thumbnail;
 
+import com.aspose.slides.IImage;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class ThumbnailWithUserDefinedDimensions
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:ThumbnailWithUserDefinedDimensions
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Slides_Presentations_Thumbnail();
+        String outputDir = RunExamples.getOutPath();
 
         // Instantiate a Presentation class that represents the presentation file
         Presentation pres = new Presentation(dataDir + "ThumbnailWithUserDefinedDimensions.pptx");
@@ -36,10 +33,10 @@ public class ThumbnailWithUserDefinedDimensions
 
 
             // Create a full scale image
-            BufferedImage bmp = sld.getThumbnail(ScaleX, ScaleY);
+            IImage bmp = sld.getImage(ScaleX, ScaleY);
 
             // Save the image to disk in JPEG format
-            ImageIO.write(bmp, "jpeg", new File(dataDir + "Thumbnail2_out.jpg"));
+            bmp.save(outputDir + "Thumbnail2_out.jpg");
         }
         finally
         {

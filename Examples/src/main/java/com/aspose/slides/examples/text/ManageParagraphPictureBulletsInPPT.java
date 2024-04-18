@@ -3,19 +3,15 @@ package com.aspose.slides.examples.text;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class ManageParagraphPictureBulletsInPPT
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:ManageParagraphPictureBulletsInPPT
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Text();
+        String outputDir = RunExamples.getOutPath();
 
         Presentation presentation = new Presentation();
 
@@ -23,7 +19,7 @@ public class ManageParagraphPictureBulletsInPPT
         ISlide slide = presentation.getSlides().get_Item(0);
 
         // Instantiate the image for bullets
-        BufferedImage image = ImageIO.read(new File(dataDir + "bullets.png"));
+        IImage image = Images.fromFile(dataDir + "bullets.png");
         IPPImage ippxImage = presentation.getImages().addImage(image);
 
         // Adding and accessing Autoshape
@@ -50,9 +46,9 @@ public class ManageParagraphPictureBulletsInPPT
         textFrame.getParagraphs().add(paragraph);
 
         // Writing the presentation as a PPTX file
-        presentation.save(dataDir + "ParagraphPictureBulletsPPTX_out.pptx", SaveFormat.Pptx);
+        presentation.save(outputDir + "ParagraphPictureBulletsPPTX_out.pptx", SaveFormat.Pptx);
         // Writing the presentation as a PPT file
-        presentation.save(dataDir + "ParagraphPictureBulletsPPT_out.ppt", SaveFormat.Ppt);
+        presentation.save(outputDir + "ParagraphPictureBulletsPPT_out.ppt", SaveFormat.Ppt);
         //ExEnd:ManageParagraphPictureBulletsInPPT
     }
 }

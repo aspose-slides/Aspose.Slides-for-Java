@@ -3,24 +3,15 @@ package com.aspose.slides.examples.shapes;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class FillShapesPicture
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:FillShapesPicture
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Shapes();
-
-        // Create directory if it is not already present.
-        boolean IsExists = new File(dataDir).exists();
-        if (!IsExists)
-            new File(dataDir).mkdirs();
+        String outputDir = RunExamples.getOutPath();
 
         // Instantiate PrseetationEx class that represents the PPTX
         Presentation pres = new Presentation();
@@ -41,12 +32,12 @@ public class FillShapesPicture
             shp.getFillFormat().getPictureFillFormat().setPictureFillMode(PictureFillMode.Tile);
 
             // Set the picture
-            BufferedImage img = ImageIO.read(new File(dataDir + "Tulips.jpg"));
+            IImage img = Images.fromFile(dataDir + "Tulips.jpg");
             IPPImage imgx = pres.getImages().addImage(img);
             shp.getFillFormat().getPictureFillFormat().getPicture().setImage(imgx);
 
             //Write the PPTX file to disk
-            pres.save(dataDir + "RectShpPic_out.pptx", SaveFormat.Pptx);
+            pres.save(outputDir + "RectShpPic_out.pptx", SaveFormat.Pptx);
             //ExEnd:FillShapesPicture
         }
         finally

@@ -1,22 +1,19 @@
 package com.aspose.slides.examples.slides.thumbnail;
 
+import com.aspose.slides.IImage;
 import com.aspose.slides.ISlide;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class ThumbnailFromSlideInNotes
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:ThumbnailFromSlideInNotes
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Slides_Presentations_Thumbnail();
+        String outputDir = RunExamples.getOutPath();
 
         // Instantiate a Presentation class that represents the presentation file
         Presentation pres = new Presentation(dataDir + "ThumbnailFromSlideInNotes.pptx");
@@ -35,9 +32,9 @@ public class ThumbnailFromSlideInNotes
 
 
             // Create a full scale image                
-            BufferedImage bmp = sld.getThumbnail(ScaleX, ScaleY);
+            IImage bmp = sld.getImage(ScaleX, ScaleY);
             // Save the image to disk in JPEG format
-            ImageIO.write(bmp, "jpeg", new File(dataDir + "Notes_tnail_out.jpg"));
+            bmp.save(outputDir + "Notes_tnail_out.jpg");
         }
         finally
         {

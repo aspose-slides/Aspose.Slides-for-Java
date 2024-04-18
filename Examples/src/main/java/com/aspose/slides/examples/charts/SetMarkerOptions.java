@@ -3,19 +3,16 @@ package com.aspose.slides.examples.charts;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
 public class SetMarkerOptions
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:SetMarkerOptions
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Charts();
+        String outputDir = RunExamples.getOutPath();
 
         // Create an instance of Presentation class
         Presentation presentation = new Presentation();
@@ -38,11 +35,11 @@ public class SetMarkerOptions
         chart.getChartData().getSeries().add(fact.getCell(defaultWorksheetIndex, 1, 1, "Series 1"), chart.getType());
 
         // Set the picture
-        BufferedImage image1 = ImageIO.read(new File(dataDir + "aspose-logo.jpg"));
+        IImage image1 = Images.fromFile(dataDir + "aspose-logo.jpg");
         IPPImage imgx1 = presentation.getImages().addImage(image1);
 
         // Set the picture
-        BufferedImage image2 = ImageIO.read(new File(dataDir + "Tulips.jpg"));
+        IImage image2 = Images.fromFile(dataDir + "Tulips.jpg");
         IPPImage imgx2 = presentation.getImages().addImage(image2);
 
         // Take first chart series
@@ -69,7 +66,7 @@ public class SetMarkerOptions
         series.getMarker().setSize(15);
 
         // Write presentation to disk
-        presentation.save(dataDir + "MarkOptions_out.pptx", SaveFormat.Pptx);
+        presentation.save(outputDir + "MarkOptions_out.pptx", SaveFormat.Pptx);
         //ExEnd:SetMarkerOptions
     }
 }

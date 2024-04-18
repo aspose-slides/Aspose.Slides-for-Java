@@ -3,9 +3,7 @@ package com.aspose.slides.examples.shapes;
 
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException;
+
 
 public class SketchedShapes {
 

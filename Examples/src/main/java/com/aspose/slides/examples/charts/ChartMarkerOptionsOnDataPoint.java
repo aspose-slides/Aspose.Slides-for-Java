@@ -3,18 +3,15 @@ package com.aspose.slides.examples.charts;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class ChartMarkerOptionsOnDataPoint
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:ChartMarkerOptionsOnDataPoint
         String dataDir = RunExamples.getDataDir_Charts();
+        String outputDir = RunExamples.getOutPath();
+
         Presentation pres = new Presentation(dataDir + "Test.pptx");
 
         ISlide slide = pres.getSlides().get_Item(0);
@@ -36,11 +33,11 @@ public class ChartMarkerOptionsOnDataPoint
 
 
         //Set the picture
-        BufferedImage img = ImageIO.read(new File(dataDir + "aspose-logo.jpg"));
+        IImage img = Images.fromFile(dataDir + "aspose-logo.jpg");
         IPPImage imgx1 = pres.getImages().addImage(img);
 
         //Set the picture
-        BufferedImage img2 = ImageIO.read(new File(dataDir + "Tulips.jpg"));
+        IImage img2 = Images.fromFile(dataDir + "Tulips.jpg");
         IPPImage imgx2 = pres.getImages().addImage(img2);
 
         //Take first chart series
@@ -69,7 +66,7 @@ public class ChartMarkerOptionsOnDataPoint
         //Changing the chart series marker
         series.getMarker().setSize(15);
 
-        pres.save(dataDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
+        pres.save(outputDir + "AsposeScatterChart.pptx", SaveFormat.Pptx);
     }
 
     //ExEnd:ChartMarkerOptionsOnDataPoint
