@@ -26,11 +26,7 @@ public class SketchedShapes {
             // Transform shape to sketch of a freehand style
             shape.getLineFormat().getSketchFormat().setSketchType(LineSketchType.Scribble);
 
-            try {
-                ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(4/3f, 4/3f), "PNG", new File(outPngFile));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            pres.getSlides().get_Item(0).getImage(4/3f, 4/3f).save(outPngFile, ImageFormat.Png);
             pres.save(outPptxFile, SaveFormat.Pptx);
 
         }

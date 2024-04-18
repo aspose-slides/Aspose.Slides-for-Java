@@ -1,20 +1,12 @@
 package com.aspose.slides.examples.shapes;
 
-import com.aspose.slides.ISmartArt;
-import com.aspose.slides.ISmartArtNode;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SmartArtLayoutType;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
 public class CreateSmartArtChildNoteThumbnail
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:CreateSmartArtChildNoteThumbnail
         // The path to the documents directory.
@@ -30,10 +22,10 @@ public class CreateSmartArtChildNoteThumbnail
         ISmartArtNode node = smart.getNodes().get_Item(1);
 
         // Get thumbnail
-        BufferedImage bmp = node.getShapes().get_Item(0).getThumbnail();
+        IImage bmp = node.getShapes().get_Item(0).getImage();
 
         // Save thumbnail
-        ImageIO.write(bmp, ".jpeg", new File(dataDir + "SmartArt_ChildNote_Thumbnail_out.jpeg"));
+        bmp.save(dataDir + "SmartArt_ChildNote_Thumbnail_out.jpeg", ImageFormat.Jpeg);
         //ExEnd:CreateSmartArtChildNoteThumbnail
     }
 }

@@ -1,15 +1,7 @@
 package com.aspose.slides.examples.text;
 
-import com.aspose.slides.LoadFormat;
-import com.aspose.slides.LoadOptions;
-import com.aspose.slides.Presentation;
-import com.aspose.slides.SaveFormat;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
 public class DefaultFonts
@@ -30,18 +22,13 @@ public class DefaultFonts
         try
         {
             // Generate slide thumbnail
-            BufferedImage image = pptx.getSlides().get_Item(0).getThumbnail(1, 1);
-            ImageIO.write(image, ".png", new File(dataDir + "output_out.png"));
+            pptx.getSlides().get_Item(0).getImage(1, 1).save(dataDir + "output_out.png", ImageFormat.Png);
 
             // Generate PDF
             pptx.save(dataDir + "output_out.pdf", SaveFormat.Pdf);
 
             // Generate XPS
             pptx.save(dataDir + "output_out.xps", SaveFormat.Xps);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
         }
         finally
         {

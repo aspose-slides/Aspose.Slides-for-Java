@@ -2,12 +2,9 @@ package com.aspose.slides.examples.text;
 
 import com.aspose.slides.AutoShape;
 import com.aspose.slides.IAutoShape;
+import com.aspose.slides.ImageFormat;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
-
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.IOException;
 
 public class KeepTextFlat
 {
@@ -27,10 +24,7 @@ public class KeepTextFlat
             shape1.getTextFrame().getTextFrameFormat().setKeepTextFlat(false);
             shape2.getTextFrame().getTextFrameFormat().setKeepTextFlat(true);
 
-            ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(4 / 3f, 4 / 3f), "PNG",
-                    new File(resultPath));
-        } catch (IOException e) {
-            e.printStackTrace();
+            pres.getSlides().get_Item(0).getImage(4 / 3f, 4 / 3f).save(resultPath, ImageFormat.Png);
         } finally {
             if (pres != null) pres.dispose();
         }

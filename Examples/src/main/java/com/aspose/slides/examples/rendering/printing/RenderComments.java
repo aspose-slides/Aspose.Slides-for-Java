@@ -3,16 +3,12 @@ package com.aspose.slides.examples.rendering.printing;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
 public class RenderComments
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:RenderComments
         // The path to the documents directory.
@@ -31,17 +27,7 @@ public class RenderComments
 
         try
         {
-            BufferedImage image = new BufferedImage(740, 960, BufferedImage.TYPE_INT_ARGB);
-            java.awt.Graphics graphics = image.createGraphics();
-            try
-            {
-                pres.getSlides().get_Item(0).renderToGraphics(renderOptions, (Graphics2D) graphics);
-            }
-            finally
-            {
-                if (graphics != null) graphics.dispose();
-            }
-            ImageIO.write(image, "png", new File(resultPath));
+            pres.getSlides().get_Item(0).getImage(new Dimension(740, 960)).save(resultPath, ImageFormat.Png);
         }
         finally
         {

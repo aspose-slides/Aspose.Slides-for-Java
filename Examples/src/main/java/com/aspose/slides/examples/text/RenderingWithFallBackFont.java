@@ -3,11 +3,6 @@ package com.aspose.slides.examples.text;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 
 public class RenderingWithFallBackFont
 {
@@ -47,12 +42,7 @@ public class RenderingWithFallBackFont
             pres.getFontsManager().setFontFallBackRulesCollection(rulesList);
 
             // Rendering of thumbnail with using of initialized rules collection and saving to PNG
-            BufferedImage image = pres.getSlides().get_Item(0).getThumbnail(1f, 1f);
-            ImageIO.write(image, ".png", new File(dataDir + "Slide_0.png"));
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
+            pres.getSlides().get_Item(0).getImage(1f, 1f).save(dataDir + "Slide_0.png", ImageFormat.Png);
         }
         finally
         {

@@ -1,19 +1,13 @@
 package com.aspose.slides.examples.charts;
 
-import com.aspose.slides.ChartType;
-import com.aspose.slides.IChart;
-import com.aspose.slides.Presentation;
+import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
 public class GetChartImage
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:GetChartImage
         // The path to the documents directory.
@@ -23,8 +17,8 @@ public class GetChartImage
         try
         {
             IChart chart = pres.getSlides().get_Item(0).getShapes().addChart(ChartType.ClusteredColumn, 50, 50, 600, 400);
-            BufferedImage img = chart.getThumbnail();
-            ImageIO.write(img, ".png", new File(dataDir + "image.png"));
+            IImage img = chart.getImage();
+            img.save(dataDir + "image.png", ImageFormat.Png);
         }
         finally
         {

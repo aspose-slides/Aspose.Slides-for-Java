@@ -3,16 +3,13 @@ package com.aspose.slides.examples.rendering.printing;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 
 public class Rendering3D {
 
     // This example demonstrates creating and rendering presentation with 3D graphics.
 
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         //ExStart:RenderComments
         String outPptxFile = RunExamples.getOutPath() + "sandbox_3d.pptx";
@@ -33,7 +30,7 @@ public class Rendering3D {
             shape.getThreeDFormat().setExtrusionHeight(100);
             shape.getThreeDFormat().getExtrusionColor().setColor(Color.BLUE);
 
-            ImageIO.write(pres.getSlides().get_Item(0).getThumbnail(2, 2),"PNG", new File(outPngFile));
+            pres.getSlides().get_Item(0).getImage(2, 2).save(outPngFile, ImageFormat.Png);
             pres.save(outPptxFile, SaveFormat.Pptx);
         }
         finally
