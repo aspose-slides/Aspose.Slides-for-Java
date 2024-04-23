@@ -159,6 +159,8 @@ public class RunExamples
         //PdfImportTableExample.main(null);
         //ExportMathParagraphToLatex.main(null);
         //ConvertToHtml5NotesComments.main(null);
+        //ConvertToPdfUnsupportedFontStyles.main(null);
+        //ConvertToXml.main(null);
 
         // =====================================================
         //// =====================================================
@@ -211,6 +213,7 @@ public class RunExamples
         //AddImageFromSVGObject.main(null);
         //ConvertSvgImageObjectIntoGroupOfShapes.main(null);
         //AddBlobImageToPresentation.main(null);
+        //SaveInZip64Mode.main(null);
 
         //// =====================================================
         ////            Presentations -   LowCode
