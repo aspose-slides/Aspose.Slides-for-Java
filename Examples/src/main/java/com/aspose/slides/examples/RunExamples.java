@@ -464,6 +464,7 @@ public class RunExamples
         //GetEffectiveValuesOfTable.main(null);
         //CreateATableFromScratchInASlide.main(null);
         //SetFirstRowAsHeader.main(null);
+        //TableTransparency.main(null);
 
         //// =====================================================
         ////                     Text

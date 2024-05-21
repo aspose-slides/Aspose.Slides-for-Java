@@ -29,11 +29,7 @@ public class ConvertToAnimation
                 try {
                     player.setFrameTick(new PresentationPlayer.FrameTick() {
                         public void invoke(PresentationPlayer sender, FrameTickEventArgs arg) {
-                            try {
-                                ImageIO.write(arg.getFrame(), "PNG", new java.io.File(outPath + "frame_" + sender.getFrameIndex() + ".png"));
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
-                            }
+                            arg.getFrame().save(outPath + "frame_" + sender.getFrameIndex() + ".png");
                         }
                     });
                     animationsGenerator.run(pres.getSlides());
