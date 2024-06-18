@@ -7,20 +7,21 @@ import com.aspose.slides.TextHighlightingOptions;
 import com.aspose.slides.examples.RunExamples;
 
 import java.awt.*;
+import java.util.regex.Pattern;
 
 
 public class HighlightTextusingRegex
 {
     public static void main(String[] args)
     {
-
-        //ExStart:HighlightTextUsingRegx
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Text();
+
+        //ExStart:HighlightTextUsingRegx
         Presentation presentation = new Presentation(dataDir + "SomePresentation.pptx");
-        TextHighlightingOptions options = new TextHighlightingOptions();
-        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightRegex("\\b[^\\s){5,}\\b", Color.BLUE, options); // highlighting all words with 10 symbols or longer
-        presentation.save(dataDir + "SomePresentation-out.pptx", SaveFormat.Pptx);
+        Pattern regex = Pattern.compile("\\b[^\\s]{5,}\\b");
+        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightRegex(regex, Color.BLUE, null); // highlighting all words with 10 symbols or longer
+        presentation.save(RunExamples.getOutPath() + "SomePresentation-out.pptx", SaveFormat.Pptx);
 
         //ExEnd:HighlightTextUsingRegx
     }

@@ -10,16 +10,19 @@ public class HighlightText
 {
     public static void main(String[] args)
     {
-
-        //ExStart:HighlightText
         // The path to the documents directory.
         String dataDir = RunExamples.getDataDir_Text();
+
+        //ExStart:HighlightText
         Presentation presentation = new Presentation(dataDir + "SomePresentation.pptx");
-        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("title", new Color(PresetColor.LightBlue));
-        TextHighlightingOptions tmp0 = new TextHighlightingOptions();
-        tmp0.setWholeWordsOnly(true); // highlighting all words 'important'
-        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("to", new Color(PresetColor.Violet), tmp0); // highlighting all separate 'the' occurrences
-        presentation.save(dataDir + "SomePresentation-out2.pptx", SaveFormat.Pptx);
+        // highlighting all words 'title'
+        ((AutoShape) presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("title", Color.BLUE);
+        TextSearchOptions textSearchOptions = new TextSearchOptions();
+        textSearchOptions.setWholeWordsOnly(true);
+        // highlighting all separate 'to' occurrences
+        ((AutoShape)presentation.getSlides().get_Item(0).getShapes().get_Item(0)).getTextFrame().highlightText("to", Color.MAGENTA, textSearchOptions, null);
+
+        presentation.save(RunExamples.getOutPath() + "SomePresentation-out2.pptx", SaveFormat.Pptx);
 
         //ExEnd:HighlightText
     }

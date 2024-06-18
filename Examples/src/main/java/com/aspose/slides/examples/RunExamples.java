@@ -527,6 +527,7 @@ public class RunExamples
         //SpecifyDefaultTextLanguage.main(null);
         //AnimateTextTypeExample.main(null);
         //NumberlinesInParagraph.main(null);
+        //FindAndReplaceTextResult.main(null);
 
         //// =====================================================
         ////                    VBA Macros
@@ -541,6 +542,7 @@ public class RunExamples
         //// =====================================================
 
         //ManagePresenetationNormalViewState.main(null);
+        //GradientStyleRendering.main(null);
 
         // Stop before exiting
         System.out.println("\n\nProgram Finished. Press any key to exit....");
