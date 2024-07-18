@@ -161,6 +161,7 @@ public class RunExamples
         //ConvertToHtml5NotesComments.main(null);
         //ConvertToPdfUnsupportedFontStyles.main(null);
         //ConvertToXml.main(null);
+        //ExportOleExample.main(null);
 
         // =====================================================
         //// =====================================================
@@ -176,6 +177,7 @@ public class RunExamples
         //GetRectangularCoordinatesofParagraph.main(null);
         //GetPositionCoordinatesofPortion.main(null);
         //SetAccessPermissionsToPDF.main(null);
+        //DeleteEmbeddedBinaryObjects.main(null);
 
         //// =====================================================
         ////            Presentations -   Properties
@@ -381,6 +383,7 @@ public class RunExamples
         //CheckSlidesComparison.main(null);
         //RemoveUnusedLayoutMaster.main(null);
         //GetBasePlacehorderExample.main(null);
+        //LayoutPlaceholderManagerExample.main(null);
 
         //// =====================================================
         ////                    Slides - HyperLink

@@ -10,12 +10,12 @@ import java.io.IOException;
 
 public class ExportShapeToSVG
 {
-    //ExStart:ExportShapeToSVG
     public static void main(String[] args) throws IOException
     {
-
         String outSvgFileName = "SingleShape.svg";
         String dataDir = RunExamples.getDataDir_Conversion();
+
+        //ExStart:ExportShapeToSVG
         Presentation pres = new Presentation(dataDir + "TestExportShapeToSvg.pptx");
         try
         {
@@ -30,17 +30,11 @@ public class ExportShapeToSVG
             {
                 if (stream != null) stream.close();
             }
-
-
         }
         finally
         {
             if (pres != null) pres.dispose();
         }
-
-
+        //ExEnd:ExportShapeToSVG
     }
-
-
-    //ExEnd:ExportShapeToSVG
 }
