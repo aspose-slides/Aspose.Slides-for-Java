@@ -294,6 +294,7 @@ public class RunExamples
         //InkManagementExample.main(null);
         //DeletePictureCroppedAreasExample.main(null);
         //ShapeIsDecorativePropertyExample.main(null);
+        //TilePictureFillFormatExample.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -531,6 +532,8 @@ public class RunExamples
         //AnimateTextTypeExample.main(null);
         //NumberlinesInParagraph.main(null);
         //FindAndReplaceTextResult.main(null);
+        //FontBinaryDataExample..main(null);
+        //FontEmbeddingLevelExample..main(null);
 
         //// =====================================================
         ////                    VBA Macros
