@@ -8,10 +8,10 @@ public class RuleBasedFontsReplacement
 {
     public static void main(String[] args)
     {
-        //ExStart:RuleBasedFontsReplacement
-        // The path to the documents directory.
+        // The path to the document's directory.
         String dataDir = RunExamples.getDataDir_Text();
 
+        //ExStart:RuleBasedFontsReplacement
         // Load presentation
         Presentation presentation = new Presentation(dataDir + "Fonts.pptx");
 
@@ -32,10 +32,10 @@ public class RuleBasedFontsReplacement
         presentation.getFontsManager().setFontSubstRuleList(fontSubstRuleCollection);
 
         // Arial font will be used instead of SomeRareFont when inaccessible
-        IImage bmp = presentation.getSlides().get_Item(0).getImage(1f, 1f);
+        IImage img = presentation.getSlides().get_Item(0).getImage(1f, 1f);
 
         // Save the image to disk in JPEG format
-        bmp.save(dataDir + "Thumbnail_out.jpg", ImageFormat.Jpeg);
+        img.save(dataDir + "Thumbnail_out.jpg", ImageFormat.Jpeg);
         //ExEnd:RuleBasedFontsReplacement
     }
 }

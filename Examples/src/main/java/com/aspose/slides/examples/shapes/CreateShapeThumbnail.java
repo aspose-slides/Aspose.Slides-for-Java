@@ -20,9 +20,9 @@ public class CreateShapeThumbnail
         try
         {
             // Create a full scale image
-            IImage bitmap = presentation.getSlides().get_Item(0).getShapes().get_Item(0).getImage();
+            IImage img = presentation.getSlides().get_Item(0).getShapes().get_Item(0).getImage();
             // Save the image to disk in PNG format
-            bitmap.save(dataDir + "Shape_thumbnail_out.png", ImageFormat.Png);
+            img.save(dataDir + "Shape_thumbnail_out.png", ImageFormat.Png);
         }
         finally
         {

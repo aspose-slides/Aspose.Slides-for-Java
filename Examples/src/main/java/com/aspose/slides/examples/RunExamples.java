@@ -283,7 +283,6 @@ public class RunExamples
         //GeometryShapeRemoveSegment.main(null);
         //GeometryShapeCreatesCustomGeometry.main(null);
         //GeometryShapeCompositeObjects.main(null);
-        //GeometryShapeUsingShapeUtil.main(null);
         //CreateZoomFrame.main(null);
         //CreateSummaryZoom.main(null);
         //CreateSectionZoom.main(null);
@@ -295,6 +294,8 @@ public class RunExamples
         //DeletePictureCroppedAreasExample.main(null);
         //ShapeIsDecorativePropertyExample.main(null);
         //TilePictureFillFormatExample.main(null);
+        //AnimationFloatUpDown.main(null);
+        //CompressImageExample.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -533,7 +534,8 @@ public class RunExamples
         //NumberlinesInParagraph.main(null);
         //FindAndReplaceTextResult.main(null);
         //FontBinaryDataExample..main(null);
-        //FontEmbeddingLevelExample..main(null);
+        //FontEmbeddingLevelExample.main(null);
+        //GetPresentationRowTextExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros

@@ -10,11 +10,11 @@ public class ThumbnailWithUserDefinedDimensions
 {
     public static void main(String[] args)
     {
-        //ExStart:ThumbnailWithUserDefinedDimensions
-        // The path to the documents directory.
+        // The path to the document's directory.
         String dataDir = RunExamples.getDataDir_Slides_Presentations_Thumbnail();
         String outputDir = RunExamples.getOutPath();
 
+        //ExStart:ThumbnailWithUserDefinedDimensions
         // Instantiate a Presentation class that represents the presentation file
         Presentation pres = new Presentation(dataDir + "ThumbnailWithUserDefinedDimensions.pptx");
         try
@@ -33,10 +33,10 @@ public class ThumbnailWithUserDefinedDimensions
 
 
             // Create a full scale image
-            IImage bmp = sld.getImage(ScaleX, ScaleY);
+            IImage img = sld.getImage(ScaleX, ScaleY);
 
             // Save the image to disk in JPEG format
-            bmp.save(outputDir + "Thumbnail2_out.jpg");
+            img.save(outputDir + "Thumbnail2_out.jpg");
         }
         finally
         {

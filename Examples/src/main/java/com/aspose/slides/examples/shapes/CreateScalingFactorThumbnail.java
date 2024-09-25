@@ -20,10 +20,10 @@ public class CreateScalingFactorThumbnail
         try
         {
             // Create a full scale image
-            IImage bitmap = p.getSlides().get_Item(0).getShapes().get_Item(0).getImage(ShapeThumbnailBounds.Shape, 1, 1);
+            IImage img = p.getSlides().get_Item(0).getShapes().get_Item(0).getImage(ShapeThumbnailBounds.Shape, 1, 1);
 
             // Save the image to disk in PNG format
-            bitmap.save(dataDir + "Scaling Factor Thumbnail_out.png", ImageFormat.Png);
+            img.save(dataDir + "Scaling Factor Thumbnail_out.png", ImageFormat.Png);
         }
         finally
         {

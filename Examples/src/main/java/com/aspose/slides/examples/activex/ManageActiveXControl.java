@@ -4,9 +4,12 @@ package com.aspose.slides.examples.activex;
 import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
+import javax.imageio.ImageIO;
 import java.awt.SystemColor;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 public class ManageActiveXControl
 {
@@ -63,7 +66,15 @@ public class ManageActiveXControl
                 graphics.drawLine(image.getWidth(), image.getHeight(), image.getWidth(), 0);
 
                 graphics.dispose();
-                control.getSubstitutePictureFormat().getPicture().setImage(presentation.getImages().addImage(image));
+
+                final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                try {
+                    ImageIO.write(image, "PNG", byteArrayOutputStream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                IImage img = Images.fromData(byteArrayOutputStream.toByteArray());
+                control.getSubstitutePictureFormat().getPicture().setImage(presentation.getImages().addImage(img));
             }
 
             // Changing Button caption
@@ -103,7 +114,15 @@ public class ManageActiveXControl
                 graphics.drawLine(image.getWidth(), image.getHeight(), image.getWidth(), 0);
 
                 graphics.dispose();
-                control.getSubstitutePictureFormat().getPicture().setImage(presentation.getImages().addImage(image));
+
+                final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                try {
+                    ImageIO.write(image, "PNG", byteArrayOutputStream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                IImage img = Images.fromData(byteArrayOutputStream.toByteArray());
+                control.getSubstitutePictureFormat().getPicture().setImage(presentation.getImages().addImage(img));
             }
 
             // Moving ActiveX frames 100 points down

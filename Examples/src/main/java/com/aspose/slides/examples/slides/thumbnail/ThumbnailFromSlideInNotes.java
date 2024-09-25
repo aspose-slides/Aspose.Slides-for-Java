@@ -32,9 +32,9 @@ public class ThumbnailFromSlideInNotes
 
 
             // Create a full scale image                
-            IImage bmp = sld.getImage(ScaleX, ScaleY);
+            IImage img = sld.getImage(ScaleX, ScaleY);
             // Save the image to disk in JPEG format
-            bmp.save(outputDir + "Notes_tnail_out.jpg");
+            img.save(outputDir + "Notes_tnail_out.jpg");
         }
         finally
         {

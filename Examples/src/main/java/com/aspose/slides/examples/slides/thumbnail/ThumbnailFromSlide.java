@@ -25,10 +25,10 @@ public class ThumbnailFromSlide
             ISlide sld = pres.getSlides().get_Item(0);
 
             // Create a full scale image
-            IImage bmp = sld.getImage(1f, 1f);
+            IImage img = sld.getImage(1f, 1f);
 
             // Save the image to disk in JPEG format
-            bmp.save(outputDir + "Thumbnail_out.jpg");
+            img.save(outputDir + "Thumbnail_out.jpg");
 
         }
         finally

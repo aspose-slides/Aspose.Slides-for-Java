@@ -22,10 +22,10 @@ public class CreateSmartArtChildNoteThumbnail
         ISmartArtNode node = smart.getNodes().get_Item(1);
 
         // Get thumbnail
-        IImage bmp = node.getShapes().get_Item(0).getImage();
+        IImage img = node.getShapes().get_Item(0).getImage();
 
         // Save thumbnail
-        bmp.save(dataDir + "SmartArt_ChildNote_Thumbnail_out.jpeg", ImageFormat.Jpeg);
+        img.save(dataDir + "SmartArt_ChildNote_Thumbnail_out.jpeg", ImageFormat.Jpeg);
         //ExEnd:CreateSmartArtChildNoteThumbnail
     }
 }
