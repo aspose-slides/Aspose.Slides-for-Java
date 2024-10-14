@@ -354,6 +354,7 @@ public class RunExamples
         //AnimationRepeatOnSlide.main(null);
         //AnimationRewind.main(null);
         //AfterAnimationTypeExample.main(null);
+        //AnimationFadedZoomSubtype.main(null);
 
         //// =====================================================
         ////                    Slides - Thumbnail
