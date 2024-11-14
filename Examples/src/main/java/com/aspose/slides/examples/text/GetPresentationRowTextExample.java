@@ -4,7 +4,7 @@ import com.aspose.slides.*;
 import com.aspose.slides.examples.RunExamples;
 
 /*
-This example demonstrates hao to get raw text of a presentation using PresentationFactory.Instance.GetPresentationText method.
+This example demonstrates how to get raw text of a presentation using PresentationFactory.Instance.GetPresentationText method.
 
 In version 24.9 this method only works if you have a license.
 */

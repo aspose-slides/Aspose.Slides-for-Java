@@ -200,6 +200,8 @@ public class RunExamples
         //RootDirectoryClsId.main(null);
         //PresentationSlideShowSetup.main(null);
         //SlideShowMediaControls.main(null);
+        //GridProperties.main(null);
+        //GuidesProperties.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
