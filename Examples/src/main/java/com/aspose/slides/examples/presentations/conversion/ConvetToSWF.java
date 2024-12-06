@@ -19,9 +19,7 @@ public class ConvetToSWF
             SwfOptions swfOptions = new SwfOptions();
             swfOptions.setViewerIncluded(false);
 
-
-            INotesCommentsLayoutingOptions notesOptions = swfOptions.getNotesCommentsLayouting();
-            notesOptions.setNotesPosition(NotesPositions.BottomFull);
+            swfOptions.getNotesCommentsLayouting().setNotesPosition(NotesPositions.BottomFull);
 
             // Saving presentation and notes pages
             presentation.save(dataDir + "SaveAsSwf_out.swf", SaveFormat.Swf, swfOptions);
