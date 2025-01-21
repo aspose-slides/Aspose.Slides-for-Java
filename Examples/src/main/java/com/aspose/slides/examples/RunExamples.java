@@ -162,6 +162,8 @@ public class RunExamples
         //ConvertToPdfUnsupportedFontStyles.main(null);
         //ConvertToXml.main(null);
         //ExportOleExample.main(null);
+        //ConvertToEmf.main(null);
+        //ConvertSvgToEmf.main(null);
 
         // =====================================================
         //// =====================================================
@@ -202,6 +204,7 @@ public class RunExamples
         //SlideShowMediaControls.main(null);
         //GridProperties.main(null);
         //GuidesProperties.main(null);
+        //ExtendedPresentationProperties.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
@@ -218,6 +221,7 @@ public class RunExamples
         //ConvertSvgImageObjectIntoGroupOfShapes.main(null);
         //AddBlobImageToPresentation.main(null);
         //SaveInZip64Mode.main(null);
+        //RefreshThumbnailPresentation.main(null);
 
         //// =====================================================
         ////            Presentations -   LowCode
