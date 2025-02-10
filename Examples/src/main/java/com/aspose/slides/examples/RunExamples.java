@@ -411,7 +411,9 @@ public class RunExamples
         //ExtractAudioFromTimeline.main(null);
         //ExtractAudioFromHyperLink.main(null);
         //StopPreviousSoundExample.main(null);
-
+        //FadeInOutDurationAudioExample.main(null);
+        //VolumeAudioExample.main(null);
+        //TrimmingTimeAudioExample.main(null);
 
         //// =====================================================
         ////            Rendering - Printing a Slide
@@ -543,6 +545,7 @@ public class RunExamples
         //FontBinaryDataExample..main(null);
         //FontEmbeddingLevelExample.main(null);
         //GetPresentationRowTextExample.main(null);
+        //DisableFontLigaturesExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros
