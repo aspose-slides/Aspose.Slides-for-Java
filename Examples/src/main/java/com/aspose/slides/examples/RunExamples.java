@@ -222,6 +222,8 @@ public class RunExamples
         //AddBlobImageToPresentation.main(null);
         //SaveInZip64Mode.main(null);
         //RefreshThumbnailPresentation.main(null);
+        //JavaScriptLinkExample.main(null);
+        //ImageQualityExample.main(null);
 
         //// =====================================================
         ////            Presentations -   LowCode
@@ -414,6 +416,7 @@ public class RunExamples
         //FadeInOutDurationAudioExample.main(null);
         //VolumeAudioExample.main(null);
         //TrimmingTimeAudioExample.main(null);
+        //VideoCaptionsExample.main(null);
 
         //// =====================================================
         ////            Rendering - Printing a Slide
@@ -546,6 +549,7 @@ public class RunExamples
         //FontEmbeddingLevelExample.main(null);
         //GetPresentationRowTextExample.main(null);
         //DisableFontLigaturesExample.main(null);
+        //SplitTextByColumnsExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros
