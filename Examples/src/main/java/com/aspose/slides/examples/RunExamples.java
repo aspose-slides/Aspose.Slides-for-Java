@@ -304,6 +304,7 @@ public class RunExamples
         //TilePictureFillFormatExample.main(null);
         //AnimationFloatUpDown.main(null);
         //CompressImageExample.main(null);
+        //AdjustValueTypeExample.main(null);
 
         //// =====================================================
         ////                        Slides 

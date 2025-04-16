@@ -31,6 +31,9 @@ public class MeteredLicensing
             // Display information
             System.out.println("Amount Consumed After: " + amountafter);
 
+            // Print status of a Metered license.
+            System.out.println("Is metered license accepted: " + Metered.isMeteredLicensed());
+
         }
         catch (Exception ex)
         {
