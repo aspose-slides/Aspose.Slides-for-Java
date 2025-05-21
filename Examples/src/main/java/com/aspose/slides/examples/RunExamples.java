@@ -164,6 +164,9 @@ public class RunExamples
         //ExportOleExample.main(null);
         //ConvertToEmf.main(null);
         //ConvertSvgToEmf.main(null);
+        //ConvertToHtml5Handout.main(null);
+        //ConvertToMarkdownOptions.main(null);
+        //ImportHtmlSlideExample.main(null);
 
         // =====================================================
         //// =====================================================
@@ -305,6 +308,7 @@ public class RunExamples
         //AnimationFloatUpDown.main(null);
         //CompressImageExample.main(null);
         //AdjustValueTypeExample.main(null);
+        //PictureFrameIsCameoExample.main(null);
 
         //// =====================================================
         ////                        Slides 
