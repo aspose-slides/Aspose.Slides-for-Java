@@ -309,6 +309,7 @@ public class RunExamples
         //CompressImageExample.main(null);
         //AdjustValueTypeExample.main(null);
         //PictureFrameIsCameoExample.main(null);
+        //InkEffectsExample.main(null);
 
         //// =====================================================
         ////                        Slides 
