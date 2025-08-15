@@ -15,21 +15,21 @@ public class ManageHeaderFooterText
         String dataDir = RunExamples.getDataDir_Slides_Presentations_Layout();
 
         // Load Presentation
-        Presentation pres = new Presentation(dataDir + "headerTest.pptx");
+        Presentation pres = new Presentation(dataDir + "presentation.pptx");
 
         // Setting Footer
         pres.getHeaderFooterManager().setAllFootersText("My Footer text");
         pres.getHeaderFooterManager().setAllFootersVisibility(true);
 
         // Access and Update Header
-        IMasterNotesSlide masterNotesSlide = pres.getMasterNotesSlideManager().getMasterNotesSlide();
+        IMasterSlide masterNotesSlide = pres.getMasters().get_Item(0);
         if (null != masterNotesSlide)
         {
             updateHeaderFooterText(masterNotesSlide);
         }
 
         // Save presentation
-        pres.save(dataDir + "HeaderFooterJava.pptx", SaveFormat.Pptx);
+        pres.save(RunExamples.getOutPath() + "HeaderFooterJava.pptx", SaveFormat.Pptx);
 
         //ExEnd:ManageHeaderFooterText
 
@@ -43,7 +43,7 @@ public class ManageHeaderFooterText
         {
             if (shape.getPlaceholder() != null)
             {
-                if (shape.getPlaceholder().getType() == PlaceholderType.Header)
+                if (shape.getPlaceholder().getType() == PlaceholderType.Footer)
                 {
                     ((IAutoShape) shape).getTextFrame().setText("HI there new header");
                 }

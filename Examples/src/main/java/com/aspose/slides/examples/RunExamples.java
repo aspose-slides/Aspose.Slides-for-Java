@@ -103,6 +103,8 @@ public class RunExamples
         //TimeUnitTypeEnum.main(null);
         //LeaderLineColor.main(null);
         //ChartDataPointIndex.main(null);
+        //ExtractExcelDataExample.main(null);
+        //ImportingChartsFromExcelExample.main(null);
 
         //// =====================================================
         ////                    Presentations 
@@ -310,6 +312,7 @@ public class RunExamples
         //AdjustValueTypeExample.main(null);
         //PictureFrameIsCameoExample.main(null);
         //InkEffectsExample.main(null);
+        //BrightnessContrastEffectExample.main(null);
 
         //// =====================================================
         ////                        Slides 
@@ -423,6 +426,7 @@ public class RunExamples
         //VolumeAudioExample.main(null);
         //TrimmingTimeAudioExample.main(null);
         //VideoCaptionsExample.main(null);
+        //AudioCaptionsExample.main(null);
 
         //// =====================================================
         ////            Rendering - Printing a Slide
@@ -556,6 +560,8 @@ public class RunExamples
         //GetPresentationRowTextExample.main(null);
         //DisableFontLigaturesExample.main(null);
         //SplitTextByColumnsExample.main(null);
+        //ManageScriptFontsExample.main(null);
+        //GetPlaceholderTextExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros
