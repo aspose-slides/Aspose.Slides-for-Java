@@ -105,6 +105,7 @@ public class RunExamples
         //ChartDataPointIndex.main(null);
         //ExtractExcelDataExample.main(null);
         //ImportingChartsFromExcelExample.main(null);
+        //TitleLegendChartExample.main(null);
 
         //// =====================================================
         ////                    Presentations 
