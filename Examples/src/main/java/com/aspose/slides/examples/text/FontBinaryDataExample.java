@@ -1,6 +1,6 @@
 package com.aspose.slides.examples.text;
 
-import com.aspose.slides.FontStyle;
+import com.aspose.slides.FontStyleType;
 import com.aspose.slides.IFontData;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
@@ -23,7 +23,7 @@ public class FontBinaryDataExample
             IFontData[] fonts = pres.getFontsManager().getFonts();
 
             // Get the byte array representing the regular style of the first font in the presentation
-            byte[] bytes = pres.getFontsManager().getFontBytes(fonts[0], FontStyle.Regular);
+            byte[] bytes = pres.getFontsManager().getFontBytes(fonts[0], FontStyleType.Regular);
 
             // The path to output file
             String outFilePath = RunExamples.getOutPath() + fonts[0].getFontName() + ".ttf";

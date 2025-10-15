@@ -49,8 +49,7 @@ public class CreateZoomFrame
 
             // Add ZoomFrame objects with custom image
             // Create a new image for the zoom object
-            byte[] imageBytes = Files.readAllBytes(Paths.get(imagePath));
-            IPPImage image = pres.getImages().addImage(imageBytes);
+            IPPImage image = pres.getImages().addImage(Images.fromFile(imagePath));
             IZoomFrame zoomFrame2 = pres.getSlides().get_Item(0).getShapes().addZoomFrame(200, 250, 250, 100, slide3, image);
 
             // Set a zoom frame format for the zoomFrame2 object
@@ -64,8 +63,6 @@ public class CreateZoomFrame
 
             // Save the presentation
             pres.save(resultPath, SaveFormat.Pptx);
-        } catch (IOException e) {
-            e.printStackTrace();
         } finally {
             if (pres != null) pres.dispose();
         }

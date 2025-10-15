@@ -1,6 +1,6 @@
 package com.aspose.slides.examples.text;
 
-import com.aspose.slides.FontStyle;
+import com.aspose.slides.FontStyleType;
 import com.aspose.slides.IFontData;
 import com.aspose.slides.Presentation;
 import com.aspose.slides.examples.RunExamples;
@@ -21,7 +21,7 @@ public class FontEmbeddingLevelExample
             IFontData[] fontDatas = pres.getFontsManager().getFonts();
 
             // Get the byte array representing the regular style of the first font in the presentation
-            byte[] bytes = pres.getFontsManager().getFontBytes(fontDatas[0], FontStyle.Regular);
+            byte[] bytes = pres.getFontsManager().getFontBytes(fontDatas[0], FontStyleType.Regular);
 
             // Determine the embedding level of the font
             int embeddingLevel = pres.getFontsManager().getFontEmbeddingLevel(bytes, fontDatas[0].getFontName());

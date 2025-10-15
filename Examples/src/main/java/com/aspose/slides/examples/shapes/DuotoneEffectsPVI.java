@@ -18,10 +18,8 @@ public class DuotoneEffectsPVI
         //ExStart:DuotoneEffectsPVI
         Presentation presentation = new Presentation();
         try {
-            byte[] imageBytes = Files.readAllBytes(Paths.get(RunExamples.getDataDir_Shapes() + "aspose-logo.jpg"));
-
             // Add image to presentation
-            IPPImage backgroundImage = presentation.getImages().addImage(imageBytes);
+            IPPImage backgroundImage = presentation.getImages().addImage(Images.fromFile(RunExamples.getDataDir_Shapes() + "aspose-logo.jpg"));
 
             // Set background in first slide
             presentation.getSlides().get_Item(0).getBackground().setType(BackgroundType.OwnBackground);
@@ -45,8 +43,6 @@ public class DuotoneEffectsPVI
             // Show effective values
             System.out.println("Duotone effective color1: " + duotoneEffective.getColor1());
             System.out.println("Duotone effective color2: " + duotoneEffective.getColor2());
-        } catch(IOException e) {
-            e.printStackTrace();
         } finally {
             if (presentation != null) presentation.dispose();
         }

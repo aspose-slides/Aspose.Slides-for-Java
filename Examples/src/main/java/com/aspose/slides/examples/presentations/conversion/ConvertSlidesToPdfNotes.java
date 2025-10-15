@@ -29,7 +29,7 @@ public class ConvertSlidesToPdfNotes
 
 
                 PdfOptions pdfOptions = new PdfOptions();
-                INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
+                NotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
                 options.setNotesPosition(NotesPositions.BottomFull);
                 pdfOptions.setSlidesLayoutOptions(options);
 

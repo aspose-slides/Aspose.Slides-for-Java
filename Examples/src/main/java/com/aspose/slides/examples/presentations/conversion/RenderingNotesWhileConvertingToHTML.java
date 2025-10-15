@@ -17,7 +17,7 @@ public class RenderingNotesWhileConvertingToHTML
         {
             HtmlOptions opt = new HtmlOptions();
 
-            INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
             options.setNotesPosition(NotesPositions.BottomFull);
             opt.setSlidesLayoutOptions(options);
 

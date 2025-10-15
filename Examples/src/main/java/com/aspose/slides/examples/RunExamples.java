@@ -563,6 +563,7 @@ public class RunExamples
         //SplitTextByColumnsExample.main(null);
         //ManageScriptFontsExample.main(null);
         //GetPlaceholderTextExample.main(null);
+        //HighlightTextUsingRegx.main(null);
 
         //// =====================================================
         ////                    VBA Macros

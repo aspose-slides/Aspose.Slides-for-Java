@@ -31,7 +31,7 @@ public class CustomOptionsPDFConversion
             // Define the PDF standard
             pdfOptions.setCompliance(PdfCompliance.Pdf15);
 
-            INotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions options = new NotesCommentsLayoutingOptions();
             options.setNotesPosition(NotesPositions.BottomFull);
             pdfOptions.setSlidesLayoutOptions(options);
 

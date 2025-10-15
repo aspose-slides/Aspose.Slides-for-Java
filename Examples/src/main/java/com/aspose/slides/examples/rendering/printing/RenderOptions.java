@@ -17,7 +17,7 @@ public class RenderOptions {
         Presentation pres = new Presentation(presPath);
         try {
             IRenderingOptions renderingOpts = new RenderingOptions();
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomTruncated);
             renderingOpts.setSlidesLayoutOptions(notesOptions);
 

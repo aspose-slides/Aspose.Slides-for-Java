@@ -19,7 +19,7 @@ public class PresentationToTIFFWithCustomImagePixelFormat
             TiffOptions options = new TiffOptions();
 
             options.setPixelFormat(ImagePixelFormat.Format8bppIndexed);
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
             options.setSlidesLayoutOptions(notesOptions);
 

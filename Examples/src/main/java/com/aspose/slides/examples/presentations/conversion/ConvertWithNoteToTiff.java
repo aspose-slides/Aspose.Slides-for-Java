@@ -17,7 +17,7 @@ public class ConvertWithNoteToTiff
         try
         {
             TiffOptions opts = new TiffOptions();
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
             opts.setSlidesLayoutOptions(notesOptions);
             // Saving the presentation to TIFF notes

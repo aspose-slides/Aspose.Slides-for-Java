@@ -19,7 +19,7 @@ public class ConvertWholePresentationToHTML
             HtmlOptions htmlOpt = new HtmlOptions();
             htmlOpt.setHtmlFormatter(HtmlFormatter.createDocumentFormatter("", false));
 
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
             htmlOpt.setSlidesLayoutOptions(notesOptions);
 

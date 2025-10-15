@@ -24,7 +24,7 @@ public class ConvertWithCustomSize
             // Setting compression type
             opts.setCompressionType(TiffCompressionTypes.Default);
 
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
             opts.setSlidesLayoutOptions(notesOptions);
             // Compression Types

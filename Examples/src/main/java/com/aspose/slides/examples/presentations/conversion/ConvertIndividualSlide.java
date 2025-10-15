@@ -17,7 +17,7 @@ public class ConvertIndividualSlide
 
             htmlOptions.setHtmlFormatter(HtmlFormatter.createCustomFormatter(new CustomFormattingController()));
 
-            INotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
+            NotesCommentsLayoutingOptions notesOptions = new NotesCommentsLayoutingOptions();
             notesOptions.setNotesPosition(NotesPositions.BottomFull);
             htmlOptions.setSlidesLayoutOptions(notesOptions);
 
