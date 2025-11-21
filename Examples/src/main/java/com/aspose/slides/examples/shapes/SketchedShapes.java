@@ -11,8 +11,8 @@ public class SketchedShapes {
     {
         //ExStart:SketchedShapes
         //Path for output presentation
-        String outPptxFile = RunExamples.OutPath + "SketchedShapes_out.pptx";
-        String outPngFile = RunExamples.OutPath + "SketchedShapes_out.png";
+        String outPptxFile = RunExamples.getOutPath() + "SketchedShapes_out.pptx";
+        String outPngFile = RunExamples.getOutPath() + "SketchedShapes_out.png";
 
         Presentation pres = new Presentation();
         try

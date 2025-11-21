@@ -20,7 +20,7 @@ public class ConvertToHtml5NotesComments
 
             Html5Options html5Options = new Html5Options();
             html5Options.setOutputPath(RunExamples.getOutPath());
-            html5Options.setNotesCommentsLayouting(notesCommentsLayouting);
+            html5Options.setSlidesLayoutOptions(notesCommentsLayouting);
 
             // Save a result
             pres.save(resultPath, SaveFormat.Html5, html5Options);

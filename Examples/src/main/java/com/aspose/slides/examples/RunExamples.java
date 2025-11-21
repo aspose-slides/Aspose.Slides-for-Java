@@ -133,7 +133,6 @@ public class RunExamples
         //ConvertNotesSlideView.main(null);
         //ConvertWithoutXpsOptions.main(null);
         //ConvertWithXpsOptions.main(null);
-        //ConvetToSWF.main(null);
         //ConversionToTIFFNotes.main(null);
         //GeneratingSVGWithCustomShapeIDS.main(null);
         //ConvertNotesSlideViewToPDF.main(null);
@@ -170,6 +169,7 @@ public class RunExamples
         //ConvertToHtml5Handout.main(null);
         //ConvertToMarkdownOptions.main(null);
         //ImportHtmlSlideExample.main(null);
+        //ConvertImagesToMarkdown.main(null);
 
         // =====================================================
         //// =====================================================
@@ -291,6 +291,7 @@ public class RunExamples
         //ExtractEmbeddedFileDataFromOLEObject.main(null);
         //MathematicalShape.main(null);
         //MathShape_GetChildren.main(null);
+        //MathPhantomExample.main(null);
         //ShapesAlignment.main(null);
         //SketchedShapes.main(null);
         //GeometryShapeAddSegment.main(null);
@@ -373,6 +374,7 @@ public class RunExamples
         //AnimationRewind.main(null);
         //AfterAnimationTypeExample.main(null);
         //AnimationFadedZoomSubtype.main(null);
+        //AnimationDurationSlide.main(null);
 
         //// =====================================================
         ////                    Slides - Thumbnail
@@ -550,6 +552,7 @@ public class RunExamples
         //WordArt.main(null);
         //KeepTextFlat.main(null);
         //GetFontsSubstitution.main(null);
+        //GetFontsSlideSubstitution.main(null);
         //EmbeddedFontCompression.main(null);
         //FindAndReplaceText.main(null);
         //SpecifyDefaultTextLanguage.main(null);
@@ -564,6 +567,7 @@ public class RunExamples
         //ManageScriptFontsExample.main(null);
         //GetPlaceholderTextExample.main(null);
         //HighlightTextUsingRegx.main(null);
+        //FindTextOptions.main(null);
 
         //// =====================================================
         ////                    VBA Macros
@@ -602,7 +606,7 @@ public class RunExamples
         return OutPath;
     }
 
-    public static String OutPath = null;
+    private static String OutPath = null;
 
     public static String getDataDir_Charts()
     {

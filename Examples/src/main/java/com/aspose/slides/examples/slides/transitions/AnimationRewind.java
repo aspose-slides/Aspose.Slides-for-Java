@@ -26,12 +26,12 @@ public class AnimationRewind
             effect.getTiming().setRewind(true);
 
             // Save presentation
-            presentation.save(RunExamples.OutPath + "AnimationRewind-out.pptx", SaveFormat.Pptx);
+            presentation.save(RunExamples.getOutPath() + "AnimationRewind-out.pptx", SaveFormat.Pptx);
         } finally {
             if (presentation != null) presentation.dispose();
         }
 
-        Presentation pres = new Presentation(RunExamples.OutPath + "AnimationRewind-out.pptx");
+        Presentation pres = new Presentation(RunExamples.getOutPath() + "AnimationRewind-out.pptx");
         try {
             // Gets the effects sequence for the first slide
             ISequence effectsSequence = pres.getSlides().get_Item(0).getTimeline().getMainSequence();

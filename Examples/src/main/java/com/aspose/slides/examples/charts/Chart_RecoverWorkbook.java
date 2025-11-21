@@ -14,7 +14,7 @@ public class Chart_RecoverWorkbook
         String dataDir = RunExamples.getDataDir_Charts();
 
         String pptxFile = dataDir + "ExternalWB.pptx";
-        String outPptxFile = RunExamples.OutPath + "ExternalWB_out.pptx";
+        String outPptxFile = RunExamples.getOutPath() + "ExternalWB_out.pptx";
 
         LoadOptions lo = new LoadOptions();
         lo.getSpreadsheetOptions().setRecoverWorkbookFromChartCache(true);

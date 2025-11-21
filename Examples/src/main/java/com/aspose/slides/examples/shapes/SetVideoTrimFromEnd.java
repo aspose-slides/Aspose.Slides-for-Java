@@ -26,7 +26,7 @@ public class SetVideoTrimFromEnd
             videoFrame.setTrimFromEnd(14000f);
 
             // Save presentation
-            pres.save(RunExamples.OutPath + "VideoTrimming-out.pptx", SaveFormat.Pptx);
+            pres.save(RunExamples.getOutPath() + "VideoTrimming-out.pptx", SaveFormat.Pptx);
         } catch(IOException e) {
         } finally {
             if (pres != null) pres.dispose();
