@@ -237,6 +237,8 @@ public class RunExamples
 
         //RemoveUnusedLayoutMaster.main(null);
         //ForEachPortion.main(null);
+        //ConvertToImage.main(null);
+        //MergerExample.main(null);
 
         //// =====================================================
         ////                    Shapes
@@ -568,6 +570,7 @@ public class RunExamples
         //GetPlaceholderTextExample.main(null);
         //HighlightTextUsingRegx.main(null);
         //FindTextOptions.main(null);
+        //SpellCheckExample.main(null);
 
         //// =====================================================
         ////                    VBA Macros
@@ -645,7 +648,7 @@ public class RunExamples
 
     public static String getDataDir_Slides_Presentations_LowCode()
     {
-        return getDataDir_Data() + "Presentations"+ File.separator + " LowCode" + File.separator;
+        return getDataDir_Data() + "Presentations"+ File.separator + "LowCode" + File.separator;
     }
 
     public static String getDataDir_Rendering()
