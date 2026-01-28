@@ -211,6 +211,7 @@ public class RunExamples
         //GridProperties.main(null);
         //GuidesProperties.main(null);
         //ExtendedPresentationProperties.main(null);
+        //SensitivityLabelsExample.main(null);
 
         //// =====================================================
         ////            Presentations -   Saving
@@ -317,6 +318,7 @@ public class RunExamples
         //PictureFrameIsCameoExample.main(null);
         //InkEffectsExample.main(null);
         //BrightnessContrastEffectExample.main(null);
+        //ShapePathPointsExample.main(null);
 
         //// =====================================================
         ////                        Slides 
