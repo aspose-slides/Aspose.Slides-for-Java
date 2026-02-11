@@ -231,6 +231,7 @@ public class RunExamples
         //RefreshThumbnailPresentation.main(null);
         //JavaScriptLinkExample.main(null);
         //ImageQualityExample.main(null);
+        //ToSaveFormatExample.main(null);
 
         //// =====================================================
         ////            Presentations -   LowCode
