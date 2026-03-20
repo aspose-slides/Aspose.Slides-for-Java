@@ -320,6 +320,8 @@ public class RunExamples
         //InkEffectsExample.main(null);
         //BrightnessContrastEffectExample.main(null);
         //ShapePathPointsExample.main(null);
+        //ShapeVisualBoundsExample.main(null);
+        //SolidFillSchemeColorExamole.main(null);
 
         //// =====================================================
         ////                        Slides 
