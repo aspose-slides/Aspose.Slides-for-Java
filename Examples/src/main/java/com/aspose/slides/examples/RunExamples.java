@@ -106,6 +106,7 @@ public class RunExamples
         //ExtractExcelDataExample.main(null);
         //ImportingChartsFromExcelExample.main(null);
         //TitleLegendChartExample.main(null);
+        //EmbeddedWorkbookType.main(null);
 
         //// =====================================================
         ////                    Presentations 
