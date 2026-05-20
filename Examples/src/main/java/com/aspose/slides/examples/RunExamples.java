@@ -503,6 +503,7 @@ public class RunExamples
         //CreateATableFromScratchInASlide.main(null);
         //SetFirstRowAsHeader.main(null);
         //TableTransparency.main(null);
+        //AddTableFromWorkbookExample.main(null);
 
         //// =====================================================
         ////                     Text
