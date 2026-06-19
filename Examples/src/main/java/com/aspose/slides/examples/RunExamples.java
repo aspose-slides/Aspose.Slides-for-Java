@@ -233,6 +233,7 @@ public class RunExamples
         //JavaScriptLinkExample.main(null);
         //ImageQualityExample.main(null);
         //ToSaveFormatExample.main(null);
+        //CompressionLevelExample.main(null);
 
         //// =====================================================
         ////            Presentations -   LowCode
