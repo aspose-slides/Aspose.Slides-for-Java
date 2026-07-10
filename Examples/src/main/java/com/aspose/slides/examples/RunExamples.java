@@ -171,6 +171,7 @@ public class RunExamples
         //ConvertToMarkdownOptions.main(null);
         //ImportHtmlSlideExample.main(null);
         //ConvertImagesToMarkdown.main(null);
+        //Html5PicturesCompressionExample.main(null);
 
         // =====================================================
         //// =====================================================
